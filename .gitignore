@@ -1,44 +1,60 @@
-# Backend
-/apps/backend/target/
-
-# Frontend build outputs
-/apps/public-frontend/.next/
-/apps/public-frontend/out/
-/apps/admin-frontend/.next/
-/apps/admin-frontend/out/
-
-# Dependencies (covers root and all nested node_modules)
+# =========================
+# Dependencies
+# =========================
 node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# =========================
+# Build outputs
+# =========================
+dist/
+build/
+out/
+.out/
+.next/
+.cache/
+coverage/
+
+# =========================
 # Environment files
+# =========================
 .env
 .env.local
 .env.*.local
-.env.development
-.env.production
 
-# IDEs
-/.idea/
-/.vscode/
-*.iml
+# =========================
+# Logs
+# =========================
+logs
+*.log
 
-# OS
+# =========================
+# OS / System files
+# =========================
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
+# =========================
 # TypeScript
+# =========================
 *.tsbuildinfo
-/apps/public-frontend/.next/
-/apps/admin-frontend/.next/
-/node_modules/
-**/node_modules/
-/.idea/
-/.vscode/
-.env
+
+# =========================
+# Misc
+# =========================
 docs/
-**/docs/
+.tmp/
+.temp/
