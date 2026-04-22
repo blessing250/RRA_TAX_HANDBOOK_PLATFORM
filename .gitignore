@@ -42,3 +42,9 @@ pnpm-debug.log*
 .env
 docs/
 **/docs/
+
+# SSH keys
+Admin
+Admin.pub
+*.pem
+*.key
