@@ -1,7 +1,7 @@
 package com.rra.taxhandbook.document.service;
 
 import java.util.List;
-
+import java.time.Year;
 import org.springframework.stereotype.Service;
 
 import com.rra.taxhandbook.common.dto.ApiResponse;
@@ -12,7 +12,8 @@ import com.rra.taxhandbook.document.dto.DocumentResponse;
 public class DocumentService {
 
 	public List<DocumentResponse> getDocuments() {
-		return List.of(new DocumentResponse(1L, "Tax Handbook 2025", "RRA_Tax_Handbook_2025_Final.pdf", "/documents/tax-handbook-2025"));
+    int currentYear = Year.now().getValue();
+		return List.of(new DocumentResponse(1L, "Tax Handbook " + currentYear, "RRA_Tax_Handbook_" + currentYear + "_Final.pdf", "/documents/tax-handbook-" + currentYear));
 	}
 
 	public ApiResponse<DocumentResponse> createDocument(DocumentRequest request) {

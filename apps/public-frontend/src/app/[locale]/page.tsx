@@ -5,6 +5,33 @@ import { routes } from "../../lib/constants/routes";
 import { getHomepageBranchHref } from "../../lib/content/homepageBranches";
 import type { HandbookSectionSummary, HomepageContent } from "../../types/handbook";
 
+const fallbackCopy = {
+  en: {
+    unavailableTitle: "Content unavailable",
+    unavailableMessage:
+      "The handbook service could not be reached. Verify the backend is running and the public frontend has a valid API base URL.",
+    entryPointsLabel: "Handbook entry points",
+    openSection: "Open section",
+    lastUpdated: "This page was last updated on:",
+  },
+  rw: {
+    unavailableTitle: "Ibirimo ntibibonetse",
+    unavailableMessage:
+      "Serivisi ya handbook ntibashije kuyigeraho. Reba ko backend iri gukora kandi public frontend ifite API base URL nyayo.",
+    entryPointsLabel: "Aho watangirira muri handbook",
+    openSection: "Fungura icyiciro",
+    lastUpdated: "Iyi paji yaherukaga kuvugururwa ku wa:",
+  },
+  fr: {
+    unavailableTitle: "Contenu indisponible",
+    unavailableMessage:
+      "Le service du manuel est inaccessible. Verifiez que le backend est en cours d'execution et que le frontend public dispose d'une URL de base API valide.",
+    entryPointsLabel: "Points d'entree du manuel",
+    openSection: "Ouvrir la section",
+    lastUpdated: "Cette page a ete mise a jour le :",
+  },
+} as const;
+
 function buildSectionTree(sections: HandbookSectionSummary[]) {
   return sections
     .filter((section) => section.parentId === null)
@@ -34,6 +61,7 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const copy = fallbackCopy[locale as keyof typeof fallbackCopy] ?? fallbackCopy.en;
   let homepageContent: HomepageContent | null = null;
   let homeCards: Array<{ key: string; title: string; description: string; href: string }> = [];
 
@@ -101,45 +129,15 @@ export default async function HomePage({
 
   return (
     <div className="page-stack">
-      <section className="home-hero">
-        <div className="home-hero-copy">
-          <span className="home-kicker">{homepageContent?.kicker ?? "Rwanda Revenue Authority"}</span>
-          <h1 className="page-heading">{homepageContent?.title ?? "Tax Handbook"}</h1>
-          <p className="page-subtitle">
-            {homepageContent?.subtitle ??
-              "Explore the official public handbook for tax information, services, procedures, and practical guidance across Rwanda's tax system."}
-          </p>
-          <div className="home-actions">
-            <Link className="home-primary-action" href={`/${locale}/search`}>
-              {homepageContent?.searchLabel ?? "Search handbook"}
-            </Link>
-            <Link className="home-secondary-action" href={`/${locale}/contact`}>
-              {homepageContent?.helpLabel ?? "Get help"}
-            </Link>
-          </div>
-        </div>
-
-        <div className="home-hero-visual" aria-hidden="true">
-          <img
-            className="home-hero-image"
-            src="/assets/bg_rra_logo.png"
-            alt=""
-          />
-        </div>
-      </section>
-
       {homeCards.length === 0 ? (
-        <section className="content-panel">
-          <h2 className="section-h2">Content unavailable</h2>
+        <section className="content-panel home-entry-panel">
+          <h2 className="section-h2">{copy.unavailableTitle}</h2>
           <div className="rich-copy">
-            <p>
-              The handbook service could not be reached. Verify the backend is running and the
-              public frontend has a valid API base URL.
-            </p>
+            <p>{copy.unavailableMessage}</p>
           </div>
         </section>
       ) : (
-        <section className="home-grid" aria-label="Handbook entry points">
+        <section className="home-grid home-entry-section" aria-label={copy.entryPointsLabel}>
           {homeCards.map((card) => (
             <article key={card.key} className="home-card">
               <Link className="home-card-title-row" href={card.href}>
@@ -148,7 +146,7 @@ export default async function HomePage({
               </Link>
               <p className="home-card-desc">{card.description}</p>
               <Link className="home-card-link" href={card.href}>
-                Open section
+                {copy.openSection}
               </Link>
             </article>
           ))}
@@ -157,7 +155,7 @@ export default async function HomePage({
 
       {homepageContent?.updatedAt ? (
         <p className="last-updated">
-          This page was last updated on:{" "}
+          {copy.lastUpdated}{" "}
           {new Intl.DateTimeFormat("en-GB").format(new Date(homepageContent.updatedAt))}
         </p>
       ) : null}
