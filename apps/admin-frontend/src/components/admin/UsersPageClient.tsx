@@ -6,7 +6,17 @@ import { useEffect, useRef, useState } from "react";
 
 import { ConfirmDialog } from "../../components/admin/ConfirmDialog";
 import { DataTable } from "../../components/admin/DataTable";
+import { EditUserModal } from "../../components/admin/EditUserModal";
 import { InviteUserModal } from "../../components/admin/InviteUserModal";
+import {
+  cancelInvite,
+  deactivateUser,
+  removeUser,
+  restoreUser,
+  resendInvite,
+  reactivateUser,
+  suspendUser,
+} from "../../lib/api/users";
 import type { User, UserStatus, UserSummary } from "../../types/user";
 
 function formatStatus(status: UserStatus) {
@@ -278,6 +288,8 @@ export function UsersPageClient({
 }: UsersPageClientProps) {
   const router = useRouter();
   const [isInviteModalOpen, setIsInviteModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [activeDialog, setActiveDialog] = useState<{
     type: DialogType;
     user: User | null;
@@ -311,8 +323,13 @@ export function UsersPageClient({
     router.refresh();
   };
 
+  const handleEditSuccess = () => {
+    router.refresh();
+  };
+
   const handleEdit = (user: User) => {
-    router.push(`/users/${user.id}/edit`);
+    setSelectedUser(user);
+    setIsEditModalOpen(true);
   };
 
   const handleDeactivateClick = (user: User) => {
@@ -344,32 +361,50 @@ export function UsersPageClient({
   };
 
   const handleDialogConfirm = async () => {
-    if (!activeDialog.user || !token) return;
+    if (!activeDialog.user) {
+      alert("No active user selected for this action.");
+      return;
+    }
+
+    if (!token) {
+      alert("Missing authentication token. Please sign in again.");
+      return;
+    }
 
     setActiveDialog((prev) => ({ ...prev, isLoading: true }));
 
     try {
-      const action = activeDialog.type;
-      const endpoint = `/api/users/${activeDialog.user.id}/${action}`;
-
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setActiveDialog({ type: null, user: null, isLoading: false });
-        router.refresh();
-      } else {
-        alert(`Failed to ${action} user. Please try again.`);
-        setActiveDialog((prev) => ({ ...prev, isLoading: false }));
+      switch (activeDialog.type) {
+        case "deactivate":
+          await deactivateUser(activeDialog.user.id, token);
+          break;
+        case "suspend":
+          await suspendUser(activeDialog.user.id, token);
+          break;
+        case "remove":
+          await removeUser(activeDialog.user.id, token);
+          break;
+        case "reactivate":
+          await reactivateUser(activeDialog.user.id, token);
+          break;
+        case "restore":
+          await restoreUser(activeDialog.user.id, token);
+          break;
+        case "cancel":
+          await cancelInvite(activeDialog.user.id, token);
+          break;
+        case "resend":
+          await resendInvite(activeDialog.user.id, token);
+          break;
+        default:
+          throw new Error(`Unsupported action: ${activeDialog.type}`);
       }
+
+      setActiveDialog({ type: null, user: null, isLoading: false });
+      router.refresh();
     } catch (error) {
       console.error("Error:", error);
-      alert("Error processing action. Please try again.");
+      alert(`Failed to ${activeDialog.type ?? "perform this action"} user. Please try again.`);
       setActiveDialog((prev) => ({ ...prev, isLoading: false }));
     }
   };
@@ -624,6 +659,14 @@ export function UsersPageClient({
         isOpen={isInviteModalOpen}
         onClose={() => setIsInviteModalOpen(false)}
         onSuccess={handleInviteSuccess}
+        token={token}
+      />
+
+      <EditUserModal
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        onSuccess={handleEditSuccess}
+        user={selectedUser}
         token={token}
       />
 
