@@ -51,6 +51,21 @@ export interface InviteUserRequest {
   position?: string;
 }
 
+export interface UpdateUserProfileRequest {
+  employeeId: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  preferredLocale?: string;
+  phoneNumber?: string;
+  department?: string;
+  position?: string;
+}
+
+export interface UpdateUserRoleRequest {
+  roleName: string;
+}
+
 export interface UserActivity {
   id: number;
   action: string;

@@ -117,12 +117,7 @@ public class EmailNotificationQueueService {
 		}
 		catch (RuntimeException ex) {
 			auditLogService.log(actionPrefix + "_EMAIL_FAILED", actor, notification.getRecipientEmail(), "Email delivery failed and notification was queued for retry");
-			throw new NotificationDeliveryException(
-				notification.getType() == EmailNotificationType.PASSWORD_RESET
-					? "Password reset token was created but the reset email could not be sent. Retry the request or review mail delivery configuration."
-					: "Invite was created but the email could not be sent. The user remains in a pending state and invite delivery should be retried.",
-				ex
-			);
+			log.warn("Immediate email delivery failed for {} to {}: {}. Notification will be retried.", actionPrefix, notification.getRecipientEmail(), ex.getMessage());
 		}
 	}
 

@@ -590,16 +590,16 @@ select {
 
 .dashboard-column {
   display: grid;
-  gap: 24px;
+  gap: 15px;
 }
 
 .panel-card {
-  padding: 24px;
+  padding: 10px;
   position: relative;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(202, 214, 232, 0.78);
-  border-radius: 22px;
+  border-radius: 10px;
   box-shadow: 0 14px 28px rgba(51, 77, 122, 0.07);
 }
 
@@ -633,7 +633,7 @@ select {
   align-items: start;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .panel-title {
@@ -2639,30 +2639,58 @@ select {
   border: 1px solid rgba(202, 214, 232, 0.48);
 }
 
-.invite-user-modal-button-secondary:hover:not(:disabled) {
-  background: rgba(202, 214, 232, 0.5);
+.edit-user-form {
+  display: grid;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.invite-user-modal-button-primary {
-  background: var(--rra-blue-secondary);
-  color: #ffffff;
-  border: none;
+.edit-user-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
 }
 
-.invite-user-modal-button-primary:hover:not(:disabled) {
-  background: #0a52a3;
-  box-shadow: 0 8px 20px rgba(13, 103, 196, 0.24);
-  transform: translateY(-2px);
+.edit-user-section {
+  display: grid;
+  gap: 18px;
 }
 
-.invite-user-modal-button-primary:active:not(:disabled) {
-  transform: translateY(0);
+.section-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(30, 120, 219, 0.12);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.field-muted {
+  display: inline-flex;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.edit-user-actions {
+  justify-content: flex-end;
 }
 
 .invite-user-modal-footer {
-  padding: 0 28px 20px;
-  font-size: 0.88rem;
-  color: var(--text-muted);
   line-height: 1.6;
   flex-shrink: 0;
 }

@@ -36,7 +36,7 @@ public class UserController {
 	}
 
 	@GetMapping
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public List<UserResponse> getUsers(
 		@RequestParam(required = false) String status,
 		@RequestParam(required = false) String search,
@@ -47,19 +47,19 @@ public class UserController {
 	}
 
 	@GetMapping("/invited")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public List<PendingInviteResponse> getPendingInvites() {
 		return userService.getPendingInvites();
 	}
 
 	@GetMapping("/summary")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public UserSummaryResponse getUserSummary() {
 		return userService.getUserSummary();
 	}
 
 	@GetMapping("/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public UserResponse getUser(@PathVariable Long id) {
 		return userService.getUserById(id);
 	}
@@ -71,26 +71,38 @@ public class UserController {
 	}
 
 	@PostMapping
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserResponse> createUser(@RequestBody UserRequest request, Authentication authentication) {
 		return userService.createUser(request, authentication.getName());
 	}
 
 	@PostMapping("/invite")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserInviteResponse> inviteUser(@RequestBody InviteUserRequest request, Authentication authentication) {
 		return userService.inviteUser(request, authentication.getName());
 	}
 
 	@PostMapping("/{id}/resend-invite")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserInviteResponse> resendInvite(@PathVariable Long id, Authentication authentication) {
 		return userService.resendInvite(id, authentication.getName());
 	}
 
-	@PostMapping("/{id}/cancel-invite")
+	@PostMapping("/{id}/resend")
 	@PreAuthorize("hasRole('ADMIN')")
+	public ApiResponse<UserInviteResponse> resendInviteAlias(@PathVariable Long id, Authentication authentication) {
+		return userService.resendInvite(id, authentication.getName());
+	}
+
+	@PostMapping("/{id}/cancel-invite")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<String> cancelInvite(@PathVariable Long id, Authentication authentication) {
+		return userService.cancelInvite(id, authentication.getName());
+	}
+
+	@PostMapping("/{id}/cancel")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ApiResponse<String> cancelInviteAlias(@PathVariable Long id, Authentication authentication) {
 		return userService.cancelInvite(id, authentication.getName());
 	}
 
@@ -100,7 +112,7 @@ public class UserController {
 	}
 
 	@PostMapping("/{id}/role")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserResponse> updateUserRole(
 		@PathVariable Long id,
 		@RequestBody UpdateUserRoleRequest request,
@@ -110,7 +122,7 @@ public class UserController {
 	}
 
 	@PostMapping("/{id}/profile")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserResponse> updateUserProfile(
 		@PathVariable Long id,
 		@RequestBody UpdateUserProfileRequest request,
@@ -119,20 +131,38 @@ public class UserController {
 		return userService.updateUserProfile(id, request, authentication.getName());
 	}
 
-	@PostMapping("/{id}/deactivate")
+	@DeleteMapping("/{id}")
 	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<String> deactivateUser(@PathVariable Long id, Authentication authentication) {
+	public ApiResponse<String> removeUser(@PathVariable Long id, Authentication authentication) {
 		return userService.removeUser(id, authentication.getName());
 	}
 
-	@PostMapping("/{id}/reactivate")
+	@PostMapping("/{id}/remove")
 	@PreAuthorize("hasRole('ADMIN')")
+	public ApiResponse<String> removeUserAlias(@PathVariable Long id, Authentication authentication) {
+		return userService.removeUser(id, authentication.getName());
+	}
+
+	@PostMapping("/{id}/suspend")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ApiResponse<UserResponse> suspendUser(@PathVariable Long id, Authentication authentication) {
+		return userService.suspendUser(id, authentication.getName());
+	}
+
+	@PostMapping("/{id}/deactivate")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ApiResponse<UserResponse> deactivateUserAlias(@PathVariable Long id, Authentication authentication) {
+		return userService.suspendUser(id, authentication.getName());
+	}
+
+	@PostMapping("/{id}/reactivate")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserResponse> reactivateUser(@PathVariable Long id, Authentication authentication) {
 		return userService.reactivateUser(id, authentication.getName());
 	}
 
 	@PostMapping("/{id}/restore")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ADMIN') or hasRole('EDITOR')")
 	public ApiResponse<UserInviteResponse> restoreUser(@PathVariable Long id, Authentication authentication) {
 		return userService.restoreUser(id, authentication.getName());
 	}

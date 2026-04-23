@@ -1,4 +1,12 @@
-import type { User, UserActivity, UserInviteResponse, UserSummary, InviteUserRequest } from "../../types/user";
+import type {
+  User,
+  UserActivity,
+  UserInviteResponse,
+  UserSummary,
+  InviteUserRequest,
+  UpdateUserProfileRequest,
+  UpdateUserRoleRequest,
+} from "../../types/user";
 import { apiClient } from "./axios";
 
 interface ApiResponse<T> {
@@ -33,6 +41,30 @@ export async function getUserSummary(token?: string) {
   return apiClient<UserSummary>("/api/users/summary", { token });
 }
 
+export async function getUser(id: number, token?: string) {
+  return apiClient<User>(`/api/users/${id}`, { token });
+}
+
+export async function updateUserProfile(
+  id: number,
+  data: UpdateUserProfileRequest,
+  token?: string,
+) {
+  return apiClient<ApiResponse<User>>(`/api/users/${id}/profile`, {
+    method: "POST",
+    data,
+    token,
+  });
+}
+
+export async function updateUserRole(id: number, data: UpdateUserRoleRequest, token?: string) {
+  return apiClient<ApiResponse<User>>(`/api/users/${id}/role`, {
+    method: "POST",
+    data,
+    token,
+  });
+}
+
 export async function getUserActivity(id: number, token?: string) {
   return apiClient<UserActivity[]>(`/api/users/${id}/activity`, { token });
 }
@@ -53,6 +85,20 @@ export async function reactivateUser(id: number, token?: string) {
 
 export async function restoreUser(id: number, token?: string) {
   return apiClient<ApiResponse<UserInviteResponse>>(`/api/users/${id}/restore`, {
+    method: "POST",
+    token,
+  });
+}
+
+export async function deactivateUser(id: number, token?: string) {
+  return apiClient<ApiResponse<string>>(`/api/users/${id}/deactivate`, {
+    method: "POST",
+    token,
+  });
+}
+
+export async function cancelInvite(id: number, token?: string) {
+  return apiClient<ApiResponse<string>>(`/api/users/${id}/cancel`, {
     method: "POST",
     token,
   });
