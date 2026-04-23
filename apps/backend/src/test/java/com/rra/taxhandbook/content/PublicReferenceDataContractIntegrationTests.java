@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import java.time.Year;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,16 +87,25 @@ class PublicReferenceDataContractIntegrationTests {
 			.andExpect(jsonPath("$[0].language").value("EN"));
 	}
 
-	@Test
-	void publicDocumentsEndpointReturnsExpectedContract() throws Exception {
-		mockMvc.perform(get("/api/documents"))
-			.andExpect(status().isOk())
-			.andExpect(jsonPath("$.length()").value(1))
-			.andExpect(jsonPath("$[0].id").value(1))
-			.andExpect(jsonPath("$[0].title").value("Tax Handbook 2025"))
-			.andExpect(jsonPath("$[0].fileName").value("RRA_Tax_Handbook_2025_Final.pdf"))
-			.andExpect(jsonPath("$[0].fileUrl").value("/documents/tax-handbook-2025"));
-	}
+@Test
+void publicDocumentsEndpointReturnsExpectedContract() throws Exception {
+    int currentYear = Year.now().getValue();
+
+    mockMvc.perform(get("/api/documents"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.length()").value(1))
+        .andExpect(jsonPath("$[0].id").value(1))
+        .andExpect(jsonPath("$[0].title").value("Tax Handbook " + currentYear))
+        .andExpect(jsonPath("$[0].fileName")
+            .value("RRA_Tax_Handbook_" + currentYear + "_Final.pdf"))
+        .andExpect(jsonPath("$[0].fileUrl")
+            .value("/documents/tax-handbook-" + currentYear));
+}
+
+
+
+
+
 
 	@Test
 	void publicFaqsEndpointReturnsExpectedContract() throws Exception {

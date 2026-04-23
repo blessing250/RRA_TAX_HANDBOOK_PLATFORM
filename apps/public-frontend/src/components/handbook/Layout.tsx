@@ -1,6 +1,8 @@
 'use client';
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
+
+const currentYear = new Date().getFullYear();
 
 interface UtilBarProps {
   onSearch: () => void;
@@ -62,9 +64,7 @@ interface HeaderProps {
   showMobileMenu?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onLogoClick, onBackClick, showMobileMenu }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+export const Header: React.FC<HeaderProps> = ({ onLogoClick }) => {
   return (
     <header
       style={{
@@ -93,33 +93,33 @@ export const Header: React.FC<HeaderProps> = ({ onLogoClick, onBackClick, showMo
       />
 
       <div
+        className="desktop-only"
         style={{
           width: '1px',
           height: '36px',
           background: '#d0d9e8',
           margin: '0 8px',
-          display: window.innerWidth > 768 ? 'block' : 'none',
         }}
       />
 
       <div
+        className="desktop-only"
         style={{
           fontSize: '13px',
           fontWeight: 500,
           color: '#1a3a6b',
-          display: window.innerWidth > 768 ? 'block' : 'none',
           flexGrow: 1,
         }}
       >
-        Tax Handbook-Edition 2025
+        Tax Handbook-Edition <span style={{ fontWeight: 'bold' }}>{currentYear}</span>
       </div>
 
       <a
         href="https://www.rra.gov.rw"
         target="_blank"
         rel="noopener noreferrer"
+        className="tablet-up-only"
         style={{
-          display: window.innerWidth > 640 ? 'flex' : 'none',
           alignItems: 'center',
           gap: '6px',
           color: '#1a5fa8',
@@ -194,7 +194,7 @@ export const Footer: React.FC<FooterProps> = ({ children }) => (
     }}
   >
     <span style={{ color: '#a0b4d0' }}>
-      Copyright © 2025 All Rights Reserved by Rwanda Revenue Authority
+      Copyright © {currentYear} All Rights Reserved by Rwanda Revenue Authority
     </span>
     {children}
   </footer>
@@ -219,8 +219,8 @@ export const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose, o
         zIndex: 500,
         alignItems: 'flex-start',
         justifyContent: 'center',
-        paddingTop: window.innerWidth <= 640 ? '20px' : '80px',
       }}
+      className="search-overlay"
       onClick={onClose}
     >
       <div
