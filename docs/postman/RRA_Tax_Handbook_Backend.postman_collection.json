@@ -45,6 +45,22 @@
     {
       "key": "resetToken",
       "value": ""
+    },
+    {
+      "key": "articleId",
+      "value": "1"
+    },
+    {
+      "key": "categoryId",
+      "value": "1"
+    },
+    {
+      "key": "faqId",
+      "value": "1"
+    },
+    {
+      "key": "documentId",
+      "value": "1"
     }
   ],
   "auth": {
@@ -136,7 +152,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"sysempadmin001\",\n  \"password\": \"Admin@123\"\n}"
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"Admin@123\"\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/api/auth/login",
@@ -671,43 +687,6 @@
           }
         },
         {
-          "name": "Delete User",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/users/{{userId}}",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "users",
-                "{{userId}}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Suspend User",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/users/{{userId}}/suspend",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "users",
-                "{{userId}}",
-                "suspend"
-              ]
-            }
-          }
-        },
-        {
           "name": "Deactivate User",
           "request": {
             "method": "POST",
@@ -723,7 +702,8 @@
                 "{{userId}}",
                 "deactivate"
               ]
-            }
+            },
+            "description": "Deactivates user access. This is the canonical endpoint for disabling an account without deleting the user record."
           }
         },
         {
@@ -799,40 +779,6 @@
           ]
         },
         {
-          "name": "Resend Invite Alias",
-          "request": {
-            "description": "Alias for resend-invite. inviteToken is hidden by default and is only returned in the response when APP_SECURITY_EXPOSE_SENSITIVE_TOKENS=true.",
-            "method": "POST",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/users/{{userId}}/resend",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "users",
-                "{{userId}}",
-                "resend"
-              ]
-            }
-          },
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "const json = pm.response.json();",
-                  "if (json.data && json.data.inviteToken) {",
-                  "  pm.collectionVariables.set('inviteToken', json.data.inviteToken);",
-                  "}"
-                ]
-              }
-            }
-          ]
-        },
-        {
           "name": "Cancel Invite",
           "request": {
             "method": "POST",
@@ -847,44 +793,6 @@
                 "users",
                 "{{userId}}",
                 "cancel-invite"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Cancel Invite Alias",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/users/{{userId}}/cancel",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "users",
-                "{{userId}}",
-                "cancel"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove User Alias",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/api/users/{{userId}}/remove",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "users",
-                "{{userId}}",
-                "remove"
               ]
             }
           }
@@ -940,13 +848,19 @@
             },
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/articles",
+              "raw": "{{baseUrl}}/api/articles?locale=EN",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "articles"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
               ]
             }
           }
@@ -965,10 +879,10 @@
                 "value": "application/json"
               }
             ],
-              "body": {
-                "mode": "raw",
-                "raw": "{\n  \"keyword\": \"VAT\",\n  \"language\": \"EN\"\n}"
-              },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"keyword\": \"VAT\",\n  \"language\": \"EN\"\n}"
+            },
             "url": {
               "raw": "{{baseUrl}}/api/articles/search",
               "host": [
@@ -991,13 +905,19 @@
             },
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/categories",
+              "raw": "{{baseUrl}}/api/categories?locale=EN",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "categories"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
               ]
             }
           }
@@ -1011,13 +931,19 @@
             },
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/faqs",
+              "raw": "{{baseUrl}}/api/faqs?locale=EN",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
                 "faqs"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
               ]
             }
           }
@@ -2196,6 +2122,574 @@
               "path": [
                 "api",
                 "audit-logs"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles/{{articleId}}?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles",
+                "{{articleId}}"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"VAT Basics Updated\",\n  \"summary\": \"Updated overview of VAT rules.\",\n  \"content\": \"Updated article content.\",\n  \"language\": \"EN\",\n  \"status\": \"PUBLISHED\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles/{{articleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles",
+                "{{articleId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles/{{articleId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles",
+                "{{articleId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories/{{categoryId}}?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories",
+                "{{categoryId}}"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Income Tax Updated\",\n  \"language\": \"EN\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories/{{categoryId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories",
+                "{{categoryId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories/{{categoryId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories",
+                "{{categoryId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs/{{faqId}}?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs",
+                "{{faqId}}"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"Who can use this platform?\",\n  \"answer\": \"Authorized RRA employees with assigned roles can use this platform.\",\n  \"language\": \"EN\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs/{{faqId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs",
+                "{{faqId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs/{{faqId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs",
+                "{{faqId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - Get By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents/{{documentId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents",
+                "{{documentId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Tax Guide Updated\",\n  \"fileName\": \"tax-guide-updated.pdf\",\n  \"fileUrl\": \"https://example.org/documents/tax-guide-updated.pdf\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents/{{documentId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents",
+                "{{documentId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents/{{documentId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents",
+                "{{documentId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - Archive",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles/{{articleId}}/archive?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles",
+                "{{articleId}}",
+                "archive"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Articles - Restore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/articles/{{articleId}}/restore?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "articles",
+                "{{articleId}}",
+                "restore"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - Archive",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories/{{categoryId}}/archive?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories",
+                "{{categoryId}}",
+                "archive"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Categories - Restore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/categories/{{categoryId}}/restore?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories",
+                "{{categoryId}}",
+                "restore"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - Archive",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs/{{faqId}}/archive?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs",
+                "{{faqId}}",
+                "archive"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin FAQs - Restore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/faqs/{{faqId}}/restore?locale=EN",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "faqs",
+                "{{faqId}}",
+                "restore"
+              ],
+              "query": [
+                {
+                  "key": "locale",
+                  "value": "EN"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - Archive",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents/{{documentId}}/archive",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents",
+                "{{documentId}}",
+                "archive"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Admin Documents - Restore",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/documents/{{documentId}}/restore",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "documents",
+                "{{documentId}}",
+                "restore"
               ]
             }
           }

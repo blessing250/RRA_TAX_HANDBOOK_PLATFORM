@@ -50,25 +50,25 @@ public class AdminContentController {
 	}
 
 	@GetMapping("/sections")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public java.util.List<AdminSectionResponse> getSections(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminSections(locale);
 	}
 
 	@GetMapping("/summary")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public ContentSummaryResponse getSummary() {
 		return contentStructureService.getContentSummary();
 	}
 
 	@GetMapping("/homepage")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public AdminHomepageResponse getHomepage(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminHomepage(locale);
 	}
 
 	@GetMapping("/topics")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public java.util.List<TopicSummaryResponse> getTopics(
 		@RequestParam(defaultValue = "EN") LanguageCode locale,
 		@RequestParam(required = false) ContentStatus status
@@ -77,49 +77,49 @@ public class AdminContentController {
 	}
 
 	@GetMapping("/topics/review-queue")
-	@PreAuthorize("hasAnyRole('REVIEWER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('REVIEWER','ADMIN','AUDITOR')")
 	public java.util.List<TopicSummaryResponse> getReviewQueue(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminTopics(locale, ContentStatus.REVIEW);
 	}
 
 	@GetMapping("/topics/review-queue/details")
-	@PreAuthorize("hasAnyRole('REVIEWER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('REVIEWER','ADMIN','AUDITOR')")
 	public java.util.List<TopicDetailResponse> getReviewQueueDetails(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminTopicDetails(locale, ContentStatus.REVIEW);
 	}
 
 	@GetMapping("/topics/publish-queue")
-	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR')")
 	public java.util.List<TopicSummaryResponse> getPublishQueue(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminTopics(locale, ContentStatus.APPROVED);
 	}
 
 	@GetMapping("/topics/publish-queue/details")
-	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR')")
 	public java.util.List<TopicDetailResponse> getPublishQueueDetails(@RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminTopicDetails(locale, ContentStatus.APPROVED);
 	}
 
 	@GetMapping("/topics/{topicId}")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public TopicDetailResponse getTopic(@PathVariable Long topicId, @RequestParam(defaultValue = "EN") LanguageCode locale) {
 		return contentStructureService.getAdminTopic(topicId, locale);
 	}
 
 	@PostMapping("/sections")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<SectionSummaryResponse> createSection(@RequestBody AdminCreateSectionRequest request, Authentication authentication) {
 		return contentStructureService.createSection(request, authentication.getName());
 	}
 
 	@PutMapping("/sections/{sectionId}")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<AdminSectionResponse> updateSection(@PathVariable Long sectionId, @RequestBody AdminUpdateSectionRequest request, Authentication authentication) {
 		return contentStructureService.updateSection(sectionId, request, authentication.getName());
 	}
 
 	@PutMapping("/homepage")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<AdminHomepageResponse> updateHomepage(@RequestBody AdminHomepageRequest request, Authentication authentication) {
 		return contentStructureService.updateHomepage(request, authentication.getName());
 	}
@@ -131,25 +131,25 @@ public class AdminContentController {
 	}
 
 	@PostMapping("/topics")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<TopicDetailResponse> createTopic(@RequestBody AdminCreateTopicRequest request, Authentication authentication) {
 		return contentStructureService.createTopic(request, authentication.getName());
 	}
 
 	@PutMapping("/topics/{topicId}")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<TopicDetailResponse> updateTopic(@PathVariable Long topicId, @RequestBody AdminUpdateTopicRequest request, Authentication authentication) {
 		return contentStructureService.updateTopic(topicId, request, authentication.getName());
 	}
 
 	@PostMapping("/topics/{topicId}/blocks")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<TopicBlockResponse> createTopicBlock(@PathVariable Long topicId, @RequestBody AdminCreateTopicBlockRequest request, Authentication authentication) {
 		return contentStructureService.createTopicBlock(topicId, request, authentication.getName());
 	}
 
 	@PutMapping("/blocks/{blockId}")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','ADMIN')")
 	public ApiResponse<TopicBlockResponse> updateTopicBlock(@PathVariable Long blockId, @RequestBody AdminUpdateTopicBlockRequest request, Authentication authentication) {
 		return contentStructureService.updateTopicBlock(blockId, request, authentication.getName());
 	}
@@ -167,7 +167,7 @@ public class AdminContentController {
 	}
 
 	@PostMapping("/topics/{topicId}/workflow")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN')")
 	public ApiResponse<TopicWorkflowResponse> transitionTopic(
 		@PathVariable Long topicId,
 		@RequestBody TopicWorkflowActionRequest request,
@@ -177,13 +177,13 @@ public class AdminContentController {
 	}
 
 	@GetMapping("/topics/{topicId}/workflow-history")
-	@PreAuthorize("hasAnyRole('EDITOR','CONTENT_OFFICER','REVIEWER','PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('EDITOR','REVIEWER','PUBLISHER','ADMIN','AUDITOR')")
 	public java.util.List<TopicWorkflowHistoryResponse> getTopicWorkflowHistory(@PathVariable Long topicId) {
 		return topicWorkflowService.getWorkflowHistory(topicId);
 	}
 
 	@GetMapping("/topics/{topicId}/publish-readiness")
-	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR','VIEWER')")
+	@PreAuthorize("hasAnyRole('PUBLISHER','ADMIN','AUDITOR')")
 	public TopicPublishReadinessResponse getTopicPublishReadiness(@PathVariable Long topicId) {
 		return topicWorkflowService.getPublishReadiness(topicId);
 	}
@@ -194,3 +194,4 @@ public class AdminContentController {
 		return topicWorkflowService.processScheduledPublishes(authentication);
 	}
 }
+

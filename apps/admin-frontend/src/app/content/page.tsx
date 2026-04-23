@@ -59,12 +59,12 @@ async function getContentData(token: string, role: string | null, locale: Locale
   ]);
 
   const reviewQueue =
-    role === "ADMIN" || role === "REVIEWER" || role === "AUDITOR" || role === "VIEWER"
+    role === "ADMIN" || role === "REVIEWER" || role === "AUDITOR"
       ? await safeRead(getAdminReviewQueueDetails(token, locale), [] as TopicDetail[])
       : ([] as TopicDetail[]);
 
   const publishQueue =
-    role === "ADMIN" || role === "PUBLISHER" || role === "AUDITOR" || role === "VIEWER"
+    role === "ADMIN" || role === "PUBLISHER" || role === "AUDITOR"
       ? await safeRead(getAdminPublishQueueDetails(token, locale), [] as TopicDetail[])
       : ([] as TopicDetail[]);
 

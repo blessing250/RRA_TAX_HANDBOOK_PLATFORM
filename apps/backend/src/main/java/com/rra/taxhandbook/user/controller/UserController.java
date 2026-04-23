@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -89,21 +88,9 @@ public class UserController {
 		return userService.resendInvite(id, authentication.getName());
 	}
 
-	@PostMapping("/{id}/resend")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<UserInviteResponse> resendInviteAlias(@PathVariable Long id, Authentication authentication) {
-		return userService.resendInvite(id, authentication.getName());
-	}
-
 	@PostMapping("/{id}/cancel-invite")
 	@PreAuthorize("hasRole('ADMIN')")
 	public ApiResponse<String> cancelInvite(@PathVariable Long id, Authentication authentication) {
-		return userService.cancelInvite(id, authentication.getName());
-	}
-
-	@PostMapping("/{id}/cancel")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<String> cancelInviteAlias(@PathVariable Long id, Authentication authentication) {
 		return userService.cancelInvite(id, authentication.getName());
 	}
 
@@ -132,28 +119,10 @@ public class UserController {
 		return userService.updateUserProfile(id, request, authentication.getName());
 	}
 
-	@DeleteMapping("/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<String> removeUser(@PathVariable Long id, Authentication authentication) {
-		return userService.removeUser(id, authentication.getName());
-	}
-
-	@PostMapping("/{id}/remove")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<String> removeUserAlias(@PathVariable Long id, Authentication authentication) {
-		return userService.removeUser(id, authentication.getName());
-	}
-
-	@PostMapping("/{id}/suspend")
-	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<UserResponse> suspendUser(@PathVariable Long id, Authentication authentication) {
-		return userService.suspendUser(id, authentication.getName());
-	}
-
 	@PostMapping("/{id}/deactivate")
 	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<UserResponse> deactivateUserAlias(@PathVariable Long id, Authentication authentication) {
-		return userService.suspendUser(id, authentication.getName());
+	public ApiResponse<String> deactivateUser(@PathVariable Long id, Authentication authentication) {
+		return userService.removeUser(id, authentication.getName());
 	}
 
 	@PostMapping("/{id}/reactivate")

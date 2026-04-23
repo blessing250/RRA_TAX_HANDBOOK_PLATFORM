@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev --webpack -p 3001",
+    "dev:turbopack": "next dev -p 3001",
+    "clean:dev": "node scripts/clean-next-dev.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."

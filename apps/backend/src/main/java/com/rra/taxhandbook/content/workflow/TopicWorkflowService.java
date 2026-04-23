@@ -152,7 +152,7 @@ public class TopicWorkflowService {
 	private void applyAction(Topic topic, TopicWorkflowAction action, TopicWorkflowActionRequest request, Authentication authentication, String comment) {
 		switch (action) {
 			case SUBMIT_FOR_REVIEW -> {
-				requireAnyRole(authentication, "EDITOR", "CONTENT_OFFICER", "ADMIN");
+				requireAnyRole(authentication, "EDITOR", "ADMIN");
 				requireStatus(topic, ContentStatus.DRAFT, ContentStatus.REVIEW);
 				topic.clearScheduledPublish();
 				topic.changeStatus(ContentStatus.REVIEW);
