@@ -38,14 +38,7 @@ export async function getUserActivity(id: number, token?: string) {
 }
 
 export async function removeUser(id: number, token?: string) {
-  return apiClient<ApiResponse<string>>(`/api/users/${id}`, {
-    method: "DELETE",
-    token,
-  });
-}
-
-export async function suspendUser(id: number, token?: string) {
-  return apiClient<ApiResponse<User>>(`/api/users/${id}/suspend`, {
+  return apiClient<ApiResponse<string>>(`/api/users/${id}/deactivate`, {
     method: "POST",
     token,
   });
@@ -66,7 +59,7 @@ export async function restoreUser(id: number, token?: string) {
 }
 
 export async function resendInvite(id: number, token?: string) {
-  return apiClient<ApiResponse<UserInviteResponse>>(`/api/users/${id}/resend`, {
+  return apiClient<ApiResponse<UserInviteResponse>>(`/api/users/${id}/resend-invite`, {
     method: "POST",
     token,
   });

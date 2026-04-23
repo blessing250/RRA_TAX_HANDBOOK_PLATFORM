@@ -78,8 +78,6 @@ interface ActionMenuProps {
   onEdit: (user: User) => void;
   onDeactivate: (user: User) => void;
   onReactivate: (user: User) => void;
-  onRemove: (user: User) => void;
-  onSuspend: (user: User) => void;
   onCancel: (user: User) => void;
   onResend: (user: User) => void;
   onRestore: (user: User) => void;
@@ -90,8 +88,6 @@ function ActionMenu({
   onEdit,
   onDeactivate,
   onReactivate,
-  onRemove,
-  onSuspend,
   onCancel,
   onResend,
   onRestore,
@@ -152,30 +148,6 @@ function ActionMenu({
               >
                 <span className="action-menu-icon">Off</span>
                 Deactivate
-              </button>
-
-              <button
-                className="action-menu-item action-menu-item-warning"
-                onClick={() => {
-                  onSuspend(user);
-                  setIsOpen(false);
-                }}
-                type="button"
-              >
-                <span className="action-menu-icon">Hold</span>
-                Suspend
-              </button>
-
-              <button
-                className="action-menu-item action-menu-item-danger"
-                onClick={() => {
-                  onRemove(user);
-                  setIsOpen(false);
-                }}
-                type="button"
-              >
-                <span className="action-menu-icon">Del</span>
-                Remove
               </button>
             </>
           )}
@@ -260,8 +232,6 @@ type DialogType =
   | null
   | "deactivate"
   | "reactivate"
-  | "remove"
-  | "suspend"
   | "cancel"
   | "resend"
   | "restore";
@@ -323,14 +293,6 @@ export function UsersPageClient({
     setActiveDialog({ type: "reactivate", user, isLoading: false });
   };
 
-  const handleRemoveClick = (user: User) => {
-    setActiveDialog({ type: "remove", user, isLoading: false });
-  };
-
-  const handleSuspendClick = (user: User) => {
-    setActiveDialog({ type: "suspend", user, isLoading: false });
-  };
-
   const handleCancelClick = (user: User) => {
     setActiveDialog({ type: "cancel", user, isLoading: false });
   };
@@ -350,7 +312,18 @@ export function UsersPageClient({
 
     try {
       const action = activeDialog.type;
-      const endpoint = `/api/users/${activeDialog.user.id}/${action}`;
+      const endpointByAction: Record<string, string> = {
+        cancel: `/api/users/${activeDialog.user.id}/cancel-invite`,
+        deactivate: `/api/users/${activeDialog.user.id}/deactivate`,
+        reactivate: `/api/users/${activeDialog.user.id}/reactivate`,
+        resend: `/api/users/${activeDialog.user.id}/resend-invite`,
+        restore: `/api/users/${activeDialog.user.id}/restore`,
+      };
+      const endpoint = endpointByAction[action ?? ""];
+
+      if (!endpoint) {
+        throw new Error(`Unsupported user action: ${action}`);
+      }
 
       const response = await fetch(endpoint, {
         method: "POST",
@@ -389,13 +362,6 @@ export function UsersPageClient({
           confirmText: "Deactivate",
           isDangerous: true,
         };
-      case "suspend":
-        return {
-          title: "Suspend User",
-          message: `Are you sure you want to suspend ${activeDialog.user.fullName}? They will be temporarily unable to access the system.`,
-          confirmText: "Suspend",
-          isDangerous: true,
-        };
       case "reactivate":
         return {
           title: "Reactivate User",
@@ -409,13 +375,6 @@ export function UsersPageClient({
           message: `Are you sure you want to restore ${activeDialog.user.fullName}? They will be able to sign in again.`,
           confirmText: "Restore",
           isDangerous: false,
-        };
-      case "remove":
-        return {
-          title: "Remove User",
-          message: `Are you sure you want to remove ${activeDialog.user.fullName}? This action will mark them as removed.`,
-          confirmText: "Remove",
-          isDangerous: true,
         };
       case "cancel":
         return {
@@ -568,8 +527,6 @@ export function UsersPageClient({
                   onEdit={handleEdit}
                   onDeactivate={handleDeactivateClick}
                   onReactivate={handleReactivateClick}
-                  onRemove={handleRemoveClick}
-                  onSuspend={handleSuspendClick}
                   onCancel={handleCancelClick}
                   onResend={handleResendClick}
                   onRestore={handleRestoreClick}

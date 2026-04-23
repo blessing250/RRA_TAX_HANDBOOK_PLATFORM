@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rra.taxhandbook.common.enums.LanguageCode;
 import com.rra.taxhandbook.faq.dto.FAQResponse;
 import com.rra.taxhandbook.faq.service.FAQService;
 
@@ -20,7 +22,7 @@ public class PublicFAQController {
 	}
 
 	@GetMapping
-	public List<FAQResponse> getFAQs() {
-		return faqService.getFAQs();
+	public List<FAQResponse> getFAQs(@RequestParam(defaultValue = "EN") LanguageCode locale) {
+		return faqService.getFAQs(locale);
 	}
 }

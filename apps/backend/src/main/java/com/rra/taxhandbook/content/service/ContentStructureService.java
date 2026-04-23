@@ -529,27 +529,32 @@ public class ContentStructureService {
 		if (request.cards().size() != 4) {
 			throw new IllegalArgumentException("Homepage must contain exactly four cards.");
 		}
-		List<Section> cardSections = request.cards().stream()
-			.map(card -> resolveHomepageCardSection(
+		Instant now = Instant.now();
+		HomepageContent homepageContent = homepageContentRepository.findFirstByOrderByUpdatedAtDesc().orElse(null);
+		if (homepageContent == null) {
+			homepageContent = homepageContentRepository.save(new HomepageContent(ContentStatus.DRAFT, now));
+		}
+		List<HomepageCard> existingCards = homepageCardRepository
+			.findByHomepageContent_IdOrderBySortOrderAsc(homepageContent.getId());
+		List<Section> cardSections = new java.util.ArrayList<>();
+		for (int index = 0; index < request.cards().size(); index++) {
+			var card = request.cards().get(index);
+			Section fallbackSection = index < existingCards.size() ? existingCards.get(index).getSection() : null;
+			cardSections.add(resolveHomepageCardSection(
 				card.sectionId(),
 				card.sectionSlug(),
 				card.title(),
 				card.description(),
 				card.sortOrder(),
-				request.locale()
-			))
-			.toList();
+				request.locale(),
+				fallbackSection
+			));
+		}
 		long uniqueSectionCount = cardSections.stream().map(Section::getId).distinct().count();
 		if (uniqueSectionCount != request.cards().size()) {
-			throw new IllegalArgumentException("Homepage cards must reference four different sections.");
+			throw new IllegalArgumentException(buildDuplicateHomepageSectionMessage(cardSections));
 		}
 
-		Instant now = Instant.now();
-		HomepageContent homepageContent = homepageContentRepository.findFirstByOrderByUpdatedAtDesc().orElse(null);
-		if (homepageContent == null) {
-			homepageContent = homepageContentRepository.save(new HomepageContent(ContentStatus.PUBLISHED, now));
-		}
-		homepageContent.changeStatus(ContentStatus.PUBLISHED);
 		homepageContent.touch(now);
 		homepageContentRepository.save(homepageContent);
 
@@ -697,14 +702,16 @@ public class ContentStructureService {
 	}
 
 	private void requireEditableTopic(Topic topic) {
-		if (topic.getStatus() != ContentStatus.DRAFT) {
-			throw new IllegalArgumentException("Only draft topics can be edited. Use REQUEST_CHANGES to return content to draft before editing.");
+		if (!(topic.getStatus() == ContentStatus.DRAFT || topic.getStatus() == ContentStatus.ARCHIVED)) {
+			throw new IllegalArgumentException("Only draft or archived topics can be edited. Use REQUEST_CHANGES to return content to draft before editing.");
 		}
 	}
 
 	private void requireEditableTopicBlock(TopicBlock topicBlock) {
-		if (topicBlock.getStatus() != ContentStatus.DRAFT || topicBlock.getTopic().getStatus() != ContentStatus.DRAFT) {
-			throw new IllegalArgumentException("Only blocks on draft topics can be edited. Use REQUEST_CHANGES to return content to draft before editing.");
+		boolean blockEditable = topicBlock.getStatus() == ContentStatus.DRAFT || topicBlock.getStatus() == ContentStatus.ARCHIVED;
+		boolean topicEditable = topicBlock.getTopic().getStatus() == ContentStatus.DRAFT || topicBlock.getTopic().getStatus() == ContentStatus.ARCHIVED;
+		if (!blockEditable || !topicEditable) {
+			throw new IllegalArgumentException("Only blocks on draft or archived topics can be edited. Use REQUEST_CHANGES to return content to draft before editing.");
 		}
 	}
 
@@ -759,7 +766,8 @@ public class ContentStructureService {
 		String cardTitle,
 		String cardDescription,
 		Integer sortOrder,
-		LanguageCode locale
+		LanguageCode locale,
+		Section fallbackSection
 	) {
 		if (sectionId != null) {
 			return sectionRepository.findById(sectionId)
@@ -772,6 +780,9 @@ public class ContentStructureService {
 				return sectionBySlug.get().getSection();
 			}
 		}
+		if (fallbackSection != null) {
+			return fallbackSection;
+		}
 		if (cardTitle != null && !cardTitle.isBlank()) {
 			return sectionTranslationRepository.findFirstByNameIgnoreCaseAndLocale(cardTitle.trim(), locale)
 				.orElseGet(() -> sectionTranslationRepository.findFirstByNameIgnoreCaseAndLocale(cardTitle.trim(), LanguageCode.EN)
@@ -780,6 +791,19 @@ public class ContentStructureService {
 		}
 
 		throw new IllegalArgumentException("Homepage card requires sectionId, sectionSlug, or a title matching an existing section.");
+	}
+
+	private String buildDuplicateHomepageSectionMessage(List<Section> cardSections) {
+		java.util.Map<Long, java.util.List<Integer>> positionsBySection = new java.util.LinkedHashMap<>();
+		for (int index = 0; index < cardSections.size(); index++) {
+			Long sectionId = cardSections.get(index).getId();
+			positionsBySection.computeIfAbsent(sectionId, ignored -> new java.util.ArrayList<>()).add(index + 1);
+		}
+		String duplicates = positionsBySection.entrySet().stream()
+			.filter(entry -> entry.getValue().size() > 1)
+			.map(entry -> "section " + entry.getKey() + " on cards " + entry.getValue())
+			.collect(java.util.stream.Collectors.joining("; "));
+		return "Homepage cards must reference four different sections. Duplicate selection: " + duplicates + ". Choose a different section for each card.";
 	}
 
 	private SectionTranslation createHomepageCardSection(
@@ -798,7 +822,7 @@ public class ContentStructureService {
 			null,
 			SectionType.MAIN,
 			sortOrder == null ? 1 : sortOrder,
-			ContentStatus.PUBLISHED,
+			ContentStatus.DRAFT,
 			null,
 			true,
 			now,

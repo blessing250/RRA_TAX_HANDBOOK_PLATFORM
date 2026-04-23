@@ -38,8 +38,6 @@ public class DataInitializer implements CommandLineRunner {
 
 	private void initializeRoles() {
 		seedRole("ADMIN", "Administrator role with full access");
-		seedRole("CONTENT_OFFICER", "Content officer role");
-		seedRole("VIEWER", "Viewer role with read-only access");
 	}
 
 	private void seedRole(String name, String description) {

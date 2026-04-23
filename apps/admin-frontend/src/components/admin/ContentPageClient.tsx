@@ -54,15 +54,20 @@ interface ContentPageClientProps {
 
 const statusFilters = ["ALL", "DRAFT", "REVIEW", "APPROVED", "PUBLISHED", "ARCHIVED"];
 const localeOptions: LocaleCode[] = ["EN", "FR", "KIN"];
+const adminDateFormatter = new Intl.DateTimeFormat("en-GB", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: false,
+});
 
 const roleDetails = [
   {
     name: "EDITOR",
     scope: "Create sections, create drafts, add content blocks, and submit topics for review.",
-  },
-  {
-    name: "CONTENT_OFFICER",
-    scope: "Operational content creation role with the same drafting workflow as editors.",
   },
   {
     name: "REVIEWER",
@@ -80,10 +85,6 @@ const roleDetails = [
     name: "AUDITOR",
     scope: "Read-only content oversight for compliance and monitoring.",
   },
-  {
-    name: "VIEWER",
-    scope: "Read-only access to content lists, statuses, and queues.",
-  },
 ];
 
 function slugify(value: string) {
@@ -92,6 +93,13 @@ function slugify(value: string) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function formatAdminDateTime(value: string | null | undefined, fallback: string) {
+  if (!value) {
+    return fallback;
+  }
+  return adminDateFormatter.format(new Date(value));
 }
 
 function pageUrl(params: Record<string, string | undefined>) {
@@ -116,7 +124,7 @@ function statusClassName(status: string) {
 
 function permittedActions(role?: string | null, status?: string): TopicWorkflowAction[] {
   const actions: TopicWorkflowAction[] = [];
-  if ((role === "ADMIN" || role === "EDITOR" || role === "CONTENT_OFFICER") && (status === "DRAFT" || status === "REVIEW")) {
+  if ((role === "ADMIN" || role === "EDITOR") && (status === "DRAFT" || status === "REVIEW")) {
     actions.push("SUBMIT_FOR_REVIEW");
   }
   if ((role === "ADMIN" || role === "REVIEWER") && status === "REVIEW") {
@@ -357,6 +365,15 @@ export function ContentPageClient({
     setIsBusy(true);
     setMessage(null);
     try {
+      const cardSectionIds = homepageForm.cards.map((card) => Number(card.sectionId));
+      if (cardSectionIds.some((sectionId) => !Number.isFinite(sectionId) || sectionId <= 0)) {
+        setMessage({ tone: "error", text: "Each homepage card must select a section." });
+        return;
+      }
+      if (new Set(cardSectionIds).size !== cardSectionIds.length) {
+        setMessage({ tone: "error", text: "Homepage cards must link to four different sections." });
+        return;
+      }
       await updateAdminHomepage(token, {
         locale,
         kicker: homepageForm.kicker,
@@ -365,7 +382,7 @@ export function ContentPageClient({
         searchLabel: homepageForm.searchLabel,
         helpLabel: homepageForm.helpLabel,
         cards: homepageForm.cards.map((card, index) => ({
-          sectionId: Number(card.sectionId),
+          sectionId: cardSectionIds[index],
           sortOrder: Number(card.sortOrder || index + 1),
           title: card.title,
           description: card.description,
@@ -660,7 +677,7 @@ export function ContentPageClient({
                       </td>
                       <td>{topic.topicType}</td>
                       <td>
-                        {topic.scheduledPublishAt ? new Date(topic.scheduledPublishAt).toLocaleString() : "Not scheduled"}
+                        {formatAdminDateTime(topic.scheduledPublishAt, "Not scheduled")}
                       </td>
                       <td>
                         <div className="content-action-stack">
@@ -756,7 +773,7 @@ export function ContentPageClient({
               <span>Status {homepage.status}</span>
               <span>
                 Updated{" "}
-                {homepage.updatedAt ? new Date(homepage.updatedAt).toLocaleString() : "Not published yet"}
+                {formatAdminDateTime(homepage.updatedAt, "Not published yet")}
               </span>
             </div>
             <label>
@@ -979,7 +996,7 @@ export function ContentPageClient({
                 <span>Section #{detailTopic.sectionId}</span>
                 <span>
                   Updated{" "}
-                  {detailTopic.lastUpdated ? new Date(detailTopic.lastUpdated).toLocaleString() : "not yet"}
+                  {formatAdminDateTime(detailTopic.lastUpdated, "not yet")}
                 </span>
               </div>
 
