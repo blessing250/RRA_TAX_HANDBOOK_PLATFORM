@@ -152,8 +152,8 @@ public class UserController {
 
 	@PostMapping("/{id}/deactivate")
 	@PreAuthorize("hasRole('ADMIN')")
-	public ApiResponse<UserResponse> deactivateUserAlias(@PathVariable Long id, Authentication authentication) {
-		return userService.suspendUser(id, authentication.getName());
+	public ApiResponse<String> deactivateUserAlias(@PathVariable Long id, Authentication authentication) {
+		return userService.removeUser(id, authentication.getName());
 	}
 
 	@PostMapping("/{id}/reactivate")

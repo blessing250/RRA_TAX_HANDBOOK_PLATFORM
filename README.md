@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RRA Tax Handbook Platform
 
 Monorepo structure:
@@ -7,3 +8,6 @@ Monorepo structure:
 - `apps/admin-frontend`: admin dashboard scaffold
 - `docs`: top-level architecture and delivery docs
 - `infra`: Docker, nginx, and helper scripts
+=======
+# Tax hand book
+>>>>>>> 99f5382 (init)
