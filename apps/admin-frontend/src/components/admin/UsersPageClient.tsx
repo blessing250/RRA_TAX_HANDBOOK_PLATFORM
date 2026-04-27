@@ -336,24 +336,34 @@ export function UsersPageClient({
     setActiveDialog((prev) => ({ ...prev, isLoading: true }));
 
     try {
-      const action = activeDialog.type;
-      const endpoint = `/api/users/${activeDialog.user.id}/${action}`;
-
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setActiveDialog({ type: null, user: null, isLoading: false });
-        router.refresh();
-      } else {
-        alert(`Failed to ${action} user. Please try again.`);
-        setActiveDialog((prev) => ({ ...prev, isLoading: false }));
+      switch (activeDialog.type) {
+        case "deactivate":
+          await deactivateUser(activeDialog.user.id, token);
+          break;
+        case "suspend":
+          await suspendUser(activeDialog.user.id, token);
+          break;
+        case "remove":
+          await removeUser(activeDialog.user.id, token);
+          break;
+        case "reactivate":
+          await reactivateUser(activeDialog.user.id, token);
+          break;
+        case "restore":
+          await restoreUser(activeDialog.user.id, token);
+          break;
+        case "cancel":
+          await cancelInvite(activeDialog.user.id, token);
+          break;
+        case "resend":
+          await resendInvite(activeDialog.user.id, token);
+          break;
+        default:
+          throw new Error(`Unsupported action: ${activeDialog.type}`);
       }
+
+      setActiveDialog({ type: null, user: null, isLoading: false });
+      router.refresh();
     } catch (error) {
       console.error("Error:", error);
       alert(`Failed to ${activeDialog.type ?? "perform this action"} user. Please try again.`);
