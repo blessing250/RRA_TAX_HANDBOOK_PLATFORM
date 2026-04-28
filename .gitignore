@@ -12,6 +12,7 @@ yarn-error.log*
 # =========================
 dist/
 build/
+out/
 .out/
 .next/
 .cache/
@@ -54,5 +55,6 @@ Thumbs.db
 # =========================
 # Misc
 # =========================
+docs/
 .tmp/
 .temp/
