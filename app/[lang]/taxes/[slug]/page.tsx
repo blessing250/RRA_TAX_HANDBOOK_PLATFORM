@@ -19,10 +19,12 @@ import { isLocale, locales, type Locale } from "@/lib/i18n/config"
 
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
-    taxTopics.map((topic) => ({
-      lang,
-      slug: topic.slug,
-    }))
+    taxTopics
+      .filter((topic) => topic.slug !== "domestic-taxes")
+      .map((topic) => ({
+        lang,
+        slug: topic.slug,
+      }))
   )
 }
 
@@ -39,6 +41,11 @@ export default async function TaxTopicPage({
 
   const locale = lang as Locale
   const dict = getDictionary(locale)
+
+  if (slug === "domestic-taxes") {
+    notFound()
+  }
+
   const topic = getLocalizedTopic(slug, locale)
 
   if (!topic) {

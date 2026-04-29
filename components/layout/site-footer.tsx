@@ -1,11 +1,11 @@
-import Link from "next/link"
+import Link from 'next/link';
 
-import { Container } from "@/components/layout/container"
-import type { Locale } from "@/lib/i18n/config"
+import { Container } from '@/components/layout/container';
+import type { Locale } from '@/lib/i18n/config';
 
 type SiteFooterProps = {
-  lang: Locale
-}
+  lang: Locale;
+};
 
 export function SiteFooter({ lang }: SiteFooterProps) {
   return (
@@ -21,7 +21,7 @@ export function SiteFooter({ lang }: SiteFooterProps) {
         </nav>
 
         <p className="text-center md:whitespace-nowrap">
-          Copyright &copy;2025 All Rights Reserved by Rwanda Revenue Authority
+          Copyright &copy;{new Date().getFullYear()} All Rights Reserved by Rwanda Revenue Authority
         </p>
 
         <nav className="flex justify-center md:justify-end" aria-label="Contact">
@@ -34,5 +34,5 @@ export function SiteFooter({ lang }: SiteFooterProps) {
         </nav>
       </Container>
     </footer>
-  )
+  );
 }
