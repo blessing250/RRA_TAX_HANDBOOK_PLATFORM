@@ -58,7 +58,7 @@ export function SiteHeader({ dict, lang }: SiteHeaderProps) {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <Link href={`/${lang}`} className="min-w-0">
               <span className="block text-balance text-2xl font-bold leading-tight text-rra-black sm:text-3xl">
-                Tax Handbook-Edition 2025
+                Tax Handbook- {new Date().getFullYear()} Edition
               </span>
             </Link>
           </div>
