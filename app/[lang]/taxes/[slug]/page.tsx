@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import { Container } from "@/components/layout/container"
@@ -8,12 +7,16 @@ import { HandbookSection } from "@/components/handbook/handbook-section"
 import { PageHero } from "@/components/handbook/page-hero"
 import { RelatedTopics } from "@/components/handbook/related-topics"
 import { TableOfContents } from "@/components/handbook/table-of-contents"
-import { Button } from "@/components/ui/button"
 import {
+  localizedText,
   getLocalizedTopic,
   getLocalizedTopics,
 } from "@/lib/content/handbook"
 import { taxTopics } from "@/lib/content/taxes"
+import {
+  centralGovernmentTaxSlugs,
+  domesticTaxesPage,
+} from "@/lib/content/taxes/domestic-taxes"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { isLocale, locales, type Locale } from "@/lib/i18n/config"
 
@@ -56,17 +59,15 @@ export default async function TaxTopicPage({
   const relatedTopics = allTopics.filter((item) =>
     topic.relatedSlugs?.includes(item.slug)
   )
+  const isDomesticTaxChild =
+    centralGovernmentTaxSlugs.some((itemSlug) => itemSlug === slug) ||
+    slug === "local-government-taxes"
 
   return (
     <>
       <PageHero
         title={topic.titleText}
         summary={topic.summaryText}
-        actions={
-          <Button asChild variant="outline">
-            <Link href={`/${locale}/taxes`}>{dict.common.backToTaxes}</Link>
-          </Button>
-        }
       />
       <Container className="py-8 sm:py-10">
         <div className="mb-8">
@@ -74,6 +75,14 @@ export default async function TaxTopicPage({
             items={[
               { label: dict.nav.home, href: `/${locale}` },
               { label: dict.nav.taxes, href: `/${locale}/taxes` },
+              ...(isDomesticTaxChild
+                ? [
+                    {
+                      label: localizedText(domesticTaxesPage.title, locale),
+                      href: `/${locale}/taxes/domestic-taxes`,
+                    },
+                  ]
+                : []),
               { label: topic.titleText },
             ]}
           />
