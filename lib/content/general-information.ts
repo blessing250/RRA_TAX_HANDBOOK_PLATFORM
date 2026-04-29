@@ -1,5 +1,4 @@
 import type { HandbookTopic } from '@/lib/types/handbook';
-import style from 'styled-jsx/style';
 
 export const generalInformation: HandbookTopic = {
   slug: 'general-information',
@@ -239,7 +238,7 @@ export const generalInformation: HandbookTopic = {
            `FRW: Franc Rwandais`,
            `HF: Handling Fee`,
             `IDL: Infrastructure Development Levy`,
-            `IGO: Inter-Governmental Organisation`,`
+            `IGO: Inter-Governmental Organisation`,
             `IQP: Instalment Quarterly Payment`,
             `IT: Immatriculation Temporaire`,
             `LGT: Local Government Taxes`,
