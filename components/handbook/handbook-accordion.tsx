@@ -19,11 +19,17 @@ type HandbookAccordionItem = {
 type HandbookAccordionProps = {
   defaultValue?: string
   items: HandbookAccordionItem[]
+  variant?: "card" | "minimal"
 }
 
-export function HandbookAccordion({ defaultValue, items }: HandbookAccordionProps) {
+export function HandbookAccordion({
+  defaultValue,
+  items,
+  variant = "card",
+}: HandbookAccordionProps) {
   const itemValues = useMemo(() => items.map((item) => item.value), [items])
   const [value, setValue] = useState(defaultValue ?? "")
+  const isMinimal = variant === "minimal"
 
   useEffect(() => {
     const applyHash = () => {
@@ -66,11 +72,21 @@ export function HandbookAccordion({ defaultValue, items }: HandbookAccordionProp
       collapsible
       value={value}
       onValueChange={handleValueChange}
-      className="w-full rounded-lg border bg-card px-4 sm:px-5"
+      className={
+        isMinimal
+          ? "w-full border-y border-rra-black/35"
+          : "w-full rounded-lg border bg-card px-4 sm:px-5"
+      }
     >
       {items.map((item) => (
         <AccordionItem key={item.value} value={item.value}>
-          <AccordionTrigger className="py-4 text-base font-semibold text-rra-light-blue">
+          <AccordionTrigger
+            className={
+              isMinimal
+                ? "rounded-none py-3 text-sm font-bold text-rra-light-blue hover:no-underline"
+                : "py-4 text-base font-semibold text-rra-light-blue"
+            }
+          >
             {item.title}
           </AccordionTrigger>
           <AccordionContent>{item.content}</AccordionContent>
