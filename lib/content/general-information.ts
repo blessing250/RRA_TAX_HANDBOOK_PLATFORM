@@ -79,10 +79,8 @@ export const generalInformation: HandbookTopic = {
            `- Healthcare`,
            `- Access to utilities such as water and electricity`,
            `There are also a range of less tangible benefits that arise from taxes, such as:`,
-           `- Good governance – when citizens are paying taxes, the government is held more responsible for improving public services.`,
-           `- Social responsibility – citizens are more likely to protect those public services, and can be proud of contributing to Rwanda’s development.`,
-           `- Self-reliance – tax revenues are the backbone of national self-reliance, reducing the country’s dependency on unpredictable foreign aid and donors. `,
-        ],
+           `<ul><li><strong>- Good governance</strong> - when citizens are paying taxes, the government is held more responsible for improving public services</li><li><strong>- Social responsibility</strong> - citizens are more likely to protect those public services, and can be proud of contributing to Rwanda's development</li><li><strong>- Self-reliance</strong> - tax revenues are the backbone of national self-reliance, reducing the country's dependency on unpredictable foreign aid and donors.</li></ul>`,
+          ],
       },
     },
     {
