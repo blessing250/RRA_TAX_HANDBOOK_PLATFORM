@@ -31,8 +31,8 @@ export const homeCards: HomeCard[] = [
       rw: 'Imisoro yakirwa mu Rwanda',
     },
     summary: {
-      en: 'Browse central government taxes, domestic taxes, local government taxes, and related obligations.',
-      fr: 'Parcourez les impôts du gouvernement central, les impôts domestiques, les impôts locaux et les obligations associées.',
+      en: `Find information on different taxes, their rates, how to file and pay taxes and non-compliance penalties.`,
+      fr: `Trouvez des informations sur les différents impôts, leurs taux, comment les déclarer et les payer, ainsi que sur les pénalités en cas de non-respect des règles.`,
       rw: 'Reba imisoro ya Leta, imisoro y’imbere mu gihugu, imisoro y’inzego z’ibanze n’inshingano bijyanye.',
     },
     href: (locale) => `/${locale}/taxes`,
@@ -45,8 +45,8 @@ export const homeCards: HomeCard[] = [
       rw: 'Izindi serivisi',
     },
     summary: {
-      en: 'Access supporting services and references connected to taxpayer obligations.',
-      fr: 'Accédez aux services d’appui et aux références liés aux obligations des contribuables.',
+      en: `Find information on other tax-related services such VAT Rewards & Refund, Debt Management, Audit, Certificates offered by RRA and Motor Vehicle Services among others.`,
+      fr: `Trouvez des informations sur d'autres services liés à la fiscalité, tels que les remises et remboursements de TVA, la gestion des dettes, l'audit, les certificats proposés par la RRA et les services relatifs aux véhicules automobiles, entre autres.`,
       rw: 'Reba serivisi zunganira n’inyandiko zifasha ku nshingano z’abasora.',
     },
     href: (locale) => `/${locale}/other-services`,
@@ -59,8 +59,8 @@ export const homeCards: HomeCard[] = [
       rw: `Imfashanyigisho n’ingero`,
     },
     summary: {
-      en: 'Find practical guidance, examples, and step-by-step support for common tax processes.',
-      fr: 'Trouvez des orientations pratiques, des exemples et un accompagnement étape par étape pour les démarches fiscales courantes.',
+      en: `Here you will find user guides on filing different taxes and various examples to help your understanding on various tax types.`,
+      fr: `Vous trouverez ici des guides d'utilisation sur la déclaration des différents impôts et divers exemples pour vous aider à comprendre les différents types d'impôts.`,
       rw: 'Bona ubuyobozi bufatika, ingero n’intambwe ku ntambwe ku bikorwa by’imisoro.',
     },
     href: (locale) => `/${locale}/user-guides-and-examples`,
