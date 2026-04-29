@@ -91,7 +91,13 @@ export const generalInformation: HandbookTopic = {
         rw: "Amahame y'imisoro",
       },
       content: {
-        en: ['This section introduces the main principles that guide fair and effective taxation.'],
+        en: [
+          `There are four key principles of good taxation systems, which RRA strives to attain and uphold:`,
+          `<ul><li><strong>- Equity</strong> – taxes are fair such that the tax system does not discriminate between taxpayers, but that those with higher incomes, and who are more able to, pay a higher proportion of taxes.</li><li>
+          <strong>- Certainty</strong> – taxpayers should know how much, when, where, how and why they have to pay. This increases trust with the taxpayer and enables them to manage their income and expenditure.</li><li>
+          <strong>- Convenience</strong> – tax authorities should make every effort to reduce the difficulties of paying taxes, taking into account locations, methods and times of tax declarations and payment.</li><li>
+          <strong>- Economy</strong> – tax authorities should try to minimise the administrative costs of collecting taxes to ensure the greatest benefits to the government and taxpayers.</li></ul>`,
+        ],
       },
     },
     {
@@ -102,7 +108,12 @@ export const generalInformation: HandbookTopic = {
         rw: "Amateka y'imisoro mu Rwanda",
       },
       content: {
-        en: ['This section summarizes the development of taxation in Rwanda over time.'],
+        en: [
+          `The formal, monetary tax system in Rwanda has been in effect for more than one hundred years, when the first property tax was implemented in August 1912. This was joined by a profit tax established in June 1925.`,
+         ` After independence, taxes were formally inducted into Rwandan law in the June 1964 law on profit tax, and the July 1968 law on customs and excise duties.`,
+          `Up to this point, administration of taxes had been carried out by the Ministry of Finance and Economic Planning (MINECOFIN). However, after the Genocide against the Tutsi in 1994, the ambitious new government identified the benefits of improved tax administration to a growing economy, leading to the creation of the semi-autonomous Rwanda Revenue Authority (RRA) in November 1997.`,
+
+          ],
       },
     },
     {
