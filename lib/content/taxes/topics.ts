@@ -47,7 +47,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Income Tax' },
     summary: {
-      en: 'Income tax guidance for individuals, companies, and other taxable persons.',
+      en: 'Income Tax is a tax on income resulting from business, self-employment and investment activities. Income Tax ensures that all businesses benefiting from Rwanda’s infrastructure, security and prosperity contribute their fair share towards the nation’s development.',
     },
     sections: [
       {
@@ -77,7 +77,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Pay As You Earn (PAYE)' },
     summary: {
-      en: 'Employer withholding obligations on employment income.',
+      en: 'PAYE is a tax on employment income. It is withheld by employers on behalf of their employees for efficient collection. Find more details here.',
     },
     sections: [
       {
@@ -97,7 +97,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Value Added Tax (VAT)' },
     summary: {
-      en: 'VAT registration, taxable supplies, returns, and payment guidance.',
+      en: 'VAT is a tax on the consumption of goods and services. It is indirectly paid by the final consumer of the goods or service. However, it is paid on their behalf by taxpayers.',
     },
     sections: [
       {
@@ -117,7 +117,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Withholding taxes' },
     summary: {
-      en: 'Withholding tax obligations, rates, declarations, and payment responsibilities.',
+      en: 'Withholding taxes are paid on transactions on particular types of income. They are declared and paid by the taxpayer who is the source of the transaction, but on behalf of the recipient.',
     },
     sections: [
       {
@@ -137,7 +137,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Excise Duty' },
     summary: {
-      en: 'Excise duty on selected goods and services, including declaration and payment requirements.',
+      en: 'Excise Duty is a tax applied to specific products. This means that it is able to discourage consumption with negative social impacts.',
     },
     sections: [
       {
@@ -157,7 +157,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Capital Gains Tax' },
     summary: {
-      en: 'Tax treatment of gains arising from qualifying disposals.',
+      en: 'Capital Gains Tax applies to the profit from the sale or transfer of shares, licenses, debt instruments, options, guarantees and similar assets.',
     },
     sections: [
       {
@@ -175,7 +175,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Gaming taxes' },
     summary: {
-      en: 'Tax obligations related to gaming activities.',
+      en: 'Gaming taxes includes Gaming Tax and Withholding Tax of 25% on Gambling Proceeds, also referred to as Withholding on Payments (WOP) on Gaming or ‘WOP-Gaming’. These taxes are applied on the proceeds of gambling activities and can therefore help to reduce the negative social impacts associated with gambling.',
     },
     sections: [
       {
@@ -193,7 +193,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Mining Royalty Tax' },
     summary: {
-      en: 'Royalty tax guidance for mining activities.',
+      en: 'Mining Royalty Tax is a tax withheld from local mining operators by either a domestic mineral processing facility or an individual/entity exporting minerals from Rwanda.',
     },
     sections: [
       {
@@ -210,7 +210,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Road Maintenance Levy' },
     summary: {
-      en: 'Levy information related to road maintenance funding.',
+      en: 'Road Maintenance Levy is a tax imposed on petrol, gas oil, and motor vehicles to fund road maintenance.',
     },
     sections: [
       {
@@ -227,7 +227,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'central-government',
     title: { en: 'Tourism Tax' },
     summary: {
-      en: 'Tax guidance related to tourism services and activities.',
+      en: 'Tourism Tax is a levy paid on accommodation service, which consists of providing a room or place to sleep or rest. .',
     },
     sections: [
       {

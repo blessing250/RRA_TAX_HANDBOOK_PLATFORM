@@ -1,9 +1,16 @@
 import type { LocalizedText } from "@/lib/types/handbook"
 
+type AccordionContent = {
+  id: string
+  title: LocalizedText
+  description: Partial<Record<"en" | "fr" | "rw", string[]>>
+}
+
 type CentralTaxDetailSection = {
   id: string
   title: LocalizedText
   content?: Partial<Record<"en" | "fr" | "rw", string[]>>
+  accordionItems?: AccordionContent[]
 }
 
 export type CentralTaxDetailPage = {
@@ -39,6 +46,7 @@ function section(id: string, title: string): CentralTaxDetailSection {
         "Ibisobanuro birambuye kuri iyi ngingo bizavanwa mu nyandiko ivuguruye y'igitabo cy'imisoro.",
       ],
     },
+    accordionItems: [],
   }
 }
 
