@@ -71,39 +71,55 @@ export default async function DomesticTaxesPage({
               title: localizedText(section.title, locale),
               content:
                 section.id === "central-government-taxes" ? (
-                  <p
+                  <div
                     id={section.id}
-                    className="scroll-mt-28 text-sm leading-7 text-rra-black sm:text-base"
+                    className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base"
                   >
-                    {localizedText(section.text, locale)}{" "}
-                    {centralGovernmentTaxLinks.map((topic, index) => (
-                      <span key={topic.slug}>
-                        <Link
-                          href={`/${locale}/taxes/${topic.slug}`}
-                          className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                        >
-                          {topic.titleText}
-                        </Link>
-                        {index < centralGovernmentTaxLinks.length - 1
-                          ? ", "
-                          : "."}
-                      </span>
-                    ))}
-                  </p>
+                    <p>
+                      {localizedText(section.text, locale)}{" "}
+                      {centralGovernmentTaxLinks.map((topic, index) => (
+                        <span key={topic.slug}>
+                          <Link
+                            href={`/${locale}/taxes/${topic.slug}`}
+                            className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                          >
+                            {topic.titleText}
+                          </Link>
+                          {index < centralGovernmentTaxLinks.length - 1
+                            ? ", "
+                            : "."}
+                        </span>
+                      ))}
+                    </p>
+                    <Link
+                      href={`/${locale}/taxes/central-government-taxes`}
+                      className="inline-flex text-sm font-semibold text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                    >
+                      {dict.common.readMore}
+                    </Link>
+                  </div>
                 ) : (
-                  <p
+                  <div
                     id={section.id}
-                    className="scroll-mt-28 text-sm leading-7 text-rra-black sm:text-base"
+                    className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base"
                   >
-                    {localizedText(section.text, locale)}{" "}
+                    <p>
+                      {localizedText(section.text, locale)}{" "}
+                      <Link
+                        href={`/${locale}/taxes/local-government-taxes`}
+                        className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                      >
+                        {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
+                      </Link>
+                      .
+                    </p>
                     <Link
                       href={`/${locale}/taxes/local-government-taxes`}
-                      className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                      className="inline-flex text-sm font-semibold text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
                     >
-                      {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
+                      {dict.common.readMore}
                     </Link>
-                    .
-                  </p>
+                  </div>
                 ),
             }))}
           />

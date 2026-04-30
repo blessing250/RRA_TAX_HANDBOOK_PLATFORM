@@ -13,6 +13,7 @@ import {
   getLocalizedTopics,
 } from "@/lib/content/handbook"
 import { taxTopics } from "@/lib/content/taxes"
+import { getCentralTaxDetailPage } from "@/lib/content/taxes/central-tax-details"
 import {
   centralGovernmentTaxSlugs,
   domesticTaxesPage,
@@ -23,7 +24,11 @@ import { isLocale, locales, type Locale } from "@/lib/i18n/config"
 export function generateStaticParams() {
   return locales.flatMap((lang) =>
     taxTopics
-      .filter((topic) => topic.slug !== "domestic-taxes")
+      .filter(
+        (topic) =>
+          topic.slug !== "domestic-taxes" &&
+          topic.slug !== "central-government-taxes"
+      )
       .map((topic) => ({
         lang,
         slug: topic.slug,
@@ -45,7 +50,7 @@ export default async function TaxTopicPage({
   const locale = lang as Locale
   const dict = getDictionary(locale)
 
-  if (slug === "domestic-taxes") {
+  if (slug === "domestic-taxes" || slug === "central-government-taxes") {
     notFound()
   }
 
@@ -62,6 +67,77 @@ export default async function TaxTopicPage({
   const isDomesticTaxChild =
     centralGovernmentTaxSlugs.some((itemSlug) => itemSlug === slug) ||
     slug === "local-government-taxes"
+  const centralTaxDetailPage = getCentralTaxDetailPage(slug)
+
+  if (centralTaxDetailPage) {
+    const title = localizedText(centralTaxDetailPage.title, locale)
+
+    return (
+      <Container className="py-12 sm:py-16 lg:max-w-4xl">
+        <article className="mx-auto max-w-2xl">
+          <div className="mb-10">
+            <HandbookBreadcrumb
+              items={[
+                { label: dict.nav.home, href: `/${locale}` },
+                { label: dict.nav.taxes, href: `/${locale}/taxes` },
+                {
+                  label: localizedText(domesticTaxesPage.title, locale),
+                  href: `/${locale}/taxes/domestic-taxes`,
+                },
+                {
+                  label: localizedText(
+                    {
+                      en: "Central Government Taxes",
+                      fr: "Impots du gouvernement central",
+                      rw: "Imisoro ya leta",
+                    },
+                    locale
+                  ),
+                  href: `/${locale}/taxes/central-government-taxes`,
+                },
+                { label: title },
+              ]}
+            />
+          </div>
+
+          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
+            {title}
+          </h1>
+
+          <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
+            {centralTaxDetailPage.intro[locale]?.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            )) ??
+              centralTaxDetailPage.intro.en?.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+          </div>
+
+          <div className="mt-12 max-w-xl">
+            <HandbookAccordion
+              variant="minimal"
+              items={centralTaxDetailPage.sections.map((section) => ({
+                value: section.id,
+                title: localizedText(section.title, locale),
+                content: (
+                  <HandbookSection
+                    id={section.id}
+                    paragraphs={
+                      section.content?.[locale] ?? section.content?.en ?? []
+                    }
+                  />
+                ),
+              }))}
+            />
+          </div>
+
+          <p className="mt-20 text-sm text-rra-black">
+            {localizedText(centralTaxDetailPage.lastUpdated, locale)}
+          </p>
+        </article>
+      </Container>
+    )
+  }
 
   return (
     <>
