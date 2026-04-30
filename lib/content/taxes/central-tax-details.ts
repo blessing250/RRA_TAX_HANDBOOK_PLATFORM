@@ -46,7 +46,6 @@ function section(id: string, title: string): CentralTaxDetailSection {
         "Ibisobanuro birambuye kuri iyi ngingo bizavanwa mu nyandiko ivuguruye y'igitabo cy'imisoro.",
       ],
     },
-    accordionItems: [],
   }
 }
 
@@ -61,6 +60,7 @@ export const centralTaxDetailPages: Record<string, CentralTaxDetailPage> = {
     },
     sections: [
       section("taxable-income", "Taxable income"),
+      
       section("income-tax-registration", "Income tax Registration"),
       section("income-tax-categories", "Income tax categories"),
       section("income-tax-regimes", "Income Tax regimes"),
