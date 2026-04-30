@@ -1,23 +1,17 @@
-import Link from "next/link"
-import { ArrowRightIcon } from "lucide-react"
+import Link from 'next/link';
+import { ArrowRightIcon } from 'lucide-react';
 
-import type { Locale } from "@/lib/i18n/config"
+import type { Locale } from '@/lib/i18n/config';
 
 type TaxTopicCardProps = {
-  lang: Locale
-  readMore: string
-  slug: string
-  summary: string
-  title: string
-}
+  lang: Locale;
+  readMore: string;
+  slug: string;
+  summary: string;
+  title: string;
+};
 
-export function TaxTopicCard({
-  lang,
-  readMore,
-  slug,
-  summary,
-  title,
-}: TaxTopicCardProps) {
+export function TaxTopicCard({ lang, readMore, slug, summary, title }: TaxTopicCardProps) {
   return (
     <Link
       href={`/${lang}/taxes/${slug}`}
@@ -25,14 +19,12 @@ export function TaxTopicCard({
     >
       <span>
         <span className="text-lg font-semibold leading-7">{title}</span>
-        <span className="mt-3 block text-sm leading-6 text-rra-black">
-          {summary}
-        </span>
+        <span className="mt-3 block text-sm leading-6 text-rra-black">{summary}</span>
       </span>
       <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium">
         <span>{readMore}</span>
         <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-0.5" />
       </span>
     </Link>
-  )
+  );
 }
