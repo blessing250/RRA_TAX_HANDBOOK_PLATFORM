@@ -22,7 +22,7 @@ export function PageHero({ actions, className, eyebrow, summary, title }: PageHe
           <h1 className="text-balance text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
             {title}
           </h1>
-          <p className="mt-4 max-w-2xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg">
+          <p className="mt-4 max-w-2xl text-pretty text-base leading-7 text-rra-black sm:text-lg">
             {summary}
           </p>
         </div>
