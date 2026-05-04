@@ -48,9 +48,9 @@ export const domesticTaxesPage = {
     rw: "Iyi paji iherukaga kuvugururwa ku wa: 05/03/2026",
   },
   detailsLinkLabel: {
-    en: "here",
-    fr: "ici",
-    rw: "hano",
+    en: "Find details here.",
+    fr: "Trouvez les details ici.",
+    rw: "Reba ibisobanuro hano.",
   },
 }
 
@@ -76,9 +76,9 @@ export const domesticTaxSections: DomesticTaxAccordionItem[] = [
       rw: "Imisoro n'amahoro byakwa n'inzego zegerejwe abaturage",
     },
     text: {
-      en: "Taxes and fees levied by decentralised entities commonly known as Local Government Taxes (LGT) and fees are revenues collected by RRA on behalf of the district authorities. Find details",
-      fr: "Les impots et frais preleves par les entites decentralisees, communement appeles impots locaux (LGT), sont des recettes collectees par la RRA pour le compte des autorites de district. Trouvez les details",
-      rw: "Imisoro n'amahoro byakwa n'inzego zegerejwe abaturage, bizwi nk'imisoro y'inzego z'ibanze (LGT), ni amafaranga akusanywa na RRA mu izina ry'ubuyobozi bw'uturere. Reba ibisobanuro",
+      en: "Taxes and fees levied by decentralised entities commonly known as Local Government Taxes (LGT) and fees are revenues collected by RRA on behalf of the district authorities.",
+      fr: "Les impots et frais preleves par les entites decentralisees, communement appeles impots locaux (LGT), sont des recettes collectees par la RRA pour le compte des autorites de district.",
+      rw: "Imisoro n'amahoro byakwa n'inzego zegerejwe abaturage, bizwi nk'imisoro y'inzego z'ibanze (LGT), ni amafaranga akusanywa na RRA mu izina ry'ubuyobozi bw'uturere.",
     },
   },
 ]

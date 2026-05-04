@@ -244,7 +244,7 @@ export const taxTopics: HandbookTopic[] = [
     category: 'local-government',
     title: { en: 'Local Government Taxes (LGT)' },
     summary: {
-      en: 'Taxes administered by local government entities.',
+      en: 'Taxes and fees levied by decentralised entities and collected by RRA on behalf of district authorities.',
     },
     sections: [
       {
@@ -255,7 +255,12 @@ export const taxTopics: HandbookTopic[] = [
         },
       },
     ],
-    relatedSlugs: ['immovable-property-tax', 'trading-license'],
+    relatedSlugs: [
+      'immovable-property-tax',
+      'tax-on-sale-of-immovable-property',
+      'trading-license',
+      'rental-income-tax',
+    ],
   },
   {
     slug: 'immovable-property-tax',
@@ -310,5 +315,95 @@ export const taxTopics: HandbookTopic[] = [
       },
     ],
     relatedSlugs: ['local-government-taxes'],
+  },
+  {
+    slug: 'rental-income-tax',
+    category: 'local-government',
+    title: { en: 'Rental Income Tax' },
+    summary: {
+      en: 'Rental Income Tax is a tax levied on income generated from rented land and buildings.',
+    },
+    sections: [
+      {
+        id: 'overview',
+        title: { en: 'Overview' },
+        content: {
+          en: ['Rental income tax content will be migrated from the handbook.'],
+        },
+      },
+    ],
+    relatedSlugs: ['immovable-property-tax', 'local-government-taxes'],
+  },
+  {
+    slug: 'fees-levied-by-decentralized-entities',
+    category: 'local-government',
+    title: { en: 'Fees Levied by Decentralized entities' },
+    summary: {
+      en: 'Fees levied on services and certificates delivered by decentralised entities.',
+    },
+    sections: [
+      {
+        id: 'overview',
+        title: { en: 'Overview' },
+        content: {
+          en: ['Fees levied by decentralized entities content will be migrated from the handbook.'],
+        },
+      },
+    ],
+    relatedSlugs: ['local-government-taxes'],
+  },
+  {
+    slug: 'domestic-tax-penalties-and-fines',
+    category: 'local-government',
+    title: { en: 'Domestic Tax penalties and fines' },
+    summary: {
+      en: 'Penalties and fines for late, missing, or incorrect domestic tax declarations and payments.',
+    },
+    sections: [
+      {
+        id: 'overview',
+        title: { en: 'Overview' },
+        content: {
+          en: ['Domestic tax penalties and fines content will be migrated from the handbook.'],
+        },
+      },
+    ],
+    relatedSlugs: ['local-government-taxes'],
+  },
+  {
+    slug: 'domestic-tax-centers',
+    category: 'local-government',
+    title: { en: 'Domestic Tax Centers' },
+    summary: {
+      en: 'Domestic Tax Centres support registration, declaration, and taxpayer services.',
+    },
+    sections: [
+      {
+        id: 'overview',
+        title: { en: 'Overview' },
+        content: {
+          en: ['Domestic tax center content will be migrated from the handbook.'],
+        },
+      },
+    ],
+    relatedSlugs: ['local-government-taxes'],
+  },
+  {
+    slug: 'customs-taxes',
+    category: 'domestic',
+    title: { en: 'Customs Taxes' },
+    summary: {
+      en: 'Customs duties are taxes, duties, levies and fees paid on imported or exported goods.',
+    },
+    sections: [
+      {
+        id: 'overview',
+        title: { en: 'Overview' },
+        content: {
+          en: ['Customs taxes content will be migrated from the handbook.'],
+        },
+      },
+    ],
+    relatedSlugs: ['domestic-taxes'],
   },
 ]
