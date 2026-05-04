@@ -87,16 +87,17 @@ export default async function DomesticTaxesPage({
                           </Link>
                           {index < centralGovernmentTaxLinks.length - 1
                             ? ", "
-                            : "."}
+                          : "."}
                         </span>
                       ))}
+                      {" "}
+                      <Link
+                        href={`/${locale}/taxes/central-government-taxes`}
+                        className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                      >
+                        {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
+                      </Link>
                     </p>
-                    <Link
-                      href={`/${locale}/taxes/central-government-taxes`}
-                      className="inline-flex text-sm font-semibold text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                    >
-                      {dict.common.readMore}
-                    </Link>
                   </div>
                 ) : (
                   <div
@@ -111,14 +112,7 @@ export default async function DomesticTaxesPage({
                       >
                         {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
                       </Link>
-                      .
                     </p>
-                    <Link
-                      href={`/${locale}/taxes/local-government-taxes`}
-                      className="inline-flex text-sm font-semibold text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                    >
-                      {dict.common.readMore}
-                    </Link>
                   </div>
                 ),
             }))}
