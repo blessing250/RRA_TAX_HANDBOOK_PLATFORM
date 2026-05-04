@@ -100,9 +100,7 @@ export default async function TaxTopicPage({
           </h1>
 
           <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            {localizedParagraphs(centralGovernmentTaxesPage.summary, locale).map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            <HandbookSection paragraphs={localizedParagraphs(centralGovernmentTaxesPage.summary, locale)} />
           </div>
 
           <div className="mt-16 max-w-xl">
@@ -176,10 +174,7 @@ export default async function TaxTopicPage({
           </h1>
 
           <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            {centralTaxDetailPage.intro[locale]?.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            )) ??
-              centralTaxDetailPage.intro.en?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <HandbookSection paragraphs={centralTaxDetailPage.intro[locale] ?? centralTaxDetailPage.intro.en ?? []} />
           </div>
 
           <div className="mt-12 max-w-xl">
@@ -306,9 +301,7 @@ export default async function TaxTopicPage({
           </h1>
 
           <div className="mt-10 max-w-xl space-y-6 text-sm leading-8 text-rra-black">
-            {(localGovernmentIntro[locale] ?? localGovernmentIntro.en ?? []).map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            <HandbookSection paragraphs={localGovernmentIntro[locale] ?? localGovernmentIntro.en ?? []} />
           </div>
 
           <div className="mt-12 max-w-xl">
@@ -364,11 +357,7 @@ export default async function TaxTopicPage({
           </h1>
 
           <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            {(localTaxDetailPage.intro[locale] ?? localTaxDetailPage.intro.en ?? []).map(
-              (paragraph) => (
-                <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />
-              ),
-            )}
+            <HandbookSection paragraphs={localTaxDetailPage.intro[locale] ?? localTaxDetailPage.intro.en ?? []} />
           </div>
 
           {localTaxDetailPage.sections.length > 0 ? (

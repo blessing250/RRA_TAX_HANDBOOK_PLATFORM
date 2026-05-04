@@ -4,10 +4,19 @@ export type LocalizedText = Partial<Record<Locale, string>>
 
 export type TranslationStatus = "complete" | "draft" | "missing"
 
+export type HandbookTableBlock = {
+  caption?: string
+  headers: string[]
+  rows: string[][]
+  type: "table"
+}
+
+export type HandbookContentBlock = string | HandbookTableBlock
+
 export type HandbookSection = {
   id: string
   title: LocalizedText
-  content: Partial<Record<Locale, string[]>>
+  content: Partial<Record<Locale, HandbookContentBlock[]>>
 }
 
 export type HandbookTopic = {
