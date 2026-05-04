@@ -1,8 +1,12 @@
 import { notFound } from "next/navigation"
 
+import { HandbookAccordion } from "@/components/handbook/handbook-accordion"
 import { Container } from "@/components/layout/container"
 import { HandbookBreadcrumb } from "@/components/handbook/handbook-breadcrumb"
+import { HandbookSection } from "@/components/handbook/handbook-section"
 import { PageHero } from "@/components/handbook/page-hero"
+import { localizedParagraphs, localizedText } from "@/lib/content/handbook"
+import { otherServicesPage, otherServiceSections } from "@/lib/content/other-services"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 
@@ -23,16 +27,38 @@ export default async function OtherServicesPage({
   return (
     <>
       <PageHero
-        title="Other services"
-        summary="Access supporting services and references connected to taxpayer obligations."
+        title={localizedText(otherServicesPage.title, locale)}
+        summary={localizedText(otherServicesPage.summary, locale)}
       />
-      <Container className="py-8 sm:py-10">
-        <HandbookBreadcrumb
-          items={[
-            { label: dict.nav.home, href: `/${locale}` },
-            { label: "Other services" },
-          ]}
-        />
+      <Container className="py-8 sm:py-10 lg:max-w-5xl">
+        <article className="mx-auto max-w-3xl">
+          <div className="mb-10">
+            <HandbookBreadcrumb
+              items={[
+                { label: dict.nav.home, href: `/${locale}` },
+                { label: localizedText(otherServicesPage.title, locale) },
+              ]}
+            />
+          </div>
+
+          <HandbookAccordion
+            variant="minimal"
+            items={otherServiceSections.map((section) => ({
+              value: section.id,
+              title: localizedText(section.title, locale),
+              content: (
+                <HandbookSection
+                  id={section.id}
+                  paragraphs={localizedParagraphs(section.content, locale)}
+                />
+              ),
+            }))}
+          />
+
+          <p className="mt-16 text-sm text-rra-black">
+            {localizedText(otherServicesPage.lastUpdated, locale)}
+          </p>
+        </article>
       </Container>
     </>
   )

@@ -1,409 +1,196 @@
-import type { HandbookTopic } from '@/lib/types/handbook';
+import { centralGovernmentTaxesPage } from "@/lib/content/taxes/central-government-taxes"
+import { centralTaxDetailPages } from "@/lib/content/taxes/central-tax-details"
+import {
+  centralGovernmentTaxSlugs,
+  domesticTaxesPage,
+} from "@/lib/content/taxes/domestic-taxes"
+import { localTaxDetailPages } from "@/lib/content/taxes/local-tax-details"
+import {
+  localGovernmentSupportSlugs,
+  localGovernmentTaxSlugs,
+  localGovernmentTaxesPage,
+} from "@/lib/content/taxes/local-government-taxes"
+import type {
+  HandbookContentBlock,
+  HandbookSection,
+  HandbookTopic,
+  LocalizedText,
+} from "@/lib/types/handbook"
+
+type DetailPage = {
+  intro: HandbookTopic["sections"][number]["content"]
+  sections: Array<{
+    content?: HandbookTopic["sections"][number]["content"]
+    id: string
+    title: HandbookTopic["sections"][number]["title"]
+  }>
+  slug: string
+  title: HandbookTopic["title"]
+}
+
+const overviewTitle = {
+  en: "Overview",
+  fr: "Apercu",
+  rw: "Incamake",
+}
+
+const localTaxRelatedSlugs: Record<string, string[]> = {
+  "immovable-property-tax": ["tax-on-sale-of-immovable-property", "local-government-taxes"],
+  "tax-on-sale-of-immovable-property": ["immovable-property-tax", "local-government-taxes"],
+  "trading-license": ["local-government-taxes"],
+  "rental-income-tax": ["immovable-property-tax", "local-government-taxes"],
+  "fees-levied-by-decentralized-entities": [
+    "local-government-taxes",
+    "domestic-tax-penalties-and-fines",
+  ],
+  "domestic-tax-penalties-and-fines": [
+    "fees-levied-by-decentralized-entities",
+    "local-government-taxes",
+  ],
+  "domestic-tax-centers": ["local-government-taxes"],
+  "customs-taxes": ["domestic-taxes"],
+}
+
+const centralTaxRelatedSlugs: Record<string, string[]> = {
+  "income-tax": ["pay-as-you-earn", "withholding-taxes", "capital-gains-tax"],
+  "pay-as-you-earn": ["income-tax", "withholding-taxes"],
+  "value-added-tax": ["excise-duty", "withholding-taxes"],
+  "excise-duty": ["value-added-tax", "customs-taxes"],
+  "withholding-taxes": ["income-tax", "pay-as-you-earn", "gaming-taxes"],
+  "gaming-taxes": ["withholding-taxes"],
+  "capital-gains-tax": ["income-tax", "tax-on-sale-of-immovable-property"],
+  "mining-royalty-tax": ["withholding-taxes"],
+  "road-maintenance-levy": ["customs-taxes"],
+  "tourism-tax": ["value-added-tax"],
+}
+
+function asContent(value: Partial<Record<"en" | "fr" | "rw", HandbookContentBlock[]>>) {
+  return value
+}
+
+function firstParagraph(value: Partial<Record<"en" | "fr" | "rw", HandbookContentBlock[]>>) {
+  const en = value.en?.find((item) => typeof item === "string")
+  const fr = value.fr?.find((item) => typeof item === "string")
+  const rw = value.rw?.find((item) => typeof item === "string")
+
+  return {
+    ...(typeof en === "string" ? { en } : {}),
+    ...(typeof fr === "string" ? { fr } : {}),
+    ...(typeof rw === "string" ? { rw } : {}),
+  }
+}
+
+function detailToTopic(
+  detail: DetailPage,
+  category: HandbookTopic["category"],
+  relatedSlugs: string[] = []
+): HandbookTopic {
+  return {
+    slug: detail.slug,
+    category,
+    title: detail.title,
+    summary: firstParagraph(detail.intro),
+    sections: [
+      {
+        id: "overview",
+        title: overviewTitle,
+        content: asContent(detail.intro),
+      },
+      ...detail.sections.map<HandbookSection>((section) => ({
+        id: section.id,
+        title: section.title,
+        content: section.content ?? { en: [] },
+      })),
+    ],
+    relatedSlugs,
+  }
+}
+
+const centralTaxTopics = centralGovernmentTaxSlugs.map((slug) =>
+  detailToTopic(
+    centralTaxDetailPages[slug],
+    "central-government",
+    centralTaxRelatedSlugs[slug] ?? ["central-government-taxes"]
+  )
+)
+
+const localGovernmentTopics = [
+  ...localGovernmentTaxSlugs,
+  ...localGovernmentSupportSlugs,
+].map((slug) =>
+  detailToTopic(
+    localTaxDetailPages[slug],
+    "local-government",
+    localTaxRelatedSlugs[slug] ?? ["local-government-taxes"]
+  )
+)
+
+const customsTopic = detailToTopic(localTaxDetailPages["customs-taxes"], "domestic", [
+  "domestic-taxes",
+])
+
+const localGovernmentIntro = localGovernmentTaxesPage.intro as Partial<
+  Record<"en" | "fr" | "rw", HandbookContentBlock[]>
+>
+
+const localGovernmentSummary: LocalizedText = {
+  en: localGovernmentIntro.en?.[0] as string,
+  fr: localGovernmentIntro.fr?.[0] as string | undefined,
+  rw: localGovernmentIntro.rw?.[0] as string | undefined,
+}
 
 export const taxTopics: HandbookTopic[] = [
   {
-    slug: 'central-government-taxes',
-    category: 'central-government',
-    title: { en: 'Central government taxes' },
+    slug: "domestic-taxes",
+    category: "domestic",
+    title: domesticTaxesPage.title,
     summary: {
-      en: 'Taxes administered at national level, including income tax, VAT, excise duty, and withholding taxes.',
+      en: domesticTaxesPage.summary.en[0],
+      fr: domesticTaxesPage.summary.fr[0],
+      rw: domesticTaxesPage.summary.rw[0],
     },
     sections: [
       {
-        id: 'covered-taxes',
-        title: { en: 'Covered taxes' },
-        content: {
-          en: [
-            'Central government taxes include several major tax types administered nationally.',
-            'Each tax topic has a dedicated page with definitions, rates, obligations, and filing guidance.',
-          ],
-        },
+        id: "overview",
+        title: overviewTitle,
+        content: domesticTaxesPage.summary,
       },
     ],
-    relatedSlugs: ['income-tax', 'value-added-tax', 'excise-duty'],
+    relatedSlugs: ["central-government-taxes", "local-government-taxes", "customs-taxes"],
   },
   {
-    slug: 'domestic-taxes',
-    category: 'domestic',
-    title: { en: 'Domestic taxes' },
+    slug: "central-government-taxes",
+    category: "central-government",
+    title: centralGovernmentTaxesPage.title,
     summary: {
-      en: 'Domestic tax obligations and administrative guidance for taxpayers operating in Rwanda.',
+      en: centralGovernmentTaxesPage.summary.en[0],
+      fr: centralGovernmentTaxesPage.summary.fr[0],
+      rw: centralGovernmentTaxesPage.summary.rw[0],
     },
     sections: [
       {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: [
-            'Domestic taxes cover obligations for residents, businesses, employers, and other taxpayers.',
-          ],
-        },
+        id: "overview",
+        title: overviewTitle,
+        content: centralGovernmentTaxesPage.summary,
       },
     ],
-    relatedSlugs: ['income-tax', 'pay-as-you-earn', 'value-added-tax'],
+    relatedSlugs: [...centralGovernmentTaxSlugs],
   },
+  ...centralTaxTopics,
   {
-    slug: 'income-tax',
-    category: 'central-government',
-    title: { en: 'Income Tax' },
-    summary: {
-      en: 'Income Tax is a tax on income resulting from business, self-employment and investment activities. Income Tax ensures that all businesses benefiting from Rwanda’s infrastructure, security and prosperity contribute their fair share towards the nation’s development.',
-    },
+    slug: "local-government-taxes",
+    category: "local-government",
+    title: localGovernmentTaxesPage.title,
+    summary: localGovernmentSummary,
     sections: [
       {
-        id: 'who-pays',
-        title: { en: 'Who pays income tax?' },
-        content: {
-          en: [
-            "Income tax applies to taxable income according to the rules provided in Rwanda's tax laws.",
-            'Detailed taxpayer categories, exemptions, and computation rules will be migrated from the handbook.',
-          ],
-        },
-      },
-      {
-        id: 'declaration',
-        title: { en: 'Declaration and payment' },
-        content: {
-          en: [
-            'This section will summarize declaration obligations, deadlines, and payment procedures.',
-          ],
-        },
+        id: "overview",
+        title: overviewTitle,
+        content: localGovernmentIntro,
       },
     ],
-    relatedSlugs: ['pay-as-you-earn', 'withholding-taxes'],
+    relatedSlugs: [...localGovernmentTaxSlugs, ...localGovernmentSupportSlugs],
   },
-  {
-    slug: 'pay-as-you-earn',
-    category: 'central-government',
-    title: { en: 'Pay As You Earn (PAYE)' },
-    summary: {
-      en: 'PAYE is a tax on employment income. It is withheld by employers on behalf of their employees for efficient collection. Find more details here.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: [
-            'PAYE is withheld by employers from employment income and remitted according to applicable rules.',
-          ],
-        },
-      },
-    ],
-    relatedSlugs: ['income-tax', 'withholding-taxes'],
-  },
-  {
-    slug: 'value-added-tax',
-    category: 'central-government',
-    title: { en: 'Value Added Tax (VAT)' },
-    summary: {
-      en: 'VAT is a tax on the consumption of goods and services. It is indirectly paid by the final consumer of the goods or service. However, it is paid on their behalf by taxpayers.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: [
-            'VAT applies to taxable supplies according to registration and filing requirements in the handbook.',
-          ],
-        },
-      },
-    ],
-    relatedSlugs: ['excise-duty', 'income-tax'],
-  },
-  {
-    slug: 'withholding-taxes',
-    category: 'central-government',
-    title: { en: 'Withholding taxes' },
-    summary: {
-      en: 'Withholding taxes are paid on transactions on particular types of income. They are declared and paid by the taxpayer who is the source of the transaction, but on behalf of the recipient.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: [
-            'Withholding taxes are deducted at source and remitted by responsible withholding agents.',
-          ],
-        },
-      },
-    ],
-    relatedSlugs: ['income-tax', 'pay-as-you-earn'],
-  },
-  {
-    slug: 'excise-duty',
-    category: 'central-government',
-    title: { en: 'Excise Duty' },
-    summary: {
-      en: 'Excise Duty is a tax applied to specific products. This means that it is able to discourage consumption with negative social impacts.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: [
-            'Excise duty applies to specified products and services under the applicable tax laws.',
-          ],
-        },
-      },
-    ],
-    relatedSlugs: ['value-added-tax', 'gaming-taxes'],
-  },
-  {
-    slug: 'capital-gains-tax',
-    category: 'central-government',
-    title: { en: 'Capital Gains Tax' },
-    summary: {
-      en: 'Capital Gains Tax applies to the profit from the sale or transfer of shares, licenses, debt instruments, options, guarantees and similar assets.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Capital gains tax guidance will be completed from the handbook source material.'],
-        },
-      },
-    ],
-    relatedSlugs: ['tax-on-sale-of-immovable-property'],
-  },
-  {
-    slug: 'gaming-taxes',
-    category: 'central-government',
-    title: { en: 'Gaming taxes' },
-    summary: {
-      en: 'Gaming taxes includes Gaming Tax and Withholding Tax of 25% on Gambling Proceeds, also referred to as Withholding on Payments (WOP) on Gaming or ‘WOP-Gaming’. These taxes are applied on the proceeds of gambling activities and can therefore help to reduce the negative social impacts associated with gambling.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Gaming tax details will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['excise-duty'],
-  },
-  {
-    slug: 'mining-royalty-tax',
-    category: 'central-government',
-    title: { en: 'Mining Royalty Tax' },
-    summary: {
-      en: 'Mining Royalty Tax is a tax withheld from local mining operators by either a domestic mineral processing facility or an individual/entity exporting minerals from Rwanda.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Mining royalty tax content will be migrated from the handbook.'],
-        },
-      },
-    ],
-  },
-  {
-    slug: 'road-maintenance-levy',
-    category: 'central-government',
-    title: { en: 'Road Maintenance Levy' },
-    summary: {
-      en: 'Road Maintenance Levy is a tax imposed on petrol, gas oil, and motor vehicles to fund road maintenance.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Road maintenance levy content will be migrated from the handbook.'],
-        },
-      },
-    ],
-  },
-  {
-    slug: 'tourism-tax',
-    category: 'central-government',
-    title: { en: 'Tourism Tax' },
-    summary: {
-      en: 'Tourism Tax is a levy paid on accommodation service, which consists of providing a room or place to sleep or rest. .',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Tourism tax content will be migrated from the handbook.'],
-        },
-      },
-    ],
-  },
-  {
-    slug: 'local-government-taxes',
-    category: 'local-government',
-    title: { en: 'Local Government Taxes (LGT)' },
-    summary: {
-      en: 'Taxes and fees levied by decentralised entities and collected by RRA on behalf of district authorities.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Local government tax content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: [
-      'immovable-property-tax',
-      'tax-on-sale-of-immovable-property',
-      'trading-license',
-      'rental-income-tax',
-    ],
-  },
-  {
-    slug: 'immovable-property-tax',
-    category: 'local-government',
-    title: { en: 'Immovable Property Tax' },
-    summary: {
-      en: 'Tax obligations on immovable property.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Immovable property tax content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['tax-on-sale-of-immovable-property', 'local-government-taxes'],
-  },
-  {
-    slug: 'tax-on-sale-of-immovable-property',
-    category: 'local-government',
-    title: { en: 'Tax on sale of immovable property' },
-    summary: {
-      en: 'Tax treatment for sales of immovable property.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Tax on sale of immovable property content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['immovable-property-tax', 'capital-gains-tax'],
-  },
-  {
-    slug: 'trading-license',
-    category: 'local-government',
-    title: { en: 'Trading license' },
-    summary: {
-      en: 'Trading license obligations and local government requirements.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Trading license content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['local-government-taxes'],
-  },
-  {
-    slug: 'rental-income-tax',
-    category: 'local-government',
-    title: { en: 'Rental Income Tax' },
-    summary: {
-      en: 'Rental Income Tax is a tax levied on income generated from rented land and buildings.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Rental income tax content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['immovable-property-tax', 'local-government-taxes'],
-  },
-  {
-    slug: 'fees-levied-by-decentralized-entities',
-    category: 'local-government',
-    title: { en: 'Fees Levied by Decentralized entities' },
-    summary: {
-      en: 'Fees levied on services and certificates delivered by decentralised entities.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Fees levied by decentralized entities content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['local-government-taxes'],
-  },
-  {
-    slug: 'domestic-tax-penalties-and-fines',
-    category: 'local-government',
-    title: { en: 'Domestic Tax penalties and fines' },
-    summary: {
-      en: 'Penalties and fines for late, missing, or incorrect domestic tax declarations and payments.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Domestic tax penalties and fines content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['local-government-taxes'],
-  },
-  {
-    slug: 'domestic-tax-centers',
-    category: 'local-government',
-    title: { en: 'Domestic Tax Centers' },
-    summary: {
-      en: 'Domestic Tax Centres support registration, declaration, and taxpayer services.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Domestic tax center content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['local-government-taxes'],
-  },
-  {
-    slug: 'customs-taxes',
-    category: 'domestic',
-    title: { en: 'Customs Taxes' },
-    summary: {
-      en: 'Customs duties are taxes, duties, levies and fees paid on imported or exported goods.',
-    },
-    sections: [
-      {
-        id: 'overview',
-        title: { en: 'Overview' },
-        content: {
-          en: ['Customs taxes content will be migrated from the handbook.'],
-        },
-      },
-    ],
-    relatedSlugs: ['domestic-taxes'],
-  },
+  ...localGovernmentTopics,
+  customsTopic,
 ]

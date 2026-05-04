@@ -1,14 +1,14 @@
 import { generalInformation } from "@/lib/content/general-information"
 import { taxTopics } from "@/lib/content/taxes"
 import { defaultLocale, type Locale } from "@/lib/i18n/config"
-import type { LocalizedText } from "@/lib/types/handbook"
+import type { HandbookContentBlock, LocalizedText } from "@/lib/types/handbook"
 
 export function localizedText(value: LocalizedText, lang: Locale) {
   return value[lang] ?? value[defaultLocale] ?? ""
 }
 
 export function localizedParagraphs(
-  value: Partial<Record<Locale, string[]>>,
+  value: Partial<Record<Locale, HandbookContentBlock[]>>,
   lang: Locale
 ) {
   return value[lang] ?? value[defaultLocale] ?? []
