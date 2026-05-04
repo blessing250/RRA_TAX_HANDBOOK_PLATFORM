@@ -65,10 +65,21 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
       content: {
         en: [
           'These include; Personal Income Tax (PIT), Corporate Income Tax (CIT) and Income tax for vehicles transporting persons and goods.',
-          `<strong>  1. Personal Income Tax (PIT)</strong>`,
-          `PIT is for individual traders and unincorporated businesses. The personal income tax is levied on an individual annual income. (check for proper definition)`,
-          `<strong> PIT brackets</strong>`,
-          `The tax rate for PIT is progressive, as shown below:`,
+          '<strong>1. Personal Income Tax (PIT)</strong>',
+          'PIT is for individual traders and unincorporated businesses. The personal income tax is levied on an individual annual income.',
+          '<strong>PIT brackets</strong>',
+          'The tax rate for PIT is progressive, as shown below:',
+          {
+            type: 'table',
+            headers: ['Annual taxable income (profit)', 'Marginal PIT Rate'],
+            rows: [
+              ['FRW 0 - FRW 720,000', '0%'],
+              ['FRW 720,001 - FRW 1,200,000', '10%'],
+              ['FRW 1,200,001 - FRW 2,400,000', '20%'],
+              ['Above FRW 2,400,000', '30%'],
+            ],
+          },
+          'It is important to note that these tax rates are marginal. This means that for each Real Regime PIT taxpayer each year, the first FRW 720,000 that they earn is taxed at 0%, the next FRW 480,000 is taxed at 10%, the next 1,200,000 is taxed at 20% and any remaining income is taxed at 30%.',
         ],
       },
     },

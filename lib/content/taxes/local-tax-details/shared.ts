@@ -1,13 +1,13 @@
-import type { LocalizedText } from "@/lib/types/handbook"
+import type { HandbookContentBlock, LocalizedText } from "@/lib/types/handbook"
 
 export type LocalTaxDetailSection = {
   id: string
   title: LocalizedText
-  content?: Partial<Record<"en" | "fr" | "rw", string[]>>
+  content?: Partial<Record<"en" | "fr" | "rw", HandbookContentBlock[]>>
 }
 
 export type LocalTaxDetailPage = {
-  intro: Partial<Record<"en" | "fr" | "rw", string[]>>
+  intro: Partial<Record<"en" | "fr" | "rw", HandbookContentBlock[]>>
   lastUpdated: LocalizedText
   sections: LocalTaxDetailSection[]
   slug: string

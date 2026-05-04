@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 
 import { HandbookAccordion } from "@/components/handbook/handbook-accordion"
 import { HandbookBreadcrumb } from "@/components/handbook/handbook-breadcrumb"
+import { HandbookSection } from "@/components/handbook/handbook-section"
 import { Container } from "@/components/layout/container"
 import {
   localizedParagraphs,
@@ -52,11 +53,7 @@ export default async function DomesticTaxesPage({
         </h1>
 
         <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-          {localizedParagraphs(domesticTaxesPage.summary, locale).map(
-            (paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            )
-          )}
+          <HandbookSection paragraphs={localizedParagraphs(domesticTaxesPage.summary, locale)} />
         </div>
 
         <h2 className="mt-8 text-2xl font-bold tracking-normal text-rra-black sm:text-3xl">
