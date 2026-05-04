@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import { Container } from "@/components/layout/container"
@@ -8,12 +9,14 @@ import { PageHero } from "@/components/handbook/page-hero"
 import { RelatedTopics } from "@/components/handbook/related-topics"
 import { TableOfContents } from "@/components/handbook/table-of-contents"
 import {
+  localizedParagraphs,
   localizedText,
   getLocalizedTopic,
   getLocalizedTopics,
 } from "@/lib/content/handbook"
+import { centralGovernmentTaxesPage } from "@/lib/content/taxes/central-government-taxes"
 import { taxTopics } from "@/lib/content/taxes"
-import { getCentralTaxDetailPage } from "@/lib/content/taxes/central-tax-details"
+import { getCentralTaxDetailPage } from "@/lib/content/taxes/central-tax-details/index"
 import {
   centralGovernmentTaxSlugs,
   domesticTaxesPage,
@@ -25,9 +28,7 @@ export function generateStaticParams() {
   return locales.flatMap((lang) =>
     taxTopics
       .filter(
-        (topic) =>
-          topic.slug !== "domestic-taxes" &&
-          topic.slug !== "central-government-taxes"
+        (topic) => topic.slug !== "domestic-taxes"
       )
       .map((topic) => ({
         lang,
@@ -50,7 +51,7 @@ export default async function TaxTopicPage({
   const locale = lang as Locale
   const dict = getDictionary(locale)
 
-  if (slug === "domestic-taxes" || slug === "central-government-taxes") {
+  if (slug === "domestic-taxes") {
     notFound()
   }
 
@@ -68,6 +69,78 @@ export default async function TaxTopicPage({
     centralGovernmentTaxSlugs.some((itemSlug) => itemSlug === slug) ||
     slug === "local-government-taxes"
   const centralTaxDetailPage = getCentralTaxDetailPage(slug)
+
+  if (slug === "central-government-taxes") {
+    const taxItems = centralGovernmentTaxSlugs
+      .map((itemSlug) => getLocalizedTopic(itemSlug, locale))
+      .filter((item) => item !== undefined)
+
+    return (
+      <Container className="py-12 sm:py-16 lg:max-w-4xl">
+        <article className="mx-auto max-w-2xl">
+          <div className="mb-10">
+            <HandbookBreadcrumb
+              items={[
+                { label: dict.nav.home, href: `/${locale}` },
+                { label: dict.nav.taxes, href: `/${locale}/taxes` },
+                {
+                  label: localizedText(domesticTaxesPage.title, locale),
+                  href: `/${locale}/taxes/domestic-taxes`,
+                },
+                { label: localizedText(centralGovernmentTaxesPage.title, locale) },
+              ]}
+            />
+          </div>
+
+          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
+            {localizedText(centralGovernmentTaxesPage.title, locale)}
+          </h1>
+
+          <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
+            {localizedParagraphs(centralGovernmentTaxesPage.summary, locale).map(
+              (paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              )
+            )}
+          </div>
+
+          <div className="mt-16 max-w-xl">
+            <HandbookAccordion
+              variant="minimal"
+              items={taxItems.map((item) => ({
+                value: item.slug,
+                title: item.titleText,
+                content: (
+                  <div
+                    id={item.slug}
+                    className="scroll-mt-28 space-y-4 text-sm leading-7 text-rra-black sm:text-base"
+                  >
+                    <p>
+                      {item.summaryText}{" "}
+                      <Link
+                        href={`/${locale}/taxes/${item.slug}`}
+                        className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                      >
+                        {localizedText(
+                          centralGovernmentTaxesPage.readMoreLabel,
+                          locale
+                        )}
+                      </Link>
+                      .
+                    </p>
+                  </div>
+                ),
+              }))}
+            />
+          </div>
+
+          <p className="mt-20 text-sm text-rra-black">
+            {localizedText(centralGovernmentTaxesPage.lastUpdated, locale)}
+          </p>
+        </article>
+      </Container>
+    )
+  }
 
   if (centralTaxDetailPage) {
     const title = localizedText(centralTaxDetailPage.title, locale)
