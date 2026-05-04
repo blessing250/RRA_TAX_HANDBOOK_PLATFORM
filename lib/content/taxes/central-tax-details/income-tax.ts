@@ -13,48 +13,74 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
     ],
   },
   sections: [
-    {
-      id: 'taxable-income',
-      title: {
-        en: 'Taxable income',
-        fr: 'Revenu imposable',
-        rw: 'Inyungu isoreshwa',
-      },
-      content: {
-        // Add each paragraph as a separate string.
-        // This content appears inside the "Taxable income" accordion.
-        en: [
-          'Taxable income includes all income sourced in Rwanda resulting from business, employment or investment activities and activities performed abroad by a resident of Rwanda. This includes;',
-          `-services and employment;`,
-          ` -activities of a crafts person, singer, artist and a player;`,
-          `-Sports, cultural and leisure activities;`,
-          `-Activities carried out by a non-resident in Rwanda through a permanent establishment in Rwanda;`,
-          `- Use, sale, lease and free transfer of business movable assets;`,
-          `- Sale, lease and free transfer of immovable assets allocated to the business;`,
-          `- Agricultural, fishing and forestry activities;`,
-          `-Usufruct and other rights attached to immovable assets and their sale if such rights are allocated to the business;`,
-          ` -Investments in shares of companies;`,
-          ` -Direct or indirect sale or transfer of shares or debentures; change of profits into shares that increases the capital of partners, except for financial institutions with paid-up capital below the minimum requirement set by the National bank of Rwanda;`,
-          `- Distribution of profits among partners;`,
-          `- Lending, deposits and other similar income-generating activities;`,
-          `-Transfer, sale and lease of intellectual property;`,
-          `-Digital services;`,
-          `- Gaming activities`,
-          `- Any other income generating activity.`,
-        ],
-        // French and Kinyarwanda can be filled progressively.
-        // Omit fr/rw until translated so the page falls back to English.
-      },
+  {
+    id: 'taxable-income',
+    title: {
+      en: 'Taxable income',
+      fr: 'Revenu imposable',
+      rw: 'Inyungu isoreshwa',
     },
-    section('income-tax-registration', 'Income tax Registration'),
-    section('income-tax-categories', 'Income tax categories'),
-    section('income-tax-regimes', 'Income Tax regimes'),
-    section('income-quarterly-prepayments', 'Income Quarterly Prepayments (IQP)'),
-    section(
-      'declaring-flat-tax-lump-sum-and-iqp-income-tax-using-m-declaration',
-      'Declaring Flat Tax, Lump Sum and IQP Income Tax using M-Declaration',
-    ),
-    section('step-by-step-declaration-guide', 'Step by step declaration guide'),
-  ],
+    content: {
+      en: [
+        'Taxable income includes all income sourced in Rwanda resulting from business, employment or investment activities and activities performed abroad by a resident of Rwanda. This includes;',
+        '-services and employment;',
+        '-activities of a crafts person, singer, artist and a player;',
+        '-Sports, cultural and leisure activities;',
+        '-Activities carried out by a non-resident in Rwanda through a permanent establishment in Rwanda;',
+        '-Use, sale, lease and free transfer of business movable assets;',
+        '-Sale, lease and free transfer of immovable assets allocated to the business;',
+        '-Agricultural, fishing and forestry activities;',
+        '-Usufruct and other rights attached to immovable assets and their sale if such rights are allocated to the business;',
+        '-Investments in shares of companies;',
+        '-Direct or indirect sale or transfer of shares or debentures;',
+        '-Distribution of profits among partners;',
+        '-Lending, deposits and other similar income-generating activities;',
+        '-Transfer, sale and lease of intellectual property;',
+        '-Digital services;',
+        '-Gaming activities;',
+        '-Any other income generating activity.',
+      ],
+    },
+  },
+  {
+    id: 'income-tax-registration',
+    title: {
+      en: 'Income tax Registration',
+      fr: "Enregistrement de l'impot sur le revenu",
+      rw: 'Iyandikishirizwa ry’umusoro ku nyungu',
+    },
+    content: {
+      en: [
+        'Taxpayers must register their businesses with RDB within seven days of beginning taxable activities or establishing the company. Taxpayers are automatically registered on income tax when their business registration has been approved by the Rwanda Development Board (RDB).',
+      ],
+    },
+  },
+  // section('income-tax-categories', 'Income tax categories'),
+  {
+    id: 'income-tax-categories',
+    title: {
+      en: 'Income tax categories',
+      fr: 'Catégories d’impôt sur le revenu',
+      
+    },
+    content: {
+      en: [
+        'These include; Personal Income Tax (PIT), Corporate Income Tax (CIT) and Income tax for vehicles transporting persons and goods.',
+        `<strong>  1. Personal Income Tax (PIT)</strong>`,
+        `PIT is for individual traders and unincorporated businesses. The personal income tax is levied on an individual annual income. (check for proper definition)`,
+        `<strong> PIT brackets</strong>`,
+        `The tax rate for PIT is progressive, as shown below:`,
+      ],
+    },
+
+  },
+  section('income-tax-regimes', 'Income Tax regimes'),
+  section('income-quarterly-prepayments', 'Income Quarterly Prepayments (IQP)'),
+  section(
+    'declaring-flat-tax-lump-sum-and-iqp-income-tax-using-m-declaration',
+    'Declaring Flat Tax, Lump Sum and IQP Income Tax using M-Declaration',
+  ),
+  section('step-by-step-declaration-guide', 'Step by step declaration guide'),
+],
   lastUpdated: centralTaxLastUpdated,
 };
