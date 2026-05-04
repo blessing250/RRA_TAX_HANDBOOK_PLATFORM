@@ -1,9 +1,16 @@
 import type { LocalizedText } from "@/lib/types/handbook"
 
+type AccordionContent = {
+  id: string
+  title: LocalizedText
+  description: Partial<Record<"en" | "fr" | "rw", string[]>>
+}
+
 type CentralTaxDetailSection = {
   id: string
   title: LocalizedText
   content?: Partial<Record<"en" | "fr" | "rw", string[]>>
+  accordionItems?: AccordionContent[]
 }
 
 export type CentralTaxDetailPage = {
@@ -53,6 +60,7 @@ export const centralTaxDetailPages: Record<string, CentralTaxDetailPage> = {
     },
     sections: [
       section("taxable-income", "Taxable income"),
+      
       section("income-tax-registration", "Income tax Registration"),
       section("income-tax-categories", "Income tax categories"),
       section("income-tax-regimes", "Income Tax regimes"),
