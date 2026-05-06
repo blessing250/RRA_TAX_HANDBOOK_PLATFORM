@@ -80,6 +80,7 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
             ],
           },
           'It is important to note that these tax rates are marginal. This means that for each Real Regime PIT taxpayer each year, the first FRW 720,000 that they earn is taxed at 0%, the next FRW 480,000 is taxed at 10%, the next 1,200,000 is taxed at 20% and any remaining income is taxed at 30%.',
+          '<blockquote><p><strong>Example 15</strong>: Amahora is the owner of a supermarket. Her annual turnover between January 1st and December 31st was FRW 62,000,000. Her deductible expenses, depreciation and allowances total FRW 54,000,000.</p><p><strong>Her annual taxable profit is therefore:</strong><br/>FRW 62,000,000 − FRW 54,000,000 = FRW 8,000,000</p><p><strong>Her annual Real Regime PIT due is:</strong><br/>(FRW 720,000 × 0%) + (FRW 480,000 × 10%) + (FRW 1,200,000 × 20%) + (FRW 6,800,000 × 30%) = FRW 1,968,000</p></blockquote>',
         ],
       },
     },
