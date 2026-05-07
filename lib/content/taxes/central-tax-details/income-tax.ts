@@ -25,8 +25,15 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
       },
       content: {
         en: [
-          "Taxable income includes all income sourced in Rwanda resulting from business, employment or investment activities, and activities performed abroad by a resident of Rwanda. This includes:",
-          "<ul><li>Services and employment.</li><li>Activities of a craftsperson, singer, artist, or player.</li><li>Sports, cultural, and leisure activities.</li><li>Activities carried out by a non-resident in Rwanda through a permanent establishment in Rwanda.</li><li>Use, sale, lease, and free transfer of business movable assets.</li><li>Sale, lease, and free transfer of immovable assets allocated to the business.</li><li>Agricultural, fishing, and forestry activities.</li><li>Usufruct and other rights attached to immovable assets and their sale, if such rights are allocated to the business.</li><li>Investments in shares of companies.</li><li>Direct or indirect sale or transfer of shares or debentures.</li><li>Change of profits into shares that increases the capital of partners, except for financial institutions with paid-up capital below the minimum requirement set by the National Bank of Rwanda.</li><li>Distribution of profits among partners.</li><li>Lending, deposits, and other similar income-generating activities.</li><li>Transfer, sale, and lease of intellectual property.</li><li>Digital services.</li><li>Gaming activities.</li><li>Any other income-generating activity.</li></ul>",
+          `Taxable income includes all income sourced in Rwanda resulting from business, employment or investment activities, and activities performed abroad by a resident of Rwanda. This includes:`,
+          `<ul><li>Services and employment;</li><li>• Activities of a craftsperson, singer, artist, or player.</li>
+          <li> • Sports, cultural, and leisure activities.</li><li>• Activities carried out by a non-resident in Rwanda through a permanent establishment in Rwanda.</li>
+          <li>• Use, sale, lease, and free transfer of business movable assets.</li><li>Sale, lease, and free transfer of immovable assets allocated to the business.</li>
+          <li>• Agricultural, fishing, and forestry activities.</li><li> • Usufruct and other rights attached to immovable assets and their sale, if such rights are allocated to the business.</li>
+          <li>• Investments in shares of companies.</li>
+          <li>•  Direct or indirect sale or transfer of shares or debentures; change of profits into shares that increases the capital of partners, except for financial institutions with paid-up capital below the minimum requirement set by the National bank of Rwanda;</li>
+          <li>• Distribution of profits among partners.</li><li>Lending, deposits, and other similar income-generating activities.</li><li> •Transfer, sale, and lease of intellectual property.</li>
+          <li>• Digital services.</li><li>• Gaming activities.</li><li> • Any other income-generating activity.</li></ul>`,
         ],
       },
     },
@@ -39,7 +46,7 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
       },
       content: {
         en: [
-          "Taxpayers must register their businesses with Rwanda Development Board (RDB) within seven days of beginning taxable activities or establishing the company. Taxpayers are automatically registered for Income Tax when their business registration has been approved by RDB.",
+        `Taxpayers must register their businesses with RDB within seven days of beginning taxable activities or establishing the company. Taxpayers are automatically registered on income tax when their business registration has been approved by RDB. `,
         ],
       },
     },
@@ -52,10 +59,10 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
       },
       content: {
         en: [
-          "Income Tax categories include Personal Income Tax (PIT), Corporate Income Tax (CIT), and Income Tax for vehicles transporting persons and goods.",
-          "<strong>Personal Income Tax (PIT)</strong>",
-          "PIT is for individual traders and unincorporated businesses. Personal Income Tax is levied on an individual's annual income.",
-          "<strong>PIT brackets</strong>",
+          `These include; Personal Income Tax (PIT), Corporate Income Tax (CIT) and Income tax for vehicles transporting persons and goods.`,
+          "<strong>1.Personal Income Tax (PIT)</strong>",
+          `PIT is for individual traders and unincorporated businesses. The personal income tax is levied on an individual annual income. (check for proper definition)`,
+          "<strong>i) PIT brackets</strong>",
           "The tax rate for PIT is progressive, as shown below:",
           {
             type: "table",
@@ -67,10 +74,15 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               ["Above FRW 2,400,000", "30%"],
             ],
           },
-          "These rates are marginal. For each Real Regime PIT taxpayer, the first FRW 720,000 earned in a year is taxed at 0%, the next FRW 480,000 at 10%, the next FRW 1,200,000 at 20%, and any remaining income at 30%. This means that no taxpayer is made worse off by receiving income in a higher tax bracket.",
-          "<blockquote><p><strong>Example 15</strong>: Amahoro is the owner of a supermarket. Her annual turnover between January 1 and December 31 was FRW 62,000,000. Her deductible expenses, depreciation, and allowances total FRW 54,000,000.</p><p><strong>Annual taxable profit:</strong><br/>FRW 62,000,000 - FRW 54,000,000 = FRW 8,000,000</p><p><strong>Annual Real Regime PIT due:</strong><br/>(FRW 720,000 * 0%) + (FRW 480,000 * 10%) + (FRW 1,200,000 * 20%) + (FRW 6,800,000 * 30%) = FRW 1,968,000</p></blockquote>",
-          "<strong>PIT declaration obligation</strong>",
-          "PIT must be declared and paid annually. The tax period is the calendar year, from 1 January to 31 December. The deadline to declare and pay PIT is 31 March of the following year. PIT is declared online through E-Tax or through M-Declaration (*800#).",
+          `These rates are marginal. For each Real Regime PIT taxpayer, the first FRW 720,000 earned in a year is taxed at 0%, the next FRW 480,000 at 10%, the next FRW 1,200,000 at 20%, and any remaining income at 30%. This means that no taxpayer is made worse off by receiving income in a higher tax bracket.`,
+          "<blockquote><p><strong>Example 15</strong>: Amahoro is the owner of a supermarket. Her annual turnover between January 1 and December 31 was FRW 62,000,000. Her deductible expenses, depreciation, and allowances total FRW 54,000,000.</p><p><strong>Her annual taxable profit is therefore:</strong><br/>FRW 62,000,000 - FRW 54,000,000 = FRW 8,000,000</p><p><strong>Her annual Real Regime PIT due is:</strong><br/>(FRW 720,000 * 0%) + (FRW 480,000 * 10%) + (FRW 1,200,000 * 20%) + (FRW 6,800,000 * 30%) = FRW 1,968,000</p></blockquote>",
+          "<strong>ii)  PIT declaration obligation</strong>",
+         ` PIT is required to be declared and paid on an annual basis. The tax period is the calendar year, from 1st January until 31st December. The deadline to declare and pay PIT is 31st March of the following year. PIT is declared online through <a href="https://etax.rra.gov.rw/">E-tax system</a> or M-declaration ( *800#). `,
+         `<strong>Note</strong>: If the tax type and tax period for the relevant declaration is not available on the ‘Document Details’ screen, the taxpayer can generate it in the E-Tax system.`,
+         `<strong>iii) PIT Payment</strong>`,
+         `PIT payments can be made via Mobile/Airtel Money, MobiCash, mobile banking, or Internet Banking.`,
+        `<strong>iv) PIT de-registration</strong>`,
+       ` When a taxpayer wants to apply for PIT de-registration for various reasons, RRA may request any documents of proof as necessary. For more information on how to request for de-registration,<a href="https://www.rra.gov.rw/fileadmin/user_upload/RRA_TIN_De-registration_Engl.pdf"> see a step-by-step guide.</a>`,
           "<strong>Corporate Income Tax (CIT)</strong>",
           "Corporate Income Tax is imposed on the profit of a taxpayer other than an individual. Annual Income Tax declaration is prepared according to tax administration procedures and submitted not later than 31 March of the following tax period, unless the law provides otherwise.",
           "Taxpayers exempted from Corporate Income Tax are not required to register, declare, or pay Income Tax. However, they must submit their financial statements through E-Tax by 31 March after the tax period or within three months following a specific tax period granted to the taxpayer.",
