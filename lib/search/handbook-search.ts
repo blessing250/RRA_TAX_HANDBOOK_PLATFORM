@@ -5,6 +5,7 @@ import {
   localizedText,
 } from "@/lib/content/handbook"
 import { otherServicesPage, otherServiceSections } from "@/lib/content/other-services"
+import { userGuideSections, userGuidesPage } from "@/lib/content/user-guides"
 import type { Locale } from "@/lib/i18n/config"
 import type { HandbookContentBlock } from "@/lib/types/handbook"
 
@@ -79,6 +80,14 @@ export function getHandbookSearchIndex(lang: Locale): HandbookSearchItem[] {
     .join(" ")
     .replace(/\s+/g, " ")
     .trim()
+  const userGuideSectionText = userGuideSections
+    .flatMap((section) => [
+      localizedText(section.title, lang),
+      ...localizedParagraphs(section.content, lang).map(blockToText),
+    ])
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim()
 
   const topicItems = topics.map((topic) => {
     const sectionText = topic.sections
@@ -112,6 +121,8 @@ export function getHandbookSearchIndex(lang: Locale): HandbookSearchItem[] {
 
   const otherServicesTitle = localizedText(otherServicesPage.title, lang)
   const otherServicesSummary = localizedText(otherServicesPage.summary, lang)
+  const userGuidesTitle = localizedText(userGuidesPage.title, lang)
+  const userGuidesSummary = localizedText(userGuidesPage.summary, lang)
 
   return [
     ...topicItems,
@@ -127,6 +138,22 @@ export function getHandbookSearchIndex(lang: Locale): HandbookSearchItem[] {
         otherServicesSummary,
         "Other services",
         otherServicesSectionText,
+      ]
+        .join(" ")
+        .toLowerCase(),
+    },
+    {
+      id: userGuidesPage.slug,
+      title: userGuidesTitle,
+      summary: userGuidesSummary,
+      body: userGuideSectionText,
+      category: "User guides and examples",
+      href: `/${lang}/user-guides-and-examples`,
+      keywords: [
+        userGuidesTitle,
+        userGuidesSummary,
+        "User guides and examples",
+        userGuideSectionText,
       ]
         .join(" ")
         .toLowerCase(),
