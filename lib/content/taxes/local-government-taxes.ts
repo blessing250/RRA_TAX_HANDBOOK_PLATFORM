@@ -29,12 +29,12 @@ export const localGovernmentTaxesPage = {
   },
   intro: {
     en: [
-      "Taxes and fees levied by decentralised entities commonly known as Local Government Taxes (LGT) and fees are revenues collected by RRA on behalf of the district authorities.",
-      "The mandate for collecting taxes and fees levied by decentralised entities was transferred from the district authorities themselves to RRA in 2014. Within RRA, taxes and fees levied by decentralised entities are administered by the Provincial and Decentralized Revenues Division.",
-      "The mandate was changed because of the greater experience and capacity of RRA in collecting revenues, facilitating taxpayers and modernising processes, which means that taxes and fees levied by decentralised entities can be collected more fairly and efficiently by RRA than by the districts themselves. The collected revenues are directly paid to the corresponding Districts bank account.",
-      "Decentralised entities ensure that landowners, landlords and business owners contribute towards the good governance and improvement of their local communities.",
-      "In addition, decentralised entities ensure that taxpayers occupying public areas, or taxpayers requiring certain services, pay fair and consistent fees wherever they are in the country.",
-      "Combined, taxes and fees levied by decentralised entities provide revenues for local governments to deliver valuable community development and social protection projects.",
+    `Taxes and fees levied by decentralised entities commonly known as Local Government Taxes (LGT) and fees are revenues collected by RRA on behalf of the district authorities. `,
+    `The mandate for collecting taxes and fees levied by decentralised entities was transferred from the district authorities themselves to RRA in 2014. Within RRA, taxes and fees levied by decentralised entities are administered by the Provincial and Decentralized Revenues Division. `,
+    `The mandate was changed because of the greater experience and capacity of RRA in collecting revenues, facilitating taxpayers and modernising processes, which means that taxes and fees levied by decentralised entities can be collected more fairly and efficiently by RRA than by the districts themselves. The collected revenues are directly paid to the corresponding Districts bank account.`,
+    `Decentralised entities ensure that landowners, landlords and business owners contribute towards the good governance and improvement of their local communities. In addition, decentralised entities ensure that taxpayers occupying public areas, or taxpayers requiring certain services, pay fair and consistent fees wherever they are in the country.`,
+    `Combined, taxes and fees levied by decentralised entities provide revenues for local governments to deliver valuable community development and social protection projects.`,
+
     ],
   } satisfies LocalizedParagraphs,
   lastUpdated: {
