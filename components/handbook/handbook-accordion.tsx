@@ -1,7 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
   Accordion,
@@ -29,6 +29,7 @@ export function HandbookAccordion({
 }: HandbookAccordionProps) {
   const itemValues = useMemo(() => items.map((item) => item.value), [items])
   const [value, setValue] = useState(defaultValue ?? "")
+  const itemRefs = useRef<Record<string, HTMLDivElement | null>>({})
   const isMinimal = variant === "minimal"
 
   useEffect(() => {
@@ -52,6 +53,24 @@ export function HandbookAccordion({
     const normalizedValue = nextValue || ""
 
     setValue(normalizedValue)
+
+    if (normalizedValue) {
+      window.requestAnimationFrame(() => {
+        const itemElement = itemRefs.current[normalizedValue]
+
+        if (!itemElement) {
+          return
+        }
+
+        const headerOffset = window.matchMedia("(max-width: 767px)").matches ? 126 : 96
+        const itemTop = itemElement.getBoundingClientRect().top + window.scrollY
+
+        window.scrollTo({
+          top: Math.max(itemTop - headerOffset, 0),
+          behavior: "smooth",
+        })
+      })
+    }
 
     if (normalizedValue) {
       window.history.replaceState(null, "", `#${normalizedValue}`)
@@ -79,7 +98,13 @@ export function HandbookAccordion({
       }
     >
       {items.map((item) => (
-        <AccordionItem key={item.value} value={item.value}>
+        <AccordionItem
+          key={item.value}
+          ref={(node) => {
+            itemRefs.current[item.value] = node
+          }}
+          value={item.value}
+        >
           <AccordionTrigger
             className={
               isMinimal
