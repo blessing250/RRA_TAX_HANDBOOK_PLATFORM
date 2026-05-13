@@ -29,11 +29,12 @@ export const payeDetail: CentralTaxDetailPage = {
           `<strong>Example <strong/>`,
           `Amahoro owns a small shop. She has one employee, Ubumwe. Amahoro must withhold, declare and pay PAYE on Ubumwe’s employment income. This is done by Amahoro on behalf of Ubumwe so Ubumwe does not need to declare or pay any further taxes on this income.`,
           `In the event that an employer has special authorisation from the Government of Rwanda that they are not required to declare and pay taxes on income, employees are required to register with RRA, declare and pay PAYE on their own behalf. `,
-          `<ul><li>Employers are required to provide each employee with a statement each tax period showing:</li>`,
-          `<li>The employee’s name.</li>`,
-          `<li>The amount and type(s) of income received.</li>`,
-          `<li>The amount of PAYE and RSSB contributions that have been withheld and paid on their behalf.</li>`,
-          `</ul>`,
+          `<ul><li>Employers are required to provide each employee with a statement each tax period showing:</li>
+          <li>The employee’s name.</li>
+          <li>The amount and type(s) of income received.</li>
+          <li>The amount of PAYE and RSSB contributions that have been withheld and paid on their behalf.</li>
+          </ul>`,
+          
         ],
       },
     },
@@ -67,10 +68,10 @@ export const payeDetail: CentralTaxDetailPage = {
       content: {
         en: [
           `Employment income that is exempt from taxation includes:`,
-          `<ul><li>• Reimbursement of expenses incurred by the employee if wholly and exclusively for the business activities of the employer.</li>`,
-          `<li>• Retirement contributions or pension payments made by the employer on behalf of the employee to Rwanda Social Security Board (RSSB).</li>`,
-          `<li>• Retirement contributions made by the employer on behalf of the employee and/or contributions made by the employee to a qualified pension fund up to a maximum of 10% of the employee's employment income or FRW 1,200,000 per year, whichever is lower.</li>`,
-          `<li>• Employment income received by an employee who is not a citizen of Rwanda from a foreign government or NGO under an agreement signed by the Government of Rwanda, when the income is received in performance of aid services in Rwanda.</li>`,
+          `<ul><li>Reimbursement of expenses incurred by the employee if wholly and exclusively for the business activities of the employer.</li>`,
+          `<li> Retirement contributions or pension payments made by the employer on behalf of the employee to Rwanda Social Security Board (RSSB).</li>`,
+          `<li>Retirement contributions made by the employer on behalf of the employee and/or contributions made by the employee to a qualified pension fund up to a maximum of 10% of the employee's employment income or FRW 1,200,000 per year, whichever is lower.</li>`,
+          `<li> Employment income received by an employee who is not a citizen of Rwanda from a foreign government or NGO under an agreement signed by the Government of Rwanda, when the income is received in performance of aid services in Rwanda.</li>`,
           `</ul>`,
         ],
       },
