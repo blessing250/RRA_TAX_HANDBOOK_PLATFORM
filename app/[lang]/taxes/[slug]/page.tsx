@@ -234,10 +234,10 @@ export default async function TaxTopicPage({
         <HandbookSection
           id="registration"
           paragraphs={[
-            'Each of the Decentralised Entities Taxes listed above, and many of the Decentralised Entities fees, must be declared using the Local Government Taxes (LGT) system.',
-            'The LGT system is an online portal designed to make it easier for taxpayers to declare Decentralised Entities Taxes and fees.',
-            'This can be done online, or with assistance from a RRA officer. To register, taxpayers must visit any RRA offices with either a Rwandan ID or Passport. The system is accessed via the link <a href="https://localgov.rra.gov.rw">https://localgov.rra.gov.rw</a>',
-            "If a taxpayer does not know their password, it can be reset by clicking 'Forgot Password' on the LGT system login and receiving a new password by SMS or email.",
+             `Each of the Decentralised Entities Taxes listed above, and many of the Decentralised Entities fees, must be declared using the Local Government Taxes (LGT) system. The LGT system is an online portal designed to make it easier for taxpayers to declare Decentralised Entities Taxes and fees. This can be done online, or with assistance from a RRA officer. `,
+            `To register, taxpayers must visit any RRA offices with either a Rwandan ID or Passport. The system is accessed via  <a href = "https://localgov.rra.gov.rw/">the link</a>`,
+            `If a taxpayer does not know their password, it can be reset by clicking ‘Forgot Password’ on the LGT system login and receiving a new password by SMS or email. `,
+
           ]}
         />
       ),
@@ -271,9 +271,15 @@ export default async function TaxTopicPage({
         <HandbookSection
           id="declaration-system"
           paragraphs={[
-            'Taxpayers must declare taxes and fees levied by decentralised entities using the Rwanda Automated Local Government Taxes Management System, referred to as the LGT system. They can also use M-declaration.',
-            'The LGT system has been designed with taxpayers in mind to make it as easy as possible to declare the required taxes and fees.',
-            '<ul><li>Declare taxes anytime, from anywhere.</li><li>Avoid travel costs of visiting RRA offices.</li><li>Avoid queuing times at RRA offices.</li></ul>',
+           `Taxpayers must declare taxes and fees levied by decentralised entities using the Rwanda Automated Local Government Taxes Management System, referred to as the LGT system. They can also use M-declaration.`,
+            `The LGT system has been designed with taxpayers in mind to make it as easy as possible to declare the required taxes and fees. The advantages of declaring online using the LGT system or using M-declaration are:`,
+            `<ul>
+            <li>  Declare taxes anytime, from anywhere.
+            <li>Avoid travel costs of visiting RRA offices.
+             <li> Avoid queuing times at RRA offices.
+                    </ul>`,
+
+
           ]}
         />
       ),
