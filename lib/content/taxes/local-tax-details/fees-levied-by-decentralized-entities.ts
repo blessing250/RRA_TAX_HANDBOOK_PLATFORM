@@ -209,16 +209,130 @@ export const feesLeviedByDecentralizedEntitiesDetail: LocalTaxDetailPage = {
         `The four types of Decentralised Entities Taxes which are Rental Income Tax, Trading License Tax, Immovable Property Tax, and Tax on Sale of Immovable Property, and Decentralised Entities fees can be declared using the LGT system. The process of declaring each is similar, and described below.`,
           "<strong>Step 1: Login to the LGT system</strong>",
           `Access the LGT system at <a href ="https://localgov.rra.gov.rw/"> https://localgov.rra.gov.rw</a> or through the RRA website at <a href ="https://www.rra.gov.rw/en/home">https://www.rra.gov.rw/en/home</a> and clicking on ‘Pay District taxes here’ on the right of the screen. This loads the following login screen:`,
-          "<strong>Step 2: Select the correct tax or fee</strong>",
-          "The LGT system has Registration, Declaration, Fee Payment Ticket, and Change Password menus. Taxes are declared through Declaration, while fees are declared through Fee Payment Ticket.",
-          "Fee Payment Ticket includes civil marriage fees, immovable property service fees, official certificates, clay brick and charcoal authorization, market fees, parking fees, small-scale quarry exploitation fees, advertising fees, boat and bicycle number plate fees, communication tower fees, and transport of materials from quarries and forests.",
-          "<strong>Step 3: Complete declaration form and submit</strong>",
-          "Enter the required information in the declaration form. Required information depends on the tax or fee selected. After completion, calculate tax, certify the declaration, and submit.",
-          "<strong>Step 4: View payment details and pay</strong>",
-          "After successfully submitting the declaration, view the acknowledgement receipt or receive payment details by email or SMS. Use the RRA reference number to pay before the deadline.",
-          "<strong>M-Declaration</strong>",
-          "Taxpayers can use M-Declaration for Trading License Tax, Immovable Property Tax for plots without buildings, and outsourced fees available for Ngali Holdings Ltd. Dial *800#, select a language, choose Local Government Taxes, select the tax or fee type, enter the TIN, and follow the on-screen instructions.",
-        ],
+          `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+         ` The language can be changed by clicking on the flag icons in the top right corner, respectively English, Kinyarwanda and French.`,
+        ` Click ‘Taxes’ for the following LGT system login screen:`,
+         `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+        ` If a taxpayer does not know their password, it can be reset by clicking ‘Forgot Password’ on the LGT system login and receiving a new password by SMS or email.`,
+          "<strong>Step 2: Select the correct Decentralised Entities Taxes or fee to declare</strong>",
+          `After logging in, the LGT system home page is loaded.`,
+          `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+             `There are four menus available on the left of the screen: ‘Registration’, ‘Declaration’, ‘Fee Payment Ticket’ and ‘Change Password’. Each of these menus is discussed in turn.`,
+              `As taxpayers must register with LGT System staff and cannot use the ‘Registration’ menu to register. However, it does display confirmation of registration, and allows for printing of Trading License Tax Certificates.`,
+              `The taxpayer is also required to indicate building characteristics such as roofing, wall material, sewage system etc that was previously displayed on registration form as per below screen:`,
+              `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+             `The ‘Declaration’ menu is where the four types of Decentralised Entities Taxes are declared. Click ‘Declaration’ and the drop-down ‘Taxes’ option. Then choose the tax type and tax period that is being declared and click ‘Submit’. Finally, click on the document number of the applicable declaration.`,
+             `<blockquote>
+             <strong>Example:</strong> 
+              <p>A taxpayer clicks ‘Declaration’ then ‘Taxes’ and sees the following screen. The only Decentralised Entities Tax the taxpayer is registered for is ‘Rental Income’. They select this tax type and the tax year that is being declared, and click ‘Submit’</p>
+              <blockquote>`,
+              `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+              `This loads the following screen. It displays each of the properties registered by that taxpayer for Rental Income Tax, for this taxpayer only one. For each property, the taxpayer clicks the ‘Document No’ to begin the declaration.`,
+             `The ‘Fees Payment Ticket’ menu is where fees can be declared and the drop-down provides the choice of a range of fee declarations:`,
+             `<ul>
+                       <li>     Fees on civil marriage conducted on a day other than an official business day.</li>
+                         <li>   Fees on services and documents of immovable property.</li>
+                          <li>  Fees on official certificates of a decentralized entity.</li>
+                          <li>  Fees on authorisation to make or burn clay bricks, tiles, or charcoal.</li>
+                           <li> Market fees.</li>
+                         <li>   Fees on parking.</li>
+                           <Li> Fees on public parking.</li>
+                           <li> Parking fees on boats.</li>
+                            <li>Fees on small-scale quarry exploitation.</li>
+                           <li> Fees on advertising.</li>
+                         <li> Fees for boat number plates.</li>
+                          <li>  Fees on bicycle number plates.</li>
+                           <li> Fees on communication towers.</li>
+                           <li> Fees on transport of materials from quarries and forests.</li>
+                           </ul>`,
+                  `The‘Change Password’ menu requires the taxpayer to enter the previous password, and the new password. The taxpayer is automatically required to change their password when first logging in to the LGT system with the RRA provided password.`,
+                  ` <strong>Step 3: Complete declaration form and submit </strong>`,
+                 ` Having selected the correct Decentralised Entities Tax or fee, enter the required information in the declaration form. The information that is required depends upon the type of Decentralised Entities Tax or fee. These are displayed in turn below.`,              
+                `<strong> Immovable Property Tax </strong>`,
+               ` The declaration for the Immovable Property Tax generally consists of three parts:`,
+              ` <ol>
+                  <p>1.     Part referring to the land.</p>
+             <p>   2.  Part referring to the building – if there is a building on the land.</p>
+             <p>  3.     Part referring to the entire immovable property.</p>
+                </ol>`,
+                `In the first part of the declaration, the taxpayer does not have to enter any information about the land. Instead, the LGT system automatically displays all information determining the tax due on the land.`,
+                 ` Note that if the construction of a building has been completed on the plot during the tax period so that the land is no longer undeveloped, the taxpayer needs to visit an RRA office to update the registration of the Immovable Property Tax to indicate that land is developed.`,
+                 `In the second part of the declaration, the taxpayer needs to provide information on the building (for developed land, only). In particular, the taxpayer needs to indicate the market value of the building.`,
+                 ` In the following section, the taxpayer is asked to indicate the total market value of the immovable property, which includes both the building component and the land component.`,
+                 `Once the required information has been entered, click ‘Calculate Tax’. The LGT system automatically displays:`,
+                ` <ol>
+                <p> 1.     The tax due on the land component, depending on the surface area of the plot and the tax rate on land.</p>
+                 <p>2.     The tax due on the building component, based on the market value and the tax rate on building.</p>
+                 <p>3.     The total tax due on the immovable property, potential penalties and interests in case of late declaration, as well as the total amount due.</p>
+                    </ol>`,
+                  `  Afterwards, certify that the declaration was done correctly before you ‘Submit’.`,
+             `<blockquote>
+                <strong>Example 74</strong>
+                 <p>An example of a filled in declaration form for Immovable Property Tax is shown below. The tax due on the land is FRW 14,460. The tax due on the building is FRW 125,000. Therefore, the total Immovable Property Tax due to be paid with this declaration is FRW 139,460.</p>
+              </blockquote>`,
+               `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+             `<strong>Trading License Tax</strong>`,
+                    `  Select Trading License Tax from the ‘Taxes’ menu, choose annual or quarterly: If the previous annual turnover exists, the system retrieves it and fills it automatically. Otherwise, the system classifies a taxpayer under ‘Other profit-oriented activities’ category and charges trading licence tax accordingly.`,
+                     `If all the information is correct, click ‘Calculate Tax’ to display the tax due, and click to ‘Submit’ the declaration.`,
+                   `<blockquote>
+                  <strong>Example </strong>
+                <p> The Trading License Tax due for a business with an annual turnover of FRW 20 million is FRW 160,000.<p>
+              <p><strong>   Example</strong></p>
+                    The Trading License Tax due for a business with unknown previous fiscal year turnover is FRW 60,000 if the taxpayer is located in urban zone or FRW 30,000 if the taxpayer is located rural zone as per ‘other profit-oriented activities’ category.
+                  </blockquote>`,
+                `<strong>    Rental Income Tax</strong>`,
+              ` Having clicked on the document number of the relevant property for the tax type and tax period that is being declared, the following declaration form is displayed for Rental Income Tax.`,
+              `The taxpayer must enter the monthly rent and the total amount of rental income received during the tax year. In addition, if bank interest is being paid on this property, the taxpayer must change ‘Is Bank Interest paid’ to ‘Yes’ and enter the additional required details including rent contract copy.`,
+                 `Once all required information has been entered, click ‘Continue with Declaration’. This generates an additional ‘Rental Income Declaration’ section. If all the information is correct, click ‘Calculate Tax’ to display the tax due, and click to ‘Submit’ the declaration.`,
+                 `<blockquote>
+                 <strong>   Example 76</strong>
+               <p> An example Rental Income Tax declaration form is entered below. The total Rental Income Tax due to be paid with this declaration is FRW 584,000.</p>
+                  </blockquote>`,
+                   `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+                 `<strong>Tax on a sale of Immovable Property Tax</strong>`,
+                 ` A rate of 2% is levied on the sale value of an immovable property for commercial use if the seller is a taxpayer registered for income tax. This tax is considered as a deductible expense.`,
+                     `A rate of 2.5% is levied on the sale value of an immovable property sold by a person not registered for income tax.`,
+                      `Tax on a sale of immovable property is levied on the balance of the sale value of the property after deduction of FRW 5,000,000 which is not subject to tax.`,
+                ` <strong> Decentralised Entities Fees</strong>`,
+                       ` The process of declaring Decentralised Entities fees varies depending upon the type of fee. In general, having selected the correct type of ‘Fee Payment Ticket’, enter the required information, and click ‘Submit’. This Tax Handbook uses two examples to demonstrate the general processes of declaring Decentralised Entities fees.`,
+                       `Fees for civil marriage conducted on days other than official business days.`,
+                       ` The taxpayer must enter their personal details including their national ID number or passport number, name, date of birth, mobile number and the province, district and sector where they live. Some of these details may be automatically generated after entering the ID number.`,
+                      ` The taxpayer can then choose the type of service that is required. This may include further drop-down options. Once selected, this automatically generates the correct amount that must be paid for that service, and the taxpayer can click to ‘Submit’ the fee declaration.`,
+               ` <blockquote>
+               <strong> Example</strong>
+                 <p>   An example fee declaration to pay for civil marriage done not on official business days is entered below. The amount that must be paid for this service is FRW 10,000.</p>
+                </blockquote>`,
+                 `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+                   `<strong>Step 4: View payment details via the Acknowledgement Receipt, email or SMS, and pay the total amount due.</strong>`,
+                   ` After successfully submitting the declaration, click to view the Acknowledgement Receipt. Alternatively, receive the payment details by email or SMS by entering an email address or phone number and clicking ‘Send Email’ or ‘Send SMS’.`,
+                  `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
+                 ` Use the RRA Reference Number to pay the total amount due. This must be paid before the deadline to avoid penalties and fines, see page 415 for more details on paying taxes.`,
+               `<strong> Declaring Decentralised Entities Taxes and Fees using M-Declaration. </strong>`,
+                         `Taxpayers can use M-declaration for the following local government tax and fees:`,
+                        ` <ul>
+                          <li>Trading License Tax</li>
+                          <li> Immovable Property Tax (available for plots without buildings, only)</li>
+                          <li>   Outsourced Fees (available for Ngali Holding Ltd, only).</li>
+                          </ul>`,
+                         ` The process for declaring these Decentralised Entities Taxes and fees using M-declaration is explained below.`,
+                `<strong> M-Declaration Process</strong>`,
+                                ` The M-Declaration system is accessed by dialling *800#. The M-Declaration system has a series of screens, with number options, that are navigated by entering and sending the relevant number.`,
+                                ` On the first screen, select a language: either English or Kinyarwanda.`,
+                                 ` On the next screen select which M-Declaration service is required. To declare Decentralised Entities Taxes and fees, select ‘3. Local Government Taxes’.`,
+                                ` At the following screen, select the type of tax or fee:`,
+                               `<ol>
+                              <p>1. Land lease</p>
+                              <p> 2.  Trading license</p>
+                              <P>5.Property tax</p>
+                                  </ol>`,
+                                 ` When the desired type of tax or fee is selected, first enter the ‘TIN’ and then follow the on-screen instructions, depending on the tax type.`,
+                                 `Having entered all required information, the system calculates the tax to be paid, and generates the RRA Reference Number required for paying. `,
+                               ` <strong>Third parties collecting Decentralised Entities fees </strong>`,
+                             `  Ngali Holdings Ltd is mandated to support RRA in collecting all Decentralised Entities fees. MISIC also collects parking fees. (duplicated content)`,
+
+
+                        
+            ],
       },
     },
     {
