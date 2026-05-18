@@ -8,9 +8,9 @@ export const otherServicesPage = {
     rw: 'Izindi serivisi',
   },
   summary: {
-    en: 'Access supporting services and references connected to taxpayer obligations, including rulings, audits, refunds, appeals, debt management, certificates, motor vehicle services, and exchange of information.',
-    fr: "Accédez aux services et références liés aux obligations des contribuables, notamment les décisions, les audits, les remboursements, les recours, la gestion des dettes, les certificats, les services relatifs aux véhicules automobiles et l'échange d'informations.",
-    rw: "Reba serivisi n'inyandiko zifasha ku nshingano z'abasora, zirimo ibisobanuro by'amategeko, ubugenzuzi, gusubizwa imisoro, ubujurire, gucunga imyenda, ibyemezo, serivisi z'ibinyabiziga no guhana amakuru.",
+    en: `This section includes information on paying taxes, business registration, E-tax system, EBM, importing and exporting of products, Motor vehicle ownership transfer, tax laws and related documents, tax audit, bookkeeping, tax refund, debt management, appeals,VAT refund and Voluntary diclosure.`,
+    fr: `ccédez aux services et références liés aux obligations des contribuables, notamment les décisions, les audits, les remboursements, les recours, la gestion des dettes, les certificats, les services relatifs aux véhicules automobiles et l'échange d'informations.`,
+    rw:`Reba serivisi n'inyandiko zifasha ku nshingano z'abasora, zirimo ibisobanuro by'amategeko, ubugenzuzi, gusubizwa imisoro, ubujurire, gucunga imyenda, ibyemezo, serivisi z'ibinyabiziga no guhana amakuru.`,
   },
   lastUpdated: {
     en: 'This page was last updated on: 05/03/2026',
