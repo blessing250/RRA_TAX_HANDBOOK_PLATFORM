@@ -1,9 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
-};
-module.exports = {
+  output: 'standalone',
+
   allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
 };
 
