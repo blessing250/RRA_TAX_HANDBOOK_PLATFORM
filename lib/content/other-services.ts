@@ -397,72 +397,11 @@ export const otherServiceSections: HandbookSection[] = [
     },
     content: {
       en: [
-                       `<strong>   When to transfer motor vehicles </strong>`,
-                        `Transfer of motor vehicles is required when the ownership of the vehicle changes. `,
-                        `It can happen due to the following reasons:`,
-                        `Normal sale,donation, inheritance (Succession), public/private auction and court orders.`,
-                        `<strong>The cost of motor vehicle transfer`,
-                        `The Transfer Fee is FRW 30,000 for motorcycles and FRW 60,000 for all other motor vehicles.`,
-                        `<strong>Required documents for motor vehicle transfer</strong>`,
-                        `The documents required for motor vehicle transfer are:`,
-                        `<ul>
-                        <li>      Notarised Sale Contract (containing the date, location, value and the names, phone numbers, NID, identification of motor vehicles and signatures of both the buyer and the seller). If done outside the country, the Embassy and MINAFET may approve it.</li>
-                        <li>       Registration Transfer Fee payment receipt (FRW 30,000-FRW 60,000)</li>
-                        <li>       Latest Yellow Card and plate number for the motor vehicle</li>
-                        <li>       The buyer’s TIN</li>
-                        <li>       Historical insurance information (only required if the vehicle will be used as a business such as a taxi).</li>
-                        <li>       No tax arrears on the vehicle owner’s TIN</li>
-                        </ul>`,
-                       `Motor vehicle ownership transfer process:`,
-                        `<strong>Step 1: </strong>The seller logs in into E-Tax, goes to ‘Motor Vehicle’ then clicks on ‘Ownership Transfer’. The system displays the following screen:`,
-                        `<strong>AN IMAGE HERE!!!</strong>`,
-                        `If the seller is transferring the owned motor vehicle to a new owner; the seller uses the first option ‘Transfer from Myself to Another Person’. If a new owner wants to acquire the motor vehicle for the following specific reasons:`,
-                        `<ul>
-                           <li>    Auction </li>
-                           <li>  Succession</li>
-                           <li>   Court order</li>
-                           </ul>`,
-                      `The applicant uses the ‘Transfer to Myself’ option.`,
-                   `<strong>   Step 2:</strong> The taxpayer pays the Transfer Fee.`,
-                    `<strong>  Step 3:</strong> If the buyer of the motor vehicle does not have a unique Taxpayer Identification Number (TIN), they must provide RRA staff with a valid NID or Passport. The TIN and certificate are provided free.`,
-                   `<strong>   Step 4:</strong> The buyer must provide RRA staff with all the required documents.`,
-                     `<strong> Step 5:</strong> If all required documents are valid, RRA staff will provide the buyer of the motor vehicle with the updated Yellow Card containing the buyer’s details after receiving the old yellow card and plate number.`,
-                     `<strong>Step 6:</strong> The process is finished and the buyer is now the legal owner of the motor vehicle.`,
-                     `<strong> Motor vehicle-related services accessible online</strong>`,
-                      `To access online Motor vehicle services, log into E-Tax, click on Motor vehicle menu, choose any of the following services as displayed by the system:`,
-                      `<ul>
-                      <li>      Motor vehicle (MV) Declaration</li>
-                      <li>       Motor vehicle (MV) Acknowledgment Receipt</li>
-                      <li>       New Inactivity Request</li>
-                      <li>       Duplicate Request</li>
-                      <li>       View Duplicate requests</li>
-                      <li>       Owner Ship Transfer</li>
-                      <Li>       View Owner Ship Transfer Requests</li>
-                      <li>       Ownership Certificate Request</li>
-                      <li>       View Ownership Certificate Requests</li>
-                      <ul>`,
-                      `<strong>MyRRA</strong>`,
-                      `The MyRRA system is a unified gateway that allows taxpayers to access a range of tax services provided by the Rwanda Revenue Authority. `,
-                      `<strong>How to Login into MyRRA?</strong>`,
-                     ` Visit RRA website and click on the top right menu labelled “Login to MyRRA" as per the below picture:`,
-                     `<strong>IMAGE HERE!!</STRONG>`,
-                     `Or use the following link:<a href ="https://myrra.rra.gov.rw/indexMain">https://myrra.rra.gov.rw/indexMain</a>`,
-                    ` Once clicked, the following access picture will be displayed on the screen:`,
-                    `<strong> IMAGE HERE!!!</strong>`,
-                    ` Click on 'Sign Up' to access MyRRA for the first time, or 'Login' if you already have credentials. If you have forgotten your password, the system provides an option to reset it by clicking on 'Forgot your Password'.`,
-                            `<strong>Services available through MyRRA</strong>`,
-                            `MyRRA offers various features including the following:`,
-                            `<ul>
-                            <li> View current tax declarations</li>
-                            <li> View undeclared taxes</li>
-                            <Li> View unpaid taxes </li>
-                            <li> Request EBM </li>
-                            <li> Registration on VAT Reward</li> 
-                            <li> Checking your VAT Reward information details</li>
-                            </ul>`,
-                            `In addition to the above services, through MyRRA, a taxpayer can access other information displayed on the following picture: `,
-                            `<strong>IMAGE HERE!!!</strong>`,                
-           ],
+        'Transfer of motor vehicles is required when ownership of the vehicle changes. This can happen due to sale, donation, inheritance, public or private auction, and court orders.',
+        'The transfer fee is FRW 30,000 for motorcycles and FRW 60,000 for all other motor vehicles.',
+        'Documents required for motor vehicle transfer include a notarised sale contract, registration transfer fee payment receipt, latest yellow card and plate number for the motor vehicle.',
+        'RRA motor vehicle services also include requests related to duplicate documents, ownership transfer, ownership certificates and viewing related requests through the appropriate systems.',
+      ],
     },
   },
   {
