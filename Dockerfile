@@ -1,4 +1,4 @@
-ARG NODE_VERSION=24.14.0-slim
+ARG NODE_VERSION=22-alpine
 
 # ============================================
 # Dependencies
@@ -8,13 +8,18 @@ FROM node:${NODE_VERSION} AS dependencies
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
-RUN corepack enable pnpm
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+
+RUN corepack enable && corepack prepare pnpm@10.17.1 --activate
 
 RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
     pnpm config set store-dir /pnpm/store && \
-    pnpm install --frozen-lockfile
+    pnpm install --frozen-lockfile --config.confirmModulesPurge=false
+
+RUN pnpm rebuild sharp
 
 # ============================================
 # Build
@@ -24,13 +29,16 @@ FROM node:${NODE_VERSION} AS builder
 
 WORKDIR /app
 
-COPY --from=dependencies /app/node_modules ./node_modules
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
+COPY --from=dependencies /app ./
 COPY . .
 
 ENV NODE_ENV=production
 
-RUN corepack enable pnpm && pnpm build
+RUN corepack enable && corepack prepare pnpm@10.17.1 --activate && pnpm build
+RUN ls -la .next && find .next -maxdepth 2 -type d
 
 # ============================================
 # Production Runner

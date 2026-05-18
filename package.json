@@ -2,6 +2,7 @@
   "name": "rra_tax_handbook",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.17.1",
   "scripts": {
     "predev": "node scripts/clean-next-dev.mjs",
     "dev": "next dev --webpack",
@@ -33,5 +34,12 @@
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "msw",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
