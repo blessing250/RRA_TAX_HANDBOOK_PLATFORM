@@ -413,9 +413,55 @@ export const otherServiceSections: HandbookSection[] = [
                         <li>       Historical insurance information (only required if the vehicle will be used as a business such as a taxi).</li>
                         <li>       No tax arrears on the vehicle owner’s TIN</li>
                         </ul>`,
-                       `Motor vehicle ownership transfer process`,
-                        `Step 1: The seller logs in into E-Tax, goes to ‘Motor Vehicle’ then clicks on ‘Ownership Transfer’. The system displays the following screen:`,
-                        `<strong>AN IMAGE HERE!!!</strong>`
+                       `Motor vehicle ownership transfer process:`,
+                        `<strong>Step 1: </strong>The seller logs in into E-Tax, goes to ‘Motor Vehicle’ then clicks on ‘Ownership Transfer’. The system displays the following screen:`,
+                        `<strong>AN IMAGE HERE!!!</strong>`,
+                        `If the seller is transferring the owned motor vehicle to a new owner; the seller uses the first option ‘Transfer from Myself to Another Person’. If a new owner wants to acquire the motor vehicle for the following specific reasons:`,
+                        `<ul>
+                           <li>    Auction </li>
+                           <li>  Succession</li>
+                           <li>   Court order</li>
+                           </ul>`,
+                      `The applicant uses the ‘Transfer to Myself’ option.`,
+                   `<strong>   Step 2:</strong> The taxpayer pays the Transfer Fee.`,
+                    `<strong>  Step 3:</strong> If the buyer of the motor vehicle does not have a unique Taxpayer Identification Number (TIN), they must provide RRA staff with a valid NID or Passport. The TIN and certificate are provided free.`,
+                   `<strong>   Step 4:</strong> The buyer must provide RRA staff with all the required documents.`,
+                     `<strong> Step 5:</strong> If all required documents are valid, RRA staff will provide the buyer of the motor vehicle with the updated Yellow Card containing the buyer’s details after receiving the old yellow card and plate number.`,
+                     `<strong>Step 6:</strong> The process is finished and the buyer is now the legal owner of the motor vehicle.`,
+                     `<strong> Motor vehicle-related services accessible online</strong>`,
+                      `To access online Motor vehicle services, log into E-Tax, click on Motor vehicle menu, choose any of the following services as displayed by the system:`,
+                      `<ul>
+                      <li>      Motor vehicle (MV) Declaration</li>
+                      <li>       Motor vehicle (MV) Acknowledgment Receipt</li>
+                      <li>       New Inactivity Request</li>
+                      <li>       Duplicate Request</li>
+                      <li>       View Duplicate requests</li>
+                      <li>       Owner Ship Transfer</li>
+                      <Li>       View Owner Ship Transfer Requests</li>
+                      <li>       Ownership Certificate Request</li>
+                      <li>       View Ownership Certificate Requests</li>
+                      <ul>`,
+                      `<strong>MyRRA</strong>`,
+                      `The MyRRA system is a unified gateway that allows taxpayers to access a range of tax services provided by the Rwanda Revenue Authority. `,
+                      `<strong>How to Login into MyRRA?</strong>`,
+                     ` Visit RRA website and click on the top right menu labelled “Login to MyRRA" as per the below picture:`,
+                     `<strong>IMAGE HERE!!</STRONG>`,
+                     `Or use the following link:<a href ="https://myrra.rra.gov.rw/indexMain">https://myrra.rra.gov.rw/indexMain</a>`,
+                    ` Once clicked, the following access picture will be displayed on the screen:`,
+                    `<strong> IMAGE HERE!!!</strong>`,
+                    ` Click on 'Sign Up' to access MyRRA for the first time, or 'Login' if you already have credentials. If you have forgotten your password, the system provides an option to reset it by clicking on 'Forgot your Password'.`,
+                            `<strong>Services available through MyRRA</strong>`,
+                            `MyRRA offers various features including the following:`,
+                            `<ul>
+                            <li> View current tax declarations</li>
+                            <li> View undeclared taxes</li>
+                            <Li> View unpaid taxes </li>
+                            <li> Request EBM </li>
+                            <li> Registration on VAT Reward</li> 
+                            <li> Checking your VAT Reward information details</li>
+                            </ul>`,
+                            `In addition to the above services, through MyRRA, a taxpayer can access other information displayed on the following picture: `,
+                            `<strong>IMAGE HERE!!!</strong>`,                
            ],
     },
   },
@@ -428,10 +474,34 @@ export const otherServiceSections: HandbookSection[] = [
     },
     content: {
       en: [
-        'In 2017, Rwanda joined the international effort against tax evasion and fraud by becoming a member of the Global Forum on Transparency and Exchange of Information for Tax Purposes.',
-        'Rwanda implemented the Exchange of Information on Request standard, which allows tax authorities to request specific financial and legal information from other countries to support audits, investigations and compliance with tax laws.',
-        'Partner jurisdictions are required to provide access to bank account information, legal and beneficial ownership records, and accounting and financial documentation.',
-        'Individuals, businesses and legal entities must maintain complete and accurate financial and ownership records, including the identity of beneficial owners. These records may be shared with partner jurisdictions upon request.',
+                 ` In 2017, Rwanda joined the international crusade against tax evasion and fraud by becoming a member of Global Forum on Transparency and Exchange of Information for Tax purposes and acceded to the convention on Mutual Administrative Assistance in Tax Matters as amended by the 2010 Protocol on 11 August 2021. `,
+                   `<strong> Exchange of Information on Request (EOIR)</strong>`,
+                        `Rwanda implemented the Exchange of Information on Request (EOIR) standard of the Global Forum that allows tax authorities to request specific financial and legal information from other countries to support audits and investigations and ensure compliance with tax laws.`,
+                        `<strong>   Requirements for the EOIR partner countries</strong>`,
+                       ` Country partner of EOIR is required to provide partner jurisdictions with access to:`,
+                       `<ul>
+                        <li>Bank account information</li>
+                        <li>     Legal and beneficial ownership records</li>
+                        <li>   Accounting and financial documentation.</li>
+                        </ul>`,
+                       ` Partner jurisdictions of Rwanda are also required to avail the above-mentioned information for Rwanda to access them.`,
+                     `<strong>  What does this mean for taxpayers and entities?</strong>`,
+                       ` All individuals, businesses, and legal entities must maintain complete and accurate financial and ownership records, including the identity of beneficial owners. These records may be shared with other partner jurisdictions upon request, so as they can share the same information with Rwanda upon request.`,
+                     `<strong>EOIR Non-compliance consequences to taxpayers</strong>`,
+                       ` Failure to provide required information or intentional non-disclosure may result in fines, legal action, or criminal prosecution, in accordance with the Tax Procedure Law.`,
+               `<strong> Automatic Exchange of Information (AEOI)</strong>`,
+                      `  It is a country commitment to implementing the Automatic Exchange of Information (AEOI) standard under the OECD’s Common Reporting Standard (CRS). This allows for the annual automatic exchange of financial account information between jurisdictions.`,
+                       `All financial institutions in Rwanda must report information on financial accounts held by non-residents through the AEOI portal, not later than 30 April each year. The first data exchange is scheduled for September 2025.`,
+                `<strong>Consequences of AEOI non-compliance by financial institutions</strong>`,
+                       ` The Tax Administration is vested with powers to impose administrative sanctions for the faults provided for under law n° 021/2023 of 31/03/2023 governing the automatic exchange of information for tax purposes.`,
+                 `<Strong>  Security of shared information </strong>`,
+                       `The Government of Rwanda is committed to high standards of data security and confidentiality. Information collected locally or from foreign jurisdictions is strictly protected and used solely for tax purposes, in line with national laws and international agreements.`,
+                 `<strong>  Step-by-Step guide to declaring domestic taxes</strong>`,
+                 `<strong>    Step 1: Log-in to E-Tax</strong>`,
+                ` Access the E-Tax website at<a href=" https://etax.rra.gov.rw">  https://etax.rra.gov.rw/</a> or through the RRA website <a href ="https://www.rra.gov.rw/">  https://www.rra.gov.rw</a>  and clicking on ‘Pay Domestic taxes here’ on the right of the screen. This loads the following login screen:`,
+
+
+
       ],
     },
   },
