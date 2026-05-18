@@ -9,12 +9,17 @@ export const importingMotorVehiclesSection: LocalTaxDetailSection = {
   },
   content: {
     en: [
-      "Imported motor vehicles must be declared at DPW - Masaka or Magerwa - Gikondo Dry Port. If the motor vehicle does not have a number plate, it receives a transit number plate until the process is completed.",
-      "The process for declaring imported motor vehicles is similar to declarations of other goods, with the additional step of vehicle registration. Registration first requires the owner to have a Taxpayer Identification Number (TIN). The owner must also provide a passport photo and either a Rwandan ID card or passport.",
-      "<strong>Valuation of imported brand new motor vehicles</strong>",
-      "Brand new imported motor vehicles are valued at Cost, Insurance and Freight (CIF) using transaction price invoices or equivalent documents as normal. When a customs officer is not satisfied with the transaction price, other customs valuation methods can be applied.",
-      "<strong>Valuation of used imported motor vehicles</strong>",
-      "Used or second-hand imported motor vehicles are valued using the depreciation method. The transaction price may also be used in special circumstances.",
+                `Imported motor vehicles must be declared at ‘DPW – Masaka, Magerwa - Gikondo’ Dry Port. If the motor vehicle does not have a number plate, they will receive a transit number plate until the process is completed.`,
+                `Once at DPW – Masaka or Magerwa - Gikondo, the process for declaring imported motor vehicles is similar to declarations of other types of goods, see page 394. The only difference is the additional step of registration of the motor vehicle.`,
+                `Registration of the motor vehicle first requires the owner to have a unique Taxpayer Identification Number (TIN). If they do not already have a TIN, they are provided with one. Secondly, the owner must provide a passport photo and either a Rwandan ID card or passport.`,
+               ` Finally, they are registered as owner of the motor vehicle, and provided with a Rwandan number plate and ‘Yellow Card’ logbook. This initial registration service and the provision of the number plate has already been paid for within the Motor Vehicle Registration Fee (MVF).`,
+          `<strong>    i) Valuation of imported brand new motor vehicles .</strong>`,
+                    `  Brand new imported motor vehicles are valued at Cost, Insurance and Freight (CIF) using the transaction price invoices or equivalent documents as normal. When a customs officer is not satisfied with the transaction price, other customs valuation methods can be applied to determine customs value.`,
+           `<strong>    ii) Valuation of used imported used motor vehicles.</strong>`,
+                    `  Used or second-hand imported motor vehicles are valued using the depreciation method. The transaction price may also be used in special circumstances.`,
+                    `The first step of the depreciation method is to download the valuation database. The link to the spreadsheet is available on the <a href="https://www.rra.gov.rw/en/customs-services/valuation-gateway"> RRA website</a> `,
+           ` The valuation database contains details on the brand, mark, engine, drive, year and body style. Identify the exact description of the motor vehicle, and then note the ‘When New Price ($)’. This price, in US Dollars, is the base of the depreciation. Contact RRA if you cannot identify the appropriate motor vehicle. An example view of the valuation database is shown below.`, 
+           `The depreciation method then uses a standardised depreciation rate depending upon the age of the car. The depreciation schedule is shown below:`,
       {
         type: "table",
         headers: ["Date of manufacture", "Depreciation"],
@@ -32,27 +37,61 @@ export const importingMotorVehiclesSection: LocalTaxDetailSection = {
           ["More than 10 years ago", "80%"],
         ],
       },
-      "<strong>Customs Duties on imported motor vehicles</strong>",
-      "The rates of Customs Duties on imported motor vehicles depend on the vehicle category. A flat Motor Vehicle Registration Fee is also charged on all imported motor vehicles without exemptions.",
+     `<strong> iii) Customs Duties on imported motor vehicles<strong>`,
+              `The rates of Customs Duties on imported motor vehicles are summarised below. In addition, a flat rate Motor Vehicle Registration Fee (MVF) is charged upon all imported motor vehicles without any exemptions. `,
+              `The final tab of the depreciation method spreadsheet, titled ‘Depreciation Schedule’ can be used to estimate the Customs Duties due for imported motor vehicles.`,
+        `<blockquote>
+         <strong>    Example 85</strong>
+               <p> Rukundo is importing a 1997 Rav4 with a 1.8 litre engine, 2 Wheel Drive (2WD) and three doors. In the valuation database, the listed Price When New ($) is USD 13,200.</p>
+               <p> In the ‘Depreciation Schedule’ tab, Rukundo enters the necessary details in the yellow boxes as shown below.</p>
+      <blockquote>`,
       {
         type: "table",
-        headers: ["Vehicle category", "Import Duty", "Excise Duty", "VAT", "IDL", "WHT 5%", "AUL"],
+        headers: ["Vehicles","Category","Import Duty","Excise Duty","VAT","IDL","WHT 5%","AUL"],
         rows: [
-          ["Non-utility: engine capacity below 1,500cc", "25%", "5%", "18%", "1.5%", "5%", "0.2%"],
-          ["Non-utility: engine capacity 1,501cc to 2,500cc", "25%", "10%", "18%", "1.5%", "5%", "0.2%"],
-          ["Non-utility: engine capacity above 2,501cc", "25%", "15%", "18%", "1.5%", "5%", "0.2%"],
+          ["Non-utility motor vehicles", ],
+          ["Engine capacity less than 1,500cc","A","25%","5%","18%","1.5%","5%","0.2%"],
+           [" Engine capacity between 1,501cc and 2,500cc","B","25%","10%","18%","1.5%","5%","0.2%"],
+          ["Engine capacity more than 2,501cc","C", "25%", "15%", "18%", "1.5%", "5%", "0.2%"],
           ["Utility: tractors", "0%", "0%", "18%", "1.5%", "5%", "0.2%"],
-          ["Utility: minibuses with less than 25 seats", "25%", "0%", "18%", "1.5%", "5%", "0.2%"],
-          ["Utility: buses with 25 seats or more", "10%", "0%", "18%", "1.5%", "5%", "0.2%"],
-          ["Utility: pick-up truck", "25%", "0%", "18%", "1.5%", "5%", "0.2%"],
-          ["Utility: truck carrying capacity below 20 tonnes", "10%", "0%", "18%", "1.5%", "5%", "0.2%"],
-          ["Utility: truck carrying capacity 20 tonnes and above", "0%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Utility motor vehicles"],
+          ["Tractors","D", "0%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Minibuses (with less than 25 seats)","E" ,"25%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Buses (with 25 seats or more)","F", "10%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Pick-up truck","G", "25%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Truck (carrying capacity below 20 tonnes)","H", "10%", "0%", "18%", "1.5%", "5%", "0.2%"],
+          ["Truck (carrying capacity 20 tonnes and above)","I","0%","0%","18%","1.5%","5%","0,2%"],
         ],
       },
-      "<strong>Special number plates and exemptions</strong>",
-      "Normal number plates for Rwandan motor vehicles begin with RA. Some international institutions and foreign investors are exempt from all customs duties except Motor Vehicle Registration Fees. Special number plates include IT, CD and UN, and require supporting documents from public institutions.",
-      "When transferring ownership of any motor vehicle with IT, CD or UN number plates to a buyer without the same status, the buyer must pay all Customs Duties due on imported motor vehicles, except Motor Vehicle Registration Fees already paid for that motor vehicle.",
-      "Right-Hand Drive motor vehicles are not allowed to be imported into Rwanda except for diplomats, drivers with a medical condition with permission from the Ministry of Infrastructure, and trucks with carrying capacity above 20 tonnes.",
+      `<strong> iv) Requirements for receiving special number plates and exemption from certain Customs Duties when importing motor vehicles</strong>`,
+          `<strong> a)  Normal number plates</strong>`,
+                  ` The normal number plate provided for Rwandan motor vehicles begins with ‘RA’. There are also public institution number plates such as ‘RDF’, ‘RNP’ or ‘GR’. These vehicles must have all customs duties due paid as normal.`,
+                 `On the other hand, some international institutions and foreign investors are exempt from all customs duties, except for Motor Vehicle Registration Fees (MVF).  The number plates are issued by RRA, but require supporting documents from other public institutions. These include:`,
+          `<strong>b)‘IT’</strong>`,
+                 ` It is commonly given to foreign Investors and other foreign persons for temporally residence.`,
+                 `This requires a recommendation letter to the Commissioner for Customs Services Department (CSD) of RRA from a concerned public institution. ‘IT’ number plate is only valid for one year, before requiring renewal.`,
+        `<strong>  Other requirements include:</strong>`,
+                `<ul>
+                  <li>    Guarantee letter</li>
+                  <li>   Valid passport</li>
+                  <li>     Valid VISA</li>
+                  <li>     Valid ID Card for foreigners</li>
+                  </ul>`,
+        `<strong>      c)  CD</strong>`,
+                 `It is for Diplomatic and Consular staff`,
+                 ` This requires a letter from the Ministry of Foreign Affairs and Cooperation (MINAFFET) to the Commissioner for CSD of RRA, highlighting their diplomatic status and a reciprocal letter of approval.`,
+            `<strong>c) CD</strong>`,
+                ` These number plates are reserved for the United Nations agencies.`,
+                 ` This requires a letter from the Ministry of Foreign Affairs and Cooperation (MINAFFET) to the Commissioner for CSD of RRA, highlighting their UN status, and a reciprocal letter of approval.`,
+          `<strong>V. Customs duties paid when transferring ownership of motor vehicles with IT, CD or UN number plates to a buyer without the same status. <strong>`,
+                ` When transferring ownership of any motor vehicles with IT, CD or UN number plates to a buyer who is not subject to the same privileges, the buyer must pay all Customs Duties due on imported motor vehicles, see page 408, except for Motor Vehicle Registration Fees (MVF) that have already been paid for that motor vehicle.`,
+          `<strong>   vi) Importing Right-Hand Drive motor vehicles.</strong>`,
+                ` Right-Hand Drive (RHD) motor vehicles, where the steering wheel is on the right-hand side of the car, are not allowed to be imported into Rwanda, except for:`,
+                `<ul>
+                  <li>    Diplomats or drivers with a medical condition. In both these cases, this requires permission from the Ministry of Infrastructure (MININFRA).</li>
+                  <li>   Trucks with a carrying capacity above 20 tonnes</li>
+                  </ul>`,
+                    
     ],
   },
 }
