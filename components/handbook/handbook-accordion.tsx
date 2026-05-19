@@ -62,7 +62,7 @@ export function HandbookAccordion({
           return
         }
 
-        const headerOffset = window.matchMedia("(max-width: 767px)").matches ? 126 : 96
+        const headerOffset = window.matchMedia("(max-width: 767px)").matches ? 24 : 96
         const itemTop = itemElement.getBoundingClientRect().top + window.scrollY
 
         window.scrollTo({
