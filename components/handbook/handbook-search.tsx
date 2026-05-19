@@ -6,6 +6,9 @@ import { SearchIcon } from "lucide-react"
 
 import type { HandbookSearchItem } from "@/lib/search/handbook-search"
 
+const MAX_QUERY_LENGTH = 80
+const MAX_SEARCH_TERMS = 8
+
 type HandbookSearchProps = {
   initialQuery?: string
   items: HandbookSearchItem[]
@@ -18,8 +21,17 @@ type HandbookSearchProps = {
   }
 }
 
+function sanitizeQuery(value: string) {
+  return value
+    .normalize("NFKC")
+    .replace(/[\u0000-\u001F\u007F<>`{}[\]\\]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, MAX_QUERY_LENGTH)
+}
+
 function normalize(value: string) {
-  return value.toLowerCase().trim()
+  return sanitizeQuery(value).toLowerCase()
 }
 
 function buildSnippet(item: HandbookSearchItem, query: string) {
@@ -57,7 +69,7 @@ export function HandbookSearch({
     const urlQuery = params.get("q")
 
     if (urlQuery) {
-      const timer = window.setTimeout(() => setQuery(urlQuery), 0)
+      const timer = window.setTimeout(() => setQuery(sanitizeQuery(urlQuery)), 0)
 
       return () => window.clearTimeout(timer)
     }
@@ -69,6 +81,7 @@ export function HandbookSearch({
     const terms = normalize(query)
       .split(/\s+/)
       .filter(Boolean)
+      .slice(0, MAX_SEARCH_TERMS)
 
     if (terms.length === 0) {
       return items
@@ -101,7 +114,8 @@ export function HandbookSearch({
           id="handbook-search"
           type="search"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          maxLength={MAX_QUERY_LENGTH}
+          onChange={(event) => setQuery(sanitizeQuery(event.target.value))}
           placeholder={labels.placeholder}
           className="h-12 w-full rounded-md border border-rra-light-blue/45 bg-rra-white pl-12 pr-4 text-base font-medium text-rra-black shadow-sm outline-none placeholder:text-rra-blue/55 focus:border-rra-orange focus:ring-2 focus:ring-rra-orange/35"
         />
