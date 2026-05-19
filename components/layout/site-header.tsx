@@ -18,10 +18,11 @@ export function SiteHeader({ dict, lang }: SiteHeaderProps) {
       <div className="bg-rra-blue text-rra-white">
         <div className="flex min-h-10 flex-wrap items-center justify-end gap-3 px-4 py-2 text-sm sm:px-6 lg:px-8">
           <LanguageSwitcher lang={lang} label={dict.nav.language} />
-          <form action={`/${lang}/search`} className="relative w-full max-w-64 sm:w-64">
+          <form action={`/${lang}/search/`} method="get" className="relative w-full max-w-64 sm:w-64">
             <SearchIcon className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-rra-blue/70" />
             <input
               aria-label={dict.common.search}
+              maxLength={80}
               name="q"
               type="search"
               placeholder={dict.common.search}
