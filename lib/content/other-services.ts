@@ -26,6 +26,312 @@ export const otherServicesPage = {
 
 export const otherServiceSections: HandbookSection[] = [
   {
+    id: 'paying-taxes-and-fees',
+    title: {
+      en: 'Paying taxes and fees ',
+      fr: 'Inscription des entreprises',
+      rw: 'Ubwungeza ibintu by’abashuri',
+    },
+    content: {
+      en: [
+       ` Taxpayers should submit tax declarations before paying taxes. Tax declarations provide the necessary information to calculate the correct amount of tax due.`,
+           `The process of submitting the relevant tax declarations is different for each tax type, and is discussed in greater detail in their respective chapters of the Tax Handbook. `,
+           ` However, after declaring, the methods of paying taxes are the same for all types of domestic taxes, customs duties and local government taxes and fees. There are four possible methods of paying all types of taxes and fees:`,
+           `<ul>
+             <li>Online using Internet Banking and E-Payment.
+            <li>On mobile phones or through agents using MTN Mobile Money and airtel money.
+            <li>Through Mobicash agents.
+            <li>In person at a bank outlet.
+            </ul>`,
+               ` It is important to note that it is not possible to pay taxes in cash at RRA offices. `,
+               `The details needed for each method of paying taxes are the same. However, there are many advantages for taxpayers to pay taxes online or through mobile phones. This Tax Handbook aims to provide the information necessary for all methods of paying taxes. `,
+               ` For all methods of paying taxes, it is important to save any receipts confirming the payment. `,
+              `<strong>    a. Advantages of digital payment modes</strong>`,
+                   ` The benefits of paying online, on mobile phones or through licensed agents are: `,
+                   `<ul>
+                <li>Pay taxes anytime, anywhere.</li>
+                <li>Avoid travel costs of visiting a bank.</li>
+                <li>Avoid queuing times at banks.</li>
+                <li>Avoid safety risks of carrying cash.</li>
+                    </ul>`,
+                 `<strong>  b. What is needed when paying taxes</strong>`,
+                  ` There are two main details needed when paying taxes. `,
+                  `<ul>
+                   <li><strong>  RRA Reference Number  </strong> of the declaration that has been submitted. </li>
+                 <li><strong>Amount of tax due to be paid:</strong>  The amount due may also include any penalties and fines referring to that declaration.</li>
+                   </ul>`,
+                   ` Both these details are in the ‘Acknowledgement Receipts’ generated after submitting all tax declarations. `,
+                  `<strong>  c. Acknowledgement Receipts</strong>`,
+                   ` After submitting a declaration, for all types of taxes and fees, there is an option to download and view the acknowledgement receipt.`,
+                  ` Acknowledgement receipts confirm the details of the taxpayer, contain details of the taxes and fees that must be paid, and provide the RRA Reference Number for the account the tax must be paid into. This RRA Reference Number is also known as the ‘Doc ID’, or ‘Doc No’. `,
+                   ` The RRA Reference Number is very important to ensure that the taxes are paid into the correct RRA tax account, and that the payment is attributed to the correct taxpayer. The RRA Reference Number and total tax due is highlighted in the examples for each broad tax type below.`,
+                   `<strong>  Acknowledgement receipt domestic taxes </strong>`,
+                  ` In the case of domestic taxes on the E-Tax system, acknowledgement receipts can be viewed by clicking on ‘View Acknowledgement Receipt’ immediately after submitting the declaration, as seen below. `,
+                  `<strong>HERE'S AN iMAGE</STRONG>`,
+                 ` Alternatively, from the E-Tax homepage, hover the mouse on ‘Tax Declaration’ and click on ‘Submitted Declarations’.`,
+                  `  Choose the year of the tax period, and optionally the tax type, then click submit. Find the relevant submitted tax declaration, click on the Document Number, and the following options appear. Again, click on ‘View Acknowledgement Receipt’.`,
+                  `<STRONG>HERE'S AN IMAGE</STRONG>`,
+                `  An example acknowledgement receipt for domestic tax declarations is displayed below. The associated RRA Reference Number and total tax due are highlighted.`,
+             `<strong>  Acknowledgment for Customs Duties </strong>`,
+                   ` In the case of customs duties, the acknowledgement receipt is more commonly referred to as the ‘Assessment Notice’. This can be accessed by Clearing Agents through the Rwanda electronic Single Window (ReSW) system. The Clearing Agent then provides the taxpayer with the assessment notice in order to pay the taxes and fees due. `,
+                   `Different types of customs duties can be required to be paid to different accounts. Therefore, each assessment notice may have multiple RRA Reference Numbers with different amounts of tax due. The associated RRA Reference Numbers and amounts of tax due are highlighted in different colours in the example below.`,
+                  `<strong> HERE'S AN IMAGE</STRONG>`,
+                `<strong>  Acknowledgement for receipt for Local Government Taxes and Fees </strong>`,
+                     ` In the case of Local Government Taxes (LGT) and Fees on the LGT system, this can vary slightly for the type of tax or fee. Typically, acknowledgement receipts can be viewed by clicking ‘Get Acknowledgement’ immediately after submitting the declaration, as seen below. `,
+                     `<strong> HERE'S AN IMAGE</STRONG>`,
+                    ` The taxpayer can also enter their email address or phone number to receive the RRA Reference Number and tax due. An example acknowledgement receipt for LGT and fees declarations is displayed below. The associated RRA Reference Number and total tax due are highlighted.`,
+                 `<strong>HERE'S AN IMAGE</STRONG>`,
+              `<strong>d.Tax payment methods</strong>`,
+                     ` After all tax declarations, taxpayers may pay the due taxes or penalties if any, using the following methods:`,
+              `<strong>Internet banking systems</strong>`,
+                     ` All commercial banks in Rwanda now offer internet banking services. However, the process of using these internet banking systems varies depending on the bank. It is not possible to cover each system in this Tax Handbook, but bank staff will be able to assist with registering and using internet banking, including explaining how to pay taxes.`,
+              `<strong> Domestic Taxes E-Payment system</strong>`,
+                    `  After submitting the declaration it is possible to directly access the domestic taxes E-Payment system, by clicking ‘Epayment’.  `,
+                     `This shows the following screen. Clicking on the ‘Select Bank to Pay’ drop-down menu lists the banks that are linked with the domestic taxes E-Payment system. `,
+                     `<strong>HERE'S AN IMAGE</strong>`,
+                    ` It is important to note that taxpayers may need to register for internet banking directly with their bank before paying taxes on the E-Payment system.`,
+                            ` After the taxpayer has selected their bank from the drop-down menu and clicked ‘submit’, they will be directed to the online banking system of their bank. Follow the bank instructions to complete the payment. The exact steps may vary by bank. `,
+               `<strong>MTN Mobile Money / Airtel Money</strong>`,        
+                             ` This can be done individually, or through a Telecom agent. To pay taxes individually, register on Telecom Mobile Money requires a SIM-card, and registering an account at any Telecom Mobile Money agent. The taxpayer does not need to register with MTN/Airtel to pay taxes through an agent.`,
+                             `It is important to note that there are small additional transaction fees payable to MTN that vary depending upon the amount of tax being paid.`,
+                             ` Once registered, and with sufficient funds in the account to cover the amount payable, including transaction fees, follow these steps to pay taxes individually:`,
+                             `<ul>
+                              -	Dial *182# to enter the mobile money platform. 
+                              -	Choose the Language.
+                              -	Choose the ‘Pay Bill’ option.
+                              -	Choose the ‘RRA’ payment option.
+                              -	Enter the RRA Reference Number from the Acknowledgement Receipt. 
+                              -	This will then show the Amount and Taxpayer Name. If these details are correct, enter ‘1’ to proceed with payment.
+                              -	Enter Mobile Money PIN to confirm the payment.
+                              </ul>`,
+                             ` To pay through an MTN Mobile Money agent, provide the agent with the RRA Reference Number from the Acknowledgement Receipt and sufficient funds to cover the amount payable, including transaction fees.`,
+                  `<strong>    Bank</strong>`,
+                             ` Taxes can be paid at all registered commercial banks in Rwanda. This can be done using a cash deposit slip or by bank cheque. Any payments of FRW 500,000 (five hundred thousand Rwandan francs) or more must be paid by bank cheque only.`,
+                             `When writing a bank cheque, make it out to ‘Rwanda Revenue Authority’, and ensure to include the RRA Reference Number, total tax due and tax type.`,
+                             ` On the Cash Deposit Slip, enter the following details:`,
+                   `<strong>   Beneficiary:</strong>`,
+                   `  <ul>
+                         <li>Account Number – Write the RRA Reference Number from the Acknowledgement Receipt.</li>
+                         <li> Of – Write ‘Rwanda Revenue Authority’.</li>
+                              </u>`,
+                       `<strong>Amount:</strong>`,
+                           `<li>Write the ‘Total Tax Due’.</li>`,
+                    `<strong>  Paid in by:</strong>`,
+                         `<li> Name – Write the Taxpayer Name.</li>`,
+                          `<li>Address – Write the address of the business or the PO Box number if applicable.</li>`,
+                     `<strong>Comment:</strong>`,
+                      `<li>   Write the tax type, e.g ‘VAT’.</li>`,
+     ],
+    },
+  },
+  {
+   id:'how-to-register-a-business-and-get-a-TIN',
+   title: {
+      en: 'How to register a business and get a TIN',
+      fr: 'Comment enregistrer une entreprise et obtenir un NIF',
+      rw: "Uburyo bukora igihugu n'akongera TIN'",
+    },
+    content: {
+      en: [
+       `<strong>Businesses registration</strong>`,
+              `  Business registration in Rwanda is carried out by the Office of the Registrar General (ORG) within the Rwanda Development Board (RDB). A business must register with the Register General when the business is established.`,
+               `This is carried out online on the RDB portal rather than RRA in order to facilitate the aftercare and investment promotion facilities that RDB offers. `,
+               ` RDB has developed the business registration system to make it easier for taxpayers to register their business. The RDB system is an online portal through which all businesses are registered.`,
+               `It is important to note that although all business registrations go through the RDB system, this can still be done with the help of RDB staff at RDB offices. `,
+               ` Nevertheless, there are many advantages for taxpayers to register online. This Tax Handbook aims to provide all the information necessary for taxpayers to be able to register online.`,
+               `Any questions during the registration process can be answered by calling the RDB call centre toll-free on 1415. `,
+             ` The RDB, RCA, and RRA computer systems are integrated to ensure a smooth registration process that provides a single, unique Taxpayer Identification Number (TIN) and a clear understanding of the taxpayer’s obligations.`,
+               `According to the World Bank Ease of Doing Business Index 2019, Rwanda was the simplest and fastest country in East Africa in which to start a business. This Tax Handbook tries to promote this further, with a basic guide to business registration, for further questions visit the<a href="https://urs.rdb.rw/auth/login"> RDB website .</a> `,
+               ` When registering your business, the following are the steps to follow: `,
+          `<strong>step 1: Register and login on the RDB system</strong>`,
+                           ` Access the RDB business registration system at<a href="https://urs.rdb.rw/auth/login"> RDB website .</a>and click on ‘Register Here’. Submit the required details. Click the link in the validation email. Return to the RDB system to login.`,
+           `<strong> Step 2: Choose the business category to be registered</strong>`,
+                           ` The taxpayer must register as a ‘Domestic’ company, individual ‘Enterprise’ or ‘Foreign’ company. `,
+           `<strong> Step 3: Complete the business registration application</strong>`,
+                           ` Enter all the required business information, including attaching scanned versions of any required documents. Submit the application to register the business and receive the Taxpayer Identification Number (TIN) by SMS. `,
+             `<strong>      Step 4: Print Certificates</strong>`,
+                           ` Login to the RDB system to print the required certificates, including the business certificate and memorandum. The taxpayer is registered and must fulfil all tax obligations.`,
+                `<strong>     Benefits of business registration</strong>`,
+                           ` As well as being a legal requirement, there are many advantages to registering as a business. These include:`,
+                           `<ul>
+                            <li>   Ensuring the business benefits from the protections provided by business laws, such as limited liability.</li>
+                            <li>   Improving access to credit from financial institutions.</li>
+                            <li>   Inspiring trust in customers with proof of being a registered business.</li>
+                            </ul>`,
+                `<strong> Limited liability</strong>`,
+                          ` Liability refers to the responsibility for any debts that are owed by the business. One of the advantages of registering a business as a company, as opposed to an individual enterprise, is that all debts incurred by the company are the responsibility of the company, they are not the legal liability of the shareholders or the directors. In this way, the liability of the people who run the company is said to be ‘limited’. They are not responsible for all the debts of the company, only to the extent of the stake they have in the company, see page 78 for more details.`,
+                `<strong>  Cost of business registration</strong>`,
+                           ` It is free to register a business in Rwanda. It is free to register online and at RDB office. However, some private internet cafés/Irembo Agents also offer assistance with business registration and can charge a fee for this service.`,
+                  `<strong>Categories of businesses</strong>`,
+                           `There are three categories of business that can be registered. On the RDB business registration system these are: ‘Domestic’ company, individual ‘Enterprise’ and ‘Foreign’ company.`,
+                          `  Registering as<strong>‘Domestic’</strong> is for domestic companies or for subsidiaries of foreign companies.`,
+                          ` Registering as an<strong>‘Enterprise’</strong> is for sole traders or partnerships and is the simplest way to start and conduct business in Rwanda. ‘Enterprise’ typically refers to a business whose turnover is less than FRW 10,000 per day.`,
+                          `  Registering as ‘Foreign’ is for companies which already exist and are registered in a foreign country that are undertaking business in Rwanda. It is important to note that this does not include domestic subsidiaries of foreign companies.`,
+                   `<strong>Types of ‘Domestic’ companies</strong>`,
+                           `Within the ‘Domestic’ company business category, the Rwanda Companies Act recognises four legal types of companies. These are: limited by shares, limited by guarantee, limited by shares and guarantee or unlimited.`,
+                           ` Limited by shares is the most common business type, and is suitable for most profit-oriented businesses. Limited by guarantee is suitable for non-profit organisations and charities.  Limited by shares and guarantee, and unlimited, are rare business types and should not be selected without consultation with RDB.`,
+                           `These four types of companies all follow the same registration procedure, although requirements vary.`,
+                           ` Companies limited by shares must register a chairman of the board, a managing director and at least one shareholder. However, these can all be the same person.`,
+                 `<strong>  Needed documents for business registration</strong>`,
+                           ` The requirements for registering vary depending on the category of business. These must be scanned and attached whilst completing the business registration application. The documents that are required for each business category are listed below:`,
+                `<strong >    ‘Domestic’ company:</strong>`,
+                `<ul>
+                            <li>      Rwanda National ID or Passport (for all shareholders, directors, company secretaries, accountants)</li>
+                             <li>     Notarised articles of association (if applicable)</li>
+                             <li>     Notarised company resolution to open a subsidiary company (if a subsidiary)</li>
+                             <li>     Notarised certificate of incorporation issued by the registration company in the country of incorporation (if a foreign subsidiary)</li>
+                            </ul>`,
+                  `<strong>Individual ‘Enterprise’:</strong>`,
+                          `<li>  Rwanda National ID or Passport</li>`,
+                  `<strong>  ‘Foreign’ company:</strong>`,
+                 ` <ul>
+                            <li>     Rwanda National ID or Passport (for all shareholders, directors, company secretaries, accountants residing in Rwanda)</li>
+                            <li>    Notarised power of attorney to present the company in Rwanda</li>
+                            <li>   Notarised articles of association</li>
+                            <li>   Notarised certificate of incorporation issued by the registration institution in the country of incorporation</li>
+                            <li>   Notarised company resolution to open a branch in RwandaTaxpayers receive a unique Taxpayer Identification Number (TIN) when registering their business with Rwanda Development Board (RDB) for all businesses, and Rwanda Cooperatives Agency (RCA) for cooperatives.</li>
+                            </ul>`,
+                          `  However, there are also circumstances where RRA registers taxpayers and provides them with TINs directly:`,
+                          `  -          Local Government Taxes (LGT) and fees`,
+                           `-          Non-business registration, for example for:`,
+                          `<ul>
+                           <li>Motor vehicle ownership</li>
+                          <li>Tax Clearance Certificates (TCCs)</li>
+                          <li> Non-governmental organisations (NGOs), after approval from Rwanda Governance Board (RGB)</li>
+                         <li>Government institutions and projects</li>
+                         </ul>`,
+                           `As the processes are separate, this Tax Handbook focuses on business registration with RDB in this section. For cooperative registration, visit any RCA office.`,
+                           ` For all non-business registration purposes, visit any RRA office with a Rwanda National ID or a Passport.`,
+                 `<strong>   How to choose the type of ‘Business Activity’</strong>`,
+                           ` The RDB business registration system asks taxpayers to identify the type of business activities that they plan to conduct. This is not binding, taxpayers can at any time carry out business activities that they do not include here.`,
+                           `However, it is important that this ‘Business Activity’ category is completed as accurately as possible when registering. This uses the International Standard Industrial Classification (ISIC), also used by the National Institute of Statistics (NISR), The National Bank of Rwanda (BNR) and the Ministry of Finance (MINECOFIN) to improve statistics and policy making.`,
+                           ` The RDB system is designed to make it easier for taxpayers to choose their business activities, by first choosing the broad sector, and then choosing the more specific activity within that sector.`,
+                           ` The RDB system allows taxpayers to choose as many different activities as they intend to carry out, and then requests that they choose one of these to designate as their main business activity. This should be the business activity that they expect will contribute the largest share of their value added, i.e., to the selling price of their products, compared to the price of their inputs.`,
+                           `<blockquote>
+                        <strong>   Example 1</strong>
+                        <p> Amahoro is starting a butchery business. She intends to buy livestock and process the meat. She expects to sell to other shops as well as directly to consumers.</p>
+                       <p>  Processing meat is within the ‘manufacture’ sector. Selling to other shops refers to ‘wholesale’. Selling directly to customers refers to ‘retail sale’. Amahoro selects ‘C1010 - Processing and preserving of meat’, ‘G4630 – Wholesale of food, beverages and tobacco’ and ‘G4721 – Retail sale of food in specialised stores’.</p>
+                       <p>  Of these three activities, Amahoro expects her greatest value added to be from the processing of the meat so she chooses this as her main business activity.</p>
+                       </blockquote>`,
+                       `<strong>HERE'S AN IMAGE </strong>`,
+                 `<strong>How to register for different tax types</strong>`,
+                             ` All businesses are immediately registered for Income Tax during business registration. This is either Personal Income Tax (PIT) for individual businesses or Corporate Income Tax (CIT) for companies.`,
+                             `All businesses must also register for Trading License Tax.  Businesses registered by RDB are automatically registered on Trading License Tax which is exempted for two years from registration date. The Trading License Tax certificate, available after declaring and paying Trading License Tax, is required for all profit-oriented activities.`,
+                             ` In addition, when registering, certain questions prompt the registration of tax accounts for other tax types. These include:`,
+                 `<strong>VAT:</strong>  ‘General Info’ → ‘Request for Value Added Tax’ →  ‘Would you like to request for VAT Certificate?’ →  ‘Yes’ →  Enter expected turnover amount.`,
+                 `<strong> PAYE:</strong>    ‘Employment Info’ →  ‘Does the company have employees?’ →  ‘Yes’ →  Enter required details.`,
+                             `Registration for any additional tax types in the future, a taxpayer can do it online via the E-tax system. `,
+                             ` When to start declaring and paying taxes after registration`,
+                             `Tax declarations for all registered tax types must be submitted for tax periods from the date the taxpayer was registered.`,
+                            `  Even if there is no business activity within the first, or subsequent, tax periods, the declarations must still be submitted to avoid non-declaration penalties. This includes domestic taxes such as Income Tax and also Local Government Taxes such as Trading License Tax.`,
+                        `<blockquote>
+                   <strong> Example 2</strong>
+                 <p>Rukundo is starting a private business of a retail shop. He is starting the business himself using his own capital and with no staff, partners or shareholders. He expects a daily turnover of approximately FRW 20,000, equivalent to an annual turnover of approximately FRW 8,000,000.</p>
+                <p> He wants to be protected by limited liability. Rukundo selects a ‘domestic’ business, with the company category ‘private’, the type ‘limited by shares’ and his position as ‘managing director’.  As shown below:</p>
+                </blockquote>`,
+                `<img src="assets/images/business_registration.png" alt="business registration">`,
+                `<strong>AN IMAGE HERE</strong>`,
+                `<blockquote>
+                  <p> On the share info tab, he lists himself as the only shareholder. On the members of the board tab, he enters himself as the only member of the board. On the business activity tab, he enters the business sector as ‘G – Wholesale or Retail Trade; Repair of Motor Vehicles and Motorcycles’ and then chooses ‘G4711 – Retail sale in non-specialised stores with food, beverages or tobacco predominating’.</p>
+                 <p>As his annual turnover is expected to be below FRW 20,000,000, he does not have to request for a VAT certificate. As he has no employees, he does not register for PAYE.</p>
+                 <p>Rukundo is automatically registered for Personal Income Tax (PIT), which must be declared and paid on an annual basis by 31st March of the following year, Trading License Tax which must be declared and paid after the expiration of the exemption period of two years from registration date.</p>
+                 </blockquote>`,
+             `<strong>  Find your TIN using ID </strong>`,
+                       `If a taxpayer does not know their TIN, they can visit RRA offices or call the RRA call centre toll-free on 3004.`,
+                       ` In addition, if an individual taxpayer (i.e., not a company) does not know their TIN , they can visit the <a href="https://etax.rra.gov.rw/nidAssignedTIN/"> RRA website</a> and click ‘Search for TIN using National ID’ as per the following screen:`,
+                       `<strong>  SCREENSHOT OF THE WEBSITE!! </strong>`,
+                      ` This leads to the following screen asking whether the taxpayer registered their TIN using a Rwandan National ID or a Passport. After clicking on the relevant choice, the National ID or Passport Number can be entered, and the associated TIN is displayed by clicking ‘Show TIN’. `,
+                      `<strong>  SCREENSHOT OF THE WEBSITE!! </strong>`,
+      ],
+    },
+  },
+{
+  id: 'e-tax-system',
+    title: {
+      en: 'E-tax-system',
+      fr: 'Système fiscal électronique',
+      rw:" Sisitemu yo gukoresha imisoro",
+    },
+    content: {
+      en: [
+         ` Each of the domestic taxes can be declared using E-Tax. This is an online portal that makes it easier for taxpayers to declare domestic taxes. This can be done online. The process of declaring using E-Tax is similar for all domestic taxes. `,
+           `Taxpayers are automatically registered for E-Tax when their business is registered. `,
+         `<strong>   E-Tax password</strong>`,
+                 ` If a taxpayer does not know their E-Tax password, reset it by clicking on ‘Forgot Password’ or visiting RRA offices.`,
+                 ` What are the causes of an annexure not validating?`,
+                `  When completing annexures, ensure to:`,
+                `<ul>
+              <li>‘Enable content’ after opening the spreadsheet.</li>
+              <li>Use the required date format (dd/mm/yyyy) for the dates entered and the computer’s settings.</li>
+              <li>Avoid blank cells for rows that have been started</li>
+              <li>Click to ‘Validate’.</li>
+              </ul>`,
+      ],
+      },
+    },
+    {
+    id:'ebm',
+    title: {
+      en: 'EBM',
+      fr: 'EBM',
+      rw: "EBM",
+    },
+    content: {
+      en: [
+               ` Taxpayers who are required to issue EBM invoices can do so by adopting either:`,
+              `  -	EBM2.1`,
+              ` -	A Virtual Sales Data Controller (VSDC)`,
+               ` EIS/EBMs must be used to produce EIS/EBM invoices for every sales transaction, both to other businesses and final consumers. RRA staff train taxpayers on how to set up, program and use their EIS/EBMs.`,
+               `The typical process for using EIS/EBMs is to enter the quantity, price and code of each item that is being sold. The taxpayer must then print the EIS/EBM invoice, give this to the consumer and keep a duplicate EIS/EBM invoice.`,
+               ` If there is any period where the EIS/EBM is not working, for whatever reason, taxpayers must notify RRA.`,
+      ],
+    },
+  },
+{
+  id: 'step-by-step-guide-to-importing-or-exporting',
+    title: {
+      en: 'Step-by-Step guide to importing or exporting',
+      fr:`Guide étape par étape pour l'importation ou l'exportation`,
+      rw: "Intambwe-ku-ntambwe iganisha ku gutumiza cyangwa kohereza hanze",
+    },
+    content: {
+      en: [
+                `<strong> Step 1:</strong> Taxpayer prepares all necessary documents and contracts a Clearing Agent. `,
+                `<strong> Step 2:</strong> The Clearing Agent prepares and submits an import or export declaration to RRA using the Rwanda electronic Single Window (ReSW). `,
+                `<strong>Step 3:</strong>     The Clearing Agent receives assessment notices, containing the amounts of customs duties due. The taxpayer pays all customs duties due, either directly or through the Clearing Agent. The assessment notice may contain different ‘Doc IDs’ for different tax types. If so, these must each be paid separately. `,
+               `<strong>  Step 4:</strong> The ReSW system allocates the consignment to a certain Customs channel. If verification is required, Customs Officers will request the necessary documents and/or access to the consignment. If there are any problems, further action may be required.`,
+              `<strong>    Step 5:</strong>After successful verification, the Customs Officer provides the taxpayer with a release order.`,
+               `<strong>  Step 6:</strong>   The taxpayer pays any due warehousing fees, if applicable, to the warehouse owner.`,
+                `<strong>   Step 7:</strong>    The taxpayer receives an exit note and may leave with their consignment. `,
+
+   
+      ],    
+},
+},
+{
+  id: 'step-by-Step-guide-to-motor-vehicle-ownership-transfer',
+    title: {
+      en: 'Step-by-Step Guide to Motor Vehicle Ownership Transfer',
+      fr: "Guide étape par étape pour le transfert de propriété d'un véhicule automobile",
+      rw: "Intambwe-ku-ntambwe yo kuyobora ibinyabiziga bifite ihererekanyabubasha",
+    },
+    content: {
+      en: [
+                 `<strong>    Step 1: Online Motor Vehicle Transfer Request</strong>`,
+             ` The seller applies for online motor vehicle transfer in E-Tax.`,
+       `<strong>  Step 2: Visit RRA offices and pay the transfer fee</strong>`,
+             ` Visit any RRA offices. If the seller of the motor vehicle has no outstanding tax arrears, RRA staff will provide an assessment notice for the Registration Transfer Fee. This must be paid by either the buyer or the seller.`,
+    `<strong>  Step 3: Register the buyer with RRA</strong>`,
+             ` If the buyer on the motor vehicle does not yet have a unique Taxpayer Identification Number (TIN), provide RRA staff with a valid Identity Document (ID) or Passport. `,
+     `<strong>Step 4: Provide all required documents</strong>`,
+             ` The buyer must provide RRA staff with all the required documents. `,
+      `<strong>Step 5: Updated Yellow Card is provided to the buyer</strong>`,
+             `RRA staff will provide the buyer of the motor vehicle with the updated Yellow Card containing the buyer’s details. The process is now finished and the buyer is now the legal owner of the motor vehicle. `,
+
+      ],
+    },
+},
+   {
     id: 'laws-ministerial-orders-and-rulings',
     title: {
       en: 'Laws, Ministerial Orders and Rulings',
@@ -35,7 +341,7 @@ export const otherServiceSections: HandbookSection[] = [
     content: {
       en: [
       `All laws, ministerial orders, Commissioner General (CG) rulings, public rulings and ruling cases governing tax administration are available on the <a href="https://www.rra.gov.rw/en/laws-policies-and-rulings">RRA website</a>`,
-       `<strong>             How can taxpayers ask for rulings if anything is unclear?</strong>`,
+       `<strong> How can taxpayers ask for rulings if anything is unclear?</strong>`,
                     `If there are any aspects that are unclear, or not covered, by the existing laws, ministerial orders or previous rulings then taxpayers may ask for an official clarification or ruling to be made by RRA.  `,
                     `In order to request a ruling, taxpayers must write a letter addressed to the Commissioner General of RRA. This letter should:`,
                     `<ul>
@@ -320,7 +626,20 @@ export const otherServiceSections: HandbookSection[] = [
                         </ul>`,
                        `<strong> Where to apply </strong>`,
                        ` During VDS period, applications are submitted online via <a href="http://www.rra.gov.rw/"> RRA website</a>`,
-                        `<strong>VAT Reward</strong>`,
+                        
+      ] 
+    },
+  },
+  {
+    id:`vat-reward`,
+    title: {
+      en: 'VAT Reward',
+      fr: 'Récompense TVA',
+      rw: 'Igice cya VAT',
+    },
+    content: {
+      en: [
+    
                       ` This scheme was established by tax law to address the following concerns at the level of final consumer:`,
                       `<ul>
                         <li>       Non-compliance with the issuance of EBM invoice </li>
@@ -348,7 +667,19 @@ export const otherServiceSections: HandbookSection[] = [
                        ` A final consumer is rewarded 10% of the VAT amount as shown on the EBM invoice issued.`,
                        `<strong> When is the VAT Reward disbursed</strong>`,
                        ` The VAT reward is deposited to the mobile money or bank account designated by the last consumer on quarterly basis, within 15 days following the declaration period of that quarter.`,
-                        `<strong>Communicate to RRA</strong>`,
+      ],
+    },
+  },
+  {
+    id: 'communicate',
+    title: {
+      en: 'Communicate to RRA',
+      fr: 'Communiquer avec le RRA',
+      rw: 'Ganira na RRA',
+    },
+    content: {
+      en: [
+                  
                         `<strong>i) Sending letters through E-Correspondence system</strong>`,
                         `Official communication with RRA is done via the E-Correspondence System. To send a letter to RRA whether you have a TIN or not, visit RRA website then click on “CLICK HERE TO SEND YOUR LETTER TO RRA” as per below screenshot:`,
                         `<strong>Image !!</strong>`,
@@ -385,7 +716,7 @@ export const otherServiceSections: HandbookSection[] = [
                                 `Silverback Mall, Kicukiro - Sonatube, Kigali, Rwanda`,
                                ` P. O. Box 3987`,
 
-      ] 
+      ],
     },
   },
   {
@@ -397,13 +728,82 @@ export const otherServiceSections: HandbookSection[] = [
     },
     content: {
       en: [
-        'Transfer of motor vehicles is required when ownership of the vehicle changes. This can happen due to sale, donation, inheritance, public or private auction, and court orders.',
-        'The transfer fee is FRW 30,000 for motorcycles and FRW 60,000 for all other motor vehicles.',
-        'Documents required for motor vehicle transfer include a notarised sale contract, registration transfer fee payment receipt, latest yellow card and plate number for the motor vehicle.',
-        'RRA motor vehicle services also include requests related to duplicate documents, ownership transfer, ownership certificates and viewing related requests through the appropriate systems.',
+     ` <strong>When to transfer motor vehicles </strong>`,
+             ` Transfer of motor vehicles is required when the ownership of the vehicle changes. `,
+             `It can happen due to the following reasons:`,
+             ` Normal sale,donation, inheritance (Succession), public/private auction and court orders.`,
+       `<strong> The cost of motor vehicle transfer</strong>`,
+             ` The Transfer Fee is FRW 30,000 for motorcycles and FRW 60,000 for all other motor vehicles.`,
+     `<strong> Required documents for motor vehicle transfer</strong>`,
+             ` The documents required for motor vehicle transfer are:`,
+             `<ul>
+              <li>  Notarised Sale Contract (containing the date, location, value and the names, phone numbers, NID, identification of motor vehicles and signatures of both the buyer and the seller). If done outside the country, the Embassy and MINAFET may approve it.</li>
+              <li>    Registration Transfer Fee payment receipt (FRW 30,000-FRW 60,000)</li>
+              <li>    Latest Yellow Card and plate number for the motor vehicle</li>
+              <li>   The buyer’s TIN</li>
+              <li>   Historical insurance information (only required if the vehicle will be used as a business such as a taxi).</li>
+              <li>  No tax arrears on the vehicle owner’s TIN</li>
+              </ul>`,
+           `<strong> Motor vehicle ownership transfer process</strong>`,
+       `<strong> Step 1:</strong>The seller logs in into E-Tax, goes to ‘Motor Vehicle’ then clicks on ‘Ownership Transfer’. The system displays the following screen:`,
+       `<strong>Here's an image</strong>`,
+      ` If the seller is transferring the owned motor vehicle to a new owner; the seller uses the first option ‘Transfer from Myself to Another Person’. If a new owner wants to acquire the motor vehicle for the following specific reasons:`,
+            `<li>          Auction</li>`,
+             `<li>         Succession</li>`,
+            `<li>            Court order</li>`,
+                `  The applicant uses the ‘Transfer to Myself’ option.`,
+         `<strong>  Step 2:</strong> The taxpayer pays the Transfer Fee.`,
+       `<strong>   Step 3:</strong>  If the buyer of the motor vehicle does not have a unique Taxpayer Identification Number (TIN), they must provide RRA staff with a valid NID or Passport. The TIN and certificate are provided free. `,
+      `<strong>   Step 4:</strong>   The buyer must provide RRA staff with all the required documents.`,
+       `<strong>   Step 5:</strong>If all required documents are valid, RRA staff will provide the buyer of the motor vehicle with the updated Yellow Card containing the buyer’s details after receiving the old yellow card and plate number.`,
+     `<strong>  Step 6:</strong>  The process is finished and the buyer is now the legal owner of the motor vehicle.`,
+       `<strong>  Motor vehicle-related services accessible online</strong>`,
+                `  To access online Motor vehicle services, log into E-Tax, click on Motor vehicle menu, choose any of the following services as displayed by the system:`,
+                `  -          Motor vehicle (MV) Declaration`,
+                ` -          Motor vehicle (MV) Acknowledgment Receipt`,
+                `  -          New Inactivity Request`,
+                ` -          Duplicate Request`,
+                `  -          View Duplicate requests`,
+                 `-          Owner Ship Transfer`,
+                 ` -          View Owner Ship Transfer Requests`,
+                 `-          Ownership Certificate Request`,
+                `  -          View Ownership Certificate Requests`,
+
+
+
       ],
     },
   },
+  {
+    id: 'my-rra',
+    title: {
+      en: 'MyRRA',
+      fr: 'MonRRA',
+      rw: 'MyRRA',
+    },
+    content: {
+      en: [
+   ` The MyRRA system is a unified gateway that allows taxpayers to access a range of tax services provided by the Rwanda Revenue Authority. `,
+       `<strong>  How to Login into MyRRA?</strong>`,
+                 ` Visit RRA website and click on the top right menu labelled “Login to MyRRA" as per the below picture:`,
+                 `<strong>HERE'S AN IMAGE</strong>`,
+                ` Or use the following <a href="https://myrra.rra.gov.rw/indexMain" >link</a>`,
+                 `  Once clicked, the following access picture will be displayed on the screen:`,
+                 `<strong>HERE'S AN IMAGE</strong>`,
+                   ` Click on 'Sign Up' to access MyRRA for the first time, or 'Login' if you already have credentials. If you have forgotten your password, the system provides an option to reset it by clicking on 'Forgot your Password'.`,
+               `<strong>Services available through MyRRA</strong>`,
+                     `MyRRA offers various features including the following:`,
+                     `-  View current tax declarations`,
+                     ` -  View undeclared taxes`,
+                     `-  View unpaid taxes `,
+                     ` - Request EBM `,
+                     `- Registration on VAT Reward`, 
+                     ` - Checking your VAT Reward information details`,
+                     `In addition to the above services, through MyRRA, a taxpayer can access other information displayed on the following picture: `,
+                    `<strong>HERE'S AN IMAGE</strong>`,
+
+      ],
+    },},
   {
     id: 'exchange-of-information',
     title: {
@@ -438,8 +838,27 @@ export const otherServiceSections: HandbookSection[] = [
                  `<strong>  Step-by-Step guide to declaring domestic taxes</strong>`,
                  `<strong>    Step 1: Log-in to E-Tax</strong>`,
                 ` Access the E-Tax website at<a href=" https://etax.rra.gov.rw">  https://etax.rra.gov.rw/</a> or through the RRA website <a href ="https://www.rra.gov.rw/">  https://www.rra.gov.rw</a>  and clicking on ‘Pay Domestic taxes here’ on the right of the screen. This loads the following login screen:`,
-
-
+               `<strong>Here's an IMAGE</strong>`,
+                   ` Login using the TIN and E-Tax password.`,
+               ` See page 93 if the TIN is not known. If a taxpayer does not know their password, it can be reset by clicking ‘Get Password?’ on the E-Tax system login and receiving a new password by SMS and email to the address used when registering.`,
+                `<strong>       Step 2: Download, complete, validate and save annexures</strong>`,
+               `After logging in, the E-Tax home page is loaded as shown below.`,
+               `<strong>HERE'S AN IMAGE</strong>`,
+              ` The first step of declaring domestic taxes is to download, complete and save the annexures of that tax type.`,
+               `To download annexures, hover the mouse over ‘Annexure Downloads’ on the top-right hand side of the E-Tax homepage, and click on the applicable tax type to download the annexures.`,
+               ` This will start a download of a spreadsheet file which can be opened in Microsoft Excel or other spreadsheet software.`,
+               `The annexures differ depending upon the tax type. For details on a specific tax type, view the relevant chapter of this Tax Handbook.`,
+               ` Annexures have an ‘Instructions’ tab and at least one other tab to be completed. Only the tabs that are relevant to the taxpayer in that tax period need to be completed. Each relevant tab must be completed, validated and saved separately. `,
+               `<strong>HERE'S AN IMAGE</strong>`,
+              ` The first step of declaring domestic taxes is to download, complete and save the annexures of that tax type.`,
+                 `To download annexures, hover the mouse over ‘Annexure Downloads’ on the top-right hand side of the E-Tax homepage, and click on the applicable tax type to download the annexures.`,
+                 ` This will start a download of a spreadsheet file which can be opened in Microsoft Excel or other spreadsheet software.`,
+                 `The annexures differ depending upon the tax type. For details on a specific tax type, view the relevant chapter of this Tax Handbook.`,
+                 ` Annexures have an ‘Instructions’ tab and at least one other tab to be completed. Only the tabs that are relevant to the taxpayer in that tax period need to be completed. Each relevant tab must be completed, validated and saved separately. `,
+             `<blockquote>
+              <strong>  Example 3</strong>
+               <p>   For VAT, the annexure is titled ‘VatAnnexure_1.1.xlsm’. The VAT annexure has six tabs: Instructions, Sales, Purchases, VAT Importation, Deductible VAT Reverse and VAT Retained. </p>
+               </blockquote>`,
 
       ],
     },
