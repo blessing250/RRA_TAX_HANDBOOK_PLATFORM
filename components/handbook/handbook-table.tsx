@@ -8,8 +8,8 @@ type HandbookTableProps = {
 
 export function HandbookTable({ caption, headers, rows }: HandbookTableProps) {
   return (
-    <div className="my-8 overflow-x-auto">
-      <table className="min-w-full border-collapse overflow-hidden rounded-sm border border-rra-black/25 text-left text-sm text-rra-black">
+    <div className="my-8 overflow-x-auto rounded-sm border border-rra-black/10">
+      <table className="min-w-full border-collapse text-left text-sm text-rra-black">
         {caption ? (
           <caption className="mb-3 text-left font-semibold text-rra-black">{caption}</caption>
         ) : null}
@@ -27,17 +27,32 @@ export function HandbookTable({ caption, headers, rows }: HandbookTableProps) {
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, rowIndex) => (
-            <tr key={row.join('|') || rowIndex} className={cn(rowIndex % 2 === 1 && 'bg-rra-black/[0.02]')}>
-              {row.map((cell, cellIndex) => (
-                <td
-                  key={`${rowIndex}-${cellIndex}-${cell}`}
-                  className="border border-rra-black/20 px-4 py-3 align-top"
-                  dangerouslySetInnerHTML={{ __html: cell }}
-                />
-              ))}
-            </tr>
-          ))}
+          {rows.map((row, rowIndex) => {
+            const isGroupRow = row.length === 1;
+
+            return (
+              <tr
+                key={row.join('|') || rowIndex}
+                className={cn(!isGroupRow && rowIndex % 2 === 1 && 'bg-rra-black/[0.02]')}
+              >
+                {isGroupRow ? (
+                  <td
+                    colSpan={headers.length}
+                    className="border border-rra-black/20 bg-rra-light-blue/10 px-4 py-3 text-center align-top font-bold text-rra-black"
+                    dangerouslySetInnerHTML={{ __html: row[0] }}
+                  />
+                ) : (
+                  row.map((cell, cellIndex) => (
+                    <td
+                      key={`${rowIndex}-${cellIndex}-${cell}`}
+                      className="border border-rra-black/20 px-4 py-3 align-top"
+                      dangerouslySetInnerHTML={{ __html: cell }}
+                    />
+                  ))
+                )}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

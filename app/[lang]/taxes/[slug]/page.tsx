@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import { Container } from '@/components/layout/container';
 import { HandbookAccordion } from '@/components/handbook/handbook-accordion';
 import { HandbookBreadcrumb } from '@/components/handbook/handbook-breadcrumb';
+import { HandbookPageLayout } from '@/components/handbook/handbook-page-layout';
 import { HandbookSection } from '@/components/handbook/handbook-section';
 import { PageHero } from '@/components/handbook/page-hero';
 import { RelatedTopics } from '@/components/handbook/related-topics';
@@ -79,62 +80,47 @@ export default async function TaxTopicPage({
       .filter((item) => item !== undefined);
 
     return (
-      <Container className="py-12 sm:py-16 lg:max-w-4xl">
-        <article className="mx-auto max-w-2xl">
-          <div className="mb-10">
-            <HandbookBreadcrumb
-              items={[
-                { label: dict.nav.home, href: `/${locale}` },
-                { label: dict.nav.taxes, href: `/${locale}/taxes` },
-                {
-                  label: localizedText(domesticTaxesPage.title, locale),
-                  href: `/${locale}/taxes/domestic-taxes`,
-                },
-                { label: localizedText(centralGovernmentTaxesPage.title, locale) },
-              ]}
-            />
-          </div>
-
-          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
-            {localizedText(centralGovernmentTaxesPage.title, locale)}
-          </h1>
-
-          <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            <HandbookSection paragraphs={localizedParagraphs(centralGovernmentTaxesPage.summary, locale)} />
-          </div>
-
-          <div className="mt-16 max-w-xl">
-            <HandbookAccordion
-              variant="minimal"
-              items={taxItems.map((item) => ({
-                value: item.slug,
-                title: item.titleText,
-                content: (
-                  <div
-                    id={item.slug}
-                    className="scroll-mt-28 space-y-4 text-sm leading-7 text-rra-black sm:text-base"
+      <HandbookPageLayout
+        title={localizedText(centralGovernmentTaxesPage.title, locale)}
+        summary={
+          <HandbookSection paragraphs={localizedParagraphs(centralGovernmentTaxesPage.summary, locale)} />
+        }
+        breadcrumbs={[
+          { label: dict.nav.home, href: `/${locale}` },
+          { label: dict.nav.taxes, href: `/${locale}/taxes` },
+          {
+            label: localizedText(domesticTaxesPage.title, locale),
+            href: `/${locale}/taxes/domestic-taxes`,
+          },
+          { label: localizedText(centralGovernmentTaxesPage.title, locale) },
+        ]}
+        lastUpdated={localizedText(centralGovernmentTaxesPage.lastUpdated, locale)}
+      >
+        <HandbookAccordion
+          variant="minimal"
+          items={taxItems.map((item) => ({
+            value: item.slug,
+            title: item.titleText,
+            content: (
+              <div
+                id={item.slug}
+                className="scroll-mt-28 space-y-4 text-sm leading-7 text-rra-black sm:text-base"
+              >
+                <p>
+                  {item.summaryText}{' '}
+                  <Link
+                    href={`/${locale}/taxes/${item.slug}`}
+                    className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
                   >
-                    <p>
-                      {item.summaryText}{' '}
-                      <Link
-                        href={`/${locale}/taxes/${item.slug}`}
-                        className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                      >
-                        {localizedText(centralGovernmentTaxesPage.readMoreLabel, locale)}
-                      </Link>
-                      .
-                    </p>
-                  </div>
-                ),
-              }))}
-            />
-          </div>
-
-          <p className="mt-20 text-sm text-rra-black">
-            {localizedText(centralGovernmentTaxesPage.lastUpdated, locale)}
-          </p>
-        </article>
-      </Container>
+                    {localizedText(centralGovernmentTaxesPage.readMoreLabel, locale)}
+                  </Link>
+                  .
+                </p>
+              </div>
+            ),
+          }))}
+        />
+      </HandbookPageLayout>
     );
   }
 
@@ -142,62 +128,49 @@ export default async function TaxTopicPage({
     const title = localizedText(centralTaxDetailPage.title, locale);
 
     return (
-      <Container className="py-12 sm:py-16 lg:max-w-4xl">
-        <article className="mx-auto max-w-2xl">
-          <div className="mb-10">
-            <HandbookBreadcrumb
-              items={[
-                { label: dict.nav.home, href: `/${locale}` },
-                { label: dict.nav.taxes, href: `/${locale}/taxes` },
-                {
-                  label: localizedText(domesticTaxesPage.title, locale),
-                  href: `/${locale}/taxes/domestic-taxes`,
-                },
-                {
-                  label: localizedText(
-                    {
-                      en: 'Central Government Taxes',
-                      fr: 'Impots du gouvernement central',
-                      rw: 'Imisoro ya leta',
-                    },
-                    locale,
-                  ),
-                  href: `/${locale}/taxes/central-government-taxes`,
-                },
-                { label: title },
-              ]}
-            />
-          </div>
-
-          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
-            {title}
-          </h1>
-
-          <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            <HandbookSection paragraphs={centralTaxDetailPage.intro[locale] ?? centralTaxDetailPage.intro.en ?? []} />
-          </div>
-
-          <div className="mt-12 max-w-xl">
-            <HandbookAccordion
-              variant="minimal"
-              items={centralTaxDetailPage.sections.map((section) => ({
-                value: section.id,
-                title: localizedText(section.title, locale),
-                content: (
-                  <HandbookSection
-                    id={section.id}
-                    paragraphs={section.content?.[locale] ?? section.content?.en ?? []}
-                  />
-                ),
-              }))}
-            />
-          </div>
-
-          <p className="mt-20 text-sm text-rra-black">
-            {localizedText(centralTaxDetailPage.lastUpdated, locale)}
-          </p>
-        </article>
-      </Container>
+      <HandbookPageLayout
+        title={title}
+        summary={
+          <HandbookSection
+            paragraphs={centralTaxDetailPage.intro[locale] ?? centralTaxDetailPage.intro.en ?? []}
+          />
+        }
+        breadcrumbs={[
+          { label: dict.nav.home, href: `/${locale}` },
+          { label: dict.nav.taxes, href: `/${locale}/taxes` },
+          {
+            label: localizedText(domesticTaxesPage.title, locale),
+            href: `/${locale}/taxes/domestic-taxes`,
+          },
+          {
+            label: localizedText(
+              {
+                en: 'Central Government Taxes',
+                fr: 'Impots du gouvernement central',
+                rw: 'Imisoro ya leta',
+              },
+              locale,
+            ),
+            href: `/${locale}/taxes/central-government-taxes`,
+          },
+          { label: title },
+        ]}
+        lastUpdated={localizedText(centralTaxDetailPage.lastUpdated, locale)}
+      >
+        <HandbookAccordion
+          variant="minimal"
+          items={centralTaxDetailPage.sections.map((section) => ({
+            value: section.id,
+            title: localizedText(section.title, locale),
+            content: (
+              <HandbookSection
+                id={section.id}
+                paragraphs={section.content?.[locale] ?? section.content?.en ?? []}
+              />
+            ),
+          }))}
+        />
+      </HandbookPageLayout>
     );
   }
 
@@ -286,46 +259,29 @@ export default async function TaxTopicPage({
     };
 
     return (
-      <Container className="py-12 sm:py-16 lg:max-w-4xl">
-        <article className="mx-auto max-w-2xl">
-          <div className="mb-10">
-            <HandbookBreadcrumb
-              items={[
-                { label: dict.nav.home, href: `/${locale}` },
-                { label: dict.nav.taxes, href: `/${locale}/taxes` },
-                {
-                  label: localizedText(domesticTaxesPage.title, locale),
-                  href: `/${locale}/taxes/domestic-taxes`,
-                },
-                { label: localizedText(localGovernmentTaxesPage.title, locale) },
-              ]}
-            />
-          </div>
-
-          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
-            {localizedText(localGovernmentTaxesPage.title, locale)}
-          </h1>
-
-          <div className="mt-10 max-w-xl space-y-6 text-sm leading-8 text-rra-black">
-            <HandbookSection paragraphs={localGovernmentIntro[locale] ?? localGovernmentIntro.en ?? []} />
-          </div>
-
-          <div className="mt-12 max-w-xl">
-            <HandbookAccordion
-              variant="minimal"
-              items={localGovernmentTaxSections.map((section) => ({
-                value: section.id,
-                title: localizedText(section.title, locale),
-                content: localSectionContent[section.id],
-              }))}
-            />
-          </div>
-
-          <p className="mt-20 text-sm text-rra-black">
-            {localizedText(localGovernmentTaxesPage.lastUpdated, locale)}
-          </p>
-        </article>
-      </Container>
+      <HandbookPageLayout
+        title={localizedText(localGovernmentTaxesPage.title, locale)}
+        summary={<HandbookSection paragraphs={localGovernmentIntro[locale] ?? localGovernmentIntro.en ?? []} />}
+        breadcrumbs={[
+          { label: dict.nav.home, href: `/${locale}` },
+          { label: dict.nav.taxes, href: `/${locale}/taxes` },
+          {
+            label: localizedText(domesticTaxesPage.title, locale),
+            href: `/${locale}/taxes/domestic-taxes`,
+          },
+          { label: localizedText(localGovernmentTaxesPage.title, locale) },
+        ]}
+        lastUpdated={localizedText(localGovernmentTaxesPage.lastUpdated, locale)}
+      >
+        <HandbookAccordion
+          variant="minimal"
+          items={localGovernmentTaxSections.map((section) => ({
+            value: section.id,
+            title: localizedText(section.title, locale),
+            content: localSectionContent[section.id],
+          }))}
+        />
+      </HandbookPageLayout>
     );
   }
 
@@ -334,61 +290,46 @@ export default async function TaxTopicPage({
     const isCustomsTaxPage = localTaxDetailPage.slug === 'customs-taxes';
 
     return (
-      <Container className="py-12 sm:py-16 lg:max-w-4xl">
-        <article className="mx-auto max-w-2xl">
-          <div className="mb-10">
-            <HandbookBreadcrumb
-              items={[
-                { label: dict.nav.home, href: `/${locale}` },
-                { label: dict.nav.taxes, href: `/${locale}/taxes` },
-                ...(!isCustomsTaxPage
-                  ? [
-                      {
-                        label: localizedText(domesticTaxesPage.title, locale),
-                        href: `/${locale}/taxes/domestic-taxes`,
-                      },
-                      {
-                        label: localizedText(localGovernmentTaxesPage.title, locale),
-                        href: `/${locale}/taxes/local-government-taxes`,
-                      },
-                    ]
-                  : []),
-                { label: title },
-              ]}
-            />
-          </div>
-
-          <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
-            {title}
-          </h1>
-
-          <div className="mt-10 max-w-xl space-y-4 text-sm leading-8 text-rra-black">
-            <HandbookSection paragraphs={localTaxDetailPage.intro[locale] ?? localTaxDetailPage.intro.en ?? []} />
-          </div>
-
-          {localTaxDetailPage.sections.length > 0 ? (
-            <div className="mt-12 max-w-xl">
-              <HandbookAccordion
-                variant="minimal"
-                items={localTaxDetailPage.sections.map((section) => ({
-                  value: section.id,
-                  title: localizedText(section.title, locale),
-                  content: (
-                    <HandbookSection
-                      id={section.id}
-                      paragraphs={section.content?.[locale] ?? section.content?.en ?? []}
-                    />
-                  ),
-                }))}
-              />
-            </div>
-          ) : null}
-
-          <p className="mt-20 text-sm text-rra-black">
-            {localizedText(localTaxDetailPage.lastUpdated, locale)}
-          </p>
-        </article>
-      </Container>
+      <HandbookPageLayout
+        title={title}
+        summary={
+          <HandbookSection paragraphs={localTaxDetailPage.intro[locale] ?? localTaxDetailPage.intro.en ?? []} />
+        }
+        breadcrumbs={[
+          { label: dict.nav.home, href: `/${locale}` },
+          { label: dict.nav.taxes, href: `/${locale}/taxes` },
+          ...(!isCustomsTaxPage
+            ? [
+                {
+                  label: localizedText(domesticTaxesPage.title, locale),
+                  href: `/${locale}/taxes/domestic-taxes`,
+                },
+                {
+                  label: localizedText(localGovernmentTaxesPage.title, locale),
+                  href: `/${locale}/taxes/local-government-taxes`,
+                },
+              ]
+            : []),
+          { label: title },
+        ]}
+        lastUpdated={localizedText(localTaxDetailPage.lastUpdated, locale)}
+      >
+        {localTaxDetailPage.sections.length > 0 ? (
+          <HandbookAccordion
+            variant="minimal"
+            items={localTaxDetailPage.sections.map((section) => ({
+              value: section.id,
+              title: localizedText(section.title, locale),
+              content: (
+                <HandbookSection
+                  id={section.id}
+                  paragraphs={section.content?.[locale] ?? section.content?.en ?? []}
+                />
+              ),
+            }))}
+          />
+        ) : null}
+      </HandbookPageLayout>
     );
   }
 

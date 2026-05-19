@@ -14,7 +14,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ dict, lang }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b-4 border-rra-blue bg-rra-white text-rra-black">
+    <header className="relative z-40 border-b-4 border-rra-blue bg-rra-white text-rra-black md:sticky md:top-0">
       <div className="bg-rra-blue text-rra-white">
         <div className="flex min-h-10 flex-wrap items-center justify-end gap-3 px-4 py-2 text-sm sm:px-6 lg:px-8">
           <LanguageSwitcher lang={lang} label={dict.nav.language} />
