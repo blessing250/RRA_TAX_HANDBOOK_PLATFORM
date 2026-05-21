@@ -104,7 +104,7 @@ export function HandbookSearch({
   }, [items, query])
 
   return (
-    <section className="mx-auto max-w-4xl">
+    <section className="w-full">
       <label className="sr-only" htmlFor="handbook-search">
         {labels.search}
       </label>
