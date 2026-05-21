@@ -700,13 +700,13 @@ export const otherServiceSections: HandbookSection[] = [
                                ` RRA utilizes several social media channels to handle tax enquiries and service challenges:`,
                                `<ul>
                                <li> WhatsApp+250 739 008 010 (Primary query line) / +250 785 569 363 (Recruitment) </li>                             
-                              <li>  YouTube: Rwanda Revenue Authority </li>
-                              <li>  X (Twitter): @rrainfo</li>
-                              <li>  Instagram: @rwandarevenue</li>
-                             <li>   TikTok:  @rrataxtoks</li>
-                             <li>   Facebook: Rwanda Revenue Authority</li>
-                             <li>   LinkedIn: Rwanda Revenue Authority</li>
-                             <li>   Flickr: Rwanda Revenue Authority</li>
+                              <li>  YouTube:<a href="https://www.youtube.com/@rwandarevenueauthority6148">  Rwanda Revenue Authority</a> </li>
+                              <li>  X (Twitter):<a href="https://x.com/rrainfo"> @rrainfo</a></li>
+                              <li>  Instagram:<a href="https://www.instagram.com/rwandarevenue/?fbclid=IwY2xjawQKSAJleHRuA2FlbQIxMQBicmlkETI0dkwwQlk5MURnRVRNM1Bqc3J0YwZhcHBfaWQBMAABHlbV9wpE_PBjQSNTHfJowZa6BAO_cnA_zp-uiURLa0e022xHGc3N-vNoEl7P_aem_Ib3OIieXuttBZWYxjAtChQ"> @rwandarevenue</a></li>
+                             <li>   TikTok:<a href="https://www.tiktok.com/@rrataxtoks"> @rrataxtoks</a></li>
+                             <li>   Facebook:<a href="https://web.facebook.com/RwandaRevenueAuthority/?_rdc=1&_rdr#"> Rwanda Revenue Authority</a></li>
+                             <li>   LinkedIn:<a href="https://www.linkedin.com/company/rwanda-revenue-authority/posts/?feedView=all">Rwanda Revenue Authority</a></li>
+                             <li>   Flickr:<a href="https://www.flickr.com/photos/197597413@N06/albums/"> Rwanda Revenue Authority</a></li>
                              </ul>`,
                           `<strong>      v) Call Center</strong>`,
                                ` RRA Call Center serves as a central hub for taxpayer support, designed to simplify tax compliance and provide immediate technical assistance.`,
