@@ -290,6 +290,7 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
                 <strong> Example</strong>
                  <p> An example IQP declaration is entered below. The IQP due for this taxpayer in this tax period is FRW 26,550.</p>
                  </blockquote>`,
+                  `<div><img src="/images/image.png" alt="IQP declaration example" /></div>`,
 
                   `<p>After saving the IQP regime declaration form, if the taxpayer has not had any tax withheld and paid on their behalf during the tax period, click ‘Submit without Annexures’ to submit the declaration.</p>`,
                   `<p>If the taxpayer has had any tax withheld and paid on their behalf during the tax period, upload the IQP annexures and then compare with the declaration form.</p>`,
