@@ -73,13 +73,7 @@ export default async function DomesticTaxesPage({
                         </Link>
                         {index < centralGovernmentTaxLinks.length - 1 ? ", " : "."}
                       </span>
-                    ))}{" "}
-                    <Link
-                      href={`/${locale}/taxes/central-government-taxes`}
-                      className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                    >
-                      {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
-                    </Link>
+                    ))}
                   </p>
                 </div>
               ) : (
@@ -88,13 +82,7 @@ export default async function DomesticTaxesPage({
                   className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base"
                 >
                   <p>
-                    {localizedText(section.text, locale)}{" "}
-                    <Link
-                      href={`/${locale}/taxes/local-government-taxes`}
-                      className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
-                    >
-                      {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
-                    </Link>
+                    {localizedText(section.text, locale)}
                   </p>
                 </div>
               ),

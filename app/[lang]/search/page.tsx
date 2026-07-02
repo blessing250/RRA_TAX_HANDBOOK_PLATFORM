@@ -22,24 +22,32 @@ export default async function SearchPage({
   const searchIndex = getHandbookSearchIndex(locale)
 
   return (
-    <HandbookPageLayout
-      title={dict.common.search}
-      summary="Search handbook topics, tax types, declaration guidance, rates, penalties, and taxpayer support references."
-      breadcrumbs={[
-        { label: dict.nav.home, href: `/${locale}` },
-        { label: dict.common.search },
-      ]}
-    >
-      <HandbookSearch
-        items={searchIndex}
-        labels={{
-          search: dict.common.search,
-          placeholder: dict.common.search,
-          noResults: "No matching handbook topics were found.",
-          resultCountSingular: "1 result found",
-          resultCountPlural: "results found",
-        }}
+    <>
+      <PageHero
+        title={dict.common.search}
+        summary="Search handbook topics, tax types, declaration guidance, rates, penalties, and taxpayer support references."
       />
-    </HandbookPageLayout>
+      <Container className="py-8 sm:py-10">
+        <div className="mb-8">
+          <HandbookBreadcrumb
+            items={[
+              { label: dict.nav.home, href: `/${locale}` },
+              { label: dict.common.search },
+            ]}
+          />
+        </div>
+
+        <HandbookSearch
+          items={searchIndex}
+          labels={{
+            search: dict.common.search,
+            placeholder: dict.common.search,
+            noResults: "No matching handbook topics were found.",
+            resultCountSingular: "1 result found",
+            resultCountPlural: "results found",
+          }}
+        />
+      </Container>
+    </>
   )
 }

@@ -29,6 +29,9 @@ export function HandbookPageLayout({
       <section className="border-b bg-muted/30">
         <Container className="py-8 sm:py-10 lg:max-w-5xl">
           <div className="mx-auto max-w-3xl">
+            <div className="mb-6">
+              <HandbookBreadcrumb items={breadcrumbs} />
+            </div>
             <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
               {title}
             </h1>
@@ -43,10 +46,6 @@ export function HandbookPageLayout({
 
       <Container className="py-8 sm:py-10 lg:max-w-5xl">
         <article className={cn("mx-auto max-w-3xl", contentClassName)}>
-          <div className="mb-8 sm:mb-10">
-            <HandbookBreadcrumb items={breadcrumbs} />
-          </div>
-
           {children}
 
           {lastUpdated ? (

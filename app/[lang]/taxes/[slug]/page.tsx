@@ -335,9 +335,10 @@ export default async function TaxTopicPage({
 
   return (
     <>
-      <PageHero title={topic.titleText} summary={topic.summaryText} />
-      <Container className="py-8 sm:py-10">
-        <div className="mb-8">
+      <PageHero
+        title={topic.titleText}
+        summary={topic.summaryText}
+        breadcrumb={
           <HandbookBreadcrumb
             items={[
               { label: dict.nav.home, href: `/${locale}` },
@@ -353,8 +354,9 @@ export default async function TaxTopicPage({
               { label: topic.titleText },
             ]}
           />
-        </div>
-
+        }
+      />
+      <Container className="py-8 sm:py-10">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
           <article className="min-w-0">
             <HandbookAccordion
@@ -382,7 +384,6 @@ export default async function TaxTopicPage({
           <RelatedTopics
             heading={dict.common.relatedTopics}
             lang={locale}
-            readMore={dict.common.readMore}
             topics={relatedTopics}
           />
         </div>

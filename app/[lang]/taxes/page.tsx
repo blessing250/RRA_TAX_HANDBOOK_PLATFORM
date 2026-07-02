@@ -25,16 +25,16 @@ export default async function TaxesPage({
 
   return (
     <Container className="py-10 sm:py-14 lg:max-w-5xl">
-      <div className="mb-10">
-        <HandbookBreadcrumb
-          items={[
-            { label: dict.nav.home, href: `/${locale}` },
-            { label: dict.nav.taxes },
-          ]}
-        />
-      </div>
-
       <section className="mx-auto max-w-4xl">
+        <div className="mb-6">
+          <HandbookBreadcrumb
+            items={[
+              { label: dict.nav.home, href: `/${locale}` },
+              { label: dict.nav.taxes },
+            ]}
+          />
+        </div>
+
         <h1 className="text-balance text-3xl font-bold tracking-normal text-rra-black sm:text-4xl">
           {localizedText(taxesLanding.title, locale)}
         </h1>

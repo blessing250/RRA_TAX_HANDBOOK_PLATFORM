@@ -4,6 +4,7 @@ import { ArrowLeftIcon, SearchIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/i18n/language-switcher';
+import { Container } from '@/components/layout/container';
 import type { Dictionary } from '@/lib/i18n/get-dictionary';
 import type { Locale } from '@/lib/i18n/config';
 
@@ -16,7 +17,7 @@ export function SiteHeader({ dict, lang }: SiteHeaderProps) {
   return (
     <header className="relative z-40 border-b-4 border-rra-blue bg-rra-white text-rra-black md:sticky md:top-0">
       <div className="bg-rra-blue text-rra-white">
-        <div className="flex min-h-10 flex-wrap items-center justify-end gap-3 px-4 py-2 text-sm sm:px-6 lg:px-8">
+        <Container className="flex min-h-10 flex-wrap items-center justify-end gap-3 py-2 text-sm">
           <LanguageSwitcher lang={lang} label={dict.nav.language} />
           <form action={`/${lang}/search/`} method="get" className="relative w-full max-w-64 sm:w-64">
             <SearchIcon className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-rra-blue/70" />
@@ -29,10 +30,10 @@ export function SiteHeader({ dict, lang }: SiteHeaderProps) {
               className="h-8 w-full rounded-md border border-rra-white/20 bg-rra-white pl-9 pr-3 text-sm font-medium text-rra-black shadow-sm outline-none placeholder:text-rra-blue/55 focus:border-rra-orange focus:ring-2 focus:ring-rra-orange/40"
             />
           </form>
-        </div>
+        </Container>
       </div>
 
-      <div className="grid min-h-24 gap-4 px-4 py-4 sm:grid-cols-[11rem_1fr] sm:items-center sm:px-6 lg:min-h-28 lg:grid-cols-[13rem_1fr] lg:px-8">
+      <Container className="grid min-h-24 gap-4 py-4 sm:grid-cols-[11rem_1fr] sm:items-center lg:min-h-28 lg:grid-cols-[13rem_1fr]">
         <Link href={`/${lang}`} className="flex w-full justify-start" aria-label={dict.nav.home}>
           <Image
             src="/images/Rwanda-Revenue-Authority-logo.png"
@@ -59,12 +60,12 @@ export function SiteHeader({ dict, lang }: SiteHeaderProps) {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <Link href={`/${lang}`} className="min-w-0">
               <span className="block text-balance text-2xl font-bold leading-tight text-rra-black sm:text-3xl">
-                Tax Handbook- {new Date().getFullYear()} Edition
+                Tax Handbook - 2025 Edition
               </span>
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }
