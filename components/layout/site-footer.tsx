@@ -16,7 +16,7 @@ export function SiteFooter({ lang }: SiteFooterProps) {
         </nav>
 
         <p className="text-center md:whitespace-nowrap">
-          Copyrights @2023 All Rights Reserved by Rwanda Revenue Authority
+          Copyrights @2025 All Rights Reserved by Rwanda Revenue Authority
         </p>
 
         <nav className="flex justify-center md:justify-end" aria-label="Contact">
