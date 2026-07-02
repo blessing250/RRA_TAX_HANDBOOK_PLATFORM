@@ -21,7 +21,7 @@ export default function Home() {
             <Link
               key={card.id}
               href={card.href(locale)}
-              className="group flex min-h-56 flex-col justify-between rounded-lg border bg-card p-6 text-card-foreground transition-colors hover:border-rra-light-blue hover:bg-muted/30 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+              className="group flex min-h-56 flex-col items-center justify-between rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-rra-light-blue hover:bg-[#CFE3F8] hover:shadow-md focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
             >
               <span>
                 <span className="block text-xl font-semibold leading-7 text-[#1362AE]">
@@ -31,9 +31,8 @@ export default function Home() {
                   {localizedText(card.summary, locale)}
                 </span>
               </span>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium">
-                <span>{dict.common.readMore}</span>
-                <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-0.5" />
+              <span className="mt-6 flex size-9 items-center justify-center rounded-full text-rra-blue transition-colors group-hover:bg-rra-blue group-hover:text-rra-white">
+                <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </span>
             </Link>
           ))}

@@ -5,17 +5,19 @@ import { cn } from '@/lib/utils';
 
 type PageHeroProps = {
   eyebrow?: string;
+  breadcrumb?: ReactNode;
   title: string;
   summary: string;
   actions?: ReactNode;
   className?: string;
 };
 
-export function PageHero({ actions, className, eyebrow, summary, title }: PageHeroProps) {
+export function PageHero({ actions, breadcrumb, className, eyebrow, summary, title }: PageHeroProps) {
   return (
     <section className={cn('border-b bg-muted/30', className)}>
       <Container className="grid min-h-40 gap-6 py-8 sm:min-h-44 sm:py-10 lg:grid-cols-[1fr_auto] lg:items-center">
         <div className="max-w-3xl">
+          {breadcrumb ? <div className="mb-6">{breadcrumb}</div> : null}
           {eyebrow ? (
             <p className="mb-3 text-sm font-medium text-muted-foreground">{eyebrow}</p>
           ) : null}

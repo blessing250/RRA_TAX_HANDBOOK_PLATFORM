@@ -75,9 +75,7 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
             <li>
               <strong>Personal Income Tax (PIT)</strong>
               <p>PIT is for individual traders and unincorporated businesses. The personal income tax is levied on an individual's annual income.</p>
-              <ol>
-                <li>
-                  <strong>PIT brackets</strong>
+                  <strong>1.1. PIT brackets</strong>
                   <p>The tax rate for PIT is progressive, as shown below:</p>
                 </li>
               </ol>
@@ -99,51 +97,45 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
             <p><strong>Her annual taxable profit is therefore:</strong><br/>FRW 62,000,000 - FRW 54,000,000 = FRW 8,000,000</p>
             <p><strong>Her annual Real Regime PIT due is:</strong><br/>(FRW 720,000 * 0%) + (FRW 480,000 * 10%) + (FRW 1,200,000 * 20%) + (FRW 6,800,000 * 30%) = FRW 1,968,000</p>
           </blockquote>`,
-          `<ol start="1">
-            <li>
-              <ol start="2">
-                <li>
-                  <strong>PIT declaration obligation</strong>
+            
+                  `<strong>1.2. PIT declaration obligation</strong>
                   <p>PIT is required to be declared and paid on an annual basis. The tax period is the calendar year, from 1st January until 31st December. The deadline to declare and pay PIT is 31st March of the following year. PIT is declared online through <a href="https://etax.rra.gov.rw/" target="_blank" rel="noopener noreferrer">E-Tax system</a> or M-Declaration (*800#).</p>
                   <div>
                     <p><strong>Note:</strong> If the tax type and tax period for the relevant declaration is not available on the ‘Document Details’ screen, the taxpayer can generate it in the E-Tax system.</p>
                   </div>
-                </li>
                 <li>
-                  <strong>PIT Payment</strong>
+                  <strong>1.3. PIT Payment</strong>
                   <p>PIT payments can be made via Mobile/Airtel Money, MobiCash, mobile banking, or Internet Banking.</p>
                 </li>
                 <li>
-                  <strong>PIT de-registration</strong>
+                  <strong>1.4. PIT de-registration</strong>
                   <p>When a taxpayer wants to apply for PIT de-registration for various reasons, RRA may request any documents of proof as necessary. For more information on how to request de-registration, <a href="https://www.rra.gov.rw/fileadmin/user_upload/RRA_TIN_De-registration_Engl.pdf" target="_blank" rel="noopener noreferrer">see a step-by-step guide.</a></p>
                 </li>
               </ol>
             </li>
             <li>
-              <strong>Corporate Income Tax (CIT)</strong>
+              <strong>2.  Corporate Income Tax (CIT)</strong>
               <p>The corporate income tax is imposed on the profit of a taxpayer other than an individual.</p>
-              <ol>
-                <li>
-                  <strong>CIT Declaration</strong>
+               <li>
+                  <strong>2.1. CIT Declaration</strong>
                   <p>Annual income tax declaration is prepared in accordance with procedures specified by the tax administration and submitted not later than 31st March of the following tax period, unless otherwise provided by this Law.</p>
                   <p>Click <a href="https://www.rra.gov.rw/en/taxes-fees/domestic-taxes/income-tax/declare-income-tax-1" target="_blank" rel="noopener noreferrer">here</a> to learn more. For legal reference, you can follow this link.</p>
                 </li>
                 <li>
-                  <strong>CIT Payment</strong>
+                  <strong>2.2. CIT Payment</strong>
                   <p>CIT payments can be made via Mobile/Airtel Money, MobiCash, mobile banking, or Internet Banking.</p>
                 </li>
                 <li>
-                  <strong>Exemption</strong>
+                  <strong>2.3. Exemption</strong>
                   <p>Taxpayers that are exempted from Corporate Income Tax are not required to register, declare or pay Income Tax. However, they are required to submit their financial statements through E-Tax by the 31st of March after the tax period or three months following a specific tax period granted to the taxpayer having made a request to that effect.</p>
                   <p>Click <a href="https://www.rra.gov.rw/en/details?tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=2193&cHash=8b0160d1a4cd96180ad87086837e6b47" target="_blank" rel="noopener noreferrer">here</a> to learn more about taxpayers that are exempted from Income Tax.</p>
                 </li>
                 <li>
-                  <strong>CIT De-registration</strong>
+                  <strong>2.4. CIT De-registration</strong>
                   <p>When you completely cease to operate, you must apply for de-registration from Income Tax. For more information on how to request de-registration, <a href="https://www.rra.gov.rw/fileadmin/user_upload/RRA_TIN_De-registration_Engl.pdf" target="_blank" rel="noopener noreferrer">see a step-by-step guide.</a></p>
                 </li>
               </ol>
-            </li>
-          </ol>`,
+            </li>`,
         ],
       },
     },
@@ -251,52 +243,65 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
         en: [
           `Taxpayers are required to declare and pay Income Tax Quarterly Prepayments (IQP) if they have had taxable revenue in the previous fiscal year by the following deadlines: 30 June, 30 September and 31 December.`,
           `All IQPs that are paid are considered in that tax year’s annual Income Tax declarations.`,
-          `<strong>IQP calculation</strong>`,
+          `<strong>1. IQP calculation</strong>`,
           `<p>Quarterly prepayment tax is calculated from tax paid for the previous annual tax period divided by the turnover of the same tax period, times the current quarterly turnover.</p>`,
-          `<strong>IQP declaration</strong>`,
+            `<blockquote>
+          <strong>Example</strong>
+               <p> In the fiscal year 2023 Jean-Baptiste declared Income Tax payable of FRW 540,000 in March 2024 from an annual turnover of FRW 18,000,000 under the lump sum regime. In the fiscal 2024, he realised a turnover of FRW 9,000,000 between April and June 2024. His second IQP is calculated by:</p>
+                <p>FRW (540,000/18,000,000) * 9,000,000= FRW 270,000<p>
+                <p>Jean-Baptiste must declare and pay the second IQP of FRW 270,000 by the deadline of 30th September 2024.</p>
+                Assume that in May 2024 he pays WHT 5% of FRW 50,000. This is deducted against the IQP of the quarter. Therefore, his IQP due by 30th September 2024 equals to:</p>
+               <p> FRW 270,000 – FRW 50,000= FRW 220,000.</p>
+               <p> Overall, Jean-Baptiste has to pay for the second IQP of FRW 220,000.</p>
+               </blockquote>`,
+
+
+          `<strong>2. IQP declaration</strong>`,
           `<p>The IQP can be declared using M-Declaration (*800#) or <a href="https://etax.rra.gov.rw/" target="_blank" rel="noopener noreferrer">E-Tax</a>. It is important to note that only declarations using E-Tax can deduct withholding taxes paid on behalf of the taxpayer within the preceding quarter.</p>`,
           `<ol>
-            <li>
-              <strong>IQP declaration using E-Tax</strong>
+              <strong>a) IQP declaration using E-Tax</strong>
               <p>The declaration process for IQP using E-Tax is similar to other domestic taxes. The process is the same whether declaring the tax type is PIT or CIT and for each of the regimes.</p>
               <p>Firstly, if the taxpayer has had any tax withheld and paid on their behalf during the tax period, they must download the IQP Annexures from the E-Tax website, see page 96 for more detail on downloading annexures.</p>
               <p>The taxpayer must choose the relevant PIT or CIT annexure, but the details required are the same.</p>
               <p>If the taxpayer has not had any tax withheld and paid on their behalf during the tax period, they can continue straight to the IQP declaration form below.</p>
-              <ol>
-                <li>
-                  <strong>Annexures</strong>
-                  <p>The IQP annexure has two tabs. Only the tabs that are applicable in that tax period need to be completed, validated and saved.</p>
-                  <ol>
+              <ol>`,
+                 ` <strong>i) Annexures</strong>`,
+                  `<p>The IQP annexure has two tabs. Only the tabs that are applicable in that tax period need to be completed, validated and saved.</p>`,
+                 ` <ol>
                     <li>
                       <strong>5% Withholding Tab</strong>
                       <p>This tab is applicable to any taxpayer who has paid withholding tax on imports of 5% (WHT 5%) during the tax period. This does not include any other types of withholding tax, which must be declared in the ‘Withholding’ tab.</p>
-                    </li>
                     <li>
                       <strong>Withholding Tab</strong>
                       <p>This tab is applicable to any taxpayers who have had tax withheld and paid on their behalf during the tax period. This includes WHT 15%, WHT 3%, Gaming Tax and Mining Royalty Tax. This does not include WHT 5% on imports that is included in the ‘Withholding 5%’ tab.</p>
                     </li>
-                  </ol>
-                </li>
-                <li>
-                  <strong>IQP Declaration Form</strong>
-                  <p>After all applicable IQP annexures, if any, have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the IQP declaration. The taxpayer must choose the relevant PIT or CIT declaration, but the details required are the same.</p>
-                  <p>The IQP declaration form requires data on:</p>
-                  <ul>
+                  </ol>`,
+                 ` <strong>ii) IQP Declaration Form</strong>`,
+                 ` <p>After all applicable IQP annexures, if any, have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the IQP declaration. The taxpayer must choose the relevant PIT or CIT declaration, but the details required are the same.</p>`,
+                  `<p>The IQP declaration form requires data on:</p>`,
+                 ` <ul>
                     <li>Income Tax Payable: Enter the ‘Income Tax Payable’ declared in the previous annual Income Tax declaration.</li>
                     <li>Total Withholding on Payments (3%): Enter the amount of WHT 3% that has been withheld on behalf of the taxpayer.</li>
                     <li>Total Withholding on Imports (5%): Enter the amount of WHT 5% that has been withheld on behalf of the taxpayer. This should equal the total combined values in the ‘Withholding 5%’ annexure.</li>
                     <li>Total Withholding on other Payments (15% and/or 10%): Enter the amount of all other withholdings that have been withheld on behalf of the taxpayer. This includes WHT 15%, Gaming Tax and Mining Royalty Tax. This does not include WHT 5% or WHT 3%.</li>
-                  </ul>
-                  <p>Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically.</p>
-                  <p>After saving the IQP regime declaration form, if the taxpayer has not had any tax withheld and paid on their behalf during the tax period, click ‘Submit without Annexures’ to submit the declaration.</p>
-                  <p>If the taxpayer has had any tax withheld and paid on their behalf during the tax period, upload the IQP annexures and then compare with the declaration form.</p>
-                  <p>Once all the annexures and declaration values are equal, correct and certified, click ‘Submit’ the declaration. After successfully submitting, this screen will load.</p>
-                  <p>Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the deadline to avoid penalties and fines.</p>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <strong>IQP declaration using M-Declaration</strong>
+                  </ul>`,
+               `  <p>Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically.</p>`,
+               `<blockquote>
+                <strong> Example</strong>
+                 <p> An example IQP declaration is entered below. The IQP due for this taxpayer in this tax period is FRW 26,550.</p>
+                 </blockquote>`,
+
+                  `<p>After saving the IQP regime declaration form, if the taxpayer has not had any tax withheld and paid on their behalf during the tax period, click ‘Submit without Annexures’ to submit the declaration.</p>`,
+                  `<p>If the taxpayer has had any tax withheld and paid on their behalf during the tax period, upload the IQP annexures and then compare with the declaration form.</p>`,
+                  `<blockquote>
+                 <strong> Example </strong>
+                      <p>Continuing the example of the IQP declaration above, the taxpayer has had tax withheld and paid on their behalf during the tax period, and the comparison between this IQP declaration </p><p>and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted.</p>
+                      </blockquote>`,
+
+                 ` <p>Once all the annexures and declaration values are equal, correct and certified, click ‘Submit’ the declaration. After successfully submitting, this screen will load.</p>`,
+                 ` <p>Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the deadline to avoid penalties and fines.</p>`,
+            
+             ` <strong>b. IQP declaration using M-Declaration</strong>
               <p>M-Declaration is a mobile phone-based system designed to allow taxpayers to access certain tax services including income tax declaration, motor vehicle income tax declaration, business income tax declaration, local government tax and fees declaration and some EBM services.</p>
               <p>The process for declaring income tax using M-Declaration is slightly different when declaring Flat Tax or Lump Sum Income Tax compared to Motor Vehicle Income Tax.</p>
             </li>
