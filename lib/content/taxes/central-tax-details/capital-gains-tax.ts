@@ -23,7 +23,7 @@ export const capitalGainsTaxDetail: CentralTaxDetailPage = {
       title: { en: "Registration", fr: "Registration", rw: "Kwiyandikisha" },
       content: {
         en: [
-       ` The tax rate of Capital Gains Tax is 10%. This is charged on the basis of the profit from the sale of shares, licenses, debt instruments, options, guarantees and similar assets where profit equals sale price minus purchase price.`,
+         `The tax on profit from the sale of shares is withheld, declared and paid by the company whose shares were sold.`,
         ],
       },
     },
@@ -32,8 +32,8 @@ export const capitalGainsTaxDetail: CentralTaxDetailPage = {
       title: { en: "Tax rates", fr: "Taux d'imposition", rw: "Ibipimo by'umusoro" },
       content: {
         en: [
-        ` The tax rate of Capital Gains Tax is 10%. This is charged on the basis of the profit from the sale of shares, licenses, debt instruments, options, guarantees and similar assets where profit equals sale price minus purchase price.`,
-        ],
+      `The tax rate of Capital Gains Tax is 10%. This is charged on the basis of the profit from the sale of shares, licenses, debt instruments, options, guarantees and similar assets where profit equals sale price minus purchase price. `,
+     ],
       },
     },
     {
@@ -43,11 +43,13 @@ export const capitalGainsTaxDetail: CentralTaxDetailPage = {
         en: [
             `Capital Gains tax must be declared and paid by the 15th of the month after the transaction was made.`,
             `However, as Capital Gains Tax is declared on a case-by-case basis, companies do not have to wait for the deadline to declare and pay. It is recommended to declare and pay Capital Gains Tax as soon as possible after making the transaction.`,
-            `The declaration process for Capital Gains Tax is the same as for other Withholding Taxes. as explained on page 267. The ‘Withholdings’ tab of the Withholding annexure must be completed, validated and saved as normal.`,
+            `The declaration process for Capital Gains Tax is the same as for other Withholding Taxes. The ‘Withholdings’ tab of the Withholding annexure must be completed, validated and saved as normal.`,
             `The Capital Gains declaration form is selected by choosing ‘WOP – CAPITAL GAINS’. Complete the declaration form, upload the annexure and submit the declaration as normal.`,
             `In the withholding taxes declaration forms, the total combined values for all transactions for the withholding type during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically. `,
-           `<i><strong>Example</strong></i>`, 
-             `<i>A share sold at FRW 150,000 was acquired at FRW 140,000. This attracts a withholding tax of 10% on the increase in value of shares sold (FRW 150,000- FRW 140,000) *10%. The Capital Gains Tax due for the transaction in this tax period is FRW 1,000.</i>`,
+            `<blockquote>
+           <strong>Example</strong>
+             <p>A share sold at FRW 150,000 was acquired at FRW 140,000. This attracts a withholding tax of 10% on the increase in value of shares sold (FRW 150,000- FRW 140,000) *10%. The Capital Gains Tax due for the transaction in this tax period is FRW 1,000.</p>
+             </blockquote>`,
 
         ],
       },

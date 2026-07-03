@@ -65,7 +65,7 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
       `The rates of excise duties can be charged on a ‘specific’, ‘ad valorem’ or ‘mixed’ basis as follows: `,
       `<ul>`,
           `<li>A specific Excise Duty charges a certain amount of tax per unit of the product. For example, Excise Duty is charged on premium oil in Rwanda at a rate of FRW 183 per litre. </li>`,
-            `<li>An ad valorem Excise Duty charges a percentage of the taxable value of the product. For example, Excise Duty is charged on beer in Rwanda at 65% of the taxable value. <li>`,
+            `<li>An ad valorem Excise Duty charges a percentage of the taxable value of the product. For example, Excise Duty is charged on beer in Rwanda at 65% of the taxable value. </li>`,
            `<li>A mixed Excise Duty charges both a certain amount of tax per unit and as a percentage of the taxable value of the product. For example, Excise Duty is charged on cigarettes in Rwanda at a rate of 36% of the retail price in addition to FRW 230 per pack of 20 individual cigarettes.</li>`,
         ],
       },
@@ -78,11 +78,21 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
           `The tax rates for Excise Duty vary depending upon the product. The taxable products and tax rates are:`,
            `The taxable base for ad valorem Excise Duty on locally manufactured products is calculated according to the selling price, excluding all other taxes.`,
             ` The rates of Excise Duty are the same for both domestic and imported products. Find duty the rates <a href=\"https://www.rra.gov.rw/en/domestic-tax-services/excise-duty/declare-your-excise-duty">here.</a>.`,
-           `<strong> Example</strong>`,
-            `Amahoro produces fruit juice. In one tax period she manufactures and sells 10,000 small bottles for a pre-tax selling price of FRW 400 each for a total taxable sale during that tax period of FRW 4,000,000. Amahoro must pay ad valorem Excise Duty of:`,
-             ` FRW 4,000,000 * 10% = FRW 400,000.</li>`,
-             `<strong> Example</strong>`,
-              `Ubumwe produces cigarettes. In one tax period he manufactures and sells 400 packs (of 20 `,
+                  `<blockquote>
+           <strong>  Example </strong>
+                       <p> Amahoro produces fruit juice. In one tax period she manufactures and sells 10,000 small bottles for a pre-tax selling price of FRW 400 each for a total taxable sale during that tax period of FRW 4,000,000. Amahoro must pay ad valorem Excise Duty of:</p>
+                      <p>  FRW 4,000,000 * 10% = FRW 400,000.</p>
+                      </blockquote>`,
+                      `<blockquote>
+                  <strong>      Example 38</strong>
+                       <p> Ubumwe produces cigarettes. In one tax period he manufactures and sells 400 packs (of 20 cigarettes) for a pre-tax selling price of FRW 300 each for a total taxable sale during that tax period of FRW 120,000. Ubumwe must pay mixed Excise Duty of:</p>
+                       <p>  (FRW 120,000 * 36%) + (400 * FRW 230) = FRW 135,200.</p>
+                      </blockquote>`,
+                      `<blockquote>
+                      <strong> Example 39</strong>
+                        <p>Lucie produces banana wine using ingredients sourced in Rwanda. In one tax period she manufactures and sells 200 bottles for a pre-tax selling price of FRW 850 each for a total taxable sale during that period of FRW 170,000. Lucie must pay ad valorem Excise Duty of:</p>
+                       <p> FRW 170,000 * 40% = FRW 68,000. </p>
+                      </blockquote>`,
 
         ],
       },
@@ -126,13 +136,13 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
             `<li>Product Name – Enter the type or brand of product that is being produced. This does not have to specify amounts or unit sizes. </li>`,
              `<li>Production Date – Enter the date of production, which must be entered in the format of dd/mm/yyyy such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted.</li>`,
              `<li>Name of the Raw Materials Used – Enter the name of the manufactured product.</li>`,
-              `<li>Opening Stock – Enter the opening stock (in given units) of the raw material at the beginning of that day’s production.`,
-               `<strong>Note:</strong> The units that are used can be chosen by the taxpayer, i.e., grams, kilograms or tonnes, but should remain consistent for that raw material. The units that are used are not written in the annexure, only numbers.<li>`,
-              `<li>Quantity of Raw materials locally purchased – Enter the units of raw material used purchased locally.<li>`,
-               `<li>Quantity of Raw materials imported - Enter the units of raw material used purchased abroad.<li>`,
-               `<li>Quantities Used for Production – Enter the amount of stock (in given units) of the raw material during that day’s production.<li>`,
-               `<li>Quantities Spoiled – Enter the amount of stock (in given units) of the raw material that was spoiled during that day’s production.<li>`,
-               `<li>Closing Stock – Enter the amount of stock (in given units) of the raw material remaining at the end of that day’s production. This should equal Opening Stock – Quantities Used for Production – Quantities Spoiled. <li>`,
+              `<li>Opening Stock – Enter the opening stock (in given units) of the raw material at the beginning of that day’s production.</li>`,
+               `<strong>Note:</strong> The units that are used can be chosen by the taxpayer, i.e., grams, kilograms or tonnes, but should remain consistent for that raw material. The units that are used are not written in the annexure, only numbers.</li>`,
+              `<li>Quantity of Raw materials locally purchased – Enter the units of raw material used purchased locally.</li>`,
+               `<li>Quantity of Raw materials imported - Enter the units of raw material used purchased abroad.</li>`,
+               `<li>Quantities Used for Production – Enter the amount of stock (in given units) of the raw material during that day’s production.</li>`,
+               `<li>Quantities Spoiled – Enter the amount of stock (in given units) of the raw material that was spoiled during that day’s production.</li>`,
+               `<li>Closing Stock – Enter the amount of stock (in given units) of the raw material remaining at the end of that day’s production. This should equal Opening Stock – Quantities Used for Production – Quantities Spoiled. </li>`,
           `<strong>2. Excise tab</strong>`,
              `This tab is applicable for all taxpayers to record their sales of taxable products sold during the tax period. There are different Excise tabs for cigarette, telephone and for other excisable products. The information to complete in each tab is almost similar. In this Tax Handbook the tab ‘Excise others’ is explained.`,
              `Each product type sold on each date for each specific unit price is required to have its own row in the annex. For example, if two different sized products of the same brand are sold on the same day, these are required to have two separate rows.`,
@@ -167,7 +177,11 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
           `The declaration process for Excise Duty is similar to other domestic taxes.`,
         `  Once all the Excise Duty annexures have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the Excise Duty declaration, see page 102 for more detail on selecting the relevant declaration.`,
          `  The Excise Duty declaration requires similar data to the Excise Duty Annexures that have previously been completed. The important distinction is that in the Excise Duty declaration, the total combined values for all transactions during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically. `,
-           ` Example 40: Excise declaration is entered below. The Excise Duty due for this taxpayer in this tax period is FRW 192,000. `,
+         `<blockquote>
+           <strong>Example 40</strong>
+           <p> Excise declaration is entered below. The Excise Duty due for this taxpayer in this tax period is FRW 192,000. </p>
+         </blockquote>`,
+         `<div><img src="/images/excise duty declaration.png" alt="Excise duty declaration Form" /></div>`,
           ` After saving the Excise Duty declaration form, upload the Excise Duty annexures and then compare with the Excise Duty declaration form.`,
             `  Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
            `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the `,

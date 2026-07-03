@@ -47,21 +47,25 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
       content: {
         en: [
            `All gambling proceeds to the taxpayer are subject to Gaming Tax of 40%.`,
-         `<i><strong> Example </strong></i>`,
-             `<i> Rukundo places a bet of FRW 24,000 with ABC Betting Ltd. He loses the bet. Therefore, his gambling proceeds are equal to:</i>`,
-             `<i> FRW 0 (winnings) – FRW 24,000 (amount invested) = FRW -24,000</i>`,
-              `<i>As the gambling proceeds are negative, the taxpayer is required to declare and pay Gaming Tax. ABC Betting Ltd is required to pay Gaming Tax of:</i>`,
-              `<i>FRW 24,000 * 40% = FRW 9,600</i>`,
-              `<i>This FRW 9,600 is declared and paid by ABC Betting Ltd. ABC Betting Ltd.</i>`,
-             ` Gambling proceeds are subject to WOP-Gaming of 25%. This means that all the gambling proceeds are taxed at 25%.`,
-              `<i><strong>Example</strong></i>`, 
-              `<i>Lucie cashes in FRW 160,000 with Rwanda Casinos Ltd. She plays blackjack and cashes out FRW 280,000 (including her initial buy-in). Therefore, her gambling proceeds are equal to:</i>`,
-              `<i>FRW 280,000 – FRW 160,000 = FRW 120,000</i>`,
-              `<i>As the gambling proceeds are positive, the taxpayer is required to declare and pay WOP-Gaming. Rwanda Casinos Ltd is required to withhold WOP-Gaming of:</i>`,
-              `<i>FRW 120,000 * 25% = FRW 30,000</i>`,
-              `<i>Therefore, the net amount that is transmitted by Rwanda Casinos Ltd to Lucie is:</i>`,
-              `<i>FRW 280,000 – FRW 30,000 = FRW 250,000</i>`,
-              `<i>The FRW 30,000 WOP-Gaming was withheld by Rwanda Casinos Ltd on behalf of Lucie.</i>`,
+           `<blockquote>
+         <strong> Example </strong>
+             <p> Rukundo places a bet of FRW 24,000 with ABC Betting Ltd. He loses the bet. Therefore, his gambling proceeds are equal to:<p>
+             <p> FRW 0 (winnings) – FRW 24,000 (amount invested) = FRW -24,000</p>
+              <p>As the gambling proceeds are negative, the taxpayer is required to declare and pay Gaming Tax. ABC Betting Ltd is required to pay Gaming Tax of:</p>
+              <p>FRW 24,000 * 40% = FRW 9,600</p>
+              <p>This FRW 9,600 is declared and paid by ABC Betting Ltd. ABC Betting Ltd.</p>
+             <p> Gambling proceeds are subject to WOP-Gaming of 25%. This means that all the gambling proceeds are taxed at 25%.</p>
+             </blockquote>`,
+             `<blockquote>
+              <strong>Example</strong>
+              <p>Lucie cashes in FRW 160,000 with Rwanda Casinos Ltd. She plays blackjack and cashes out FRW 280,000 (including her initial buy-in). Therefore, her gambling proceeds are equal to:</p>
+              <p>FRW 280,000 – FRW 160,000 = FRW 120,000</p>
+              <p>As the gambling proceeds are positive, the taxpayer is required to declare and pay WOP-Gaming. Rwanda Casinos Ltd is required to withhold WOP-Gaming of:</p>
+              <p>FRW 120,000 * 25% = FRW 30,000</p>
+              <p>Therefore, the net amount that is transmitted by Rwanda Casinos Ltd to Lucie is:</p>
+              <p>FRW 280,000 – FRW 30,000 = FRW 250,000</p>
+              <p>The FRW 30,000 WOP-Gaming was withheld by Rwanda Casinos Ltd on behalf of Lucie.</p>
+              </blockquote>`,
 
         ],
       },
@@ -76,7 +80,7 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
        `Gaming Tax (40%) and Withholding Tax of 25% on Gambling Proceeds (WOP-Gaming) must each be declared separately, but in a similar manner. `,
        `The declaration process for gaming taxes is similar to other domestic taxes.`,
        `<strong>Annexures</strong>`,
-       `Firstly, for both types of gaming taxes, download the Withholding Annexures from the E-Tax website, see page 96 for more detail on downloading annexures.`,
+       `Firstly, for both types of gaming taxes, download the Withholding Annexures from the E-Tax website,`,
          `However, it is important to note that both Gaming Tax and WOP-Gaming must complete their own annexure and declaration separately.`,
            `<strong> a) Withholding on Gaming 25% Tab </strong>`,
             `This tab refers to the Gaming Tax and is applicable to any transaction or game where the gambling proceeds are negative, i.e. where the betting company wins.`,
@@ -105,14 +109,18 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
             `<strong> Declaration submission</strong>`,
             `Once both the relevant annexures have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the declarations, see page 102 for more detail on selecting the relevant declarations.`,
            `The withholding taxes or gaming tax declaration forms require similar data to the annexures that have previously been completed. The important distinction is that in the withholding taxes or gaming tax declaration forms, the total combined values for all transactions during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically.`,
-           `<i><strong> Example </strong></i>`,
-          `<i> A player, Mucyo, placed a bet of FRW 20,000 on a football game and lost. The company, Y, with which Mucyo placed the bet, is required to pay a gaming tax of FRW 20,000 * 40% = FRW 8,000.</i>`,
-          `After saving the declaration form, upload the annexures and then compare with the declaration form, see page 106 for more detail on uploading annexures and comparing with declarations.`,
+           `<blockquote>
+           <strong> Example </strong>
+          <p> A player, Mucyo, placed a bet of FRW 20,000 on a football game and lost. The company, Y, with which Mucyo placed the bet, is required to pay a gaming tax of FRW 20,000 * 40% = FRW 8,000.</p>
+          </blockquote>`,
+          `After saving the declaration form, upload the annexures and then compare with the declaration form.`,
            ` Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
             `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. See page 415 for more details on paying taxes. Remember that payment must also be made before the deadline to avoid penalties and fines.`,
             `After submitting the Gaming Tax declaration and viewing the acknowledgement receipt, repeat the above process for WOP-Gaming.`,
-           `<i><strong> Example</strong></i>`, 
-            `<i>A player, Mucyo, placed a bet of FRW 40,000 on a football game and won at odds of 1.6. The company, Y, with which Mucyo placed the bet, is required to pay Mucyo the winning amount of FRW 40,000 * 1.6 = FRW 64,000, minus the Winnings of Players (WOP) gaming tax. The WOP tax is calculated on the profit portion, i.e., (FRW 64,000 – FRW 40,000) * 25% = FRW 6,000. Therefore, Y shall remit FRW 59,000 (i.e., FRW 64,000 – FRW 6,000) to Mucyo and FRW 6,000 to the tax administration as WOP gaming tax.</i>`,
+            `<blockquote>
+           <strong> Example</strong></i>
+            <p>A player, Mucyo, placed a bet of FRW 40,000 on a football game and won at odds of 1.6. The company, Y, with which Mucyo placed the bet, is required to pay Mucyo the winning amount of FRW 40,000 * 1.6 = FRW 64,000, minus the Winnings of Players (WOP) gaming tax. The WOP tax is calculated on the profit portion, i.e., (FRW 64,000 – FRW 40,000) * 25% = FRW 6,000. Therefore, Y shall remit FRW 59,000 (i.e., FRW 64,000 – FRW 6,000) to Mucyo and FRW 6,000 to the tax administration as WOP gaming tax.</p>
+            </blockquote>`,
       
 
    ],
@@ -127,7 +135,7 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
       },
       content: {
         en: [
-             `The penalties and fines for gaming taxes are similar to other domestic taxes, as explained on page 110. This includes penalties and fines for:`,
+             `The penalties and fines for gaming taxes are similar to other domestic taxes,This includes penalties and fines for:`,
         `<ul>`,
             `  -          Late declaration.`,
              ` -          Late payment.`,

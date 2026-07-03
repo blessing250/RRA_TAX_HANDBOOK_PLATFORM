@@ -64,10 +64,14 @@ export const miningRoyaltyTaxDetail: CentralTaxDetailPage = {
         `•  3% of the norm value for the category of energy minerals.`,
         `•   0.5% of the norm value for the category of gold. `,
         `</ul>`,
-       `<i><strong>Example</strong></i>`,
-            `<i>     ABC Mining Ltd exported 340kg of a product falling in base metals. The value of minerals on the international market is equivalent to FRW 16,000 per kg. Therefore, the norm value is: 340 kg * FRW 16,000 per kg = FRW 5,440,000 The tax rate for base metals is 3% of the norm value. Therefore, the Mining Royalty Tax due is: FRW 5,440,000 * 3% = FRW 163,200.</i>`,
-           `<i><strong>Example</strong></i>`,
-             `<i>  XYZ Mining Ltd is selling 50kg of a product falling in the gemstones category on the local market. The gross value is calculated at FRW 4,200,000. The tax rate for the gemstones category is 2% of the gross value. Therefore, the Mining Royalty Tax Due is: FRW 4,200,000 * 2% = FRW 84,000 </i>`,
+        `<blockquote>
+       <strong>Example</strong>
+                <p>ABC Mining Ltd exported 340kg of a product falling in base metals. The value of minerals on the international market is equivalent to FRW 16,000 per kg. Therefore, the norm value is: 340 kg * FRW 16,000 per kg = FRW 5,440,000 The tax rate for base metals is 3% of the norm value. Therefore, the Mining Royalty Tax due is: FRW 5,440,000 * 3% = FRW 163,200.</p>
+            </blockquote>`,
+            `<blockquote>
+           <strong>Example</strong>
+             <p>  XYZ Mining Ltd is selling 50kg of a product falling in the gemstones category on the local market. The gross value is calculated at FRW 4,200,000. The tax rate for the gemstones category is 2% of the gross value. Therefore, the Mining Royalty Tax Due is: FRW 4,200,000 * 2% = FRW 84,000 </p>
+             </blockquote>`,
 
       ],
       },
@@ -95,8 +99,15 @@ export const miningRoyaltyTaxDetail: CentralTaxDetailPage = {
        `<strong>c)  Declaration submission</strong>`,
           `  After the applicable WOP Mining Royalty Annexure has been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the Mining Royalty Tax declaration.`,
            `The declaration form requires similar data to the WOP Mining Royalty Tax annexure that has previously been completed. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically.`,
-       `<strong> Example 52 </strong>    An example of Mining Royalty Tax declaration form is entered below. The tax due for this taxpayer in this tax period is FRW 135,000.`,
-                    ` After saving the declaration form, upload the WOP Mining Royalty Tax annexure and then compare with the declaration form. Example 53 Continuing the example of the Mining Royalty Tax declaration form above, the comparison between this declaration form and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted.`,
+           ` <blockquote>
+       <strong> Example </strong>  
+         <p>An example of Mining Royalty Tax declaration form is entered below. The tax due for this taxpayer in this tax period is FRW 135,000.</p>
+         </blockquote>`,
+                    `After saving the declaration form, upload the WOP Mining Royalty Tax annexure and then compare with the declaration form.`,
+                    `<blockquote>
+                  <strong>  Example </strong>
+                   <p> Continuing the example of the Mining Royalty Tax declaration form above, the comparison between this declaration form and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted.</p>
+                    </blockquote>`,
                     `  Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
                     `  Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. See page 415 for more details on paying taxes. Remember that payment must also be made before the deadline to avoid penalties and fines.`,
 

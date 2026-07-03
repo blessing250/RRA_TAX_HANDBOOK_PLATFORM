@@ -30,25 +30,29 @@ export const withholdingTaxesDetail: CentralTaxDetailPage = {
           `Withholding taxes (WHT 15% and WHT 3%) are withheld on different types of income as explained here below.`,
           `<strong>1.Withholding Tax of 15%</strong>`,
           ` It is withheld and paid on income received by non-registered businesses or registered businesses without proof of their most recent income tax declaration. It applies to the following types of income:`,
-          `<ul><li>1. Interest income.</li><li>2. Dividend income.</li><li>3. Royalty income.</li><li>4. Service fees.</li><li>5. Performance payments.</li><li>6. Gambling proceeds.</li><li>7. Payments for goods.</li><li>8. Public tender income.</li></ul>`,
+          `<ul><p>1. Interest income.</p><p>2.Dividend income.</p><p>3.Royalty income.</p><p> 4.Service fees.</p><p> 5. Performance payments.</p><p> 6. Gambling proceeds.</p><p> 7. Payments for goods.</p><p> 8. Public tender income.</p></ul>`,
          `<strong> Withholding on interest income</strong>`,
            `Interest income is subject to withholding tax of 15%. Interest income includes income from loans, deposits, guarantees, current accounts, government securities, bonds and negotiable securities. It excludes interest income on deposits held for at least one year.`,
             `However, interest income on securities listed on capital markets and interest arising from investments in listed bonds with a maturity of three years and above can be withheld from Rwandan or EAC citizen registered taxpayers at the rate of 5%. `,
-            `<i><strong>Example</strong></i>`, 
-            `<i>Amahoro has a current account with Gorilla Bank Ltd. Gorilla Bank Ltd pays her a gross interest of FRW 40,000 on her savings. As the source of this income, Gorilla Bank Ltd must declare and pay withholding tax on this interest of: FRW 40,000 * 15% = FRW 6,000 This FRW 6,000 is declared and paid to RRA by Gorilla Bank Ltd. Therefore, the net amount that is transmitted by Gorilla Bank Ltd to Amahoro is: FRW 40,000 – FRW 6,000 = FRW 34,000`,
-            `<i>The FRW 6,000 withholding tax was withheld by Gorilla Bank Ltd on behalf of Amahoro. Therefore, Amahoro can claim back this amount in Income Tax declarations.</i>`,
+           `<blockquote>
+            <strong>Example</strong>  
+           <p> Amahoro has a current account with Gorilla Bank Ltd. Gorilla Bank Ltd pays her a gross interest of FRW 40,000 on her savings. As the source of this income, Gorilla Bank Ltd must declare and pay withholding tax on this interest of: FRW 40,000 * 15% = FRW 6,000 This FRW 6,000 is declared and paid to RRA by Gorilla Bank Ltd. Therefore, the net amount that is transmitted by Gorilla Bank Ltd to Amahoro is: FRW 40,000 – FRW 6,000 = FRW 34,000</p>
+            <p>The FRW 6,000 withholding tax was withheld by Gorilla Bank Ltd on behalf of Amahoro. Therefore, Amahoro can claim back this amount in Income Tax declarations.</p>
+            </blockquote>`,
            `<strong> Withholding on dividend</strong>`,
           `Dividend income is subject to withholding tax of 15%. Dividend income includes any income from shares and similar income distributed by companies.`,
            `However, dividend income from securities listed on capital markets if the beneficiary of the dividend is a resident of Rwanda or EAC citizen is withheld at the rate of 5%. `,
-            `<i><strong>Example</strong></i>`, 
-            `<i>ABC Ltd pays a gross dividend of FRW 125,000 to its shareholder, Lucie. As the source of this income, ABC Ltd must declare and pay withholding tax on this dividend of: FRW 125,000 * 15% = FRW 18,750 This FRW 18,750 is declared and paid to RRA by ABC Ltd. Therefore, the net amount that is transmitted by ABC Ltd to Lucie is: FRW 125,000 – FRW 18,750 = FRW 106,250 The FRW 18,750 withholding tax was withheld by ABC Ltd on behalf of Lucie. Therefore, Lucie can claim back this amount in Income Tax declarations.</i>`,
+           `<blockquote>
+            <strong>Example</strong></i>
+            <p>ABC Ltd pays a gross dividend of FRW 125,000 to its shareholder, Lucie. As the source of this income, ABC Ltd must declare and pay withholding tax on this dividend of: FRW 125,000 * 15% = FRW 18,750 This FRW 18,750 is declared and paid to RRA by ABC Ltd. Therefore, the net amount that is transmitted by ABC Ltd to Lucie is: FRW 125,000 – FRW 18,750 = FRW 106,250 The FRW 18,750 withholding tax was withheld by ABC Ltd on behalf of Lucie. Therefore, Lucie can claim back this amount in Income Tax declarations.</p>
+            </blockquote>`,
          `<strong> Withholding on royalty income</strong>`,
           `Royalty income is subject to withholding tax of 15%. Royalty income includes all payments of any kind received for the use of, or the right to use:`,
           `<ul>`,
-            `<li> - On the use of or the right to use any copyright of literary, craftsmanship or scientific work including cinematograph films, films or tapes used for radio or television broadcasting.</li>`,
-           `<li>- On the use, right to use or exploitation of a trademark or a tradename, a design or a model, a computer application, a software and a patent.<li>`,
-            `<li>- As the price or consideration of using, or of the right to use industrial, commercial or scientific equipment or for using information concerning industrial, commercial or scientific knowledge or formula.</li>`,
-            `<li>- On the right to exploit or explore natural resources.</li>`,
+            `<li> On the use of or the right to use any copyright of literary, craftsmanship or scientific work including cinematograph films, films or tapes used for radio or television broadcasting.</li>`,
+           `<li> On the use, right to use or exploitation of a trademark or a tradename, a design or a model, a computer application, a software and a patent.</li>`,
+            `<li> As the price or consideration of using, or of the right to use industrial, commercial or scientific equipment or for using information concerning industrial, commercial or scientific knowledge or formula.</li>`,
+            `<li> On the right to exploit or explore natural resources.</li>`,
           `</ul>`,
           `<strong>WHT on ‘service fees’</strong>`,
           `Service fees are subject to withholding tax of 15%. Service fees include payments of any kind to any person other than to an employee, in consideration for any service of a managerial, technical or consultancy nature.`,
@@ -57,9 +61,11 @@ export const withholdingTaxesDetail: CentralTaxDetailPage = {
           `Consultancy services involve the provision of advice by experts, professionals or consultants in particular fields, typically of a short-term nature of less than one year. This can overlap with managerial and technical services as these can also be provided by a consultant.`,
           `Lastly, board members allowance attracts 30% withholding tax.`,
            `The rates of withholding tax on service fees can be affected by Double Taxation Agreements (DTAs) signed with other countries. `,
-          `<i><strong> Example</strong></i>`,
-          `<i>Innocent is hired by XYZ Business Ltd as a technical consultant on a short-term contract. Innocent’s gross income for this contract is FRW 3,500,000. As the source of this income, XYZ Business Ltd must declare and pay withholding tax on this income of: FRW 3,500,000 * 15% = FRW 525,000 This FRW 525,000 is declared and paid to RRA by XYZ Business Ltd. Therefore, the net amount transmitted by XYZ Business Ltd to Innocent is: FRW 3,500,000 – FRW 525,000 = FRW 2,975,000</i>`,
-          `<i>The FRW 525,000 withholding tax was withheld by XYZ Business Ltd on behalf of Innocent. Therefore, Innocent can claim back this amount in Income Tax declarations.</i>`,
+           `<blockquote>
+          <strong> Example</strong>
+          <p>Innocent is hired by XYZ Business Ltd as a technical consultant on a short-term contract. Innocent’s gross income for this contract is FRW 3,500,000. As the source of this income, XYZ Business Ltd must declare and pay withholding tax on this income of: FRW 3,500,000 * 15% = FRW 525,000 This FRW 525,000 is declared and paid to RRA by XYZ Business Ltd. Therefore, the net amount transmitted by XYZ Business Ltd to Innocent is: FRW 3,500,000 – FRW 525,000 = FRW 2,975,000</p>
+          <p>The FRW 525,000 withholding tax was withheld by XYZ Business Ltd on behalf of Innocent. Therefore, Innocent can claim back this amount in Income Tax declarations.<p>
+          </blockquote>`,
           `<strong> WHT on ‘performance payment’</strong>`,
           `Performance payments are subject to withholding tax of 15%. Performance payments include payments of any kind made to an artist, musician or sportsperson for a performance in Rwanda. This is irrespective of whether the payments are made directly or through an entity that is not resident in Rwanda.`,
             `<strong> WHT on ‘gambling proceeds </strong>`,
@@ -75,21 +81,21 @@ export const withholdingTaxesDetail: CentralTaxDetailPage = {
            `<strong>Other Withholdings</strong>`,
            `<strong> a. Based on Double Taxation Agreement (DTA)</strong>`,
             ` withholding tax 15% can have a reduced rate:`,
-            `<ul>`,
-            `i) Withholding on interests: 10% or 5% depending on agreement.`,
-            `  ii) Withholding on dividend: 10% or 5% depending on agreement.`,
-            `iii) Withholding on Professional and Management Fees: 12%.`,
-            `iv) Withholding on Services: 10%.`,
-            `</ul>`,
+            `<ul>
+            <li>Withholding on interests: 10% or 5% depending on agreement.</li>
+            <li>Withholding on dividend: 10% or 5% depending on agreement.</li>
+            <li>Withholding on Professional and Management Fees: 12%.</li>
+            <li>Withholding on Services: 10%.</li>
+            </ul>`,
             `<strong> b) Based on other considerations: </strong>`,
-            `<ul>`,
-            `i) Investments: Withholding on preferential tax (interests, dividend, and royalty) - 0%.`,
-             `ii) Taxation of partners in partnership: Withholding on partners. The rate depends on either it is a company – 28% or individual enterprise – following PIT brackets.`,
-              `iii) Type of service provided (Commissions – 15%, Board Member Allowance – 30%, Treasury Bonds – 15%, WOP Capital Gain – 10%, and WOP Gaming – 15%).`,
-              `iv) Withholding tax of 5% on imports for commercial use, levied on the cost, insurance and freight (CIF) value of goods at customs before they are released.`,
-             `v) WHT of 18% on VAT, withheld by a public procuring entity on all payments made for taxable goods and services supplied by successful bidders.`,
-             `vi) WHT of 0.5% or 3% depending on the type of mineral, withheld by a local mineral processing facility or a person who exports minerals from Rwanda. `,
-             `</ul>`,
+            `<ul>
+            <li> Investments: Withholding on preferential tax (interests, dividend, and royalty) - 0%.</li>
+             <li> Taxation of partners in partnership: Withholding on partners. The rate depends on either it is a company – 28% or individual enterprise – following PIT brackets.</li>
+              <li> Type of service provided (Commissions – 15%, Board Member Allowance – 30%, Treasury Bonds – 15%, WOP Capital Gain – 10%, and WOP Gaming – 15%).</li>
+              <li> Withholding tax of 5% on imports for commercial use, levied on the cost, insurance and freight (CIF) value of goods at customs before they are released.</li>
+             <li> WHT of 18% on VAT, withheld by a public procuring entity on all payments made for taxable goods and services supplied by successful bidders.</li>
+             <li> WHT of 0.5% or 3% depending on the type of mineral, withheld by a local mineral processing facility or a person who exports minerals from Rwanda. </li>
+             </ul>`,
       
         ],
       },
@@ -142,14 +148,26 @@ export const withholdingTaxesDetail: CentralTaxDetailPage = {
             ` -   Rate Used – Enter the rate of tax withheld, without the percentage symbol. For example, withholding tax of 3% should be entered as ‘3’.`,
             `-   Amount – Enter the amount of tax withheld. This should equal ‘Amount on Which to Withhold’ multiplied by ‘Rate Used’%.`,
            `<ul>`,
-          `<strong> iii) Declaration submission </strong>`,
-          ` In addition, it is important to select the correct type of withholding tax, with the different types of income subject to WHT 15% listed as ‘WOP – INTEREST’, ‘WOP – DIVIDEND’ and so on. Withholding tax of 15% on payments for goods and services supplied by non-registered taxpayers is listed as ‘WOP – SERVICES’. Finally, WHT 3% is listed as ‘WOP – PUBLIC SUPPLIES’. WOP refers to ‘Withholding On Payments’.`,
+           ],
+         },
+    },
+ {
+      id: "declaration-submission",
+      title: { en: "Declaration submission", fr: "Soumission de déclaration", rw: "Injiringa y'ibidakora" },
+      content: {
+        en: [
+
+          ` Once both the relevant annexures have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the declarations, see page 102 for more detail on selecting the relevant declarations.`,
           `The withholding taxes declaration forms require similar data to the annexures that have previously been completed. The important distinction is that in the withholding taxes declaration forms, the total combined values for all transactions for the withholding type during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically.`,
-         `<i><strong>Example</strong></i>`, 
-        `<i> An example WHT 15% declaration form is entered below. This is a withholding tax of 15% on dividends. The WHT 15% due for this taxpayer in this tax period is FRW 877,500.<i>`,
+          `<blockquote>
+         <strong>Example</strong>
+        <p> An example WHT 15% declaration form is entered below. This is a withholding tax of 15% on dividends. The WHT 15% due for this taxpayer in this tax period is FRW 877,500.</p>
+        </blockquote>`,
         `After saving the declaration form, upload the annexures and then compare with the declaration form.`,
-         `<i><strong>Example</strong></i>`,  
-          `<i>Continuing the example of the WHT 15% declaration above, the comparison between this WHT 15% declaration and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted</i>`,
+        `<blockquote>
+         <strong>Example</strong>
+          <p>Continuing the example of the WHT 15% declaration above, the comparison between this WHT 15% declaration and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted.</p>
+         </blockquote>`,
          `Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
          `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the deadline to avoid penalties and fines.`,
         ],

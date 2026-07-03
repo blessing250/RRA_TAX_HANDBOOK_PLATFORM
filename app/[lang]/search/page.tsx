@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation"
 
-import { HandbookPageLayout } from "@/components/handbook/handbook-page-layout"
+import { Container } from "@/components/layout/container"
+import { HandbookBreadcrumb } from "@/components/handbook/handbook-breadcrumb"
 import { HandbookSearch } from "@/components/handbook/handbook-search"
+import { PageHero } from "@/components/handbook/page-hero"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 import { getHandbookSearchIndex } from "@/lib/search/handbook-search"
