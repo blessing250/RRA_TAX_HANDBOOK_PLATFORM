@@ -26,17 +26,16 @@ export default async function SearchPage({
       <PageHero
         title={dict.common.search}
         summary="Search handbook topics, tax types, declaration guidance, rates, penalties, and taxpayer support references."
-      />
-      <Container className="py-8 sm:py-10">
-        <div className="mb-8">
+        breadcrumb={
           <HandbookBreadcrumb
             items={[
               { label: dict.nav.home, href: `/${locale}` },
               { label: dict.common.search },
             ]}
           />
-        </div>
-
+        }
+      />
+      <Container className="py-8 sm:py-10">
         <HandbookSearch
           items={searchIndex}
           labels={{
