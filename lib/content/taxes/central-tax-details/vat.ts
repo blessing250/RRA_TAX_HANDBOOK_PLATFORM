@@ -41,8 +41,8 @@ export const vatDetail: CentralTaxDetailPage = {
           `<ul>`,
           `<li>Display clearly the VAT registration certificate in plain view at the place of business.</li>`,
           `<li>Use an Electronic Invoicing System (EIS), such as EBM to issue invoices on every transaction.</li>`,
-          `<li>Submit a monthly or quarterly VAT declaration within fifteen days after the end of the tax period.<li>`,
-          `<li>Be available at all times to receive RRA officers and to make available books of accounts.<li>`,
+          `<li>Submit a monthly or quarterly VAT declaration within fifteen days after the end of the tax period.<//li>`,
+          `<li>Be available at all times to receive RRA officers and to make available books of accounts.</li>`,
           `</ul>`,
         ],
       },
@@ -130,18 +130,20 @@ export const vatDetail: CentralTaxDetailPage = {
           `<li> Pojects funded by partners having signed agreements with the Republic of Rwanda.</li>`,
           `<li> Locally assembled electric automotive vehicles, hybrid automotive vehicles, relevant batteries and their electric charging station equipment.</li>`,
           `</ul>`,
-          `    Example`,
-          `  Innocent designs and manufactures clothes. He sells within Rwanda but also exports some to Kenya.  The goods sold within Rwanda are subject to VAT as normal. The goods exported to Kenya are zero-rated. He pays input VAT on the material used in the manufacturing.`,
-          ` He sells FRW 236,000 (VAT inclusive) within Rwanda, with VAT paid on inputs of FRW 10,000. He exports FRW 300,000 (VAT exclusive) to Kenya, with VAT paid on inputs of FRW 30,000. `,
-          ` The total (VAT exclusive) sales is therefore:`,
-          `  (FRW 236,000 / 1.18) + FRW 300,000 = FRW 200,000 + FRW 300,000 = FRW 500,000. `,
-          ` The taxable sales exclude the exports so is FRW 200,000. The output VAT is therefore:`,
-          `   FRW 200,000 * 18% = FRW 36,000. `,
-          `  The input VAT includes the VAT paid for the taxable sales, as well as the zero-rated sales. The input VAT is therefore: `,
-          `  FRW 10,000 + FRW 30,000 = FRW 40,000`,
-          `  Therefore, Innocent’s VAT due is equal to:`,
-          `  FRW 36,000 – FRW 40,000 = FRW -4,000.`,
-          `  Innocent requests a VAT refund from RRA of FRW 4,000.`,
+          `<blockquote>
+          <strong>   Example</strong>
+          <p>  Innocent designs and manufactures clothes. He sells within Rwanda but also exports some to Kenya.  The goods sold within Rwanda are subject to VAT as normal. The goods exported to Kenya are zero-rated. He pays input VAT on the material used in the manufacturing.</p>
+          <p> He sells FRW 236,000 (VAT inclusive) within Rwanda, with VAT paid on inputs of FRW 10,000. He exports FRW 300,000 (VAT exclusive) to Kenya, with VAT paid on inputs of FRW 30,000.</p>
+          <p>The total (VAT exclusive) sales is therefore:</p>
+          <p>  (FRW 236,000 / 1.18) + FRW 300,000 = FRW 200,000 + FRW 300,000 = FRW 500,000. </p>
+          <p> The taxable sales exclude the exports so is FRW 200,000. The output VAT is therefore:</p>
+          <p>   FRW 200,000 * 18% = FRW 36,000. </p>
+          <p>  The input VAT includes the VAT paid for the taxable sales, as well as the zero-rated sales. The input VAT is therefore: </p>
+          <p>  FRW 10,000 + FRW 30,000 = FRW 40,000</p>
+          <p>  Therefore, Innocent’s VAT due is equal to:</p>
+          <p> FRW 36,000 – FRW 40,000 = FRW -4,000.</p>
+          <p>Innocent requests a VAT refund from RRA of FRW 4,000.</p>
+          </blockquote>`,
         ],
       },
     },
@@ -157,17 +159,19 @@ export const vatDetail: CentralTaxDetailPage = {
           `  VAT exemption means that no output VAT is charged on the goods or services, and no input VAT can be claimed. `,
           `The list of exempt goods and services, detailed in Article 1 of law No 009/2025 of 27/05/2025 emending article 8 of Law N°049/2023 of 05/09/2023.`,
           `Here you will find the  <a href=\"http://www.rra.gov.rw/fileadmin/user_upload/Law_amending_the_2023_VAT_law___May_2025.pdf"> list of goods and services that are zero rated and exempted from value added tax</a> as provided by the law.`,
-          `  Example`,
-          `    Lucie sells processed and unprocessed agricultural products. The processed agricultural products are subject to VAT as normal. The unprocessed agricultural products are exempt. `,
-          `       She sells FRW 3,540,000 (VAT inclusive) of processed agricultural products. She sells FRW 1,000,000 (VAT exclusive) of unprocessed agricultural products. `,
-          `      The total (VAT exclusive) sales are therefore:  </i`,
-          ` (FRW 3,540,000 / 1.18) + FRW 1,000,000 = FRW 3,000,000 + FRW 1,000,000 = FRW 4,000,000. `,
-          ` The taxable sales exclude the exempt sales so is FRW 3,000,000. The output VAT is therefore: `,
-          ` FRW 3,000,000 * 18% = FRW 540,000. `,
-          ` She paid VAT on inputs of FRW 500,000 but cannot distinguish between which inputs contributed to which sales Therefore, the allowable input VAT is equal to: `,
-          ` (FRW 3,000,000 / FRW 4,000,000) * FRW 500,000 = 0.75 * FRW 500,000 = FRW 375,000`,
-          ` Therefore, Amahoro’s VAT due is equal to: `,
-          ` FRW 540,000 – FRW 375,000 = FRW 165,000.`,
+          `<blockquote>
+          <strong> Example</strong>
+          <p>  Lucie sells processed and unprocessed agricultural products. The processed agricultural products are subject to VAT as normal. The unprocessed agricultural products are exempt. </p>
+          <p>       She sells FRW 3,540,000 (VAT inclusive) of processed agricultural products. She sells FRW 1,000,000 (VAT exclusive) of unprocessed agricultural products. </p>
+          <p>      The total (VAT exclusive) sales are therefore:  </p>
+          <p> (FRW 3,540,000 / 1.18) + FRW 1,000,000 = FRW 3,000,000 + FRW 1,000,000 = FRW 4,000,000. </p>
+          <p> The taxable sales exclude the exempt sales so is FRW 3,000,000. The output VAT is therefore: </p>
+          <p> FRW 3,000,0₀₀ * 18% = FRW 540,000. </p>
+          <p> She paid VAT on inputs of FRW 500,000 but cannot distinguish between which inputs contributed to which sales Therefore, the allowable input VAT is equal to: </p>
+          <p> (FRW 3,000,000 / FRW 4,000,000) * FRW 500,000 = 0.75 * FRW 500,000 = FRW 375,000</p>
+          <p> Therefore, Amahoro’s VAT due is equal to: </p>
+          <p> FRW 540,000 – FRW 375,000 = FRW 165,000.</p>
+          </blockquote>`,
         ],
       },
     },
@@ -247,7 +251,7 @@ export const vatDetail: CentralTaxDetailPage = {
           `  This means that monthly declarations concerning the tax period between March 1st and March 31st must be declared to RRA and paid by April 15th. Then declarations concerning the tax period between April 1st and April 30th must be declared to RRA and paid by May 15th and so on throughout the year.`,
           ` The quarters for taxpayers declaring VAT on a quarterly basis concern the tax period between:`,
           ` <ul>`,
-          `<li>1st January to 31st March must be declared and paid by 15th April.<li>`,
+          `<li>1st January to 31st March must be declared and paid by 15th April.</li>`,
           `<li>1st April to 30th June must be declared and paid by 15th July.</li>`,
           `<li>1st July to 30th September must be declared and paid by 15th October.</li>`,
           `<li>1st October to 31st December must be declared and paid by 15th January. </li>`,
@@ -260,17 +264,17 @@ export const vatDetail: CentralTaxDetailPage = {
           `This sales data can be entered manually, or can be copied from the Electronic Invoicing System (EIS), a type of EBM Back Office and pasted into the Sales tab. `,
           ` The ‘Sales’ tab has 11 columns. Each row is for a separate transaction. For each transaction, enter details on:`,
           `<ul>`,
-          `<li> <strong> Buyer TIN –</strong>  For sales to other businesses, enter the Taxpayer Identification Number (TIN) of the buyer. For sales to final consumers, this can be left empty, where the system will convert it to ‘999999999’ (nine ‘9’s).</li>`,
-          `<li><strong> -	Buyer Name – </strong>As above, for sales to other businesses, enter the name of the buyer. For sales to final consumers, this can be left empty. </li>`,
-          `<li><strong> -	Nature of Goods – </strong>Enter a brief description of the goods or services that have been sold. </li>`,
-          `<li><strong> -	Invoice Number – </strong>Enter the unique invoice number of the transaction; for example, SDC001000000/001. </li>`,
-          `<li><strong> -	Invoice Date (dd/mm/yyyy) – </strong>Enter the date of the transaction in the format of dd/mm/yyyy such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted.</li>`,
-          `<li><strong> -	Total Amount of Sales (VAT Exclusive) – </strong>Enter the value of the transaction, excluding VAT.</li>`,
-          `<li><strong> -	Exempted Sales Amount – </strong>Enter the value of sales of goods or services that were exempt from VAT.</li>`,
-          `<li><strong> -	Zero Rated Sales Amount – </strong>Enter the value of sales of goods or services that were zero-rated for VAT purposes. Although exports are also zero-rated, do not include these in this column, instead enter exports in the ‘Exports Amount column’.</li>`,
-          `<li><strong> -	Exports Amount – </strong>Enter the value of sales of goods or services that were exported and sold outside Rwanda and therefore zero-rated for VAT purposes.</li>`,
-          `<li><strong> -	Taxable Sales – </strong>Enter the total value of taxable sales. This is equal to ‘Total Amount of Sales (VAT Exclusive)’ minus (‘Exempted Sales Amount’ + ‘Zero Rated Sales Amount’ + ‘Exports Amount’).</li>`,
-          `<li><strong> -	VAT – </strong>Enter the total output VAT. This is equal to ‘Taxable Sales’ * 18%.</li>`,
+          `<li> <strong> Buyer TIN: </strong>  For sales to other businesses, enter the Taxpayer Identification Number (TIN) of the buyer. For sales to final consumers, this can be left empty, where the system will convert it to ‘999999999’ (nine ‘9’s).</li>`,
+          `<li><strong>	Buyer Name: </strong>As above, for sales to other businesses, enter the name of the buyer. For sales to final consumers, this can be left empty. </li>`,
+          `<li><strong> 	Nature of Goods:  </strong>Enter a brief description of the goods or services that have been sold. </li>`,
+          `<li><strong> 	Invoice Number:  </strong>Enter the unique invoice number of the transaction; for example, SDC001000000/001. </li>`,
+          `<li><strong> Invoice Date (dd/mm/yyyy): </strong>Enter the date of the transaction in the format of dd/mm/yyyy such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted.</li>`,
+          `<li><strong> Total Amount of Sales (VAT Exclusive) : </strong>Enter the value of the transaction, excluding VAT.</li>`,
+          `<li><strong> 	Exempted Sales Amount : </strong>Enter the value of sales of goods or services that were exempt from VAT.</li>`,
+          `<li><strong> 	Zero Rated Sales Amount : </strong>Enter the value of sales of goods or services that were zero-rated for VAT purposes. Although exports are also zero-rated, do not include these in this column, instead enter exports in the ‘Exports Amount column’.</li>`,
+          `<li><strong> 	Exports Amount : </strong>Enter the value of sales of goods or services that were exported and sold outside Rwanda and therefore zero-rated for VAT purposes.</li>`,
+          `<li><strong> 	Taxable Sales : </strong>Enter the total value of taxable sales. This is equal to ‘Total Amount of Sales (VAT Exclusive)’ minus (‘Exempted Sales Amount’ + ‘Zero Rated Sales Amount’ + ‘Exports Amount’).</li>`,
+          `<li><strong> 	VAT : </strong>Enter the total output VAT. This is equal to ‘Taxable Sales’ * 18%.</li>`,
           `</ul>`,
           `<strong>3. Purchases Tab</strong>`,
           ` This tab is applicable to any taxpayer who has purchased inputs from within Rwanda during the tax period for use in their goods and services sold.`,
@@ -280,21 +284,25 @@ export const vatDetail: CentralTaxDetailPage = {
           `  This tab is applicable for any taxpayer who has imported inputs during the tax period for use in their goods and services sold. This tab uses information from the customs declaration of the imported inputs.`,
           ` The ‘VAT Importation’ tab has 7 columns. Each row is for a separate import transaction. For each transaction, enter details on:`,
           `<ul>`,
-          `<li><strong> -	Customs Station –</strong>  Enter the border post where the goods or services were imported. This is listed under the ‘Office of Destination’ in the top right of the customs declaration. <li>`,
-          `<li><strong>  -	Customs Declaration (DD COM) Number – </strong>  Enter the unique customs declaration number, for example: ‘C39012’. This is listed under the ‘Customs Reference’ in the top right of the customs declaration.</li>`,
-          `<li><strong> -	Customs Declaration Date –</strong> Enter the date of the importation, which must be entered in the format of DD/MM/YYYY such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted. This is listed next to the ‘Customs Reference’ in the top right of the customs declaration.</li>`,
-          `<li><strong> -	Nature of Goods –</strong> Enter a brief description of the goods that have been imported. This is listed in the ‘Packages and descriptions of goods’ section in the middle of the customs declaration.</li>`,
-          `<li><strong> -	Origin –</strong> Enter the name of the country where the goods or services purchased from. This means that if a product first comes from the United Kingdom but arrives via boat to Kenya and lorry through Uganda to the Gatuna border, the origin country is the United Kingdom. This is listed under the ‘Country of Origin’ or ‘Cty. orig. Code’ in the middle of the customs declaration.</li>`,
-          `<li><strong> -	Customs Value (CIF) –</strong> Enter the value of the goods or services upon entering Rwanda in Rwandan Francs. CIF stands for Cost, Insurance and Freight which means that this value includes the cost of the goods and services from when they originated, but also includes the costs of insurance and freight or transport in getting the goods to Rwanda. The value in FRW is under the ‘Statistical Value’ in the middle right of the customs declaration.</li>`,
-          `<li><strong> -	VAT Paid –</strong> Enter the VAT paid on the imports. This is equal to the ‘V02’ Amount in the ‘Calculation of Taxes’ section in the middle of  the  customs declaration.</li>`,
+          `<li><strong> Customs Station :</strong>  Enter the border post where the goods or services were imported. This is listed under the ‘Office of Destination’ in the top right of the customs declaration. </li>`,
+          `<li><strong>  	Customs Declaration (DD COM) Number – </strong>  Enter the unique customs declaration number, for example: ‘C39012’. This is listed under the ‘Customs Reference’ in the top right of the customs declaration.</li>`,
+          `<li><strong> 	Customs Declaration Date :</strong> Enter the date of the importation, which must be entered in the format of DD/MM/YYYY such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted. This is listed next to the ‘Customs Reference’ in the top right of the customs declaration.</li>`,
+          `<li><strong> Nature of Goods :</strong> Enter a brief description of the goods that have been imported. This is listed in the ‘Packages and descriptions of goods’ section in the middle of the customs declaration.</li>`,
+          `<li><strong> Origin :</strong> Enter the name of the country where the goods or services purchased from. This means that if a product first comes from the United Kingdom but arrives via boat to Kenya and lorry through Uganda to the Gatuna border, the origin country is the United Kingdom. This is listed under the ‘Country of Origin’ or ‘Cty. orig. Code’ in the middle of the customs declaration.</li>`,
+          `<li><strong> Customs Value (CIF) :</strong> Enter the value of the goods or services upon entering Rwanda in Rwandan Francs. CIF stands for Cost, Insurance and Freight which means that this value includes the cost of the goods and services from when they originated, but also includes the costs of insurance and freight or transport in getting the goods to Rwanda. The value in FRW is under the ‘Statistical Value’ in the middle right of the customs declaration.</li>`,
+          `<li><strong> VAT Paid :</strong> Enter the VAT paid on the imports. This is equal to the ‘V02’ Amount in the ‘Calculation of Taxes’ section in the middle of  the  customs declaration.</li>`,
           ` </ul>`,
           ` After all the applicable annexures have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the declaration.`,
           `  The declaration form requires similar data to the annexures that have previously been completed. The important distinction is that in the declaration form, the total combined values for all transactions during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically. `,
-          `<strong>  Example </strong>`,
-          `   An example VAT declaration form is entered below. The final VAT due for this taxpayer in this tax period is FRW 18,900.  `,
-          `   After saving the declaration form, upload the annexures and then compare with the declaration form, see page 106 for more detail on uploading annexures and comparing with declaration forms. `,
-          ` <strong> Example</strong>`,
-          `Continuing the example of the VAT declaration form above, the comparison between this VAT declaration form and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted. `,
+          `<blockquote>
+          <strong>  Example </strong>
+          <p>  An example VAT declaration form is entered below. The final VAT due for this taxpayer in this tax period is FRW 18,900.</p>
+          <p>  After saving the declaration form, upload the annexures and then compare with the declaration form, see page 106 for more detail on uploading annexures and comparing with declaration forms.</p>
+          </blockquote>`,
+          `<blockquote>
+           <strong> Example</strong>
+          <p>Continuing the example of the VAT declaration form above, the comparison between this VAT declaration form and the uploaded annexures is shown below. As all the comparison values are equal, the declaration can be certified and submitted. </p>
+          </blockquote>`,
           `  Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
           `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the deadline to avoid penalties and fines. `,
         ],
@@ -328,23 +336,23 @@ export const vatDetail: CentralTaxDetailPage = {
           `  This tab is applicable to any taxpayer who has received services from foreign suppliers during the tax period. `,
           ` The ‘Deductible VAT Reverse’ tab has 6 columns. Each row is for a separate transaction. For each transaction, enter details on:`,
           ` <ul>`,
-          ` <li><strong> Suppliers Name –</strong> Enter the name of the foreign supplier who provided the services. Note: The Taxpayer Identification Number (TIN) is not required as VAT Reverse Charge is only required from taxpayers who received services from non-resident suppliers who are not registered in Rwanda if the services are not available in the local market.<li>`,
-          `<li><strong>-	Nature of Services Supplied –</strong> Described above.</li>`,
-          `<li><strong> -	Invoice Number – </strong>  Described above.</li>`,
-          `<li><strong> -	Invoice Date (dd/mm/yyyy) –</strong> Described above.<li>`,
-          `<li><strong> -	Total Invoice Amount –</strong> Enter the total amount paid for the services to the foreign supplier, excluding VAT.</li>`,
-          `<li><strong> -	VAT Reverse Charge Amount – Enter the VAT to be paid by the taxpayer. If all services are taxable, this is equal to ‘Total Invoice Amount’ * 18%. </li>`,
-          ` VAT Retained Tab`,
+          ` <li><strong> Suppliers Name –</strong> Enter the name of the foreign supplier who provided the services. Note: The Taxpayer Identification Number (TIN) is not required as VAT Reverse Charge is only required from taxpayers who received services from non-resident suppliers who are not registered in Rwanda if the services are not available in the local market.</li>`,
+          `<li><strong>	Nature of Services Supplied –</strong> Described above.</li>`,
+          `<li><strong> 	Invoice Number – </strong>  Described above.</li>`,
+          `<li><strong> 	Invoice Date (dd/mm/yyyy) –</strong> Described above.</li>`,
+          `<li><strong> Total Invoice Amount –</strong> Enter the total amount paid for the services to the foreign supplier, excluding VAT.</li>`,
+          `<li><strong> VAT Reverse Charge Amount </strong>– Enter the VAT to be paid by the taxpayer. If all services are taxable, this is equal to ‘Total Invoice Amount’ * 18%. </li>`,
+          ` <strong>VAT Retained Tab</strong>`,
           `This tab is applicable to any taxpayer who has sold goods or services to public institutions and had the VAT withheld and paid on their behalf by the public institution.`,
           `The ‘VAT Retained’ tab has 8 columns. Each row is for a separate import transaction. For each transaction, enter details on:`,
-          `<li><strong>-	Public Institution’s TIN –</strong> Enter the Taxpayer Identification Number (TIN) of the public institution to which the goods or service were sold.<li>`,
-          `<li><strong>  -	Public Institution’s Name –</strong> Enter the name of the public institution to which the goods or service were sold.<li>`,
-          `<li><strong>   -	Nature of Goods or Services – Described above.</li>`,
-          `<li><strong>-	Invoice Number – </strong>Described above.</li>`,
-          `<li><strong> -	Date of Invoice – </strong>Described above.</li>`,
-          `<li><strong> -	Date Delivered – </strong>Enter the date the goods or services were delivered or completed, which must be entered in the format of dd/mm/yyyy such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted.</li>`,
-          `<li><strong> -	Amount on Invoice (VAT Exclusive) – </strong>Enter the amount of the invoice, excluding VAT.</li>`,
-          `<li><strong>-	Withheld Amount (18%) –</strong> Enter the amount of VAT that was withheld and paid on the taxpayers’ behalf by the public institution, typically Invoice (VAT Exclusive) * 18%. </li>`,
+          `<li><strong>	Public Institution’s TIN –</strong> Enter the Taxpayer Identification Number (TIN) of the public institution to which the goods or service were sold.</li>`,
+          `<li><strong> 	Public Institution’s Name –</strong> Enter the name of the public institution to which the goods or service were sold.</li>`,
+          `<li><strong>   	Nature of Goods or Services</strong> – Described above.</li>`,
+          `<li><strong>	Invoice Number – </strong>Described above.</li>`,
+          `<li><strong> 	Date of Invoice – </strong>Described above.</li>`,
+          `<li><strong> 	Date Delivered – </strong>Enter the date the goods or services were delivered or completed, which must be entered in the format of dd/mm/yyyy such that 10th April 2017 is entered as 10/04/2017. Any other date format will not be accepted.</li>`,
+          `<li><strong> 	Amount on Invoice (VAT Exclusive) – </strong>Enter the amount of the invoice, excluding VAT.</li>`,
+          `<li><strong>	Withheld Amount (18%)</strong> – Enter the amount of VAT that was withheld and paid on the taxpayers’ behalf by the public institution, typically Invoice (VAT Exclusive) * 18%. </li>`,
           `</ul>`,
         ],
       },
@@ -375,21 +383,24 @@ export const vatDetail: CentralTaxDetailPage = {
           `  -  A fine of 20% of the amount of the understatement.`,
           `- 1.5% interest on a monthly basis. The rate of interests for late payment is fixed as follows:`,
           `• zero point five per cent (0.5), if the taxpayer has recorded a delay not exceeding six (6) months with respect to the time limit for payment.`,
-          ` • one per cent (1%), if the taxpayer has recorded a delay of six (6) months in tax payment but not more than twelve (12) months.`,
-          ` • one point five percent (1.5%), if the taxpayer has recorded a delay of more than twelve (12) months.`,
+          ` • One per cent (1%), if the taxpayer has recorded a delay of six (6) months in tax payment but not more than twelve (12) months.`,
+          ` • One point five percent (1.5%), if the taxpayer has recorded a delay of more than twelve (12) months.`,
           `A taxpayer who submits a declaration, but realises that they have declared a lower amount due than the correct amount and conducts self-reassessment after the deadline but before notification of an imminent audit, must pay the difference and:`,
           `A fine of:`,
           `-  Five percent (5%) of the tax due, if the time limit for declaration and payment has not been exceeded by thirty (30) days.`,
-          `- Ten percent (10%) of the tax due, if the time limit for declaration and payment has been exceeded by thirty (30) days but not exceeded by sixty (60) days`,
+          `- Ten percent (10%) of the tax due, if the time limit for declaration and payment has been exceeded by thirty (30) days but not exceeded by sixty (60) days.`,
           `- Thirty percent (30%) of the tax due, if the time limit for declaration and payment has been exceeded by sixty (60) days.`,
           `A taxpayer to whom the Commissioner General granted extension for submitting tax declaration is not subject to administrative fine for late payment, unless the taxpayer failed to respect the extension period. However, interests for late payment remain due.`,
-          `<strong>Example</strong>`,
-          ` Immaculée declares Pay As You Earn (PAYE) due of FRW 125,000 for a tax period. However, during an audit four months later RRA discovers that she should have declared PAYE due of FRW 165,000. The understatement is:`,
-          `  -  1 – (FRW 125,000 / FRW 165,000) = 24.2%.`,
-          `    Immaculée has to pay the FRW 40,000 difference and the penalty and interests of:`,
-          `  -  FRW 40,000 * 1.5% * 4 months = FRW 2,400`,
-          `  - FRW 40,000 * 10% * 2 = FRW 8,000`,
-          ` In addition to paying the FRW 40,000 difference, Immaculée must pay FRW 8,000 + FRW 2,400= FRW 10,400.`,
+          `<blockquote>
+          <strong>Example</strong>
+          <p> Immaculée declares Pay As You Earn (PAYE) due of FRW 125,000 for a tax period. However, during an audit four months later RRA discovers that she should have declared PAYE due of FRW 165,000. The understatement is:</p>
+          <p>  -  1 – (FRW 125,000 / FRW 165,000) = 24.2%.</p>
+            <p> Immaculée has to pay the FRW 40,000 difference and the penalty and interests of:</p>
+             <p> -          FRW 40,000 * 1.5% * 4 months = FRW 2,400</p>
+            <p> -          FRW 40,000 * 10% * 2 = FRW 8,000</p>
+
+          <p> In addition to paying the FRW 40,000 difference, Immaculée must pay FRW 8,000 + FRW 2,400= FRW 10,400.</p>
+          </blockquote>`,
         ],
       },
     },
