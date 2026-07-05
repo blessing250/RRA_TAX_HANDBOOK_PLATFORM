@@ -267,7 +267,7 @@ export const feesLeviedByDecentralizedEntitiesDetail: LocalTaxDetailPage = {
                     </ol>`,
                   `  Afterwards, certify that the declaration was done correctly before you ‘Submit’.`,
              `<blockquote>
-                <strong>Example 74</strong>
+                <strong>Example </strong>
                  <p>An example of a filled in declaration form for Immovable Property Tax is shown below. The tax due on the land is FRW 14,460. The tax due on the building is FRW 125,000. Therefore, the total Immovable Property Tax due to be paid with this declaration is FRW 139,460.</p>
               </blockquote>`,
                `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,
@@ -285,7 +285,7 @@ export const feesLeviedByDecentralizedEntitiesDetail: LocalTaxDetailPage = {
               `The taxpayer must enter the monthly rent and the total amount of rental income received during the tax year. In addition, if bank interest is being paid on this property, the taxpayer must change ‘Is Bank Interest paid’ to ‘Yes’ and enter the additional required details including rent contract copy.`,
                  `Once all required information has been entered, click ‘Continue with Declaration’. This generates an additional ‘Rental Income Declaration’ section. If all the information is correct, click ‘Calculate Tax’ to display the tax due, and click to ‘Submit’ the declaration.`,
                  `<blockquote>
-                 <strong>   Example 76</strong>
+                 <strong>   Example </strong>
                <p> An example Rental Income Tax declaration form is entered below. The total Rental Income Tax due to be paid with this declaration is FRW 584,000.</p>
                   </blockquote>`,
                    `<strong>!!!WE HAVE AN IMAGE HERE </strong>`,

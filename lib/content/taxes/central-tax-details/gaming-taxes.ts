@@ -54,8 +54,8 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
               <p>As the gambling proceeds are negative, the taxpayer is required to declare and pay Gaming Tax. ABC Betting Ltd is required to pay Gaming Tax of:</p>
               <p>FRW 24,000 * 40% = FRW 9,600</p>
               <p>This FRW 9,600 is declared and paid by ABC Betting Ltd. ABC Betting Ltd.</p>
-             <p> Gambling proceeds are subject to WOP-Gaming of 25%. This means that all the gambling proceeds are taxed at 25%.</p>
              </blockquote>`,
+               `<p> Gambling proceeds are subject to WOP-Gaming of 25%. This means that all the gambling proceeds are taxed at 25%.</p>`,
              `<blockquote>
               <strong>Example</strong>
               <p>Lucie cashes in FRW 160,000 with Rwanda Casinos Ltd. She plays blackjack and cashes out FRW 280,000 (including her initial buy-in). Therefore, her gambling proceeds are equal to:</p>
@@ -115,7 +115,7 @@ export const gamingTaxesDetail: CentralTaxDetailPage = {
           </blockquote>`,
           `After saving the declaration form, upload the annexures and then compare with the declaration form.`,
            ` Once all the annexures and declaration values are equal, correct and certified, click to ‘Submit’ the declaration. After successfully submitting, this screen will load.`,
-            `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. See page 415 for more details on paying taxes. Remember that payment must also be made before the deadline to avoid penalties and fines.`,
+            `Click ‘View Acknowledgement Receipt’ to view the RRA reference number and the total tax due that are required for payment. Remember that payment must also be made before the deadline to avoid penalties and fines.`,
             `After submitting the Gaming Tax declaration and viewing the acknowledgement receipt, repeat the above process for WOP-Gaming.`,
             `<blockquote>
            <strong> Example</strong></i>

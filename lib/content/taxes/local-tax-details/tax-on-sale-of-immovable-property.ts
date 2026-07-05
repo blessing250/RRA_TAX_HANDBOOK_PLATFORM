@@ -36,7 +36,7 @@ export const taxOnSaleOfImmovablePropertyDetail: LocalTaxDetailPage = {
         en: [
         `There is no specific tax period for a tax on sale of immovable property. This tax is due on transfer of a property between seller and buyer.`,
         `<i><strong>Example</strong></i>`,
-          `<i> ABC Ltd, an income tax registered taxpayer sold a commercial building at FRW 60,000,000. The tax on sale of Immovable Property to be paid is (FRW 60,000,000 – FRW 5,000,000) * 2% = FRW 1,100,000. Example 71: Ihirwe, a resident of Gasabo district sold his residential building at FRW 10,000,000. The tax on sale of Immovable Property to be paid is (FRW 10,000,000 – FRW 5,000,000) * 2.5% = FRW 125,000.</i>`,
+          `<i> ABC Ltd, an income tax registered taxpayer sold a commercial building at FRW 60,000,000. The tax on sale of Immovable Property to be paid is (FRW 60,000,000 – FRW 5,000,000) * 2% = FRW 1,100,000. Example : Ihirwe, a resident of Gasabo district sold his residential building at FRW 10,000,000. The tax on sale of Immovable Property to be paid is (FRW 10,000,000 – FRW 5,000,000) * 2.5% = FRW 125,000.</i>`,
 
 
         ],

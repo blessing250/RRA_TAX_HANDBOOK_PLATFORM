@@ -336,7 +336,7 @@ export const vatDetail: CentralTaxDetailPage = {
           `  This tab is applicable to any taxpayer who has received services from foreign suppliers during the tax period. `,
           ` The ‘Deductible VAT Reverse’ tab has 6 columns. Each row is for a separate transaction. For each transaction, enter details on:`,
           ` <ul>`,
-          ` <li><strong> Suppliers Name –</strong> Enter the name of the foreign supplier who provided the services. Note: The Taxpayer Identification Number (TIN) is not required as VAT Reverse Charge is only required from taxpayers who received services from non-resident suppliers who are not registered in Rwanda if the services are not available in the local market.</li>`,
+          `<p> <li><strong> Suppliers Name –</strong> Enter the name of the foreign supplier who provided the services.</p> Note: The Taxpayer Identification Number (TIN) is not required as VAT Reverse Charge is only required from taxpayers who received services from non-resident suppliers who are not registered in Rwanda if the services are not available in the local market.</li>`,
           `<li><strong>	Nature of Services Supplied –</strong> Described above.</li>`,
           `<li><strong> 	Invoice Number – </strong>  Described above.</li>`,
           `<li><strong> 	Invoice Date (dd/mm/yyyy) –</strong> Described above.</li>`,
@@ -401,6 +401,10 @@ export const vatDetail: CentralTaxDetailPage = {
 
           <p> In addition to paying the FRW 40,000 difference, Immaculée must pay FRW 8,000 + FRW 2,400= FRW 10,400.</p>
           </blockquote>`,
+          `<strong> What are the rules concerning interest, fixed administrative fines and repeat offenders?</strong>`,
+          `<p>Interest is non-compounding. This means that interest is always on the principal amount, i.e., the tax due, there is no interest charged on interest. Interest is charged from the first day after the tax should have been paid until the day of payment, which is included. Every month that begins is considered as a complete month. The interest cannot exceed 100% of the original tax due.</p>`,
+          `<p>If an offence is repeated on another occasion within two years, the fixed administrative fine is doubled. If the offence is repeated on any other occasions within two years, the fixed administrative fine is quadrupled.  Taxpayers are informed by RRA whether they are categorised as small, medium or large taxpayers. </p>`,
+
         ],
       },
     },

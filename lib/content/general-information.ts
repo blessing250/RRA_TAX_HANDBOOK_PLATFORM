@@ -87,7 +87,7 @@ export const generalInformation: HandbookTopic = {
           `<ul>
           <li><strong> Good governance</strong> - when citizens are paying taxes, the government is held more responsible for improving public services.</li>
           <li><strong> Social responsibility</strong> - citizens are more likely to protect those public services and can be proud of contributing to Rwanda's development.</li>
-          <li><strong> Self-reliance</strong> - tax revenues are the backbone of national self-reliance, reducing the country's dependency on unpredictable foreign aid and donors./li>
+          <li><strong> Self-reliance</strong> - tax revenues are the backbone of national self-reliance, reducing the country's dependency on unpredictable foreign aid and donors.</li>
           </ul>`,
         ],
       },

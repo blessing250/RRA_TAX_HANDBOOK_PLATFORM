@@ -208,7 +208,7 @@ export const otherServiceSections: HandbookSection[] = [
                            ` The RDB system is designed to make it easier for taxpayers to choose their business activities, by first choosing the broad sector, and then choosing the more specific activity within that sector.`,
                            ` The RDB system allows taxpayers to choose as many different activities as they intend to carry out, and then requests that they choose one of these to designate as their main business activity. This should be the business activity that they expect will contribute the largest share of their value added, i.e., to the selling price of their products, compared to the price of their inputs.`,
                            `<blockquote>
-                        <strong>   Example 1</strong>
+                        <strong>   Example </strong>
                         <p> Amahoro is starting a butchery business. She intends to buy livestock and process the meat. She expects to sell to other shops as well as directly to consumers.</p>
                        <p>  Processing meat is within the ‘manufacture’ sector. Selling to other shops refers to ‘wholesale’. Selling directly to customers refers to ‘retail sale’. Amahoro selects ‘C1010 - Processing and preserving of meat’, ‘G4630 – Wholesale of food, beverages and tobacco’ and ‘G4721 – Retail sale of food in specialised stores’.</p>
                        <p>  Of these three activities, Amahoro expects her greatest value added to be from the processing of the meat so she chooses this as her main business activity.</p>
@@ -225,7 +225,7 @@ export const otherServiceSections: HandbookSection[] = [
                              `Tax declarations for all registered tax types must be submitted for tax periods from the date the taxpayer was registered.`,
                             `  Even if there is no business activity within the first, or subsequent, tax periods, the declarations must still be submitted to avoid non-declaration penalties. This includes domestic taxes such as Income Tax and also Local Government Taxes such as Trading License Tax.`,
                         `<blockquote>
-                   <strong> Example 2</strong>
+                   <strong> Example </strong>
                  <p>Rukundo is starting a private business of a retail shop. He is starting the business himself using his own capital and with no staff, partners or shareholders. He expects a daily turnover of approximately FRW 20,000, equivalent to an annual turnover of approximately FRW 8,000,000.</p>
                 <p> He wants to be protected by limited liability. Rukundo selects a ‘domestic’ business, with the company category ‘private’, the type ‘limited by shares’ and his position as ‘managing director’.  As shown below:</p>
                 </blockquote>`,
@@ -856,7 +856,7 @@ export const otherServiceSections: HandbookSection[] = [
                  `The annexures differ depending upon the tax type. For details on a specific tax type, view the relevant chapter of this Tax Handbook.`,
                  ` Annexures have an ‘Instructions’ tab and at least one other tab to be completed. Only the tabs that are relevant to the taxpayer in that tax period need to be completed. Each relevant tab must be completed, validated and saved separately. `,
              `<blockquote>
-              <strong>  Example 3</strong>
+              <strong>  Example </strong>
                <p>   For VAT, the annexure is titled ‘VatAnnexure_1.1.xlsm’. The VAT annexure has six tabs: Instructions, Sales, Purchases, VAT Importation, Deductible VAT Reverse and VAT Retained. </p>
                </blockquote>`,
 

@@ -91,15 +91,21 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               ['Above FRW 2,400,000', '30%'],
             ],
           },
-          `<p>These rates are marginal. For each Real Regime PIT taxpayer, the first FRW 720,000 earned in a year is taxed at 0%, the next FRW 480,000 at 10%, the next FRW 1,200,000 at 20%, and any remaining income at 30%. This means that no taxpayer is made worse off by receiving income in a higher tax bracket.</p>`,
+          `<p>It is important to note that these tax rates are marginal. This means that for each Real Regime PIT taxpayer each year, the first FRW 720,000 that they earn is taxed at 0%, the next FRW 480,000 is taxed at 10%, the next 1,200,000 is taxed at 20% and any remaining income is taxed at 30%. This means that no taxpayer is made worse off by receiving income in a higher tax bracket.
+</p>`,
           `<blockquote>
-            <p><strong>Example 15:</strong> Amahoro is the owner of a supermarket. Her annual turnover between January 1 and December 31 was FRW 62,000,000. Her deductible expenses, depreciation, and allowances total FRW 54,000,000.</p>
+            <strong>Example:</strong> 
+            <p>Amahoro is the owner of a supermarket. Her annual turnover between January 1 and December 31 was FRW 62,000,000. Her deductible expenses, depreciation, and allowances total FRW 54,000,000.</p>
             <p><strong>Her annual taxable profit is therefore:</strong><br/>FRW 62,000,000 - FRW 54,000,000 = FRW 8,000,000</p>
             <p><strong>Her annual Real Regime PIT due is:</strong><br/>(FRW 720,000 * 0%) + (FRW 480,000 * 10%) + (FRW 1,200,000 * 20%) + (FRW 6,800,000 * 30%) = FRW 1,968,000</p>
           </blockquote>`,
             
                   `<strong>1.2. PIT declaration obligation</strong>
                   <p>PIT is required to be declared and paid on an annual basis. The tax period is the calendar year, from 1st January until 31st December. The deadline to declare and pay PIT is 31st March of the following year. PIT is declared online through <a href="https://etax.rra.gov.rw/" target="_blank" rel="noopener noreferrer">E-Tax system</a> or M-Declaration (*800#).</p>
+                  <blockquote>
+                  <strong>Example:</strong>
+                  <p>Rukundo must declare and pay his annual PIT declaration for the 2019 tax period, from 1st January 2019 until 31st December 2019, by the deadline of 31st March 2020.</p> 
+                  </blockquote>
                   <div>
                     <p><strong>Note:</strong> If the tax type and tax period for the relevant declaration is not available on the ‘Document Details’ screen, the taxpayer can generate it in the E-Tax system.</p>
                   </div>
@@ -160,7 +166,8 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
           },
           `<p>However, small businesses with an annual turnover below FRW 20,000,000 have an option to file income tax under simplified regime.</p>`,
           `<div>
-            <p><strong>NB: Motor Vehicle Income Tax.</strong> In addition to these regimes, there is also a different option available for taxpayers earning motor vehicle transport income. This is referred to as Motor Vehicle Income Tax.</p>
+            <strong>NB: Motor Vehicle Income Tax.</strong>
+            <p> In addition to these regimes, there is also a different option available for taxpayers earning motor vehicle transport income. This is referred to as Motor Vehicle Income Tax.</p>
           </div>`,
           {
             type: 'table',
@@ -187,11 +194,9 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
             <li>
               <strong>Flat Tax regime</strong>
               <p>The Flat Tax regime is available to taxpayers with an annual turnover between FRW 2,000,000 and FRW 12,000,000. The taxpayer must pay a specific ‘Flat’ amount of annual tax due depending upon their annual turnover, as displayed below.</p>
-              <p>Note that taxpayers with annual turnover below FRW 2,000,000 are required to submit their Income Tax declaration, but are not required to pay any Income Tax.</p>
-              <p>Flat Tax regime can be declared using M-Declaration or E-Tax.</p>
-            </li>
+              </li>
           </ol>`,
-          {
+             {
             type: 'table',
             headers: ['Annual turnover', 'Annual tax due'],
             rows: [
@@ -201,8 +206,14 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               ['FRW 10,000,001 - FRW 12,000,000', 'FRW 300,000'],
             ],
           },
-          `<blockquote>
-            <p><strong>Example:</strong> Rukundo has a business fixing bikes. His annual turnover between January 1 and December 31 was FRW 8,750,500. This is within the third annual turnover category, so his annual Flat Tax due is FRW 210,000.</p>
+        
+
+              `<p>Note that taxpayers with annual turnover below FRW 2,000,000 are required to submit their Income Tax declaration, but are not required to pay any Income Tax.</p>`,
+              `<p>Flat Tax regime can be declared using M-Declaration or E-Tax.</p>`,
+            
+         `<blockquote>
+            <strong>Example:</strong>
+            <p> Rukundo has a business fixing bikes. His annual turnover between January 1 and December 31 was FRW 8,750,500. This is within the third annual turnover category, so his annual Flat Tax due is FRW 210,000.</p>
           </blockquote>`,
           `<ol start="2">
             <li>
@@ -210,14 +221,15 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               <p>The Lump Sum regime is available to taxpayers with an annual turnover between FRW 12,000,001 and FRW 20,000,000. The taxpayer must pay a specific ‘Lump Sum’ tax due equal to 3% of their annual turnover.</p>
               <p>Lump Sum regime can be declared using M-Declaration or E-Tax.</p>
               <blockquote>
-                <p><strong>Example:</strong> Ubumwe Ltd is a carpentry business making furniture. Their annual turnover between January 1st and December 31st was FRW 17,400,200. Their annual ‘Lump Sum’ Income Tax due is: FRW 17,400,200 * 3% = FRW 522,006.</p>
+                <strong>Example:</strong>
+                <p> Ubumwe Ltd is a carpentry business making furniture. Their annual turnover between January 1st and December 31st was FRW 17,400,200. Their annual ‘Lump Sum’ Income Tax due is: FRW 17,400,200 * 3% = FRW 522,006.</p>
               </blockquote>
             </li>
             <li>
               <strong>Real Regime</strong>
               <p>The Real Regime is required for all taxpayers with an annual turnover above FRW 20,000,000, as well as all liberal professions. Liberal professions include, but are not limited to, accountants, company auditors, tax consultants, architects, real estate agents, lawyers, bailiffs, doctors, dentists and other similar professions.</p>
               <p>In addition, any taxpayer may choose to use the Real Regime, but cannot then change this decision for a period of three years from the date that RRA is informed of this choice.</p>
-              <p>The most important distinction of Real Regime is the rate applied to profit, not to turnover. This allows taxpayers to deduct expenses allowances against the income.</p>
+              <p>The most important distinction of Real Regime is the rate applied to profit, not to turnover. This allows taxpayers to deduct expenses allowances against the income.For more details on the additional differences of Real Regime.</p>
               <p>In addition, it is important to note that unlike the other Income Tax regimes, the tax rate for Real Regime is slightly different for PIT and for CIT.</p>
               <p>The tax rate for CIT is a uniform rate of 28% on the profit.</p>
               <p>Real Regime can only be declared using E-Tax.</p>
@@ -266,7 +278,7 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               <p>If the taxpayer has not had any tax withheld and paid on their behalf during the tax period, they can continue straight to the IQP declaration form below.</p>
               <ol>`,
                  ` <strong>i) Annexures</strong>`,
-                  `<p>The IQP annexure has two tabs. Only the tabs that are applicable in that tax period need to be completed, validated and saved.</p>`,
+                  `<p>The IQP annexure has two tabs. Only the tabs that are applicable in that tax period need to be completed, validated and saved. Declaring IQP using E-Tax</p>`,
                  ` <ol>
                     <li>
                       <strong>5% Withholding Tab</strong>
@@ -376,50 +388,62 @@ export const incomeTaxDetail: CentralTaxDetailPage = {
               <strong>Step-by-Step guide to declaring and paying Flat Tax, Lump Sum regime, or IQP using M-Declaration</strong>
               <p>Flat Tax, Lump Sum or Instalment Quarterly Prepayments (IQP) Income Tax can be declared on mobile phones using M-Declaration.</p>
               <ol>
-                <li><strong>Keep records of all income.</strong><p>Keep records of all income to calculate annual turnover.</p></li>
-                <li><strong>Register for M-Declaration.</strong><p>Using the mobile phone, dial *800#. Select a language, ‘2. Other Business Activities’ and then ‘1. Registration’. Enter the TIN and Rwanda National ID number. This step is only required for first-time users of M-Declaration.</p></li>
-                <li><strong>M-Declaration of Income Tax.</strong><p>Using the mobile phone, dial *800#. Select a language, ‘2. Other Business Activities’ and then ‘2. Declaration’. Enter the tax period, whether the taxpayer is ‘new’ or ‘usual’ to M-Declaration and the tax period business income.</p></li>
-                <li><strong>Receive payment details and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN Mobile Money, Mobicash, or at a bank.</p></li>
+                <strong>Step 1: Keep records of all income.</strong><p>Keep records of all income to calculate annual turnover.</p>
+                <strong>Step 2: Register for M-Declaration.</strong><p>Using the mobile phone, dial *800#. Select a language, ‘2. Other Business Activities’ and then ‘1. Registration’. Enter the TIN and Rwanda National ID number. This step is only required for first-time users of M-Declaration.</p>
+                <strong>Step 3: M-Declaration of Income Tax.</strong><p>Using the mobile phone, dial *800#. Select a language, ‘2. Other Business Activities’ and then ‘2. Declaration’. Enter the tax period, whether the taxpayer is ‘new’ or ‘usual’ to M-Declaration and the tax period business income.</p>
+                <strong>Step 4: Receive payment details and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN Mobile Money, Mobicash, or at a bank.</p>
               </ol>
             </li>
             <li>
               <strong>Step-by-Step guide to declaring and paying Motor Vehicle Income Tax or IQP using M-Declaration</strong>
+              <p>Motor Vehicle Income Tax must be declared on mobile phones using M-Declaration. The process is the same when declaring Motor Vehicle Income Tax Instalment Quarterly Prepayments (IQP).</p>
               <ol>
-                <li><strong>Register Motor Vehicle for Transport Income use.</strong><p>Visit any RRA offices and register the motor vehicle for transport income use. This use also requires specific insurance to be purchased for the motor vehicle. This step is only required the first time using M-Declaration.</p></li>
-                <li><strong>M-Declaration of Income Tax.</strong><p>Using your mobile phone, dial *800#. Select a language, ‘1. Motor Cycles/Vehicles’. Enter the TIN, number plate of the motor vehicle, tax period and whether you are a ‘new’ taxpayer or a ‘usual taxpayer’.</p></li>
-                <li><strong>Receive payment details and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p></li>
+                <strong>Step 1: Register Motor Vehicle for Transport Income use.</strong><p>Visit any RRA offices and register the motor vehicle for transport income use. This use also requires specific insurance to be purchased for the motor vehicle. This step is only required the first time using M-Declaration.</p>
+                <strong>Step 2: M-Declaration of Income Tax.</strong><p>Using your mobile phone, dial *800#. Select a language, ‘1. Motor Cycles/Vehicles’. Enter the TIN, number plate of the motor vehicle, tax period and whether you are a ‘new’ taxpayer or a ‘usual taxpayer’.</p>
+                <strong>Step 3: Receive payment details and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p>
               </ol>
             </li>
             <li>
               <strong>Step-by-Step guide to declaring and paying Flat Tax regime using E-Tax</strong>
               <ol>
-                <li><strong>Keep records of all income.</strong><p>Keep records of all income to calculate annual turnover.</p></li>
-                <li><strong>Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong></li>
-                <li><strong>Complete form and submit.</strong><p>Complete the declaration form and submit the Income Tax declaration.</p></li>
-                <li><strong>View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p></li>
+                <strong>Step 1: Keep records of all income.</strong><p>Keep records of all income to calculate annual turnover.</p>
+                <strong>Step 2: Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong></p>
+                <strong>Step 3: Complete form and submit.</strong><p>Complete the declaration form and submit the Income Tax declaration.</p>
+                <strong>Step 4: View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p>
+              </ol>
+            </li>
+            <li>
+              <strong>Step-by-Step guide to declaring and paying Lump Sum regime using E-Tax</strong>
+              <ol>
+                <strong>Step 1: Keep records of all income.</strong><p>Keep records of all income to calculate annual turnover.</p>
+                <strong>Step 2: Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong></p>
+                <strong>Step 3: Download, complete, validate and save annexures.</strong><p>Download, complete, validate and save any applicable Lump Sum Annexures.</p>
+                <p>This step is only required if the taxpayer has had any tax withheld and paid on their behalf during the tax period.</p>
+                <strong>Step 4:  Complete declaration form, upload annexures and submit</strong><p>Complete the declaration form, upload annexures, confirm accuracy and submit the Income Tax declaration.</p>
+                <p>Only upload annexures if the taxpayer has had any tax withheld and paid on their behalf during the tax period.</p>
               </ol>
             </li>
             <li>
               <strong>Step-by-Step guide to declaring and paying Real Regime using E-Tax</strong>
               <ol>
-                <li><strong>Bookkeeping.</strong><p>Ensure accurate bookkeeping of all business matters.</p></li>
-                <li><strong>Certify the financial statements.</strong><p>Submit the financial statements to ICPAR members for validation. This step is only required if the taxpayer had annual turnover of more than FRW 600,000,000.</p></li>
-                <li><strong>Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong></li>
-                <li><strong>Download, complete, validate and save annexures.</strong><p>Download, complete, validate and save the applicable Real Regime annexures, including the Balance Sheet, Profit and Loss Statement and Company Representative annexures.</p></li>
-                <li><strong>Upload certified financials.</strong><p>Approved certifying audit firm uploads certified financials on behalf of their clients through their E-Tax portals.</p></li>
-                <li><strong>Complete form, upload annexures and submit.</strong><p>Complete the declaration form, upload annexures, confirm accuracy and submit the Income Tax declaration.</p></li>
-                <li><strong>View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p></li>
+                <strong>Step 1: Bookkeeping.</strong><p>Ensure accurate bookkeeping of all business matters.</p>
+                <strong>Step 2: Certify the financial statements.</strong><p>Submit the financial statements to ICPAR members for validation. This step is only required if the taxpayer had annual turnover of more than FRW 600,000,000.</p>
+                <strong>Step 3:Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong>
+                <strong>Step 4: Download, complete, validate and save annexures.</strong><p>Download, complete, validate and save the applicable Real Regime annexures, including the Balance Sheet, Profit and Loss Statement and Company Representative annexures.</p>
+                <strong>Step 5: Upload certified financials.</strong><p>Approved certifying audit firm uploads certified financials on behalf of their clients through their E-Tax portals.</p>
+                <strong>Step 6:Complete form, upload annexures and submit.</strong><p>Complete the declaration form, upload annexures, confirm accuracy and submit the Income Tax declaration.</p>
+                <strong>Step 7: View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p>
               </ol>
             </li>
             <li>
               <strong>Step-by-Step guide to declaring and paying Instalment Quarterly Prepayments (IQP) using E-Tax</strong>
               <p>If the taxpayer has had any tax withheld and paid on their behalf during the tax period, also follow the italics steps.</p>
               <ol>
-                <li><strong>Bookkeeping.</strong><p>Keep records of all tax withheld and paid on their behalf.</p></li>
-                <li><strong>Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong></li>
-                <li><strong>Download, complete, validate and save annexures.</strong><p>Download, complete, validate and save any applicable IQP Annexures.</p></li>
-                <li><strong>Complete declaration form, upload annexures and submit.</strong><p>Complete the declaration form, upload annexures, confirm accuracy and submit the IQP declaration.</p></li>
-                <li><strong>View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p></li>
+                <strong>Step 1: Bookkeeping.</strong><p>Keep records of all tax withheld and paid on their behalf.</p></li>
+                <strong>Step 2: Login to <a href="https://etax.rra.gov.rw" target="_blank" rel="noopener noreferrer">E-Tax</a>.</strong>
+                <strong>Step 3: Download, complete, validate and save annexures.</strong><p>Download, complete, validate and save any applicable IQP Annexures.</p>
+                <strong>Step 4: Complete declaration form, upload annexures and submit.</strong><p>Complete the declaration form, upload annexures, confirm accuracy and submit the IQP declaration.</p></li>
+                <strong>Step 5: View acknowledgement receipt and pay taxes.</strong><p>Note the RRA reference number and pay all tax due with E-Payment, MTN/Airtel Mobile Money, Mobicash, or at a bank.</p>
               </ol>
             </li>
           </ol>`,

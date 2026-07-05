@@ -2,6 +2,7 @@ import {
   centralTaxLastUpdated,
   type CentralTaxDetailPage,
 } from '@/lib/content/taxes/central-tax-details/shared';
+import { View } from 'lucide-react';
 
 export const payeDetail: CentralTaxDetailPage = {
   slug: 'pay-as-you-earn',
@@ -125,15 +126,15 @@ export const payeDetail: CentralTaxDetailPage = {
             <li>Providing an employee with accommodation during a tax period is valued at 20% of the employment income, excluding benefits in kind.</li>
             <li>For a benefit on a loan including advance on salary exceeding three (3) months’ salary given to an employee, there is a difference between interests calculated at a rate of interest offered to commercial banks by National Bank of Rwanda and the actual interests paid by employees.</li>
           </ul>`,
+            `Note that the rent of a house or motor vehicle directly paid by an employer for an employee is taxed as any other employment income.`,
           `<blockquote>
-          <strong>Example</strong>
+          <strong>Example </strong>
           <p>Innocent employs one employee called Ubumwe. In one tax period, Innocent pays Ubumwe FRW 35,000 in salary, a transport allowance of FRW 5,000 and provides Ubumwe with accommodation to live in.</p> 
            <p>The FRW 35,000 salary and the FRW 5,000 transport allowance are fully taxable. The accommodation benefit in kind that Ubumwe is provided with is valued at 20% of the taxable employment income. This is calculated as:</p>
           <p>(FRW 35,000 + FRW 5,000) * 20% = FRW 8,000.</p>
           <p>Therefore, the total taxable income that Innocent must declare PAYE for on behalf of Ubumwe is: </p>
           <p>FRW 35,000 + FRW 5,000 + FRW 8,000 = FRW 48,000</p>
           </blockquote>`,
-          `<strong>Note that the rent of a house or motor vehicle directly paid by an employer for an employee is taxed as any other employment income.</strong>`,
           `<strong>Tax rates for permanent employees</strong>`,
           `There are different marginal tax rates for permanent employees depending upon their taxable employment income. The groupings of income are called tax brackets. The tax rates for each tax bracket are:`,
           {
@@ -167,7 +168,7 @@ export const payeDetail: CentralTaxDetailPage = {
             ],
           },
           `<blockquote>        
-         <strong>Example 1</strong>
+         <strong>Example 1: </strong>
                            <p> Lucie employs Roy in an unskilled role on a temporary basis. Roy works for less than thirty days and Lucie pays him taxable income of FRW 80,000. As Roy is a casual labourer, the first FRW 60,000 is taxed at a rate of 0%, and the remaining FRW 20,000 is taxed at a rate of 15%. </p>
                            <p>The PAYE due on behalf of Roy is:</p>
                            <p> (FRW 60,000 * 0) + (FRW 20,000 * 15%) = FRW 0 + FRW 3,000 = FRW3,000.</p>
@@ -176,7 +177,7 @@ export const payeDetail: CentralTaxDetailPage = {
                           <p>  This may mean that the employee pays a higher amount of tax than would normally be expected if the income had come from just one employer. Resident individuals in Rwanda are able to claim a refund for excess Income Tax paid if the tax refund payable exceeds FRW 5,000.</p>
                           </blockquote>`,
                           `<blockquote>
-                          <strong>Example 2</strong>
+                          <strong>Example 2: </strong>
                             <p>Charles works separately for two employers, Lucie and Fred. Charles receives monthly taxable income of FRW 120,000 from Lucie and FRW 100,000 from Fred.  As he has a permanent contract from Lucie, Lucie is the first employer who declares PAYE as normal on behalf of Charles. The PAYE due declared by Lucie on behalf of Charles is:</p>
                           <p>  (FRW 60,000 * 0) +(FRW 40,000 * 10%) + (FRW 20,000 * 20%) = FRW 0 + FRW 4,000+FRW 4,000= FRW 8,000 </p>
                            <p> As Fred is not the first employer of Charles, he withholds PAYE of 30% on Charles’ monthly taxable income. Fred withholds FRW 100,000 * 30% = FRW 30,000.</p>
@@ -204,12 +205,12 @@ export const payeDetail: CentralTaxDetailPage = {
           <li>Using any internet browser, go to www.ishema.rssb.rw and input your personal phone number then click on login.</li>
           <li>Enter Company's TIN and Confirm Company Details: provide company's Tax Identification Number (TIN) and verify the details. Please ensure that the TIN entered is accurate and matches the official records.</li>
           <li>Provide Personal Information: provide personal information, including full name, email address, and phone number. Additionally, enter the password you currently use to log in to RRA's e-Tax system.</li>
-         <strong>Note:</strong> that Steps above are one-time processes during initial registration. For subsequent logins, you will only be required to provide your phone number to access the platform.
+         <strong>Note:</strong>  that Steps above are one-time processes during initial registration. For subsequent logins, you will only be required to provide your phone number to access the platform.
           <li><strong>Login:</strong> To log in, a One-Time Password (OTP) is needed. To generate the OTP, simply dial *876*4044# on the registered phone. Enter the prompted code, and log in Ishema successfully. Enter this code when prompted, and you will be able to log in successfully.</li>
           </ul>`,
           `On the first page of the platform, you will have access to various activities, including: `,
-          `<strong> 	View your company's information: </strong>You can review and manage the details of the company, as well as add additional users to the company's account. `,
-          `Check your compliance status: easily monitor the taxpayer compliance status and track declaration history. This helps to staying informed about the tax obligations and ensure timely filings. `,
+        `<li><strong> 	View your company's information: </strong>You can review and manage the details of the company, as well as add additional users to the company's account.</li>`,
+          `<li><strong>Check your compliance status:</strong> easily monitor the taxpayer compliance status and track declaration history. This helps to staying informed about the tax obligations and ensure timely filings. </li>`,
           `<strong>File declarations:</strong> The platform allows taxpayer to conveniently file a declaration, making the process efficient and streamlined. A taxpayer can submit tax-related information and document with ease.`,
           `<ul>
             <li>If this is your first time using the ISHEMA system, kindly download the provided Excel template file (Unified annexure). Populate the file with your employees' salary details.</li>
@@ -226,10 +227,11 @@ export const payeDetail: CentralTaxDetailPage = {
           <li>You successfully filed a declaration. Print the acknowledgment receipt for your records or click "View Details" to access additional information about your declaration.</li>
           </ul>`,
           `<strong> Note that after declaration, a taxpayer can, immediately or after a given time, proceed with a revision. A revision is initiated by clicking on ‘Revision Declaration as is shown in the following image.</strong>`,
+           `<div><img src="/images/Declaration.png" alt="IQP declaration revision" /></div>`,
           `<strong>Unified annexure</strong>`,
           `A unified annexure for PAYE, Pension, Maternity, Medial and CBHI has only one tab for a tax period. It needs to be completed and uploaded as Excel contrary to the annexure of E-Tax that needs to be downloaded, validated and saved, then uploaded in E-Tax.`,
           `<ul>
-            <li>Name: Enter the employee’s name.</li>
+            <li>Family Name: Enter the employee’s name.</li>
             <li>Another name: Enter the employee’s other name.</li>
             <li>RSSB Number: Enter the employee’s Social Security Number (SSN) from RSSB.</li>
             <li>NID or Passport: Enter the employee’s National Identity Document (ID) number or employee passport number.</li>

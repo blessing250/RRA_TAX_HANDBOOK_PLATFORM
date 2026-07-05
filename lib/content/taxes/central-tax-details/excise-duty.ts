@@ -84,12 +84,12 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
                       <p>  FRW 4,000,000 * 10% = FRW 400,000.</p>
                       </blockquote>`,
                       `<blockquote>
-                  <strong>      Example 38</strong>
+                  <strong>      Example </strong>
                        <p> Ubumwe produces cigarettes. In one tax period he manufactures and sells 400 packs (of 20 cigarettes) for a pre-tax selling price of FRW 300 each for a total taxable sale during that tax period of FRW 120,000. Ubumwe must pay mixed Excise Duty of:</p>
                        <p>  (FRW 120,000 * 36%) + (400 * FRW 230) = FRW 135,200.</p>
                       </blockquote>`,
                       `<blockquote>
-                      <strong> Example 39</strong>
+                      <strong> Example </strong>
                         <p>Lucie produces banana wine using ingredients sourced in Rwanda. In one tax period she manufactures and sells 200 bottles for a pre-tax selling price of FRW 850 each for a total taxable sale during that period of FRW 170,000. Lucie must pay ad valorem Excise Duty of:</p>
                        <p> FRW 170,000 * 40% = FRW 68,000. </p>
                       </blockquote>`,
@@ -131,6 +131,7 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
         en: [
         `Firstly, download the Excise Duty Annexures from the E-Tax website.The Excise Annexure file has two tabs. `,
           `<strong>1) Raw Materials tab</strong>`,
+          `This tab is applicable for all taxpayers to record their register of raw materials used in the manufacturing of taxable products during the tax period.`,
          ` Each raw material used for production of each product on each date is required to have its own row in the annex. For example, if two raw materials are used to produce two separate products on eight days of production, then (2 * 2 * 8 = 32) 32 rows are required in the annexure.`,
          `<ul>`,
             `<li>Product Name – Enter the type or brand of product that is being produced. This does not have to specify amounts or unit sizes. </li>`,
@@ -178,7 +179,7 @@ export const exciseDutyDetail: CentralTaxDetailPage = {
         `  Once all the Excise Duty annexures have been completed, validated and saved in the folder C:/RRA in the user’s local machine, the taxpayer can return to E-Tax to complete the Excise Duty declaration, see page 102 for more detail on selecting the relevant declaration.`,
          `  The Excise Duty declaration requires similar data to the Excise Duty Annexures that have previously been completed. The important distinction is that in the Excise Duty declaration, the total combined values for all transactions during that tax period must be entered. Once all relevant white boxes have been entered, click ‘save’ to calculate the grey boxes automatically. `,
          `<blockquote>
-           <strong>Example 40</strong>
+           <strong>Example </strong>
            <p> Excise declaration is entered below. The Excise Duty due for this taxpayer in this tax period is FRW 192,000. </p>
          </blockquote>`,
          `<div><img src="/images/excise duty declaration.png" alt="Excise duty declaration Form" /></div>`,

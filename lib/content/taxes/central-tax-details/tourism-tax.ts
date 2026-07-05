@@ -85,16 +85,17 @@ export const tourismTaxDetail: CentralTaxDetailPage = {
                   `• Invoice amount without VAT – Enter the amount as per EBM invoice net-off VAT.`,
                   `• Accommodation amount (VAT excl.) – Enter the amount on invoice charged on accommodation services net-off VAT.`,
                   `• Tax due O=(N*3/103) – Enter the amount of tourism tax calculated on ‘Accommodation amount (VAT excl.)’`,
-            `<i><strong>Example</strong></i>`, 
-                    `<i>An example of Tourism Tax computation:  A client paid FRW 50,000 VAT inclusive for accommodation service. What is the Tourism Tax to be remitted to the Tax Administration?</i>`,
-                   `<i> Amount paid by the client:             	50,000</i>`,
-                    `<i>VAT (50,000*18/118):                    	<u>(7,127)</u></i>`,
-                    `<i>Selling price (Excluding VAT):      	42,373</i>`,
-                    `<i>Tourism Tax (42,373*3/103):         	<u>(1,234)</u></i>`,
-                    `<i>Net for service provider:                	41,139</i>`,
-
-
-         `</ul>`,
+                   `</ul>`,
+                  `<blockquote>
+            <strong>Example</strong>
+                   <p> An example of Tourism Tax computation:  A client paid FRW 50,000 VAT inclusive for accommodation service. What is the
+                   Tourism Tax to be remitted to the Tax Administration?</p>
+                   <p> Amount paid by the client:             	50,000</p>
+                    <p>VAT (50,000*18/118):                    	<u>(7,127)</u></p>
+                    <p>Selling price (Excluding VAT):      	42,373</p>
+                    <p>Tourism Tax (42,373*3/103):         	<u>(1,234)</u></p>
+                    <p>Net for service provider:                	41,139</p>
+                    <blockqoute>`,
         ],
       },
     },
