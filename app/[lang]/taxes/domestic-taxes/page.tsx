@@ -14,6 +14,7 @@ import {
   domesticTaxesPage,
   domesticTaxSections,
 } from "@/lib/content/taxes/domestic-taxes"
+import { localGovernmentTaxesPage } from "@/lib/content/taxes/local-government-taxes"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { isLocale, type Locale } from "@/lib/i18n/config"
 
@@ -82,7 +83,14 @@ export default async function DomesticTaxesPage({
                   className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base"
                 >
                   <p>
-                    {localizedText(section.text, locale)}
+                    {localizedText(section.text, locale)}{" "}
+                    <Link
+                      href={`/${locale}/taxes/local-government-taxes`}
+                      className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                    >
+                      {localizedText(localGovernmentTaxesPage.title, locale)}
+                    </Link>
+                    .
                   </p>
                 </div>
               ),
