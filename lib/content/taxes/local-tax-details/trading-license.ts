@@ -25,6 +25,12 @@ export const tradingLicenseDetail: LocalTaxDetailPage = {
         en: [
                 `The tax period for the trading licence tax starts on January 1st and end on December 31st. ` ,
                 `If taxable activities begin during a calendar year tax period, the taxpayer may pay Trading License Tax equivalent to the remaining months including the month in which the taxable activities began. Trading License Tax must be declared and paid before beginning the taxable activities.`,
+                `<blockquote>
+            <strong>Example</strong>
+                  <p>Ubumwe opens a small shop in Musanze in March 2024. The tax due for the full tax year for ‘other profit-oriented’ activities is FRW 120,000. However, as Ubumwe is only in business for ten out of the twelve months that year, his Trading License Tax due is:
+                  FRW 120,000 * 10/12 = FRW 100,000</p>
+                  </blockquote>`,
+
                 `If taxable activities end during a calendar year tax period, and the full rate Trading License Tax has been paid for the whole calendar year tax period, the taxpayer may be entitled to a refund, subject to an audit, equivalent to the remaining months excluding the month in which the taxable activities ended or changed.`,
                 `Similarly, if taxable activities change during a calendar year, the taxpayer may be entitled to a refund, or be required to pay additional tax, depending upon the nature of the change in taxable activities.`,
                 `However, taxpayers conducting regular seasonal or periodic activities must pay the full rate Trading License Tax for the whole calendar year tax period, even if the taxable activities do not occur throughout the whole calendar year tax period.`,
@@ -51,6 +57,15 @@ export const tradingLicenseDetail: LocalTaxDetailPage = {
               `-          Non-commercial public institutions.`,
              `-          Micro-enterprises and small businesses during the first two years following their establishment.`,
            `<ul>`,
+           `<blockquote>
+           <strong>Example</strong>
+            <p> Footie Fun Pub was established on 1 April 2023. As the pub is considered a small enterprise, it will be exempted from Trading License Tax</p>
+            <p>- from 1st April to 31st December 2023</p>
+            <p>- from 1st January to 31st December 2024 </p>
+            <p>- from 1st January to 31st March 2025.</p>
+            <p>By 7th April 2025, Footie Fun Pub will need to declare and pay Trading License Tax for April to December 2025. The deadline for declaring and paying Trading License Tax for 2025 will be 31st March 2025.</p>
+            </blockquote>`,
+
         ],
       },
     },
@@ -60,11 +75,10 @@ export const tradingLicenseDetail: LocalTaxDetailPage = {
       content: {
         en: [
           `The trading license tax is calculated based on the turnover that includes sales from the EBM system and other sales for the period of January to December of the previous year. For other business oriented activities whose turnover is below 2.000.000Frw and others which are not registered on income tax, the trading license is determined based on location (urban or rural).`,
-           `Trading license rates are determined as follows:`,
+           `<strong>Trading license rates are determined as follows:</strong>`,
 
           {
             type: "table",
-            
             headers: ["Turnover range (FRW)", "Annual tax due / quarterly tax due (FRW)"],
             rows: [
               ["50 billion and above", "2,000,000/500,000"],
@@ -86,12 +100,25 @@ export const tradingLicenseDetail: LocalTaxDetailPage = {
               ["Transport activities by motor cycle", "8,000 / 2,000"],
             ],
           },
+          `<blockquote>
+          <strong>Example</strong>
+           <p> Intare is a moto driver based in Remera, Kigali. The trading licence tax due for the full tax year for ‘Transport activities on motorcycles’ is FRW 8,000.</p>
+          </blockquote>`,
+
+
         `<strong> a) Trading license tax calculation for the head office and branches</a>`,
         `If a taxpayer has a head office and branches in Districts, a trading license tax declaration is required for the head office as well as for each branch of his or her business activities based on the turnover of the previous year for the head office and for each branch.`,
         `In case a branch does not have or cannot determine its turnover, the trading license tax is declared based on the turnover of the head office.`,
         `However, if all the branches are located in the same district as the head office, the taxpayer pays the trading license tax according to the turnover of the head office. If the branches are located in a district other than that of the head office, the trading license tax is unique and calculated basing on the turnover of the branch with the highest turnover.`,
         `This principle doesn’t apply to motor vehicles, including motorcycles, and motorboats. If a taxpayer has multiple motor vehicles and motorboats used for profit-oriented activities, Trading License Tax must be paid for each.`,
         `On the other hand, if a taxpayer carries out multiple activities by the same company at the same premises, Trading License Tax is only paid once for that premises. If a taxpayer carries out different business activities in different buildings, he/she files a trading license tax declaration for each business activity.`,
+        `<blockquote>
+        <strong>Example</strong> 
+          <p>Lucie has a supermarket business. She has a warehouse where goods are kept, two shops in the same district where goods are sold. Lucie does not have to declare and pay Trading License Tax for the warehouse, but is required to declare and pay a single Trading License Tax for both shops. In case the two shops are located in different districts, each shop shall pay a separate trading licence tax. This also applies if the two are carrying different activities either in the same district or more than one district.</p>
+          <p>Assume that Lucie owns a truck facilitating delivery of goods:</p>
+          <p>If the truck is in Lucie’s business financial statements, this truck doesn’t pay trading licence tax. However, this truck pays trading licence tax if it is not in the financial statement.</p>
+          </blockquote>`,
+
 
 
         ],
@@ -113,8 +140,10 @@ export const tradingLicenseDetail: LocalTaxDetailPage = {
               ["Quarter 4", "1 October - 31 December", "31 October"],
             ],
              },
-            `<i><strong>Example</strong> </i>`,
-             `<i> Amahoro must declare and pay Trading License Tax to authorise her business activities during the 2023 tax period, from 1st January 2023 until 31st December 2023, by the deadline of 31st January 2023.`,
+             `<blockquote>
+            <strong>Example</strong>
+             <p>Amahoro must declare and pay Trading License Tax to authorise her business activities during the 2023 tax period, from 1st January 2023 until 31st December 2023, by the deadline of 31st January 2023.<p>
+             </blockquote>`,
          
         ],
       },

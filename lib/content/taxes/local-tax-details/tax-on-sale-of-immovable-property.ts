@@ -22,9 +22,10 @@ export const taxOnSaleOfImmovablePropertyDetail: LocalTaxDetailPage = {
       content: {
         en: [
           ` There is established a tax on sale of immovable property levied in accordance with the following rates and modalities:`,
-          `<ul`,
-             `• A rate of 2% is levied on the sale value of an immovable property for commercial use if the seller is a taxpayer registered for income tax`,
-              `• Rate of 2.5% is levied on the sale value of an immovable property sold by a person not registered for income tax`,
+          `<ul>`,
+             `<li> A rate of 2% is levied on the sale value of an immovable property for commercial use if the seller is a taxpayer registered for income tax`,
+              `<li> Rate of 2.5% is levied on the sale value of an immovable property sold by a person not registered for income tax</li>`,
+              `</ul>`,
 
         ],
       },
@@ -35,8 +36,10 @@ export const taxOnSaleOfImmovablePropertyDetail: LocalTaxDetailPage = {
       content: {
         en: [
         `There is no specific tax period for a tax on sale of immovable property. This tax is due on transfer of a property between seller and buyer.`,
-        `<i><strong>Example</strong></i>`,
-          `<i> ABC Ltd, an income tax registered taxpayer sold a commercial building at FRW 60,000,000. The tax on sale of Immovable Property to be paid is (FRW 60,000,000 – FRW 5,000,000) * 2% = FRW 1,100,000. Example : Ihirwe, a resident of Gasabo district sold his residential building at FRW 10,000,000. The tax on sale of Immovable Property to be paid is (FRW 10,000,000 – FRW 5,000,000) * 2.5% = FRW 125,000.</i>`,
+        `<blockquote>
+        <strong>Example</strong>
+          <p> ABC Ltd, an income tax registered taxpayer sold a commercial building at FRW 60,000,000. The tax on sale of Immovable Property to be paid is (FRW 60,000,000 – FRW 5,000,000) * 2% = FRW 1,100,000. Example : Ihirwe, a resident of Gasabo district sold his residential building at FRW 10,000,000. The tax on sale of Immovable Property to be paid is (FRW 10,000,000 – FRW 5,000,000) * 2.5% = FRW 125,000.</p>
+        </blockquote>`,
 
 
         ],

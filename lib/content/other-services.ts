@@ -67,20 +67,21 @@ export const otherServiceSections: HandbookSection[] = [
                    ` The RRA Reference Number is very important to ensure that the taxes are paid into the correct RRA tax account, and that the payment is attributed to the correct taxpayer. The RRA Reference Number and total tax due is highlighted in the examples for each broad tax type below.`,
                    `<strong>  Acknowledgement receipt domestic taxes </strong>`,
                   ` In the case of domestic taxes on the E-Tax system, acknowledgement receipts can be viewed by clicking on ‘View Acknowledgement Receipt’ immediately after submitting the declaration, as seen below. `,
-                  `<strong>HERE'S AN iMAGE</STRONG>`,
+                   `<div><img src="/images/Acknowledgement.png" alt="Acknowledgement" /></div>`,
                  ` Alternatively, from the E-Tax homepage, hover the mouse on ‘Tax Declaration’ and click on ‘Submitted Declarations’.`,
                   `  Choose the year of the tax period, and optionally the tax type, then click submit. Find the relevant submitted tax declaration, click on the Document Number, and the following options appear. Again, click on ‘View Acknowledgement Receipt’.`,
-                  `<STRONG>HERE'S AN IMAGE</STRONG>`,
+                 `<div><img src="/images/view2.png" alt="view2" /></div>`,
                 `  An example acknowledgement receipt for domestic tax declarations is displayed below. The associated RRA Reference Number and total tax due are highlighted.`,
+                `<div><img src="/images/rr.png" alt="rr" /></div>`,
              `<strong>  Acknowledgment for Customs Duties </strong>`,
                    ` In the case of customs duties, the acknowledgement receipt is more commonly referred to as the ‘Assessment Notice’. This can be accessed by Clearing Agents through the Rwanda electronic Single Window (ReSW) system. The Clearing Agent then provides the taxpayer with the assessment notice in order to pay the taxes and fees due. `,
                    `Different types of customs duties can be required to be paid to different accounts. Therefore, each assessment notice may have multiple RRA Reference Numbers with different amounts of tax due. The associated RRA Reference Numbers and amounts of tax due are highlighted in different colours in the example below.`,
-                  `<strong> HERE'S AN IMAGE</STRONG>`,
+                    `<div><img src="/images/Duties33.png" alt="assessment" /></div>`,
                 `<strong>  Acknowledgement for receipt for Local Government Taxes and Fees </strong>`,
                      ` In the case of Local Government Taxes (LGT) and Fees on the LGT system, this can vary slightly for the type of tax or fee. Typically, acknowledgement receipts can be viewed by clicking ‘Get Acknowledgement’ immediately after submitting the declaration, as seen below. `,
-                     `<strong> HERE'S AN IMAGE</STRONG>`,
+                     `<div><img src="/images/submitted.png" alt="LGT" /></div>`,
                     ` The taxpayer can also enter their email address or phone number to receive the RRA Reference Number and tax due. An example acknowledgement receipt for LGT and fees declarations is displayed below. The associated RRA Reference Number and total tax due are highlighted.`,
-                 `<strong>HERE'S AN IMAGE</STRONG>`,
+                 `<div><img src="/images/reference.png" alt="reference" /></div>`,
               `<strong>d.Tax payment methods</strong>`,
                      ` After all tax declarations, taxpayers may pay the due taxes or penalties if any, using the following methods:`,
               `<strong>Internet banking systems</strong>`,
@@ -88,7 +89,8 @@ export const otherServiceSections: HandbookSection[] = [
               `<strong> Domestic Taxes E-Payment system</strong>`,
                     `  After submitting the declaration it is possible to directly access the domestic taxes E-Payment system, by clicking ‘Epayment’.  `,
                      `This shows the following screen. Clicking on the ‘Select Bank to Pay’ drop-down menu lists the banks that are linked with the domestic taxes E-Payment system. `,
-                     `<strong>HERE'S AN IMAGE</strong>`,
+                                      `<div><img src="/images/accepted.png" alt="accepted" /></div>`,
+
                     ` It is important to note that taxpayers may need to register for internet banking directly with their bank before paying taxes on the E-Payment system.`,
                             ` After the taxpayer has selected their bank from the drop-down menu and clicked ‘submit’, they will be directed to the online banking system of their bank. Follow the bank instructions to complete the payment. The exact steps may vary by bank. `,
                `<strong>MTN Mobile Money / Airtel Money</strong>`,        
@@ -213,7 +215,7 @@ export const otherServiceSections: HandbookSection[] = [
                        <p>  Processing meat is within the ‘manufacture’ sector. Selling to other shops refers to ‘wholesale’. Selling directly to customers refers to ‘retail sale’. Amahoro selects ‘C1010 - Processing and preserving of meat’, ‘G4630 – Wholesale of food, beverages and tobacco’ and ‘G4721 – Retail sale of food in specialised stores’.</p>
                        <p>  Of these three activities, Amahoro expects her greatest value added to be from the processing of the meat so she chooses this as her main business activity.</p>
                        </blockquote>`,
-                       `<strong>HERE'S AN IMAGE </strong>`,
+                      `<div><img src="/images/rdb.png" alt="Business Activity" /></div>`,
                  `<strong>How to register for different tax types</strong>`,
                              ` All businesses are immediately registered for Income Tax during business registration. This is either Personal Income Tax (PIT) for individual businesses or Corporate Income Tax (CIT) for companies.`,
                              `All businesses must also register for Trading License Tax.  Businesses registered by RDB are automatically registered on Trading License Tax which is exempted for two years from registration date. The Trading License Tax certificate, available after declaring and paying Trading License Tax, is required for all profit-oriented activities.`,
@@ -229,8 +231,7 @@ export const otherServiceSections: HandbookSection[] = [
                  <p>Rukundo is starting a private business of a retail shop. He is starting the business himself using his own capital and with no staff, partners or shareholders. He expects a daily turnover of approximately FRW 20,000, equivalent to an annual turnover of approximately FRW 8,000,000.</p>
                 <p> He wants to be protected by limited liability. Rukundo selects a ‘domestic’ business, with the company category ‘private’, the type ‘limited by shares’ and his position as ‘managing director’.  As shown below:</p>
                 </blockquote>`,
-                `<img src="assets/images/business_registration.png" alt="business registration">`,
-                `<strong>AN IMAGE HERE</strong>`,
+               `<div><img src="/images/business.png" alt="businesss" /></div>`,
                 `<blockquote>
                   <p> On the share info tab, he lists himself as the only shareholder. On the members of the board tab, he enters himself as the only member of the board. On the business activity tab, he enters the business sector as ‘G – Wholesale or Retail Trade; Repair of Motor Vehicles and Motorcycles’ and then chooses ‘G4711 – Retail sale in non-specialised stores with food, beverages or tobacco predominating’.</p>
                  <p>As his annual turnover is expected to be below FRW 20,000,000, he does not have to request for a VAT certificate. As he has no employees, he does not register for PAYE.</p>

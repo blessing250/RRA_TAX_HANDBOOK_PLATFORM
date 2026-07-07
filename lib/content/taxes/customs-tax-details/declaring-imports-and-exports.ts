@@ -22,7 +22,7 @@ export const declaringImportsAndExportsSection: LocalTaxDetailSection = {
                 `<ul>
                   <li> The consignment is sealed to ensure that it is not opened or altered before reaching the Dry Port.</li>
                   <li>   The Customs Officer generates a Warehousing Document on the Rwanda electronic Single Window (ReSW) system. This is provided for free.</li>
-                  <li>   The consignment may continue to the Dry Port and begins declaration as explained on page 400.</li>
+                  <li>   The consignment may continue to the Dry Port and begins declaration.</li>
                   </ul>`,
          `<strong> What is the procedure at the ports of Dar es Salaam or Mombasa when importing?</strong>`,
                  ` There are two options available to taxpayers when importing through the Dar Es Salaam or Mombasa ports.`,

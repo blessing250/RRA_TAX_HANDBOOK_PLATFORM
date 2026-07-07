@@ -66,7 +66,7 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
       title: { en: "Valuation of the building", fr: "Evaluation du batiment", rw: "Kugena agaciro k'inyubako" },
       content: {
         en: [
-          `The valuation of a building and its improvements must be carried out by a certified valuer of the <a href = "https://irpv.rw/">Institute of Real Property Valuers in Rwanda</a> (IRPV) or by a computerised mass valuation system. `,          
+          `The valuation of a building and its improvements must be carried out by a certified valuer of the <a href="https://irpv.rw/" target="_blank" rel="noopener noreferrer"> IRPV</a> Institute of Real Property Valuers in Rwanda</a> (IRPV) or by a computerised mass valuation system. `,          
             `  However, if the taxpayer presents supporting documents to the RRA, the acquisition value or the construction value of a building can be used until valuation by a certified valuer or by computerised mass valuation system is effective. `,
              ` The purchase price is considered to be the market value if all of the following three conditions are fulfilled:`,
               `<ul>`,
@@ -107,10 +107,14 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
                       `• Land reserved for construction of residential houses but where no basic infrastructure has been erected.`,
                       `• Plot of land on which a condominium is built or meant for construction of a condominium. `,
                       `<ul>`,
-                     `<i><strong> Example</strong></i>`, 
-                         `<i> Amahoro is a farmer and lives in a small house on her 30,000m2 farm. As the land usage is agricultural, the first 20,000m2 of land is exempted. Therefore, Amahoro is only required to pay the Immovable Property Tax on the remaining 10,000m2 of land.</i>`,
-                         `<i><strong> Example</strong></i>`, 
-                          `<i> As Musafiri intends to live with his family on his residential property, the building component is not subject to property tax. Therefore, Musafiri is only required to pay tax for the plot of land.</i>`,
+                      `<blockquote>
+                     <strong> Example</strong>
+                         <p> Amahoro is a farmer and lives in a small house on her 30,000m2 farm. As the land usage is agricultural, the first 20,000m2 of land is exempted. Therefore, Amahoro is only required to pay the Immovable Property Tax on the remaining 10,000m2 of land.</p>
+                         </blockquote>`,
+                         `<blockquote>
+                         <strong> Example</strong>
+                        <p> As Musafiri intends to live with his family on his residential property, the building component is not subject to property tax. Therefore, Musafiri is only required to pay tax for the plot of land.</p>
+                          </blockquote>`,
         ],
       },
     },
@@ -130,11 +134,15 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
                           `• Plot and a building for residential use with more than three floors are taxed at the rate of 0.1% of their market value.`,
                           `• In determining the taxable value of a commercial or industrial building, machinery and other equipment attached to the building are not considered. `,
                          `</ul>`,
-                        `<i></strong> Example </i></strong>`,
-                          `<i>In 2024, Amahoro owns two residential buildings. Both buildings are located in Isange village where the land tax rate is FRW 80 per square meter. Each building is valued at FRW 10,000,000 and constructed on a plot of 400 Square meters. Each plot is valued at FRW 3,000,000. Amahoro and his family occupy the first house.</i>`,
-                          `<i>Using information above mentioned, let’s us compute the tax to be paid by Amahoro. Since the first house is exempted as the dwelling of the family, Immovable Property Tax is: FRW 80*400=FRW 32,000. For the second owned property, the Immovable Property Tax is: (FRW 10,000,000 + FRW 3,000,000) * 0.5%=FRW 65,000 The total Immovable Property Tax to be paid by Amahoro in 2024 is: FRW 32,000 + FRW 65,000=FRW 97,000. Suppose the second property is a commercial building. Amahoro would pay: FRW 32,000 + (FRW 10,000,000 + FRW 3,000,000) * 0.3%=FRW 71,000</i>`,
-                        `<i><strong>Example</strong> </i></strong>`, 
-                         `<i> Amahoro owns a residential building with three floors plus a basement floor. The building is valued at FRW 10,000,000. As Amahoro does not intend occupying the house with her family and the building has four floors, the tax due on the building in 2019 is: FRW 10,000,000 * 0.25% * 50% (reduction) = FRW 12,500.`,
+                         `<blockquote>
+                        <strong> Example </strong>
+                          <p>In 2024, Amahoro owns two residential buildings. Both buildings are located in Isange village where the land tax rate is FRW 80 per square meter. Each building is valued at FRW 10,000,000 and constructed on a plot of 400 Square meters. Each plot is valued at FRW 3,000,000. Amahoro and his family occupy the first house.<p>
+                          <p>Using information above mentioned, let’s us compute the tax to be paid by Amahoro. Since the first house is exempted as the dwelling of the family, Immovable Property Tax is: FRW 80*400=FRW 32,000. For the second owned property, the Immovable Property Tax is: (FRW 10,000,000 + FRW 3,000,000) * 0.5%=FRW 65,000 The total Immovable Property Tax to be paid by Amahoro in 2024 is: FRW 32,000 + FRW 65,000=FRW 97,000. Suppose the second property is a commercial building. Amahoro would pay: FRW 32,000 + (FRW 10,000,000 + FRW 3,000,000) * 0.3%=FRW 71,000</p>
+                          </blockquote>`,
+                          `<blockquote>
+                        <strong>Example</strong></strong>
+                         <p> Amahoro owns a residential building with three floors plus a basement floor. The building is valued at FRW 10,000,000. As Amahoro does not intend occupying the house with her family and the building has four floors, the tax due on the building in 2019 is: FRW 10,000,000 * 0.25% * 50% (reduction) = FRW 12,500.</p>
+                          </blockquote>`,
         ],
       },
     },
@@ -148,9 +156,11 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
         `• FRW 0 – FRW 80 per square metre per year (set by the District Council).`,
         `• First 20,000 square metres are exempt if the land is used for agriculture or livestock activities. `,
           `</ul>`,
-           `<i><strong>  Example </strong></i>`,
-           `<i> Amahoro owns a coffee farm, which is 30,000m2 in size. As her land is used for agriculture, the first 20,000m2 of land are exempted from Immovable Property Tax. Therefore, Amahoro is only required to pay the Immovable Property Tax on the remaining 10,000m2 of land. </i>`,
-            `<i>As the District Council set the rate on agriculture at FRW 0.4 per square metre at her location, the tax due is on land is: (30,000m2 farm - 20,000m2 exempted) * FRW 0.4 = 10,000m2 taxable farm land * FRW 0.4 = FRW 4,000.</i>`,
+          `<blockquote>
+           <strong>  Example </strong>
+           <p> Amahoro owns a coffee farm, which is 30,000m2 in size. As her land is used for agriculture, the first 20,000m2 of land are exempted from Immovable Property Tax. Therefore, Amahoro is only required to pay the Immovable Property Tax on the remaining 10,000m2 of land. </p>
+            <p>As the District Council set the rate on agriculture at FRW 0.4 per square metre at her location, the tax due is on land is: (30,000m2 farm - 20,000m2 exempted) * FRW 0.4 = 10,000m2 taxable farm land * FRW 0.4 = FRW 4,000.</p>
+          </blockquote>`,
 
         ],
       },
@@ -162,8 +172,10 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
         en: [
               `Immovable Property Tax is declared and paid on an annual basis, for each immovable property. The tax period is the calendar year, from 1st January until 31st December. `,
             `The deadline to declare and pay Immovable Property Tax is 31st December of the same year. However, in the event of changes in the value of the immovable property by more than 20% within an assessment cycle, the taxpayer must submit a new tax declaration reflecting these value changes and pay it within one month. `,
-            `<i><strong>  Example </strong></i>`,
-           `<i> Nshuti owns a house with land liable to Immovable Property Tax. He must declare and pay his Immovable Property Tax for the tax period in 2023 – from 1st January 2023 until 31st December 2023 – by the deadline of 31st December 2023. Given that there will be no substantial change in the value of his immovable property, his declaration of the year 2023 will also determine the tax to be paid on the building in the following year – which is in the same tax assessment cycle.</i>`,
+            `<blockquote>
+            <strong>  Example </strong>
+           <p> Nshuti owns a house with land liable to Immovable Property Tax. He must declare and pay his Immovable Property Tax for the tax period in 2023 – from 1st January 2023 until 31st December 2023 – by the deadline of 31st December 2023. Given that there will be no substantial change in the value of his immovable property, his declaration of the year 2023 will also determine the tax to be paid on the building in the following year – which is in the same tax assessment cycle.</p>
+           </blockquote>`,
 
          ],
       },
@@ -175,9 +187,11 @@ export const immovablePropertyTaxDetail: LocalTaxDetailPage = {
         en: [
           `If Immovable Property is purchased in a given tax period, the old owner must declare and pay the amount including the month of the ownership transfer. The new owner must declare and pay Immovable Property Tax for the remaining months.`,
            `No transfer of ownership of an immovable property can take place without all due taxes having been paid to RRA. `,
-          `<i><strong>  Example </strong></i>`,
-          `<i>  The most recent valuation of Rukundo’s immovable property implied that the Immovable Property Tax to be paid is FRW 60,000 per year. As Rukundo sells his plot to Amahoro in August 2023, Rukundo needs to pay the Immovable Property Tax for eight months of 2023 before he can transfer the plot. Amahoro needs to pay the Immovable Property Tax for the remaining four months. </i>`,
-               `<i> The tax due in 2023 is as follows: Tax due of Rukundo: FRW 60,000 * 8/12 = FRW 40,000 Tax due of Amahoro: FRW 60,000 * 4/12 = FRW 20,000.</i>`,
+           `<blockquote>
+          <strong>  Example </strong>
+          <p> The most recent valuation of Rukundo’s immovable property implied that the Immovable Property Tax to be paid is FRW 60,000 per year. As Rukundo sells his plot to Amahoro in August 2023, Rukundo needs to pay the Immovable Property Tax for eight months of 2023 before he can transfer the plot. Amahoro needs to pay the Immovable Property Tax for the remaining four months. </p>
+               <p> The tax due in 2023 is as follows: Tax due of Rukundo: FRW 60,000 * 8/12 = FRW 40,000 Tax due of Amahoro: FRW 60,000 * 4/12 = FRW 20,000.</p>
+          </blockquote>`,
 
 
         ],

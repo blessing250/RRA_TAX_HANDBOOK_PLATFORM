@@ -43,7 +43,7 @@ export const importingMotorVehiclesSection: LocalTaxDetailSection = {
       `<blockquote>
          <strong>    Example 85</strong>
                <p> Rukundo is importing a 1997 Rav4 with a 1.8 litre engine, 2 Wheel Drive (2WD) and three doors. In the valuation database, the listed Price When New ($) is USD 13,200.</p>
-               <p> In the ‘Depreciation Schedule’ tab, Rukundo enters the necessary details in the yellow boxes as shown below</p>
+               <p> In the ‘Depreciation Schedule’ tab, Rukundo enters the necessary details in the yellow boxes as shown below .</p>
       </blockquote>`,
       {
         type: 'table',
@@ -115,10 +115,10 @@ export const importingMotorVehiclesSection: LocalTaxDetailSection = {
       `<strong>      c)  CD</strong>`,
       `It is for Diplomatic and Consular staff`,
       ` This requires a letter from the Ministry of Foreign Affairs and Cooperation (MINAFFET) to the Commissioner for CSD of RRA, highlighting their diplomatic status and a reciprocal letter of approval.`,
-      `<strong>c) CD</strong>`,
+      `<strong>c) UN</strong>`,
       ` These number plates are reserved for the United Nations agencies.`,
       ` This requires a letter from the Ministry of Foreign Affairs and Cooperation (MINAFFET) to the Commissioner for CSD of RRA, highlighting their UN status, and a reciprocal letter of approval.`,
-      `<strong>V. Customs duties paid when transferring ownership of motor vehicles with IT, CD or UN number plates to a buyer without the same status. <strong>`,
+      `<strong>v. Customs duties paid when transferring ownership of motor vehicles with IT, CD or UN number plates to a buyer without the same status. <strong>`,
       ` When transferring ownership of any motor vehicles with IT, CD or UN number plates to a buyer who is not subject to the same privileges, the buyer must pay all Customs Duties due on imported motor vehicles, see page 408, except for Motor Vehicle Registration Fees (MVF) that have already been paid for that motor vehicle.`,
       `<strong>   vi) Importing Right-Hand Drive motor vehicles.</strong>`,
       ` Right-Hand Drive (RHD) motor vehicles, where the steering wheel is on the right-hand side of the car, are not allowed to be imported into Rwanda, except for:`,

@@ -120,7 +120,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                                         </ul>`,
                                        ` In import declarations and assessment notices, Environmental levy is referred to under code ‘EPL’.`,
                             `<strong>    10) Motor Vehicle Registration Fees (MVF)</strong>`,
-                                      ` MVF are paid specifically on imported motor vehicles. MVF must be paid regardless of the type of vehicle or the exemptions available to the importing taxpayer. For more details on importing motor vehicles see page 410.`,
+                                      ` MVF are paid specifically on imported motor vehicles. MVF must be paid regardless of the type of vehicxle or the exemptions available to the importing taxpayer.`,
                                        ` MVF vary depending upon the engine capacity of the vehicle as measured in cubic centimetres (cc):`,
      {
             type: "table",
@@ -168,7 +168,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                         <li>    2% of the norm value for the category of energy minerals.</li>
                         <li>    0.5% of the norm value for the category of gold.</li>
                         <ul>`,
-                       `However, the law provides exemptions on Export Tax – Minerals as follows:`,
+                       `<strong>However, the law provides exemptions on Export Tax – Minerals as follows:</strong>`,
                        `-          Samples of minerals exported for the purpose of essay, analysis or any other examination are exempted from tax on minerals. A regulation of the competent authority determines the quantity of samples of minerals exempt from the tax on minerals.`,
                        `-          The processed minerals and imported minerals to be re-exported, except gold, are exempted from tax on minerals at export point.`,
                         
