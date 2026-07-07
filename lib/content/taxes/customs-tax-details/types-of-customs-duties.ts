@@ -120,7 +120,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                                         </ul>`,
                                        ` In import declarations and assessment notices, Environmental levy is referred to under code ‘EPL’.`,
                             `<strong>    10) Motor Vehicle Registration Fees (MVF)</strong>`,
-                                      ` MVF are paid specifically on imported motor vehicles. MVF must be paid regardless of the type of vehicle or the exemptions available to the importing taxpayer. For more details on importing motor vehicles see page 410.`,
+                                      ` MVF are paid specifically on imported motor vehicles. MVF must be paid regardless of the type of vehicxle or the exemptions available to the importing taxpayer.`,
                                        ` MVF vary depending upon the engine capacity of the vehicle as measured in cubic centimetres (cc):`,
      {
             type: "table",
@@ -168,7 +168,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                         <li>    2% of the norm value for the category of energy minerals.</li>
                         <li>    0.5% of the norm value for the category of gold.</li>
                         <ul>`,
-                       `However, the law provides exemptions on Export Tax – Minerals as follows:`,
+                       `<strong>However, the law provides exemptions on Export Tax – Minerals as follows:</strong>`,
                        `-          Samples of minerals exported for the purpose of essay, analysis or any other examination are exempted from tax on minerals. A regulation of the competent authority determines the quantity of samples of minerals exempt from the tax on minerals.`,
                        `-          The processed minerals and imported minerals to be re-exported, except gold, are exempted from tax on minerals at export point.`,
                         
@@ -185,7 +185,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                `<strong>  17) Warehousing Fees </strong>`,
                       `  Warehousing Fees are paid when storing consignments in warehouses. It is important to note that these are paid directly to the warehouse owner and not to RRA. Rates may vary according to the warehouse, the size and weight of the consignment and how long it has been stored for.`,
                  `<blockquote>
-                      <strong>Example 1: </strong>
+                      <strong>Example : </strong>
                    <p>  Rukundo is importing a consignment of sports shoes packed in plastic materials from the United Kingdom. The HS Code is 6404.11.00 ‘Sports footwear…’. The net weight of the consignment is 75kg. The CIF value of the consignment is:</p>
                    <p>  -          Cost = FRW 2,800,000</p>
                    <p>  -          Insurance = FRW 75,000</p>
@@ -205,7 +205,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                    <p> Of this, the VAT of FRW 797,175 can be claimed back in domestic VAT declarations (as Rukundo is not the final consumer), and the WHT 5% of FRW 161,250 can be claimed back in domestic Income Tax declarations.<p>
                        </blockqoute>`,
                        `<blockquote>
-                        <strong>     Example 2:</strong>
+                        <strong>     Example :</strong>
                       <p>Ubumwe is importing a consignment of Tusker beer from Kenya and presented EAC Certificate of Origin. The HS Code is 2203.00.90 ‘Beer made from malt’. The net weight of the consignment is 1,400kg. The CIF value of the consignment is:</p>
                      <p>-          Cost = FRW 1,100,000</p>
                      <p>  -       Insurance = FRW 55,000</p>
@@ -224,7 +224,7 @@ export const typesOfCustomsDutiesSection: LocalTaxDetailSection = {
                        
                        </blockqoute>`,
                        `<blockquote>
-              <strong>       Example 3: </strong>
+              <strong>       Example: </strong>
                   <p>   Amahoro is importing a consignment of petrol from the United States of America. The HS Code is 2710.12.20 ‘Motor Spirit (gasoline) regular’. The consignment is 9,000 litres being transported in a semi-trailer truck. The CIF value of the consignment is:
                    <p>  -          Cost = FRW 6,500,000</p>
                    <p>  -          Insurance = FRW 400,000</p>
