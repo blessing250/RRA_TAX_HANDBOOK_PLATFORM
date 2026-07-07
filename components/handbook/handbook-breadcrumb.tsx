@@ -31,7 +31,12 @@ export function HandbookBreadcrumb({ items }: HandbookBreadcrumbProps) {
               <BreadcrumbItem>
                 {item.href && !isLast ? (
                   <BreadcrumbLink asChild>
-                    <Link href={item.href}>{item.label}</Link>
+                    <Link
+                      href={item.href}
+                      className="text-rra-black underline decoration-rra-black underline-offset-2 hover:text-rra-blue hover:decoration-rra-blue"
+                    >
+                      {item.label}
+                    </Link>
                   </BreadcrumbLink>
                 ) : (
                   <BreadcrumbPage>{item.label}</BreadcrumbPage>

@@ -71,14 +71,15 @@ export const customsFacilitiesSection: LocalTaxDetailSection = {
                           `<ul>
                            <li>Food</li>
                             <li> Medicine</li>
-                          <li> Lve animals</li>
+                          <li> Live animals</li>
                           </ul>`,
-                          ` -          Fragile or difficult to unload goods.`,
-                           ` -          Government institution or project materials.`,
-                           `-          Exempted goods.`,
+                          `<strong> -          Fragile or difficult to unload goods.</strong>`,
+                           ` <strong>-          Government institution or project materials.</strong>`,
+                           `<strong>-          Exempted goods.</strong>`,
+                           
                            `For consignments of this nature, the clearing agent can apply for Direct Delivery in the Rwanda electronic Single Window (ReSW) system. If the request for Direct Delivery is approved, the consignment can be immediately released from the border post and dry port, and then kept at a taxpayer’s premises until Customs Officials have completed the verification process.`,
                     `<strong >      8. Duty Remission scheme </strong>`,
-                          ` The Duty Remission scheme is an exemption from import duty available to taxpayers who are importing goods to be used as inputs in the production of goods for export, or in the production of particular goods for home consumption. The list of particular goods for home consumption that the Duty Remission scheme can apply to is contained within EAC gazettes, available at:< href="https://www.rra.gov.rw/en/customs-services/eac-gazette">our website</a>`,
+                          ` The Duty Remission scheme is an exemption from import duty available to taxpayers who are importing goods to be used as inputs in the production of goods for export, or in the production of particular goods for home consumption. The list of particular goods for home consumption that the Duty Remission scheme can apply to is contained within EAC gazettes, available at:<a href="https://www.rra.gov.rw/en/customs-services/eac-gazette">our website</a>`,
                           ` Taxpayers must apply for the Duty Remission scheme by writing a letter to the Commissioner for Customs Services Department (CSD), explaining the reasons for application.  If approved, the Duty Remission is valid for a period of twelve (12) months.`,
                            `There are conditions attached to the Duty Remission scheme. A taxpayer must:`,
                           ` -          Pay Import Duty on any imported goods not used in the production of goods for export or particular goods for home consumption.`,

@@ -41,15 +41,14 @@ export const borderPostsAndDryPortsSection: LocalTaxDetailSection = {
                       ` There is no threshold of value for declaring exports at a border. The taxpayer may choose whether to declare at a Border Post or a Dry Port.`,
                 `<Strong>      What are One Stop Border Posts (OSBPs) </strong>`,
                       ` One Stop Border Posts (OSBPs) are border posts where RRA Customs Officials work in the same building as the neighbouring country Customs Officials. This allows the export procedures of the neighbouring country, and the import procedures of RRA (or vice versa) to be conducted in one place at one time, reducing the time taken when importing or exporting goods.`,
-                      `  Note that there are three types or models of OSBPs:`,
+                      `<strong>  Note that there are three types or models of OSBPs:</strong>`,
                       `<ul>
                      <li>        Juxtaposed model: State A and state B share facilities in the country of entry. For example, Rusumo.</li>
                      <li>     Straddled model: Where a single facility is built across a border line for the two adjoining states. For example, Nemba.</li>
                       <li>       Wholly located model (single country): Single shared border facility is constructed in one of the countries to house officers from both countries to carry out border controls. For example, Ruhwa OSBP.</li>
                       </ul>`,
                      ` For the Juxtaposed model, the Clearing Agent only needs to visit the border post in the country they are importing into, as displayed in the example below of Rusumo OSBP.`,
-                     `<img src="/images/rusumo-osbp.png" alt="Rusumo OSBP"/>`,
-                    ` <strong> Here's an Image</strong>`,
+                    ` <div><img src="/images/osbp.png" alt="Rusumo OSBP"/></div>`,
          `<strong>       List of Border Posts and Dry Ports</strong>`,
                   `  The list of currently operational Customs Border Posts and Dry Ports is displayed below, including details of the border country, opening hours, manager contact details, import declaration value threshold (FRW) and notes such as if the Border Post is a One Stop Border Post (OSBP).`,
                   ` The import value threshold (FRW) refers to the value of imports that can be processed directly at that border post. It is important to note that higher value consignments are still able to pass through this border post, but must be declared and processed at a Dry Port.`,

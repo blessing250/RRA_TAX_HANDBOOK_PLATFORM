@@ -21,9 +21,9 @@ export const generalInformation: HandbookTopic = {
       },
       content: {
         en: [
-          `<blockquote>"We cannot rely on foreign aid forever. We are a population of 13.2 million people and those paying taxes are doing a good thing; however, if the national budget is to be fully supported by Rwandans, then we must carry on sensitizing people on their role of contributing to the country's development.</blockquote>`,
-          `<blockquote>"If we work hard and ensure that our budget is fully funded by domestic resources, then we shall have only one master - our people." -  His Excellency Paul Kagame, President of Rwanda speaking at the 2013 Taxpayers Appreciation Day. </blockquote>`,
-          `The task ahead is to sustain and raise this growth, and use our resources productively. We cannot count on anyone else to finance our development and well-being. Our most important asset as a nation is our capable young people. It is your task, as young Rwandans, to sustain what we have built, and take it further." - New Year 2026 Message by President Kagame | Kigali, 31 December 2025.`,
+          `<blockquote>"We cannot rely on foreign aid forever. We are a population of 13.2 million people and those paying taxes are doing a good thing; however, if the national budget is to be fully supported by Rwandans, then we must carry on sensitizing people on their role of contributing to the country's development."</blockquote>`,
+          `<blockquote>"If we work hard and ensure that our budget is fully funded by domestic resources, then we shall have only one master - our people." <p>-  His Excellency Paul Kagame, President of Rwanda speaking at the 2013 Taxpayers Appreciation Day.</p> </blockquote>`,
+          `<blockquote>The task ahead is to sustain and raise this growth, and use our resources productively. We cannot count on anyone else to finance our development and well-being. Our most important asset as a nation is our capable young people. It is your task, as young Rwandans, to sustain what we have built, and take it further." <p>- New Year 2026 Message by President Kagame | Kigali, 31 December 2025.</p></blockquote>`,
         ],
       },
     },
@@ -87,7 +87,7 @@ export const generalInformation: HandbookTopic = {
           `<ul>
           <li><strong> Good governance</strong> - when citizens are paying taxes, the government is held more responsible for improving public services.</li>
           <li><strong> Social responsibility</strong> - citizens are more likely to protect those public services and can be proud of contributing to Rwanda's development.</li>
-          <li><strong> Self-reliance</strong> - tax revenues are the backbone of national self-reliance, reducing the country's dependency on unpredictable foreign aid and donors./li>
+          <li><strong> Self-reliance</strong> - tax revenues are the backbone of national self-reliance, reducing the country's dependency on unpredictable foreign aid and donors.</li>
           </ul>`,
         ],
       },

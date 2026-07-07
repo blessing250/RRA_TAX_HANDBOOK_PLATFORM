@@ -4,7 +4,6 @@ import type { Locale } from "@/lib/i18n/config"
 type RelatedTopicsProps = {
   heading: string
   lang: Locale
-  readMore: string
   topics: {
     slug: string
     summaryText: string
@@ -15,7 +14,6 @@ type RelatedTopicsProps = {
 export function RelatedTopics({
   heading,
   lang,
-  readMore,
   topics,
 }: RelatedTopicsProps) {
   if (topics.length === 0) {
@@ -25,7 +23,7 @@ export function RelatedTopics({
   return (
     <section className="border-t pt-8">
       <h2 className="mb-4 text-xl font-semibold">{heading}</h2>
-      <TaxTopicGrid lang={lang} readMore={readMore} topics={topics} />
+      <TaxTopicGrid lang={lang} topics={topics} />
     </section>
   )
 }

@@ -47,11 +47,6 @@ export const domesticTaxesPage = {
     fr: "Cette page a ete mise a jour le : 05/03/2026",
     rw: "Iyi paji iherukaga kuvugururwa ku wa: 05/03/2026",
   },
-  detailsLinkLabel: {
-    en: "Find details here.",
-    fr: "Trouvez les details ici.",
-    rw: "Reba ibisobanuro hano.",
-  },
 }
 
 export const domesticTaxSections: DomesticTaxAccordionItem[] = [
