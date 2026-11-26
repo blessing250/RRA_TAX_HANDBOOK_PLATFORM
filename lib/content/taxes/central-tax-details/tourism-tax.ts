@@ -6,9 +6,9 @@ import {
 export const tourismTaxDetail: CentralTaxDetailPage = {
   slug: "tourism-tax",
   title: {
-    en: "Tourism Tax",
-    fr: "Taxe touristique",
-    rw: "Umusoro ku bukerarugendo",
+    en: "  Tourism Tax on Accommodation",
+    fr: "Taxe touristique sur l'hébergement",
+    rw: "Umusoro ku bukerarugendo ku byerekeye icumbi",
   },
   intro: {
     en: [
