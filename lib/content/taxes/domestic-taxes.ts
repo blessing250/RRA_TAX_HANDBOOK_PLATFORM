@@ -42,6 +42,16 @@ export const domesticTaxesPage = {
     fr: "Types d'impots domestiques",
     rw: "Ubwoko bw'imisoro y'imbere mu gihugu",
   },
+  otherInformationTitle: {
+    en: "Other information related to Domestic taxes",
+    fr: "Autres informations sur les impôts domestiques",
+    rw: "Andi makuru yerekeye imisoro y'imbere mu gihugu",
+  },
+  detailsLinkLabel: {
+    en: "Find details here",
+    fr: "Consulter les détails",
+    rw: "Reba ibisobanuro hano",
+  },
   lastUpdated: {
     en: "This page was last updated on: 05/03/2026",
     fr: "Cette page a ete mise a jour le : 05/03/2026",
@@ -58,22 +68,41 @@ export const domesticTaxSections: DomesticTaxAccordionItem[] = [
       rw: "Imisoro ya leta",
     },
     text: {
-      en: "These are the revenues that the RRA collects, and accounts for on behalf of the government. They include",
-      fr: "Ce sont les recettes que la RRA collecte et comptabilise pour le compte du gouvernement. Elles comprennent",
-      rw: "Iyi ni imisoro RRA ikusanya ikanayibarira leta. Ikubiyemo",
+      en: "These are the revenues that the RRA collects and accounts for on behalf of the government. They include the following:",
+      fr: "Ce sont les recettes que la RRA collecte et comptabilise pour le compte du gouvernement. Elles comprennent :",
+      rw: "Iyi ni imisoro RRA ikusanya ikanayibarira leta. Ikubiyemo iyi ikurikira:",
     },
   },
   {
     id: "decentralized-entities-taxes",
     title: {
-      en: "Taxes and fees levied by decentralised entities",
-      fr: "Impots et frais preleves par les entites decentralisees",
-      rw: "Imisoro n'amahoro byakwa n'inzego zegerejwe abaturage",
+      en: "Taxes levied by Decentralized entities",
+      fr: "Impôts prélevés par les entités décentralisées",
+      rw: "Imisoro yakwa n'inzego zegerejwe abaturage",
     },
     text: {
       en: "Taxes and fees levied by decentralised entities commonly known as Local Government Taxes (LGT) and fees are revenues collected by RRA on behalf of the district authorities.",
       fr: "Les impots et frais preleves par les entites decentralisees, communement appeles impots locaux (LGT), sont des recettes collectees par la RRA pour le compte des autorites de district.",
       rw: "Imisoro n'amahoro byakwa n'inzego zegerejwe abaturage, bizwi nk'imisoro y'inzego z'ibanze (LGT), ni amafaranga akusanywa na RRA mu izina ry'ubuyobozi bw'uturere.",
+    },
+  },
+]
+
+export const domesticTaxInformationSections: { slug: string; title: LocalizedText }[] = [
+  {
+    slug: "domestic-tax-centers",
+    title: {
+      en: "Domestic Tax Centres",
+      fr: "Centres des impôts domestiques",
+      rw: "Ibigo by'imisoro y'imbere mu gihugu",
+    },
+  },
+  {
+    slug: "domestic-tax-penalties-and-fines",
+    title: {
+      en: "Non-compliance penalties and fees",
+      fr: "Pénalités et frais en cas de non-conformité",
+      rw: "Ibihano n'amafaranga atangwa kubera kutubahiriza amategeko",
     },
   },
 ]

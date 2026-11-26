@@ -11,6 +11,7 @@ import {
 } from "@/lib/content/handbook"
 import {
   centralGovernmentTaxSlugs,
+  domesticTaxInformationSections,
   domesticTaxesPage,
   domesticTaxSections,
 } from "@/lib/content/taxes/domestic-taxes"
@@ -62,20 +63,19 @@ export default async function DomesticTaxesPage({
                   id={section.id}
                   className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base"
                 >
-                  <p>
-                    {localizedText(section.text, locale)}{" "}
-                    {centralGovernmentTaxLinks.map((topic, index) => (
-                      <span key={topic.slug}>
+                  <p>{localizedText(section.text, locale)}</p>
+                  <ul className="list-disc pl-5 marker:text-rra-light-blue">
+                    {centralGovernmentTaxLinks.map((topic) => (
+                      <li key={topic.slug}>
                         <Link
                           href={`/${locale}/taxes/${topic.slug}`}
                           className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
                         >
                           {topic.titleText}
                         </Link>
-                        {index < centralGovernmentTaxLinks.length - 1 ? ", " : "."}
-                      </span>
+                      </li>
                     ))}
-                  </p>
+                  </ul>
                 </div>
               ) : (
                 <div
@@ -94,6 +94,31 @@ export default async function DomesticTaxesPage({
                   </p>
                 </div>
               ),
+          }))}
+        />
+      </div>
+
+      <h2 className="mt-10 text-2xl font-bold tracking-normal text-rra-black sm:text-3xl">
+        {localizedText(domesticTaxesPage.otherInformationTitle, locale)}
+      </h2>
+
+      <div className="mt-8">
+        <HandbookAccordion
+          variant="minimal"
+          items={domesticTaxInformationSections.map(({ slug, title }) => ({
+            value: slug,
+            title: localizedText(title, locale),
+            content: (
+              <div id={slug} className="scroll-mt-28 space-y-3 text-sm leading-7 text-rra-black sm:text-base">
+                <p>{getLocalizedTopic(slug, locale)?.summaryText}</p>
+                <Link
+                  href={`/${locale}/taxes/${slug}`}
+                  className="text-rra-light-blue underline underline-offset-2 hover:text-rra-blue"
+                >
+                  {localizedText(domesticTaxesPage.detailsLinkLabel, locale)}
+                </Link>
+              </div>
+            ),
           }))}
         />
       </div>
